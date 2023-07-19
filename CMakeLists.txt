@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.16)
+
+# Project information
+project(
+    "Survive"
+    VERSION 0.0.1
+    LANGUAGES CXX
+    DESCRIPTION "C++ survival game based on real world data."
+    HOMEPAGE_URL https://github.com/DACA345/Survive
+)
+
+set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
+set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR})
+set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH})
+set(CPACK_PACKAGE_VERSION_FULL "${PROJECT_VERSION}${CPACK_PACKAGE_VERSION_STAGE}")
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+# Dependencies
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+# Includes
+list(APPEND CMAKE_PREFIX_PATH "F:/Qt/6.3.2/msvc2019_64")
+include(FindLibCheck)
+
+include_directories("include")
+add_subdirectory("src")
