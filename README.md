@@ -17,7 +17,7 @@ DACA: Survive is an open source GUI based game in which you attempt to survive f
 4. Run the following commands
     - `mkdir build`
     - `cd build`
-    - `cmake .. `-DQt6_INSTALL_PREFIX={Qt Install Path}/{Version}/{Build Type}`
+    - `cmake .. -DQt6_INSTALL_PREFIX={Qt Install Path}/{Version}/{Build Type}`
     - `cmake --build . --config Release`
 5. The executable can then be found in `bin/Release/`
 
