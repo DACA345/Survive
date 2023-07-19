@@ -25,7 +25,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 # Includes
-list(APPEND CMAKE_PREFIX_PATH "F:/Qt/6.3.2/msvc2019_64")
 include(FindLibCheck)
 
 include_directories("include")

@@ -8,7 +8,7 @@ DACA: Survive is an open source GUI based game in which you attempt to survive f
 2. Download Qt6
     - [Qt 6 Open Source](https://www.qt.io/download-qt-installer-oss)
     - Select a Qt version in the select components page
-##### Slow download fix
+    ##### Slow download fix
     - If the Qt installer is downloading very slow try running using a mirror and choosing Qt6.3.2
         - `./qt-unified-{installer-version}-online.exe --mirror https://mirrors.ocf.berkeley.edu/qt/`
 
@@ -17,12 +17,14 @@ DACA: Survive is an open source GUI based game in which you attempt to survive f
 4. Run the following commands
     - `mkdir build`
     - `cd build`
-    - `cmake ..`
+    - `cmake .. `-DQt6_INSTALL_PREFIX={Qt Install Path}/{Version}/{Build Type}`
     - `cmake --build . --config Release`
 5. The executable can then be found in `bin/Release/`
 
 #### Building with Visual Studio
 3. Ensure your Visual Studio install has CMake
 4. Open the `CMakeLists.txt` in Visual Studio
-5. Select Survive.cpp as the target executable
-6. Run the project
+5. Configure CMakeSettings.json to use the Qt6 install path
+    - CMake Command Arguments: `-DQt6_INSTALL_PREFIX={Qt Install Path}/{Version}/{Build Type}`
+6. Select Survive.cpp as the target executable
+7. Run the project
