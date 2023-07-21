@@ -1,0 +1,28 @@
+fail_fast: false
+repos:
+-   repo: https://github.com/pocc/pre-commit-hooks
+    rev: master
+    hooks:
+    -   id: clang-format
+        args: [--style=Google]
+    -   id: clang-tidy
+    -   id: oclint
+    -   id: uncrustify
+    -   id: cppcheck
+    -   id: cpplint
+-   repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: pretty-format-yaml
+        args: [--autofix, --indent, '4']
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/compilerla/conventional-pre-commit
+    rev: 27169fe67996a07c171309cc58e8767d0f303750
+    hooks:
+    -   id: conventional-pre-commit
+        stages: [commit-msg]
+        args: [merge]
