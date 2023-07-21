@@ -17,16 +17,17 @@ DACA: Survive is an open source GUI based game in which you attempt to survive f
 4. Run the following commands
     - `mkdir build`
     - `cd build`
-    - `cmake .. -DQt6_INSTALL_PREFIX={Qt Install Path}/{Version}/{Build Type}`
+    - `cmake .. -DCMAKE_INSTALL_PREFIX={Where you want to install to} -DQt6_INSTALL_PREFIX={Qt Install Path}/{Version}/{Build Type}`
     - `cmake --build . --config Release`
-5. The executable can then be found in `bin/Release/`
+    - `cmake --install .`
+5. The executable can then be found in the `bin` folder of your specified install prefix.
 
 #### Building with Visual Studio
 3. Ensure your Visual Studio install has CMake
 4. Open the `CMakeLists.txt` in Visual Studio
 5. Configure CMakeSettings.json to use the Qt6 install path
     - CMake Command Arguments: `-DQt6_INSTALL_PREFIX={Qt Install Path}/{Version}/{Build Type}`
-6. Select Survive.cpp as the target executable
+6. Select `(install) Survive.exe` as the target executable
 7. Run the project
 
 ## Contributing
