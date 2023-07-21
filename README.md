@@ -28,3 +28,24 @@ DACA: Survive is an open source GUI based game in which you attempt to survive f
     - CMake Command Arguments: `-DQt6_INSTALL_PREFIX={Qt Install Path}/{Version}/{Build Type}`
 6. Select Survive.cpp as the target executable
 7. Run the project
+
+## Contributing
+
+### Setup pre-commit hooks
+Pre-commit hooks are used to format code and check files.
+
+To setup the pre-commit hooks follow these steps:
+###### Note: Ensure you select the add to path box when installing python.
+1. Install [Python](https://www.python.org/)
+2. Install pre-commit through python `pip install pre-commit`
+3. Install the git hooks using pre-commit `pre-commit install`
+4. Install the git commit hooks using pre-commit `pre-commit install --hook-type commit-msg`
+
+Whenever you commit your code it will be automatically formatted to follow the conventions.
+
+### Git commit conventions
+Commits must follow the [conventional commit format](https://www.conventionalcommits.org/en/v1.0.0/).
+
+### Branches
+The main repository branch is locked for editing. Please create a branch with the naming convention: `username/branch-feature`.
+Then submit a [pull request](https://github.com/DACA345/Survive/pulls) and it will be merged once reviewed.
