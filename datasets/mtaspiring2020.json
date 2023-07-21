@@ -1,0 +1,458 @@
+{
+  "JAN": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "21.6°C",
+      "Average": "18.12°C ",
+      "Min": "14.4°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "19.55°C",
+      "Average": "16.36°C ",
+      "Min": "13.37°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "17.49°C",
+      "Average": "12.81°C",
+      "Min": "8.23°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation (Rain)",
+      "Max": "44.14mm",
+      "Average": "2.43mm",
+      "Min": "0.0mm"
+    },
+    {
+      "Temperature": "Snowdepth (Snow)",
+      "Max": "0.0mm",
+      "Average": "0.0mm",
+      "Min": "0.0mm"
+    }
+  ],
+  "FEB": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "21.6°C ",
+      "Average": "18.41°C ",
+      "Min": "15.43°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "19.55°C ",
+      "Average": "16.64°C ",
+      "Min": "13.37°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "18.52°C",
+      "Average": "12.45°C ",
+      "Min": "7.2°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "27.16mm",
+      "Average": "4.35mm ",
+      "Min": "0.0mm "
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm",
+      "Average": "0.0mm ",
+      "Min": "0.0mm "
+    }
+  ],
+  "MAR": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "19.55°C ",
+      "Average": "17.29°C ",
+      "Min": "13.37°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "18.52°C ",
+      "Average": "15.07°C ",
+      "Min": "11.32°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "15.43°C ",
+      "Average": "10.85°C ",
+      "Min": "3.09°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "30.45mm ",
+      "Average": "2.61mm ",
+      "Min": "0.0mm"
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm ",
+      "Average": "0.0mm",
+      "Min": "0.0mm "
+    }
+  ],
+  "APR": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "18.52°C",
+      "Average": "14.88°C ",
+      "Min": "11.32°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "16.46°C ",
+      "Average": "12.72°C ",
+      "Min": "9.26°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "14.4°C ",
+      "Average": "9.23°C ",
+      "Min": "4.12°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "23.15mm ",
+      "Average": "4.0mm ",
+      "Min": "0.0mm"
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm",
+      "Average": "0.0mm",
+      "Min": "0.0mm"
+    }
+  ],
+  "MAY": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "15.43°C ",
+      "Average": "13.77°C ",
+      "Min": "10.29°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "14.4°C ",
+      "Average": "11.58°C",
+      "Min": "9.26°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "13.37°C",
+      "Average": "8.5°C ",
+      "Min": "2.06°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "18.11mm ",
+      "Average": "2.68mm ",
+      "Min": "0.0mm "
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm ",
+      "Average": "0.0mm",
+      "Min": "0.0mm "
+    }
+  ],
+  "JUN": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "15.43°C ",
+      "Average": "12.76°C ",
+      "Min": "8.23°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "13.37°C ",
+      "Average": "10.39°C ",
+      "Min": "7.2°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "11.32°C ",
+      "Average": "7.34°C ",
+      "Min": "4.12°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "10.08mm ",
+      "Average": "1.67mm ",
+      "Min": "0.0mm"
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm ",
+      "Average": "0.0mm ",
+      "Min": "0.0mm"
+    }
+  ],
+  "JUL": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "13.37°C ",
+      "Average": "11.25°C ",
+      "Min": "8.23°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "11.32°C ",
+      "Average": "8.93°C ",
+      "Min": "6.17°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "10.29°C ",
+      "Average": "5.81°C ",
+      "Min": "1.03°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "37.14mm ",
+      "Average": "3.24mm ",
+      "Min": "0.0mm "
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm ",
+      "Average": "0.0mm",
+      "Min": "0.0mm "
+    }
+  ],
+  "AUG": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "15.43°C ",
+      "Average": "12.48°C ",
+      "Min": "9.26°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "12.35°C ",
+      "Average": "10.56°C ",
+      "Min": "7.2°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "11.32°C ",
+      "Average": "7.53°C",
+      "Min": "2.06°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "22.53mm ",
+      "Average": "4.1mm ",
+      "Min": "0.0mm"
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm",
+      "Average": "0.0mm",
+      "Min": "0.0mm "
+    }
+  ],
+  "SEP": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "14.4°C ",
+      "Average": "12.17°C ",
+      "Min": "7.2°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "14.4°C ",
+      "Average": "10.63°C ",
+      "Min": "6.17°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "11.32°C ",
+      "Average": "6.89°C ",
+      "Min": "2.06°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "23.97mm",
+      "Average": "6.14mm",
+      "Min": "0.0mm"
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm",
+      "Average": "0.0mm",
+      "Min": "0.0mm "
+    }
+  ],
+  "OCT": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "16.46°C ",
+      "Average": "13.97°C ",
+      "Min": "10.29°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "15.43°C ",
+      "Average": "12.31°C ",
+      "Min": "8.23°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "15.43°C ",
+      "Average": "8.66°C ",
+      "Min": "3.09°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "39.3mm",
+      "Average": "5.39mm",
+      "Min": "0.0mm"
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm",
+      "Average": "0.0mm",
+      "Min": "0.0mm"
+    }
+  ],
+  "NOV": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "22.63°C ",
+      "Average": "16.19°C ",
+      "Min": "12.35°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "18.52°C ",
+      "Average": "14.4°C ",
+      "Min": "11.32°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "13.37°C ",
+      "Average": "9.91°C ",
+      "Min": "4.12°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "18.52mm ",
+      "Average": "3.82mm ",
+      "Min": "0.0mm"
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm ",
+      "Average": "0.0mm ",
+      "Min": "0.0mm"
+    }
+  ],
+  "DEC": [
+    {
+      "Temperature": "Max Temperature",
+      "Max": "19.55°C ",
+      "Average": "16.69°C ",
+      "Min": "13.37°C "
+    },
+    {
+      "Temperature": "Avg Temperature",
+      "Max": "18.52°C ",
+      "Average": "15.23°C ",
+      "Min": "12.35°C "
+    },
+    {
+      "Temperature": "Min Temperature",
+      "Max": "15.43°C ",
+      "Average": "11.32°C ",
+      "Min": "7.2°C "
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "Max",
+      "Average": "Average",
+      "Min": "Min"
+    },
+    {
+      "Temperature": "Precipitation",
+      "Max": "20.99mm",
+      "Average": "4.02mm",
+      "Min": "0.0mm"
+    },
+    {
+      "Temperature": "Snowdepth",
+      "Max": "0.0mm",
+      "Average": "0.0mm",
+      "Min": "0.0mm"
+    }
+  ]
+}
