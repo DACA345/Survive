@@ -26,14 +26,12 @@ add_compile_definitions(Survive
 )
 
 # Qt bundling with runtimes
-
 install(TARGETS Survive
     BUNDLE DESTINATION .
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
 # Qt version changes to deployment
-
 if(Qt6_VERSION VERSION_LESS 6.5.0)
     qt_generate_deploy_app_script(
         TARGET Survive
@@ -48,6 +46,12 @@ else()
     )
 endif()
 
+# Run Qt deploy Script
 install(SCRIPT ${QT_DEPLOY_SCRIPT})
+
+# Copy datasets
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/datasets"
+    DESTINATION ${CMAKE_INSTALL_PREFIX}
+)
 
 include(CPack)
