@@ -28,4 +28,4 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 # Includes
 include(FindLibCheck)
 
-add_subdirectory("src")
+add_subdirectory(src)

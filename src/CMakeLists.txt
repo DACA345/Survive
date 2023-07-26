@@ -1,3 +1,5 @@
+add_subdirectory(core)
+
 qt_add_executable(Survive
     "UI/MainMenu.cpp"
     "SurviveGame.cpp"
@@ -9,6 +11,7 @@ target_link_libraries(Survive
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
+        SurviveCore
 )
 
 set_target_properties(Survive
