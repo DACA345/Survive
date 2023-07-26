@@ -16,7 +16,7 @@ target_link_libraries(Survive
 
 set_target_properties(Survive
     PROPERTIES
-        WIN32_EXECUTABLE ON
+        WIN32_EXECUTABLE $<NOT:$<CONFIG:Debug>>
         MACOSX_BUNDLE ON
 )
 
