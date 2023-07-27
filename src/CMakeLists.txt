@@ -1,6 +1,7 @@
 add_subdirectory(Core)
 
 qt_add_executable(Survive
+    "UI/Widgets/ScalableWidget.cpp"
     "UI/MainMenu.cpp"
     "SurviveGame.cpp"
     "main.cpp"
