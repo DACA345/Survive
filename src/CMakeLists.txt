@@ -54,7 +54,7 @@ endif()
 install(SCRIPT ${QT_DEPLOY_SCRIPT})
 
 # Copy datasets
-install(DIRECTORY "${CMAKE_SOURCE_DIR}/datasets"
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/levels"
     DESTINATION ${CMAKE_INSTALL_PREFIX}
 )
 
