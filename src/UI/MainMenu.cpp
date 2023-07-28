@@ -39,7 +39,14 @@ void MainMenu::setupUi()
 
 void MainMenu::displaySettingsMenu()
 {
-    settingsMenu = new SettingsMenu();
+    settingsMenu = new SettingsMenu(this);
+
+    addWidget(settingsMenu, 0, 0, 1, 1);
+}
+
+void MainMenu::closeSettingsMenu()
+{
+    delete settingsMenu;
 }
 
 MainMenu::~MainMenu()
@@ -50,4 +57,7 @@ MainMenu::~MainMenu()
     delete loadGameButton;
     delete settingsButton;
     delete exitButton;
+
+    // TODO(Callum): Delete this once unnecessary
+    delete settingsMenu;
 }

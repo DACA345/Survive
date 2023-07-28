@@ -15,6 +15,7 @@ class MainMenu : public ScalableWidget
 
     private slots:
         void displaySettingsMenu();
+        void closeSettingsMenu();
 
     private:
         void setupUi();
