@@ -54,13 +54,14 @@ endif()
 # Run Qt deploy Script
 install(SCRIPT ${QT_DEPLOY_SCRIPT})
 
-# Copy datasets
-install(DIRECTORY "${CMAKE_SOURCE_DIR}/levels"
-    DESTINATION ${CMAKE_INSTALL_PREFIX}
+# Copy necessary directories
+install(
+    DIRECTORY
+        "${CMAKE_SOURCE_DIR}/levels"
+        "${CMAKE_SOURCE_DIR}/textures"
+    DESTINATION
+        ${CMAKE_INSTALL_PREFIX}
 )
 
-install(DIRECTORY "${CMAKE_SOURCE_DIR}/textures"
-    DESTINATION ${CMAKE_INSTALL_PREFIX}
-)
-
+# Include CPack for release packaging
 include(CPack)

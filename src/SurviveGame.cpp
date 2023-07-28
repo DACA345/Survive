@@ -26,9 +26,9 @@ void SurviveGame::setupUiSettings()
     QSettings settings;
 
     QSize resSize = settings.value("gui/resolution").value<QSize>();
-    if (resSize.isNull())
+    if (!resSize.isValid() || resSize.isNull() || resSize.isEmpty())
     {
-        QSize resolution = QApplication::primaryScreen()->size();
+        QSize resolution = QSize(800, 600);
         setFixedSize(resolution);
         settings.setValue("gui/resolution", resolution);
     }
