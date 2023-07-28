@@ -1,5 +1,6 @@
 #pragma once
 #include <QPushButton>
+#include <QLabel>
 
 #include "Widgets/ScalableWidget.h"
 
@@ -11,10 +12,14 @@ class MainMenu : public ScalableWidget
         MainMenu(QWidget* parent);
         ~MainMenu();
 
+    private slots:
+
     private:
         void setupUi();
 
         // Ui attributes
+        QLabel* menuTitle;
+
         QPushButton* newGameButton;
         QPushButton* loadGameButton;
         QPushButton* settingsButton;

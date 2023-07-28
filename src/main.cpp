@@ -13,7 +13,6 @@ int main(int argc, char* argv[])
 
     SurviveGame game;
 
-    game.setMinimumSize(800, 600);
     game.show();
 
     return app.exec();

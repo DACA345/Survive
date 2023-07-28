@@ -9,6 +9,9 @@ ScalableWidget::ScalableWidget(QWidget* parent)
     resize(size());
 }
 
+// NOTE(Callum): Does not work perfectly, likely due to rounding errors
+// Widgets can get skewed and misplaced
+// Not a priority fix, can prevent draggable resizing
 void ScalableWidget::resizeEvent(QResizeEvent* event)
 {
     int oldX = event->oldSize().width();
