@@ -8,6 +8,7 @@ qt_add_executable(Survive
     "UI/MainMenu.cpp"
     "SurviveGame.cpp"
     "main.cpp"
+    "Survive.rc"
 )
 
 target_link_libraries(Survive

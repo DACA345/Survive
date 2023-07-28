@@ -10,7 +10,6 @@ int main(int argc, char* argv[])
     QCoreApplication::setApplicationVersion(VERSION);
 
     QApplication app(argc, argv);
-    app.setWindowIcon(QIcon(TEXTURE_FILE("icon/icon.png")));
 
     SurviveGame game;
 
