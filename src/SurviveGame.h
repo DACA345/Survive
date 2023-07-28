@@ -13,6 +13,8 @@ class SurviveGame : public QMainWindow
 
     private:
         void resizeEvent(QResizeEvent* event) override;
+
+        void setupUiSettings();
         void setupUi();
         
         MainMenu* mainMenu = nullptr;

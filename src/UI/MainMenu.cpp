@@ -7,9 +7,6 @@ MainMenu::MainMenu(QWidget* parent)
 {
     resize(parent->size());
     setupUi();
-
-    settingsMenu = new SettingsMenu(this);
-    delete settingsMenu;
 }
 
 void MainMenu::setupUi()
@@ -36,7 +33,13 @@ void MainMenu::setupUi()
     addWidget(exitButton, 0, 0.9, 0.2, 0.1);
 
     // Setup button signals
-    connect(exitButton, &QPushButton::clicked, this, &QApplication::quit, Qt::QueuedConnection);
+    connect(settingsButton, &QPushButton::clicked, this, &MainMenu::displaySettingsMenu);
+    connect(exitButton, &QPushButton::clicked, this, &QApplication::quit);
+}
+
+void MainMenu::displaySettingsMenu()
+{
+    settingsMenu = new SettingsMenu();
 }
 
 MainMenu::~MainMenu()

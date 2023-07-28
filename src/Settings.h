@@ -1,0 +1,6 @@
+#pragma once
+
+// UI Settings
+#define UI_SETTINGS_FRAME_NORMAL 0
+#define UI_SETTINGS_FRAME_FRAMELESS 1
+#define UI_SETTINGS_FRAME_FULLSCREEN 2
