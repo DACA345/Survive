@@ -3,6 +3,7 @@
 #include <QLabel>
 
 #include "Widgets/ScalableWidget.h"
+#include "Widgets/MainMenu/SettingsMenu.h"
 
 class MainMenu : public ScalableWidget
 {
@@ -24,4 +25,7 @@ class MainMenu : public ScalableWidget
         QPushButton* loadGameButton;
         QPushButton* settingsButton;
         QPushButton* exitButton;
+
+        // Main Menu widgets
+        SettingsMenu* settingsMenu;
 };

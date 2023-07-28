@@ -7,6 +7,9 @@ MainMenu::MainMenu(QWidget* parent)
 {
     resize(parent->size());
     setupUi();
+
+    settingsMenu = new SettingsMenu(this);
+    delete settingsMenu;
 }
 
 void MainMenu::setupUi()
