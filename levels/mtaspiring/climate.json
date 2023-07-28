@@ -1,410 +1,374 @@
 {
     "JAN": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "21.6",
-            "Average": "18.12",
-            "Min": "14.4"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "19.55",
-            "Average": "16.36",
-            "Min": "13.37"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "17.49",
-            "Average": "12.81",
-            "Min": "8.23"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "44.14",
-            "Average": "2.43",
-            "Min": "0.0",
-            "Sum": "75.3"
-        },
-        {
-            "Measurement": "Snowdepth (Snow)",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "21.6",
+                "average": "18.12",
+                "min": "14.4"
+            },
+            "avg_temperature": {
+                "max": "19.55",
+                "average": "16.36",
+                "min": "13.37"
+            },
+            "min_temperature": {
+                "max": "17.49",
+                "average": "12.81",
+                "min": "8.23"
+            },
+            "precipitation": {
+                "max": "44.14",
+                "average": "2.43",
+                "min": "0.0",
+                "sum": "75.3"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "FEB": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "21.6",
-            "Average": "18.41",
-            "Min": "15.43"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "19.55",
-            "Average": "16.64",
-            "Min": "13.37"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "18.52",
-            "Average": "12.45",
-            "Min": "7.2"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "27.16",
-            "Average": "4.35",
-            "Min": "0.0",
-            "Sum": "126.22"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "21.6",
+                "average": "18.41",
+                "min": "15.43"
+            },
+            "avg_temperature": {
+                "max": "19.55",
+                "average": "16.64",
+                "min": "13.37"
+            },
+            "min_temperature": {
+                "max": "18.52",
+                "average": "12.45",
+                "min": "7.2"
+            },
+            "precipitation": {
+                "max": "27.16",
+                "average": "4.35",
+                "min": "0.0",
+                "sum": "126.22"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "MAR": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "19.55",
-            "Average": "17.29",
-            "Min": "13.37"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "18.52",
-            "Average": "15.07",
-            "Min": "11.32"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "15.43",
-            "Average": "10.85",
-            "Min": "3.09"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "30.45",
-            "Average": "2.61",
-            "Min": "0.0",
-            "Sum": "80.96"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "19.55",
+                "average": "17.29",
+                "min": "13.37"
+            },
+            "avg_temperature": {
+                "max": "18.52",
+                "average": "15.07",
+                "min": "11.32"
+            },
+            "min_temperature": {
+                "max": "15.43",
+                "average": "10.85",
+                "min": "3.09"
+            },
+            "precipitation": {
+                "max": "30.45",
+                "average": "2.61",
+                "min": "0.0",
+                "sum": "80.96"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "APR": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "18.52",
-            "Average": "14.88",
-            "Min": "11.32"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "16.46",
-            "Average": "12.72",
-            "Min": "9.26"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "14.4",
-            "Average": "9.23",
-            "Min": "4.12"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "23.15",
-            "Average": "4.0",
-            "Min": "0.0",
-            "Sum": "120.15"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "18.52",
+                "average": "14.88",
+                "min": "11.32"
+            },
+            "avg_temperature": {
+                "max": "16.46",
+                "average": "12.72",
+                "min": "9.26"
+            },
+            "min_temperature": {
+                "max": "14.4",
+                "average": "9.23",
+                "min": "4.12"
+            },
+            "precipitation": {
+                "max": "23.15",
+                "average": "4.0",
+                "min": "0.0",
+                "sum": "120.15"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "MAY": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "15.43",
-            "Average": "13.77",
-            "Min": "10.29"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "14.4",
-            "Average": "11.58",
-            "Min": "9.26"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "13.37",
-            "Average": "8.5",
-            "Min": "2.06"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "18.11",
-            "Average": "2.68",
-            "Min": "0.0",
-            "Sum": "83.03"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "15.43",
+                "average": "13.77",
+                "min": "10.29"
+            },
+            "avg_temperature": {
+                "max": "14.4",
+                "average": "11.58",
+                "min": "9.26"
+            },
+            "min_temperature": {
+                "max": "13.37",
+                "average": "8.5",
+                "min": "2.06"
+            },
+            "precipitation": {
+                "max": "18.11",
+                "average": "2.68",
+                "min": "0.0",
+                "sum": "83.03"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "JUN": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "15.43",
-            "Average": "12.76",
-            "Min": "8.23"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "13.37",
-            "Average": "10.39",
-            "Min": "7.2"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "11.32",
-            "Average": "7.34",
-            "Min": "4.12"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "10.08",
-            "Average": "1.67",
-            "Min": "0.0",
-            "Sum": "50.1"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "15.43",
+                "average": "12.76",
+                "min": "8.23"
+            },
+            "avg_temperature": {
+                "max": "13.37",
+                "average": "10.39",
+                "min": "7.2"
+            },
+            "min_temperature": {
+                "max": "11.32",
+                "average": "7.34",
+                "min": "4.12"
+            },
+            "precipitation": {
+                "max": "10.08",
+                "average": "1.67",
+                "min": "0.0",
+                "sum": "50.1"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "JUL": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "13.37",
-            "Average": "11.25",
-            "Min": "8.23"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "11.32",
-            "Average": "8.93",
-            "Min": "6.17"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "10.29",
-            "Average": "5.81",
-            "Min": "1.03"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "37.14",
-            "Average": "3.24",
-            "Min": "0.0",
-            "Sum": "100.29"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "13.37",
+                "average": "11.25",
+                "min": "8.23"
+            },
+            "avg_temperature": {
+                "max": "11.32",
+                "average": "8.93",
+                "min": "6.17"
+            },
+            "min_temperature": {
+                "max": "10.29",
+                "average": "5.81",
+                "min": "1.03"
+            },
+            "precipitation": {
+                "max": "37.14",
+                "average": "3.24",
+                "min": "0.0",
+                "sum": "100.29"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "AUG": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "15.43",
-            "Average": "12.48",
-            "Min": "9.26"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "12.35",
-            "Average": "10.56",
-            "Min": "7.2"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "11.32",
-            "Average": "7.53",
-            "Min": "2.06"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "22.53",
-            "Average": "4.1",
-            "Min": "0.0",
-            "Sum": "127.03"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "15.43",
+                "average": "12.48",
+                "min": "9.26"
+            },
+            "avg_temperature": {
+                "max": "12.35",
+                "average": "10.56",
+                "min": "7.2"
+            },
+            "min_temperature": {
+                "max": "11.32",
+                "average": "7.53",
+                "min": "2.06"
+            },
+            "precipitation": {
+                "max": "22.53",
+                "average": "4.1",
+                "min": "0.0",
+                "sum": "127.03"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "SEP": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "14.4",
-            "Average": "12.17",
-            "Min": "7.2"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "14.4",
-            "Average": "10.63",
-            "Min": "6.17"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "11.32",
-            "Average": "6.89",
-            "Min": "2.06"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "23.97",
-            "Average": "6.14",
-            "Min": "0.0",
-            "Sum": "184.15"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "14.4",
+                "average": "12.17",
+                "min": "7.2"
+            },
+            "avg_temperature": {
+                "max": "14.4",
+                "average": "10.63",
+                "min": "6.17"
+            },
+            "min_temperature": {
+                "max": "11.32",
+                "average": "6.89",
+                "min": "2.06"
+            },
+            "precipitation": {
+                "max": "23.97",
+                "average": "6.14",
+                "min": "0.0",
+                "sum": "184.15"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "OCT": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "16.46",
-            "Average": "13.97",
-            "Min": "10.29"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "15.43",
-            "Average": "12.31",
-            "Min": "8.23"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "15.43",
-            "Average": "8.66",
-            "Min": "3.09"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "39.3",
-            "Average": "5.39",
-            "Min": "0.0",
-            "Sum": "166.99"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "16.46",
+                "average": "13.97",
+                "min": "10.29"
+            },
+            "avg_temperature": {
+                "max": "15.43",
+                "average": "12.31",
+                "min": "8.23"
+            },
+            "min_temperature": {
+                "max": "15.43",
+                "average": "8.66",
+                "min": "3.09"
+            },
+            "precipitation": {
+                "max": "39.3",
+                "average": "5.39",
+                "min": "0.0",
+                "sum": "166.99"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "NOV": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "22.63",
-            "Average": "16.19",
-            "Min": "12.35"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "18.52",
-            "Average": "14.4",
-            "Min": "11.32"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "13.37",
-            "Average": "9.91",
-            "Min": "4.12"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "18.52",
-            "Average": "3.82",
-            "Min": "0.0",
-            "Sum": "114.59"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "22.63",
+                "average": "16.19",
+                "min": "12.35"
+            },
+            "avg_temperature": {
+                "max": "18.52",
+                "average": "14.4",
+                "min": "11.32"
+            },
+            "min_temperature": {
+                "max": "13.37",
+                "average": "9.91",
+                "min": "4.12"
+            },
+            "precipitation": {
+                "max": "18.52",
+                "average": "3.82",
+                "min": "0.0",
+                "sum": "114.59"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ],
     "DEC": [
         {
-            "Measurement": "Max Temperature",
-            "Max": "19.55",
-            "Average": "16.69",
-            "Min": "13.37"
-        },
-        {
-            "Measurement": "Avg Temperature",
-            "Max": "18.52",
-            "Average": "15.23",
-            "Min": "12.35"
-        },
-        {
-            "Measurement": "Min Temperature",
-            "Max": "15.43",
-            "Average": "11.32",
-            "Min": "7.2"
-        },
-        {
-            "Measurement": "Precipitation",
-            "Max": "20.99",
-            "Average": "4.02",
-            "Min": "0.0",
-            "Sum": "124.58"
-        },
-        {
-            "Measurement": "Snowdepth",
-            "Max": "0.0",
-            "Average": "0.0",
-            "Min": "0.0",
-            "Sum": "0.0"
+            "max_temperature": {
+                "max": "19.55",
+                "average": "16.69",
+                "min": "13.37"
+            },
+            "avg_temperature": {
+                "max": "18.52",
+                "average": "15.23",
+                "min": "12.35"
+            },
+            "min_temperature": {
+                "max": "15.43",
+                "average": "11.32",
+                "min": "7.2"
+            },
+            "precipitation": {
+                "max": "20.99",
+                "average": "4.02",
+                "min": "0.0",
+                "sum": "124.58"
+            },
+            "snowdepth": {
+                "max": "0.0",
+                "average": "0.0",
+                "min": "0.0",
+                "sum": "0.0"
+            }
         }
     ]
 }

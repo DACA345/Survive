@@ -1,224 +1,188 @@
 {
-  "Animals": [
-    {
-      "SpeciesID": "SPA0001",
-      "Category": "Bird",
-      "Name": "South Island Robin"
-    },
-    {
-      "SpeciesID": "SPA0002",
-      "Category": "Bird",
-      "Name": "Rifleman"
-    },
-    {
-      "SpeciesID": "SPA0003",
-      "Category": "Bird",
-      "Name": "New Zealand Tomtit"
-    },
-    {
-      "SpeciesID": "SPA0004",
-      "Category": "Bird",
-      "Name": "Kea"
-    },
-    {
-      "SpeciesID": "SPA0005",
-      "Category": "Bird",
-      "Name": "South Island Wren"
-    },
-    {
-      "SpeciesID": "SPA0006",
-      "Category": "Bird",
-      "Name": "New Zealand Fantail"
-    },
-    {
-      "SpeciesID": "SPA0007",
-      "Category": "Bird",
-      "Name": "Yellowhead"
-    },
-    {
-      "SpeciesID": "SPA0008",
-      "Category": "Bird",
-      "Name": "Common Chaffinch"
-    },
-    {
-      "SpeciesID": "SPA0009",
-      "Category": "Bird",
-      "Name": "New Zealand Bellbird"
-    },
-    {
-      "SpeciesID": "SPA0010",
-      "Category": "Bird",
-      "Name": "Yellow-crowned Parakeet"
-    },
-    {
-      "SpeciesID": "SPA0011",
-      "Category": "Bird",
-      "Name": "Song Thrush"
-    },
-    {
-      "SpeciesID": "SPA0012",
-      "Category": "Bird",
-      "Name": "Tui"
-    },
-    {
-      "SpeciesID": "SPA0013",
-      "Category": "Bird",
-      "Name": "Blue Duck"
-    },
-    {
-      "SpeciesID": "SPA0014",
-      "Category": "Bird",
-      "Name": "New Zealand Pigeon"
-    },
-    {
-      "SpeciesID": "SPA0015",
-      "Category": "Bird",
-      "Name": "Paradise Shelduck"
-    },
-    {
-      "SpeciesID": "SPA0016",
-      "Category": "Bird",
-      "Name": "Gray gerygone"
-    },
-    {
-      "SpeciesID": "SPA0017",
-      "Category": "Bird",
-      "Name": "Morepork"
-    },
-    {
-      "SpeciesID": "SPA0018",
-      "Category": "Bird",
-      "Name": "Canada Goose"
-    },
-    {
-      "SpeciesID": "SPA0019",
-      "Category": "Bird",
-      "Name": "New Zealand Falcon"
-    },
-    {
-      "SpeciesID": "SPA0020",
-      "Category": "Bird",
-      "Name": "Pipipi"
-    },
-    {
-      "SpeciesID": "SPA0021",
-      "Category": "Bird",
-      "Name": "Eurasian Blackbird"
-    },
-    {
-      "SpeciesID": "SPA0022",
-      "Category": "Bird",
-      "Name": "Silvereye"
-    },
-    {
-      "SpeciesID": "SPA0023",
-      "Category": "Bird",
-      "Name": "New Zealand Kaka"
-    },
-    {
-      "SpeciesID": "SPA0024",
-      "Category": "Bird",
-      "Name": "Lesser Redpoll"
-    },
-    {
-      "SpeciesID": "SPA0025",
-      "Category": "Bird",
-      "Name": "European Greenfinch"
-    },
-    {
-      "SpeciesID": "SPA0026",
-      "Category": "Bird",
-      "Name": "Yellowhammer"
-    },
-    {
-      "SpeciesID": "SPA0027",
-      "Category": "Bird",
-      "Name": "Dunnock"
-    },
-    {
-      "SpeciesID": "SPA0028",
-      "Category": "Bird",
-      "Name": "Little Pied Cormorant"
-    },
-    {
-      "SpeciesID": "SPA0029",
-      "Category": "Bird",
-      "Name": "New Zealand Pipit"
-    },
-    {
-      "SpeciesID": "SPA0030",
-      "Category": "Bird",
-      "Name": "Great Cormorant"
-    },
-    {
-      "SpeciesID": "SPA0031",
-      "Category": "Bird",
-      "Name": "Great Crested Grebe"
-    },
-    {
-      "SpeciesID": "SPA0032",
-      "Category": "Bird",
-      "Name": "New Zealand Scaup"
-    },
-    {
-      "SpeciesID": "SPA0033",
-      "Category": "Bird",
-      "Name": "New Zealand Fernbird"
-    },
-    {
-      "SpeciesID": "SPA0034",
-      "Category": "Mammal",
-      "Name": "Chamois"
-    },
-    {
-      "SpeciesID": "SPA0035",
-      "Category": "Mammal",
-      "Name": "Red Deer"
-    },
-    {
-      "SpeciesID": "SPA0036",
-      "Category": "Mammal",
-      "Name": "Brown Hare"
-    },
-    {
-      "SpeciesID": "SPA0037",
-      "Category": "Mammal",
-      "Name": "House Mouse"
-    },
-    {
-      "SpeciesID": "SPA0038",
-      "Category": "Mammal",
-      "Name": "Common Brushtail Possum"
-    },
-    {
-      "SpeciesID": "SPA0039",
-      "Category": "Mammal",
-      "Name": "European Rabbit"
-    },
-    {
-      "SpeciesID": "SPA0040",
-      "Category": "Mammal",
-      "Name": "White-Tailed Deer"
-    },
-    {
-      "SpeciesID": "SPA0041",
-      "Category": "Reptile",
-      "Name": "Eyres Skink"
-    },
-    {
-      "SpeciesID": "SPA0042",
-      "Category": "Amphibian",
-      "Name": "Southern Brown Tree Frog"
-    },
-    {
-      "SpeciesID": "SPA0043",
-      "Category": "Fish",
-      "Name": "Climbing Galaxias"
-    },
-    {
-      "SpeciesID": "SPA0044",
-      "Category": "Fish",
-      "Name": "Rainbow Trout"
-    }
-  ]
+    "Birds": [
+        {
+            "species_id": "SPA0001",
+            "name": "South Island Robin"
+        },
+        {
+            "species_id": "SPA0002",
+            "name": "Rifleman"
+        },
+        {
+            "species_id": "SPA0003",
+            "name": "New Zealand Tomtit"
+        },
+        {
+            "species_id": "SPA0004",
+            "name": "Kea"
+        },
+        {
+            "species_id": "SPA0005",
+            "name": "South Island Wren"
+        },
+        {
+            "species_id": "SPA0006",
+            "name": "New Zealand Fantail"
+        },
+        {
+            "species_id": "SPA0007",
+            "name": "Yellowhead"
+        },
+        {
+            "species_id": "SPA0008",
+            "name": "Common Chaffinch"
+        },
+        {
+            "species_id": "SPA0009",
+            "name": "New Zealand Bellbird"
+        },
+        {
+            "species_id": "SPA0010",
+            "name": "Yellow-crowned Parakeet"
+        },
+        {
+            "species_id": "SPA0011",
+            "name": "Song Thrush"
+        },
+        {
+            "species_id": "SPA0012",
+            "name": "Tui"
+        },
+        {
+            "species_id": "SPA0013",
+            "name": "Blue Duck"
+        },
+        {
+            "species_id": "SPA0014",
+            "name": "New Zealand Pigeon"
+        },
+        {
+            "species_id": "SPA0015",
+            "name": "Paradise Shelduck"
+        },
+        {
+            "species_id": "SPA0016",
+            "name": "Gray Gerygone"
+        },
+        {
+            "species_id": "SPA0017",
+            "name": "Morepork"
+        },
+        {
+            "species_id": "SPA0018",
+            "name": "Canada Goose"
+        },
+        {
+            "species_id": "SPA0019",
+            "name": "New Zealand Falcon"
+        },
+        {
+            "species_id": "SPA0020",
+            "name": "Pipipi"
+        },
+        {
+            "species_id": "SPA0021",
+            "name": "Eurasian Blackbird"
+        },
+        {
+            "species_id": "SPA0022",
+            "name": "Silvereye"
+        },
+        {
+            "species_id": "SPA0023",
+            "name": "New Zealand Kaka"
+        },
+        {
+            "species_id": "SPA0024",
+            "name": "Lesser Redpoll"
+        },
+        {
+            "species_id": "SPA0025",
+            "name": "European Greenfinch"
+        },
+        {
+            "species_id": "SPA0026",
+            "name": "Yellowhammer"
+        },
+        {
+            "species_id": "SPA0027",
+            "name": "Dunnock"
+        },
+        {
+            "species_id": "SPA0028",
+            "name": "Little Pied Cormorant"
+        },
+        {
+            "species_id": "SPA0029",
+            "name": "New Zealand Pipit"
+        },
+        {
+            "species_id": "SPA0030",
+            "name": "Great Cormorant"
+        },
+        {
+            "species_id": "SPA0031",
+            "name": "Great Crested Grebe"
+        },
+        {
+            "species_id": "SPA0032",
+            "name": "New Zealand Scaup"
+        },
+        {
+            "species_id": "SPA0033",
+            "name": "New Zealand Fernbird"
+        }
+    ],
+    "Mammals": [
+        {
+            "species_id": "SPA0034",
+            "name": "Chamois"
+        },
+        {
+            "species_id": "SPA0035",
+            "name": "Red Deer"
+        },
+        {
+            "species_id": "SPA0036",
+            "name": "Brown Hare"
+        },
+        {
+            "species_id": "SPA0037",
+            "name": "House Mouse"
+        },
+        {
+            "species_id": "SPA0038",
+            "name": "Common Brushtail Possum"
+        },
+        {
+            "species_id": "SPA0039",
+            "name": "European Rabbit"
+        },
+        {
+            "species_id": "SPA0040",
+            "name": "White-Tailed Deer"
+        }
+    ],
+    "Fish": [
+        {
+            "species_id": "SPA0041",
+            "name": "Climbing Galaxias"
+        },
+        {
+            "species_id": "SPA0044",
+            "name": "Rainbow Trout"
+        }
+    ],
+    "Reptiles": [
+        {
+            "species_id": "SPA0042",
+            "name": "Eyres Skink"
+        }
+    ],
+    "Amphibians": [
+        {
+            "species_id": "SPA0043",
+            "name": "Southern Brown Tree Frog"
+        }
+    ]
 }
