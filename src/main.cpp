@@ -1,6 +1,7 @@
 #include <QApplication>
 
 #include "SurviveGame.h"
+#include "Data.h"
 
 int main(int argc, char* argv[])
 {
@@ -9,6 +10,9 @@ int main(int argc, char* argv[])
     QCoreApplication::setApplicationVersion(VERSION);
 
     QApplication app(argc, argv);
+    app.setWindowIcon(QIcon(TEXTURE_FILE("icon/icon.png")));
+
+    qDebug() << TEXTURE_FOLDER;
 
     SurviveGame game;
 

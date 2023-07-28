@@ -27,6 +27,7 @@ set_target_properties(Survive
 add_compile_definitions(Survive
     PRIVATE
         VERSION="${CMAKE_PROJECT_VERSION}"
+        DIRECTORY_PATH="${CMAKE_INSTALL_PREFIX}"
 )
 
 # Qt bundling with runtimes
@@ -55,6 +56,10 @@ install(SCRIPT ${QT_DEPLOY_SCRIPT})
 
 # Copy datasets
 install(DIRECTORY "${CMAKE_SOURCE_DIR}/levels"
+    DESTINATION ${CMAKE_INSTALL_PREFIX}
+)
+
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/textures"
     DESTINATION ${CMAKE_INSTALL_PREFIX}
 )
 

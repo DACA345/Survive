@@ -59,5 +59,5 @@ MainMenu::~MainMenu()
     delete exitButton;
 
     // TODO(Callum): Delete this once unnecessary
-    delete settingsMenu;
+    //delete settingsMenu;
 }
