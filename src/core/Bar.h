@@ -7,6 +7,9 @@ public:
 	// Constructor with an integer parameter
 	Bar(int initialVal);
 
+	// Default Constructor
+	Bar();
+
 	// Destructor 
 	~Bar();
 
@@ -29,6 +32,13 @@ Bar::Bar(int intialValue)
 	dataval = intialValue; // Initialize dataval with the provided intial value
 }
 
+// Constructor with no parameter (defaults to 10)
+Bar::Bar() : dataval(10)
+{
+	// Since there is no parameter, the constructor will initialize dataval to 10.
+}
+
+
 // Define Destructor
 Bar::~Bar()
 {
@@ -39,6 +49,9 @@ Bar::~Bar()
 int Bar::plus(int val)
 {
 	dataval += val; // original value plus input
+	// Apply limits after addition to ensure the health bar stays within bounds.
+	if (dataval > 10)
+		dataval = 10;
 	return dataval; // return updated value
 }
 
@@ -46,6 +59,9 @@ int Bar::plus(int val)
 int Bar::minus(int val)
 {
 	dataval -= val; // original value minus input
+	// Apply limits after subtraction to ensure the health bar stays within bounds.
+	if (dataval < 0)
+		dataval = 0;
 	return dataval; // return updated value
 }
 
