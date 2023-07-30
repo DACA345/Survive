@@ -2,8 +2,8 @@
 #include <QPushButton>
 #include <QLabel>
 
-#include "Widgets/ScalableWidget.h"
-#include "Widgets/MainMenu/SettingsMenu.h"
+#include "widgets/scalablewidget.h"
+#include "widgets/mainmenu/settingsmenu.h"
 
 class MainMenu : public ScalableWidget
 {

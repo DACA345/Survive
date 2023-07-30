@@ -1,8 +1,8 @@
 #include <QApplication>
 #include <QScreen>
 
-#include "SurviveGame.h"
-#include "Config/Settings.h"
+#include "survivegame.h"
+#include "config/settings.h"
 
 SurviveGame::SurviveGame(QWidget* parent)
     : QMainWindow(parent)

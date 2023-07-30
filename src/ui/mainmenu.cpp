@@ -1,6 +1,6 @@
 #include <QApplication>
 
-#include "MainMenu.h"
+#include "mainmenu.h"
 
 MainMenu::MainMenu(QWidget* parent)
     : ScalableWidget(parent)

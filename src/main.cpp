@@ -1,7 +1,7 @@
 #include <QApplication>
 
-#include "SurviveGame.h"
-#include "Config/Files.h"
+#include "survivegame.h"
+#include "config/files.h"
 
 int main(int argc, char* argv[])
 {

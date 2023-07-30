@@ -1,4 +1,4 @@
-#include "SettingsMenu.h"
+#include "settingsmenu.h"
 
 SettingsMenu::SettingsMenu(QWidget* parent)
     : ScalableWidget(parent)

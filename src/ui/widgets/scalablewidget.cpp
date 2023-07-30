@@ -1,6 +1,6 @@
 #include <QResizeEvent>
 
-#include "ScalableWidget.h"
+#include "scalablewidget.h"
 
 ScalableWidget::ScalableWidget(QWidget* parent)
     : QWidget(parent)

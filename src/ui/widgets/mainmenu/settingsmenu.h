@@ -1,6 +1,6 @@
 #include <QSettings>
 
-#include "../ScalableWidget.h"
+#include "../scalablewidget.h"
 
 class SettingsMenu : public ScalableWidget
 {

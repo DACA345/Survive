@@ -1,14 +1,14 @@
-add_subdirectory(Core)
+add_subdirectory(core)
 
 qt_add_executable(Survive
-    "UI/Widgets/MainMenu/LoadGameMenu.cpp"
-    "UI/Widgets/MainMenu/NewGameMenu.cpp"
-    "UI/Widgets/MainMenu/SettingsMenu.cpp"
-    "UI/Widgets/ScalableWidget.cpp"
-    "UI/MainMenu.cpp"
-    "SurviveGame.cpp"
+    "ui/widgets/mainmenu/loadgamemenu.cpp"
+    "ui/widgets/mainmenu/newgamemenu.cpp"
+    "ui/widgets/mainmenu/settingsmenu.cpp"
+    "ui/widgets/scalablewidget.cpp"
+    "ui/mainmenu.cpp"
+    "survivegame.cpp"
     "main.cpp"
-    "Survive.rc"
+    "survive.rc"
 )
 
 target_link_libraries(Survive

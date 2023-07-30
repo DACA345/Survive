@@ -1,7 +1,7 @@
 #pragma once
 #include <QMainWindow>
 
-#include "UI/MainMenu.h"
+#include "ui/mainmenu.h"
 
 class SurviveGame : public QMainWindow
 {
