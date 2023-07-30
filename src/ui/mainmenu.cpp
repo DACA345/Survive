@@ -5,59 +5,48 @@
 MainMenu::MainMenu(QWidget* parent)
     : ScalableWidget(parent)
 {
+    // Fill the whole parent
     resize(parent->size());
-    setupUi();
+
+    menu = new Menu(this);
+
+    // Setup connections for switching between menus
+    connect(menu, &Menu::settingsMenuOpened, this, &MainMenu::displaySettingsMenu);
+
+    // Display the main menu
+    addWidget(menu, 0, 0, 1, 1);
 }
 
-void MainMenu::setupUi()
+void MainMenu::onUiOptionChanged()
 {
-    // Create game title
-    QFont titleFont = font();
-    titleFont.setPointSize(32);
-
-    menuTitle = new QLabel("DACA: Survive", this);
-    menuTitle->setAlignment(Qt::AlignTop | Qt::AlignLeft);
-    menuTitle->setFont(titleFont);
-
-    // Create buttons for main menu
-    newGameButton = new QPushButton("New Game", this);
-    loadGameButton = new QPushButton("Load Game", this);
-    settingsButton = new QPushButton("Settings", this);
-    exitButton = new QPushButton("Exit", this);
-
-    // Specify the widgets should scale with the window
-    addWidget(menuTitle, 0, 0, 1, 0.2);
-    addWidget(newGameButton, 0, 0.6, 0.2, 0.1);
-    addWidget(loadGameButton, 0, 0.7, 0.2, 0.1);
-    addWidget(settingsButton, 0, 0.8, 0.2, 0.1);
-    addWidget(exitButton, 0, 0.9, 0.2, 0.1);
-
-    // Setup button signals
-    connect(settingsButton, &QPushButton::clicked, this, &MainMenu::displaySettingsMenu);
-    connect(exitButton, &QPushButton::clicked, this, &QApplication::quit);
+    emit uiOptionChanged();
 }
 
 void MainMenu::displaySettingsMenu()
 {
     settingsMenu = new SettingsMenu(this);
 
+    // Setup connections
+    connect(settingsMenu, &SettingsMenu::resolutionOptionChanged, this, &MainMenu::uiOptionChanged);
+    connect(settingsMenu, &SettingsMenu::frameOptionChanged, this, &MainMenu::uiOptionChanged);
+    connect(settingsMenu, &SettingsMenu::settingsMenuClosed, this, &MainMenu::closeSettingsMenu);
+
+    // Display the settings menu
     addWidget(settingsMenu, 0, 0, 1, 1);
+
+    settingsMenu->show();
+    menu->hide();
 }
 
 void MainMenu::closeSettingsMenu()
 {
+    menu->show();
+    settingsMenu->hide();
+
     delete settingsMenu;
 }
 
 MainMenu::~MainMenu()
-{;
-    delete menuTitle;
-
-    delete newGameButton;
-    delete loadGameButton;
-    delete settingsButton;
-    delete exitButton;
-
-    // TODO(Callum): Delete this once unnecessary
-    //delete settingsMenu;
+{
+    delete menu;
 }

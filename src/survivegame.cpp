@@ -1,6 +1,3 @@
-#include <QApplication>
-#include <QScreen>
-
 #include "survivegame.h"
 #include "config/settings.h"
 
@@ -23,6 +20,9 @@ void SurviveGame::resizeEvent(QResizeEvent* event)
 
 void SurviveGame::setupUiSettings()
 {
+    // Hide and reshow to cover changes
+    hide();
+
     QSettings settings;
 
     QSize resSize = settings.value("gui/resolution").value<QSize>();
@@ -38,26 +38,35 @@ void SurviveGame::setupUiSettings()
     }
 
     int frame = settings.value("gui/frame").value<int>();
-    if (frame == UI_SETTINGS_FRAME_NORMAL)
-    {
-        
-    }
-    else if (frame == UI_SETTINGS_FRAME_FRAMELESS)
+    if (frame == UI_SETTINGS_FRAME_FRAMELESS)
     {
         // Prevent taskbar blocking the app
         setWindowFlag(Qt::WindowStaysOnTopHint);
         setWindowFlag(Qt::FramelessWindowHint);
     }
-    else if (frame == UI_SETTINGS_FRAME_FULLSCREEN)
+    else
     {
-        showFullScreen();
+        setWindowFlag(Qt::WindowStaysOnTopHint, false);
+        setWindowFlag(Qt::FramelessWindowHint, false);
+        if (frame == UI_SETTINGS_FRAME_FULLSCREEN)
+        {
+            showFullScreen();
+        }
+        else
+        {
+            showNormal();
+        }
     }
+
+    show();
 }
 
 void SurviveGame::setupUi()
 {
     mainMenu = new MainMenu(this);
     setCentralWidget(mainMenu);
+
+    connect(mainMenu, &MainMenu::uiOptionChanged, this, &SurviveGame::setupUiSettings);
 }
 
 SurviveGame::~SurviveGame()

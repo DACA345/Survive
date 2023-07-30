@@ -14,5 +14,7 @@ class ScalableWidget : public QWidget
         void addWidget(QWidget* widget, double percentX = -1, double percentY = -1, double percentSizeX = -1, double percentSizeY = -1);
 
     private:
+        QSize* oldSize = nullptr;
+
         QList<QWidget*> widgets;
 };

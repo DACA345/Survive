@@ -14,16 +14,27 @@ ScalableWidget::ScalableWidget(QWidget* parent)
 // Not a priority fix, can prevent draggable resizing
 void ScalableWidget::resizeEvent(QResizeEvent* event)
 {
-    int oldX = event->oldSize().width();
-    int oldY = event->oldSize().height();
+    QSize useSize = event->oldSize();
+
+    // Cannot scale as the old size is invalid
+    if (!event->oldSize().isValid())
+    {
+        if (oldSize != nullptr)
+        {
+            useSize = *oldSize;
+        }
+        else
+        {
+            oldSize = new QSize(event->size());
+            return;
+        }
+    }
+
+    int oldX = useSize.width();
+    int oldY = useSize.height();
 
     int newX = event->size().width();
     int newY = event->size().height();
-
-    if (oldX < 1 || oldY < 1)
-    {
-        return;
-    }
 
     for (QWidget* widget : widgets)
     {
@@ -44,6 +55,8 @@ void ScalableWidget::resizeEvent(QResizeEvent* event)
 
         widget->setGeometry(newWidgetX, newWidgetY, newWidgetWidth, newWidgetHeight);
     }
+
+    oldSize = new QSize(size());
 }
 
 void ScalableWidget::addWidget(QWidget* widget, double percentX, double percentY, double percentWidth, double percentHeight)
@@ -68,5 +81,7 @@ void ScalableWidget::addWidget(QWidget* widget, double percentX, double percentY
 
 ScalableWidget::~ScalableWidget()
 {
+    delete oldSize;
+
     // Pointers should be deleted by the parent widget
 }

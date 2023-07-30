@@ -2,32 +2,29 @@
 #include <QPushButton>
 #include <QLabel>
 
-#include "widgets/scalablewidget.h"
 #include "widgets/mainmenu/settingsmenu.h"
+#include "widgets/mainmenu/menu.h"
 
 class MainMenu : public ScalableWidget
 {
     Q_OBJECT;
 
     public:
-        MainMenu(QWidget* parent);
+        MainMenu(QWidget* parent = nullptr);
         ~MainMenu();
 
-    private slots:
+    signals:
+        void uiOptionChanged();
+
+    public slots:
+        void onUiOptionChanged();
+
         void displaySettingsMenu();
         void closeSettingsMenu();
 
     private:
-        void setupUi();
-
-        // Ui attributes
-        QLabel* menuTitle;
-
-        QPushButton* newGameButton;
-        QPushButton* loadGameButton;
-        QPushButton* settingsButton;
-        QPushButton* exitButton;
 
         // Main Menu widgets
         SettingsMenu* settingsMenu;
+        Menu* menu;
 };
