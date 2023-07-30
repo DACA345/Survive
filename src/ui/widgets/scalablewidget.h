@@ -12,6 +12,7 @@ class ScalableWidget : public QWidget
     protected:
         void resizeEvent(QResizeEvent* event) override;
         void addWidget(QWidget* widget, double percentX = -1, double percentY = -1, double percentSizeX = -1, double percentSizeY = -1);
+        void removeWidget(QWidget* widget);
 
     private:
         QSize* oldSize = nullptr;

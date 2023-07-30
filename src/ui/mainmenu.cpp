@@ -42,6 +42,7 @@ void MainMenu::closeSettingsMenu()
 {
     menu->show();
     settingsMenu->hide();
+    removeWidget(settingsMenu);
 
     delete settingsMenu;
 }

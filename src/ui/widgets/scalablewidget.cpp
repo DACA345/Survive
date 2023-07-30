@@ -79,6 +79,11 @@ void ScalableWidget::addWidget(QWidget* widget, double percentX, double percentY
     widget->setGeometry(widgetX, widgetY, widgetWidth, widgetHeight);
 }
 
+void ScalableWidget::removeWidget(QWidget* widget)
+{
+    widgets.removeOne(widget);
+}
+
 ScalableWidget::~ScalableWidget()
 {
     delete oldSize;
