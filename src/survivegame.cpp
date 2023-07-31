@@ -29,12 +29,12 @@ void SurviveGame::setupUiSettings()
     if (!resSize.isValid() || resSize.isNull() || resSize.isEmpty())
     {
         QSize resolution = QSize(800, 600);
-        setFixedSize(resolution);
+        resize(resolution);
         settings.setValue("gui/resolution", resolution);
     }
     else
     {
-        setFixedSize(resSize);
+        resize(resSize);
     }
 
     int frame = settings.value("gui/frame").value<int>();

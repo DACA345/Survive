@@ -11,11 +11,19 @@ class ScalableWidget : public QWidget
 
     protected:
         void resizeEvent(QResizeEvent* event) override;
-        void addWidget(QWidget* widget, double percentX = -1, double percentY = -1, double percentSizeX = -1, double percentSizeY = -1);
+        void addWidget(QWidget* widget, double percentX, double percentY, double percentSizeX, double percentSizeY);
         void removeWidget(QWidget* widget);
 
     private:
-        QSize* oldSize = nullptr;
+        struct ChildInfo
+        {
+            double percentX;
+            double percentY;
+            double percentWidth;
+            double percentHeight;
+        };
 
-        QList<QWidget*> widgets;
+        void setScaledGeometry(QWidget* widget);
+
+        QMap<QWidget*, ChildInfo> widgets;
 };
