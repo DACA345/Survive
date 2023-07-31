@@ -16,7 +16,7 @@ BEGIN
         BLOCK "000004b0"
         BEGIN
             VALUE "CompanyName", "DACA"
-            VALUE "FileDescription", "DACA: Survive game"
+            VALUE "FileDescription", "DACA: Survive"
             VALUE "FileVersion", "0.0.1.0"
             VALUE "InternalName", "survive"
             VALUE "OriginalFilename", "Survive.exe"
