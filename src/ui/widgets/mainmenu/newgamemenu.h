@@ -10,5 +10,5 @@ class NewGameMenu : public ScalableWidget
         ~NewGameMenu();
 
     private:
-
+        QList<QString> levels;
 };
