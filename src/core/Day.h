@@ -24,11 +24,12 @@ struct ClimateData {
 };
 
 class Day {
-public:
-    Day(const std::string& filename);
-    const std::vector<ClimateData>& getMonthData(const std::string& month) const;
+    public:
+        Day(const std::string& filename);
+        const std::vector<ClimateData>& getMonthData(const std::string& month) const;
 
-private:
-    std::map<std::string, std::vector<ClimateData>> climateData;
-    void loadClimateData(const std::string& filename);
+    private:
+        std::map<std::string, std::vector<ClimateData>> climateData;
+
+        void loadClimateData(const std::string& filename);
 };
