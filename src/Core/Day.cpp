@@ -5,6 +5,11 @@
 #include <QJsonArray>
 #include <QJsonValue>
 
+Day::Day(const std::string& filename)
+{
+    loadClimateData(filename);
+}
+
 void Day::loadClimateData(const std::string& filename) {
     QFile file(QString::fromStdString(filename));
     if (!file.open(QIODevice::ReadOnly)) {
