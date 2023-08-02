@@ -18,10 +18,6 @@ NewGameMenu::NewGameMenu(QWidget* parent)
         }
     }
 
-    levels.append("test.json");
-    levels.append("test.json");
-    levels.append("test.json");
-
     setupUi();
 }
 
