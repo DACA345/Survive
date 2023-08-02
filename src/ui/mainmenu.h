@@ -2,6 +2,7 @@
 #include <QPushButton>
 #include <QLabel>
 
+#include "widgets/mainmenu/newgamemenu.h"
 #include "widgets/mainmenu/settingsmenu.h"
 #include "widgets/mainmenu/menu.h"
 
@@ -19,12 +20,16 @@ class MainMenu : public ScalableWidget
     public slots:
         void onUiOptionChanged();
 
+        void displayNewGameMenu();
+        void closeNewGameMenu();
+
         void displaySettingsMenu();
         void closeSettingsMenu();
 
     private:
 
         // Main Menu widgets
+        NewGameMenu* newGameMenu;
         SettingsMenu* settingsMenu;
         Menu* menu;
 };

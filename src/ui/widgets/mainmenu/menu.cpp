@@ -26,6 +26,7 @@ void Menu::setupUi()
     exitButton = new QPushButton("Exit", this);
 
     // Setup button signals
+    connect(newGameButton, &QPushButton::clicked, this, &Menu::onNewGameMenuOpened);
     connect(settingsButton, &QPushButton::clicked, this, &Menu::onSettingsMenuOpened);
     connect(exitButton, &QPushButton::clicked, this, &QApplication::quit);
 
@@ -35,6 +36,11 @@ void Menu::setupUi()
     addWidget(loadGameButton, 0, 0.7, 0.2, 0.1);
     addWidget(settingsButton, 0, 0.8, 0.2, 0.1);
     addWidget(exitButton, 0, 0.9, 0.2, 0.1);
+}
+
+void Menu::onNewGameMenuOpened()
+{
+    emit newGameMenuOpened();
 }
 
 void Menu::onSettingsMenuOpened()

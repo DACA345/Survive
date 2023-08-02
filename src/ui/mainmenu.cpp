@@ -11,6 +11,7 @@ MainMenu::MainMenu(QWidget* parent)
     menu = new Menu(this);
 
     // Setup connections for switching between menus
+    connect(menu, &Menu::newGameMenuOpened, this, &MainMenu::displayNewGameMenu);
     connect(menu, &Menu::settingsMenuOpened, this, &MainMenu::displaySettingsMenu);
 
     // Display the main menu
@@ -20,6 +21,29 @@ MainMenu::MainMenu(QWidget* parent)
 void MainMenu::onUiOptionChanged()
 {
     emit uiOptionChanged();
+}
+
+void MainMenu::displayNewGameMenu()
+{
+    newGameMenu = new NewGameMenu(this);
+
+    // Setup connections
+    connect(newGameMenu, &NewGameMenu::newGameMenuClosed, this, &MainMenu::closeNewGameMenu);
+
+    // Display the new game menu
+    addWidget(newGameMenu, 0, 0, 1, 1);
+
+    newGameMenu->show();
+    menu->hide();
+}
+
+void MainMenu::closeNewGameMenu()
+{
+    menu->show();
+    newGameMenu->hide();
+    removeWidget(newGameMenu);
+
+    delete newGameMenu;
 }
 
 void MainMenu::displaySettingsMenu()

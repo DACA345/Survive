@@ -13,9 +13,11 @@ class Menu : public ScalableWidget
         ~Menu();
 
     signals:
+        void newGameMenuOpened();
         void settingsMenuOpened();
 
     private slots:
+        void onNewGameMenuOpened();
         void onSettingsMenuOpened();
 
     private:
