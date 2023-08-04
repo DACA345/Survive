@@ -25,7 +25,6 @@ class NewGameMenu : public ScalableWidget
         const int columns = 2;
 
         QList<QString> levels;
-
         QList<QPushButton*> levelButtons;
         QWidget* levelsWidget;
         QGridLayout* levelsLayout;

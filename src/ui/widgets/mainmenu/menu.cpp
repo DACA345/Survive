@@ -27,6 +27,7 @@ void Menu::setupUi()
 
     // Setup button signals
     connect(newGameButton, &QPushButton::clicked, this, &Menu::onNewGameMenuOpened);
+    connect(loadGameButton, &QPushButton::clicked, this, &Menu::onLoadGameMenuOpened);
     connect(settingsButton, &QPushButton::clicked, this, &Menu::onSettingsMenuOpened);
     connect(exitButton, &QPushButton::clicked, this, &QApplication::quit);
 
@@ -41,6 +42,11 @@ void Menu::setupUi()
 void Menu::onNewGameMenuOpened()
 {
     emit newGameMenuOpened();
+}
+
+void Menu::onLoadGameMenuOpened()
+{
+    emit loadGameMenuOpened();
 }
 
 void Menu::onSettingsMenuOpened()

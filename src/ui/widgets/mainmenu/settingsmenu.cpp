@@ -57,7 +57,7 @@ void SettingsMenu::setupUi()
     // Add widgets
     addWidget(resolutionOption, 0.4, 0.1, 0.2, 0.1);
     addWidget(frameOption, 0.4, 0.2, 0.2, 0.1);
-    addWidget(backButton, 0.4, 0.3, 0.2, 0.1);
+    addWidget(backButton, 0.4, 0.85, 0.2, 0.1);
 }
 
 void SettingsMenu::onResolutionOptionChanged()

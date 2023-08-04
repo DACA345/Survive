@@ -3,6 +3,7 @@
 #include <QLabel>
 
 #include "widgets/mainmenu/newgamemenu.h"
+#include "widgets/mainmenu/loadgamemenu.h"
 #include "widgets/mainmenu/settingsmenu.h"
 #include "widgets/mainmenu/menu.h"
 
@@ -23,6 +24,9 @@ class MainMenu : public ScalableWidget
         void displayNewGameMenu();
         void closeNewGameMenu();
 
+        void displayLoadGameMenu();
+        void closeLoadGameMenu();
+
         void displaySettingsMenu();
         void closeSettingsMenu();
 
@@ -30,6 +34,7 @@ class MainMenu : public ScalableWidget
 
         // Main Menu widgets
         NewGameMenu* newGameMenu;
+        LoadGameMenu* loadGameMenu;
         SettingsMenu* settingsMenu;
         Menu* menu;
 };
