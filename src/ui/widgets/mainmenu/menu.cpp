@@ -19,13 +19,9 @@ void Menu::paintEvent(QPaintEvent* event)
 
     QPainter painter(this);
 
-    background = background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    overlay1 = overlay1.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    overlay2 = overlay2.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-
-    painter.drawPixmap(rect(), background);
-    painter.drawPixmap(rect(), overlay1);
-    painter.drawPixmap(rect(), overlay2);
+    painter.drawPixmap(rect(), background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+    painter.drawPixmap(rect(), overlay1.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+    painter.drawPixmap(rect(), overlay2.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
 }
 
 void Menu::loadGraphics()
