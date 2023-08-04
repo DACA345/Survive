@@ -9,7 +9,7 @@
 
 class MainMenu : public ScalableWidget
 {
-    Q_OBJECT;
+    Q_OBJECT
 
     public:
         MainMenu(QWidget* parent = nullptr);

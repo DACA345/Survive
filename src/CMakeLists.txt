@@ -5,6 +5,7 @@ qt_add_executable(Survive
     "ui/widgets/mainmenu/newgamemenu.cpp"
     "ui/widgets/mainmenu/settingsmenu.cpp"
     "ui/widgets/mainmenu/menu.cpp"
+    "ui/widgets/svgpushbutton.cpp"
     "ui/widgets/scalablewidget.cpp"
     "ui/mainmenu.cpp"
     "util/resolution.cpp"
@@ -18,6 +19,7 @@ target_link_libraries(Survive
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
+        Qt6::SvgWidgets
         SurviveCore
 )
 

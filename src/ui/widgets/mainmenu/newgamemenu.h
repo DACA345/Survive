@@ -6,7 +6,7 @@
 
 class NewGameMenu : public ScalableWidget
 {
-    Q_OBJECT;
+    Q_OBJECT
 
     public:
         NewGameMenu(QWidget *parent = nullptr);

@@ -3,7 +3,7 @@
 
 class ScalableWidget : public QWidget
 {
-    Q_OBJECT;
+    Q_OBJECT
 
     public:
         ScalableWidget(QWidget* parent = nullptr);

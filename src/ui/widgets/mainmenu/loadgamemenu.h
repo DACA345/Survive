@@ -9,7 +9,7 @@
 // Assuming that the two menu's will diverge in the future
 class LoadGameMenu : public ScalableWidget
 {
-    Q_OBJECT;
+    Q_OBJECT
 
     public:
         LoadGameMenu(QWidget *parent = nullptr);

@@ -1,8 +1,9 @@
 #pragma once
-#include <QLabel>
 #include <QPushButton>
+#include <QSvgWidget>
 
 #include "../scalablewidget.h"
+#include "../svgpushbutton.h"
 
 class Menu : public ScalableWidget
 {
@@ -23,13 +24,20 @@ class Menu : public ScalableWidget
         void onSettingsMenuOpened();
 
     private:
+        void paintEvent(QPaintEvent* event) override;
+
+        void loadGraphics();
         void setupUi();
 
         // Ui attributes
-        QLabel* menuTitle;
+        QSvgWidget* menuTitle;
 
-        QPushButton* newGameButton;
-        QPushButton* loadGameButton;
-        QPushButton* settingsButton;
-        QPushButton* exitButton;
+        SVGPushButton* newGameButton;
+        SVGPushButton* loadGameButton;
+        SVGPushButton* settingsButton;
+        SVGPushButton* exitButton;
+
+        QPixmap background;
+        QPixmap overlay1;
+        QPixmap overlay2;
 };
