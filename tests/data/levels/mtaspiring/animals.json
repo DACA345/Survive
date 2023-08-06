@@ -1,5 +1,5 @@
 {
-    "Birds": [
+    "birds": [
         {
             "species_id": "SPA0001",
             "name": "South Island Robin"
@@ -133,7 +133,7 @@
             "name": "New Zealand Fernbird"
         }
     ],
-    "Mammals": [
+    "mammals": [
         {
             "species_id": "SPA0034",
             "name": "Chamois"
@@ -163,7 +163,7 @@
             "name": "White-Tailed Deer"
         }
     ],
-    "Fish": [
+    "fish": [
         {
             "species_id": "SPA0041",
             "name": "Climbing Galaxias"
@@ -173,13 +173,13 @@
             "name": "Rainbow Trout"
         }
     ],
-    "Reptiles": [
+    "reptiles": [
         {
             "species_id": "SPA0042",
             "name": "Eyres Skink"
         }
     ],
-    "Amphibians": [
+    "amphibians": [
         {
             "species_id": "SPA0043",
             "name": "Southern Brown Tree Frog"

@@ -3,7 +3,7 @@ add_library(SurviveCore
     "Day.cpp"
     "Engine.cpp"
     "Level.cpp"
-)
+ "Action.h" "Animal.cpp")
 
 target_link_libraries(SurviveCore
     PRIVATE
