@@ -1,23 +1,28 @@
 #include <QString>
 #include <QVector>
+#include <QMap>
 
 class Animal {
 public:
-    Animal(const QString& jsonFilePath);
-    QString getSpeciesID() const;
-    QString getName() const;
-    QString getCategory() const;
-    // Add other getter methods and query methods as needed.
+    // Constructor to initialize animals from JSON file
+    Animal(const QString& filePath);
+
+    // Load animal data from JSON file
+    void loadAnimalsFromJson(const QString& filePath);
+
+    // Get a random animal from each category
+    QString getRandomBird() const;
+    QString getRandomMammal() const;
+    QString getRandomFish() const;
+    QString getRandomReptile() const;
+    QString getRandomAmphibian() const;
 
 private:
-    struct AnimalData {
-        QString speciesID;
-        QString name;
-    };
-
-    QVector<AnimalData> birds;
-    QVector<AnimalData> mammals;
-    QVector<AnimalData> fishes;
-    QVector<AnimalData> reptiles;
-    QVector<AnimalData> amphibians;
+    // Store animals categorized by species
+    QMap<QString, QVector<QString>> animals;
 };
+
+
+
+
+
