@@ -1,4 +1,6 @@
 #include <QDirIterator>
+#include <QJsonDocument>
+#include <QJsonObject>
 
 #include "newgamemenu.h"
 #include "../../../config/files.h"
@@ -14,7 +16,7 @@ NewGameMenu::NewGameMenu(QWidget* parent)
         QString levelJsonPath = levelDir.filePath("level.json");
         if (QFile::exists(levelJsonPath))
         {
-            levels.append(levelJsonPath);
+            levels.append(LevelInfo(levelJsonPath));
         }
     }
 
@@ -34,7 +36,7 @@ void NewGameMenu::displayLevels()
 
     for (int i = 0; i < levels.size(); i++)
     {
-        QPushButton* levelButton = new QPushButton(levels[i], this);
+        QPushButton* levelButton = new QPushButton(levels[i].name, this);
         levelButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         levelButtons.append(levelButton);
 
@@ -78,4 +80,15 @@ NewGameMenu::~NewGameMenu()
     delete levelsLayout;
     delete levelsWidget;
     delete backButton;
+}
+
+NewGameMenu::LevelInfo::LevelInfo(const QString& levelPath)
+{
+    QFile levelFile(levelPath);
+    levelFile.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QJsonDocument levelDoc = QJsonDocument::fromJson(levelFile.readAll());
+    QJsonObject levelObj = levelDoc.object();
+
+    name = levelObj["title_name"].toString();
 }
