@@ -32,6 +32,12 @@ add_custom_command(
         $<TARGET_FILE_DIR:${PROJECT_NAME}-core-test>
 )
 
+# One target to build all tests
+add_custom_target(${PROJECT_NAME}-Tests)
+add_dependencies(${PROJECT_NAME}-Tests
+    ${PROJECT_NAME}-core-test
+)
+
 # CMake test discovery
 include(GoogleTest)
 gtest_discover_tests(
