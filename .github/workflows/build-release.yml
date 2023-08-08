@@ -49,15 +49,15 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                     name: "Survive"
-                    path: "Survive-*-*.zip"                 
+                    path: "${{ github.workspace }}/build/Survive-*-*.zip"                 
 
             - name: "Publish release"
-              uses: marvinpinto/action-automatic-releases@latest
+              uses: softprops/action-gh-release@v0.1.15
               with:
-                repo_token: ${{ secrets.PAT_TOKEN }}
-                automatic_release_tag: "latest"
+                token: ${{ secrets.PAT_TOKEN }}
+                generate_release_notes: true
                 prerelease: true
                 title: "Survive"
                 files: |
-                    "Survive-*-*.exe"
-                    "Survive-*-*.zip"
+                    "${{ github.workspace }}/build/Survive-*-*.*"
+                    "${{ github.workspace }}/build/Survive-*-*.*"
