@@ -28,22 +28,45 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-# Features
-include(FeatureSummary)
-
-option(BUILD_TESTS "Build the Google unit tests" ON)
-
-add_feature_info(BUILD_TESTS BUILD_TESTS "Build the Google unit tests")
-
-feature_summary(WHAT ALL)
-
 # Dependencies
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 # Includes
 include(FindLibCheck)
 
+# Features
+include(FeatureSummary)
+
+option(BUILD_TESTS "Build the Google unit tests" ON)
+option(BUILD_DOCUMENTATION "Build doxygen documentation - requires doxygen" ${DOXYGEN_FOUND})
+
+add_feature_info(BUILD_TESTS BUILD_TESTS "Build the Google unit tests")
+add_feature_info(BUILD_DOCUMENTATION BUILD_DOCUMENTATION "Build doxygen documentation - requires doxygen")
+
+feature_summary(WHAT ALL)
+
 add_subdirectory(src)
+
+# Documentation
+if (BUILD_DOCUMENTATION AND DOXYGEN_FOUND)
+    set(DOXYGEN_IN "${CMAKE_SOURCE_DIR}/doc/doxy.config.in")
+    set(DOXYGEN_OUT "${CMAKE_CURRENT_BINARY_DIR}/doc/doxy.config")
+
+    configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
+
+    add_custom_target(Doxygen-Documentation ALL
+        COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
+        WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/doc/"
+        COMMENT "Building doxygen documentation."
+        VERBATIM
+    )
+
+    install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/doc/html"
+        DESTINATION "${CMAKE_INSTALL_DOCDIR}"
+    )
+elseif(BUILD_DOCUMENTATION AND NOT DOXYGEN_FOUND)
+    message(WARNING "Documentation was set on but doxygen was not found. Cannot build documentation.")
+endif()
 
 # Tests
 if (BUILD_TESTS)
