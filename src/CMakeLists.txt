@@ -65,7 +65,8 @@ install(
         "${CMAKE_SOURCE_DIR}/levels"
         "${CMAKE_SOURCE_DIR}/textures"
     DESTINATION
-        ${CMAKE_INSTALL_PREFIX}
+        # CMake install prefix causes CPack generator errors
+        ${CMAKE_INSTALL_BINDIR}/..
 )
 
 # Include CPack for release packaging
