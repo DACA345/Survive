@@ -10,12 +10,8 @@ public:
     // Load animal data from JSON file
     void loadAnimalsFromJson(const QString& filePath);
 
-    // Get a random animal from each category
-    QString getRandomBird() const;
-    QString getRandomMammal() const;
-    QString getRandomFish() const;
-    QString getRandomReptile() const;
-    QString getRandomAmphibian() const;
+    // Get random animal from category as input
+    QString getRandomAnimal(const QString& category) const;
 
 private:
     // Store animals categorized by species

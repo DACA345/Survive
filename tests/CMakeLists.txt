@@ -6,7 +6,7 @@ enable_testing()
 # Add test executable
 add_executable(${PROJECT_NAME}-core-test
     "core/day-test.cpp"
- "core/animal-test.cpp" "core/animal-test.cpp")
+ "core/animal-test.cpp" "core/animal-test.cpp" "core/plant-test.cpp")
 
 add_test(
     NAME ${PROJECT_NAME}-core-test
