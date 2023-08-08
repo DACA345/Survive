@@ -1,5 +1,33 @@
-# DACA: Survive [![survive-build-release](https://github.com/DACA345/Survive/actions/workflows/release.yml/badge.svg)](https://github.com/DACA345/Survive/actions/workflows/release.yml) [![survive-build-documentation](https://github.com/DACA345/Survive/actions/workflows/documentation.yml/badge.svg)](https://github.com/DACA345/Survive/actions/workflows/documentation.yml) [![survive-build-tests](https://github.com/DACA345/Survive/actions/workflows/test.yml/badge.svg)](https://github.com/DACA345/Survive/actions/workflows/test.yml)
+<p align="center">
+    <img alt="DACA: Survive logo" width="250px" src="./textures/icon/icon.png">
+</p>
+
+<h1 align="center">
+    DACA: Survive
+</h1>
+
+<p align="center">
+  <a href="https://github.com/DACA345/Survive/actions">
+    <img src="https://github.com/DACA345/Survive/actions/workflows/release.yml/badge.svg" alt="Release status badge">
+  </a>
+
+  <a href="https://github.com/DACA345/Survive/actions">
+    <img src="https://github.com/DACA345/Survive/actions/workflows/test.yml/badge.svg" alt="Unit test status badge">
+  </a>
+
+  <a href="https://github.com/DACA345/Survive/actions">
+    <img src="https://github.com/DACA345/Survive/actions/workflows/documentation.yml/badge.svg" alt="Documentation status badge">
+  </a>
+</p>
+
 DACA: Survive is an open source GUI based game in which you attempt to survive for as long as possible in real places using real data sets.
+
+## Release packages
+Releases can be found [here](https://github.com/DACA345/Survive/releases)
+
+The [latest](https://github.com/DACA345/Survive/releases/tag/latest) release is auto generated on every push to the main branch.
+
+Tagged pushes also auto generate a release with the tag name.
 
 ## How to build
 
@@ -31,6 +59,11 @@ DACA: Survive is an open source GUI based game in which you attempt to survive f
 7. Run the project
 
 ## Contributing
+
+### Developer documentation
+The developer documentation can be found [here](https://daca345.github.io/Survive/).
+
+This is auto generated from the code using [Doxygen](https://www.doxygen.nl/index.html) on each push to the main branch.
 
 ### Setup pre-commit hooks
 Pre-commit hooks are used to format code and check files.
