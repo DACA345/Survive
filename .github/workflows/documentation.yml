@@ -30,7 +30,7 @@ jobs:
               run: |
                     mkdir build
                     cd build
-                    cmake .. -A x64 -DBUILD_TESTS=OFF -DBUILD_DOCUMENTATION=ON -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/gcc_64"
+                    cmake .. -DBUILD_TESTS=OFF -DBUILD_DOCUMENTATION=ON -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/gcc_64"
                     cmake --build . --target Doxygen-Documentation
     
             - name: "Upload documentation artifact"
@@ -42,7 +42,7 @@ jobs:
             - name: "Upload documentation to GitHub Pages"
               uses: peaceiris/actions-gh-pages@v3
               with:
-                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    github_token: ${{ secrets.PAT_TOKEN }}
                     publish_dir: ${{ github.workspace }}/build/doc/html
                     enable_jekyll: false
                     commit_message: "chore: Update documentation (${{ github.sha }})"
