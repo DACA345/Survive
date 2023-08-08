@@ -32,5 +32,7 @@ jobs:
                     cmake --build . --config Release --target Survive-Tests
 
             - name: "Run unit tests"
+              shell: pwsh
               run: |
-                    bash -c "./bin/Release/Survive-*-test.exe"
+                    cd ${{ github.workspace }}/build
+                    Get-ChildItem bin/Release/ -Filter Survive-*-test.exe | ForEach-Object { & $_.FullName }
