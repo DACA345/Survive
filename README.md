@@ -1,4 +1,4 @@
-# DACA: Survive
+# DACA: Survive [![survive-build-release](https://github.com/DACA345/Survive/actions/workflows/release.yml/badge.svg)](https://github.com/DACA345/Survive/actions/workflows/release.yml) [![survive-build-documentation](https://github.com/DACA345/Survive/actions/workflows/documentation.yml/badge.svg)](https://github.com/DACA345/Survive/actions/workflows/documentation.yml) [![survive-build-tests](https://github.com/DACA345/Survive/actions/workflows/test.yml/badge.svg)](https://github.com/DACA345/Survive/actions/workflows/test.yml)
 DACA: Survive is an open source GUI based game in which you attempt to survive for as long as possible in real places using real data sets.
 
 ## How to build
