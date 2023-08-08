@@ -49,3 +49,5 @@ else()
 endif()
 
 install(SCRIPT ${QT_DEPLOY_SCRIPT})
+
+include(CPack)

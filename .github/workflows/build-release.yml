@@ -33,21 +33,22 @@ jobs:
                     cd build
                     cmake .. -A x64 -DBUILD_TESTS=OFF -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/msvc2019_64" -DCMAKE_INSTALL_PREFIX="${{ github.workspace }}/survive"
                     cmake --build . --config Release
-                    cmake --install . --config Release
 
-            - name: "Upload artifacts"
+            - name: "Install NSIS"
+              uses: repolevedavaj/install-nsis@v1
+              with:
+                    nsis-version: 3.09
+
+            - name: "Create installers"
+              run: |
+                    cpack -G NSIS64 --config CPackConfig.cmake
+                    cpack -G ZIP --config CPackConfig.cmake
+
+            - name: "Upload install artifact"
               uses: actions/upload-artifact@v2
               with:
                     name: "Survive"
-                    path: "${{ github.workspace }}/survive"
-
-            - name: "Create archive"
-              uses: thedoctor0/zip-release@0.7.1
-              with:
-                type: "zip"
-                directory: "${{ github.workspace }}"
-                path: "${{ github.workspace }}/survive"
-                filename: "Survive.zip"                    
+                    path: "Survive-*-*.zip"                 
 
             - name: "Publish release"
               uses: marvinpinto/action-automatic-releases@latest
@@ -56,4 +57,6 @@ jobs:
                 automatic_release_tag: "latest"
                 prerelease: true
                 title: "Survive"
-                files: "${{ github.workspace }}/Survive.zip"
+                files: |
+                    "Survive-*-*.exe"
+                    "Survive-*-*.zip"
