@@ -1,0 +1,59 @@
+name: "suvrive-build-release"
+
+on:
+    push:
+        branches:
+            - main
+        tags:
+            - v*
+
+jobs:
+    build:
+        runs-on: windows-latest
+
+        steps:
+            - name: "Checkout repository"
+            - uses: actions/checkout@v3
+  
+            - name: "Install support for Visual C++"
+            - uses: ilammy/msvc-dev-cmd@v1.12.1
+  
+            - name: "Install Qt"
+            - uses: jurple1/install-qt-action@v3.3.0
+              with:
+                    version: "6.3.2"
+                    host: "windows"
+                    target: "desktop"
+                    arch: "win64_msvc2019_64"
+                    dir: "${{ github.workspace }}/qt"
+
+            - name: "Build Survive"
+            - run: |
+                    mkdir build
+                    cd build
+                    cmake .. -A x64 -DBUILD_TESTS=OFF -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/msvc2019_64" -DCMAKE_INSTALL_PREFIX="${{ github.workspace }}/survive"
+                    cmake --build . --config Release
+                    cmake --install . --config Release
+
+            - name: "Upload artifacts"
+            - uses: actions/upload-artifact@v2
+              with:
+                    name: "Survive"
+                    path: "${{ github.workspace }}/survive"
+
+            - name: "Create archive"
+            - uses: thedocto0/zip-release@0.7.1
+              with:
+                type: "zip"
+                directory: "${{ github.workspace }}"
+                path: "${{ github.workspace }}/survive"
+                filename: "Survive.zip"                    
+
+            - name: "Publish release"
+            - uses: marvinpinto/action-automatic-release@latest
+              with:
+                repo_token: ${{ secrets.PAT_TOKEN }}
+                automatic_release_tag: "latest"
+                prerelease: true
+                title: "Survive ${{ github."
+                files: "${{ github.workspace }}/Survive.zip"
