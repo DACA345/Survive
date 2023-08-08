@@ -44,20 +44,25 @@ jobs:
                     cd ${{ github.workspace }}/build
                     cpack -G NSIS64 --config CPackConfig.cmake
                     cpack -G ZIP --config CPackConfig.cmake
+                    
+            - run: echo "SHA_SHORT=$(git rev-parse --short "${{ github.sha }}")" >> "$GITHUB_ENV"
+            - name: "Debug"
+              run: dir ${{ github.workspace }}/build
+
+            - name: "Publish release"
+              uses: softprops/action-gh-release@v1
+              with:
+                token: ${{ secrets.PAT_TOKEN }}
+                generate_release_notes: true
+                prerelease: true
+                name: "DACA: Survive - Latest"
+                tag_name: "latest"
+                fail_on_unmatched_files: true
+                files: |
+                    "${{ github.workspace }}/build/Survive-*-*.*"
 
             - name: "Upload install artifact"
               uses: actions/upload-artifact@v2
               with:
                     name: "Survive"
-                    path: "${{ github.workspace }}/build/Survive-*-*.zip"                 
-
-            - name: "Publish release"
-              uses: softprops/action-gh-release@v0.1.15
-              with:
-                token: ${{ secrets.PAT_TOKEN }}
-                generate_release_notes: true
-                prerelease: true
-                title: "Survive"
-                files: |
-                    "${{ github.workspace }}/build/Survive-*-*.*"
-                    "${{ github.workspace }}/build/Survive-*-*.*"
+                    path: "${{ github.workspace }}/build/Survive-*-*.zip"
