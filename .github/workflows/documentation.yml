@@ -1,0 +1,50 @@
+name: "survive-build-documentation"
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build_documentation:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: "Checkout repository"
+              uses: actions/checkout@v3
+
+            - name: "Install Doxygen"
+              run: sudo apt-get install doxygen
+
+            - name: "Install Qt"
+              uses: jurplel/install-qt-action@v3.3.0
+              with:
+                    version: "6.3.2"
+                    host: "linux"
+                    target: "desktop"
+                    arch: "gcc_64"
+                    dir: "${{ github.workspace }}/qt"
+                    cache: true"
+
+            - name: "Build Survive with documentation"
+              run: |
+                    mkdir build
+                    cd build
+                    cmake .. -A x64 -DBUILD_TESTS=OFF -DBUILD_DOCUMENTATION=ON -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/gcc_64"
+                    cmake --build . --target Doxygen-Documentation
+    
+            - name: "Upload documentation artifact"
+              uses: actions/upload-artifact@v3
+              with:
+                    name: "Survive-documentation.zip"
+                    path: "${{ github.workspace }}/build/doc/"
+
+            - name: "Upload documentation to GitHub Pages"
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    publish_dir: ${{ github.workspace }}/build/doc/html
+                    enable_jekyll: false
+                    commit_message: "chore: Update documentation (${{ github.sha }})"
+                    commit_user_name: "GitHub Actions"
+                    commit_user_email: "github-actions[bot]@users.noreply.github.com"
