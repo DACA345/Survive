@@ -1,4 +1,4 @@
-add_subdirectory(core)
+add_subdirectory(Core)
 
 qt_add_executable(Survive
     "UI/MainMenu.cpp"

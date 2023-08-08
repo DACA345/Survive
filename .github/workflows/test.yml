@@ -28,10 +28,9 @@ jobs:
               run: |
                     mkdir build
                     cd build
-                    cmake .. -A x64 -DBUILD_TESTS=ON -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/msvc2019_64"
+                    cmake .. -A x64 -DBUILD_TESTS=ON -DBUILD_DOCUMENTATION=OFF -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/msvc2019_64"
                     cmake --build . --config Release --target Survive-Tests
 
             - name: "Run unit tests"
-              shell: bash
               run: |
-                    ./bin/Release/Survive-*-test.exe
+                    bash -c "./bin/Release/Survive-*-test.exe"
