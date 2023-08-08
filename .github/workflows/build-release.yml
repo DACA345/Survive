@@ -31,7 +31,7 @@ jobs:
               run: |
                     mkdir build
                     cd build
-                    cmake .. -A x64 -DBUILD_TESTS=OFF -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/msvc2019_64" -DCMAKE_INSTALL_PREFIX="${{ github.workspace }}/survive"
+                    cmake .. -A x64 -DBUILD_TESTS=OFF -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/msvc2019_64"
                     cmake --build . --config Release
 
             - name: "Install NSIS"
@@ -41,6 +41,7 @@ jobs:
 
             - name: "Create installers"
               run: |
+                    cd ${{ github.workspace }}/build
                     cpack -G NSIS64 --config CPackConfig.cmake
                     cpack -G ZIP --config CPackConfig.cmake
 
