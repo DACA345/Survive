@@ -8,14 +8,17 @@
 
 
 // Constructor to initialize animals from JSON file
-Animal::Animal(const QString& filePath) {
+Animal::Animal(const QString& filePath) 
+{
     loadAnimalsFromJson(filePath);
 }
 
-void Animal::loadAnimalsFromJson(const QString& filePath) {
+void Animal::loadAnimalsFromJson(const QString& filePath) 
+{
     QFile jsonFile(filePath);
 
-    if (!jsonFile.open(QIODevice::ReadOnly)) {
+    if (!jsonFile.open(QIODevice::ReadOnly)) 
+    {
         qWarning("Could not open animals JSON file");
         return;
     }
@@ -23,7 +26,8 @@ void Animal::loadAnimalsFromJson(const QString& filePath) {
     QByteArray jsonData = jsonFile.readAll();
     QJsonDocument doc = QJsonDocument::fromJson(jsonData);
 
-    if (doc.isNull() || !doc.isObject()) {
+    if (doc.isNull() || !doc.isObject()) 
+    {
         qWarning("Invalid JSON data");
         return;
     }
@@ -32,7 +36,8 @@ void Animal::loadAnimalsFromJson(const QString& filePath) {
 
     // Process birds
     QJsonArray birdsArray = jsonObj["birds"].toArray();
-    for (const QJsonValue& birdValue : birdsArray) {
+    for (const QJsonValue& birdValue : birdsArray) 
+    {
         QJsonObject bird = birdValue.toObject();
         QString speciesID = bird["species_id"].toString();
         QString name = bird["name"].toString();
@@ -41,7 +46,8 @@ void Animal::loadAnimalsFromJson(const QString& filePath) {
 
     // Process mammals
     QJsonArray mammalsArray = jsonObj["mammals"].toArray();
-    for (const QJsonValue& mammalValue : mammalsArray) {
+    for (const QJsonValue& mammalValue : mammalsArray) 
+    {
         QJsonObject mammal = mammalValue.toObject();
         QString speciesID = mammal["species_id"].toString();
         QString name = mammal["name"].toString();
@@ -50,7 +56,8 @@ void Animal::loadAnimalsFromJson(const QString& filePath) {
 
     // Process fish
     QJsonArray fishArray = jsonObj["fish"].toArray();
-    for (const QJsonValue& fishValue : fishArray) {
+    for (const QJsonValue& fishValue : fishArray) 
+    {
         QJsonObject fish = fishValue.toObject();
         QString speciesID = fish["species_id"].toString();
         QString name = fish["name"].toString();
@@ -59,7 +66,8 @@ void Animal::loadAnimalsFromJson(const QString& filePath) {
 
     // Process reptiles
     QJsonArray reptilesArray = jsonObj["reptiles"].toArray();
-    for (const QJsonValue& reptileValue : reptilesArray) {
+    for (const QJsonValue& reptileValue : reptilesArray) 
+    {
         QJsonObject reptile = reptileValue.toObject();
         QString speciesID = reptile["species_id"].toString();
         QString name = reptile["name"].toString();
@@ -68,45 +76,21 @@ void Animal::loadAnimalsFromJson(const QString& filePath) {
 
     // Process amphibians
     QJsonArray amphibiansArray = jsonObj["amphibians"].toArray();
-    for (const QJsonValue& amphibianValue : amphibiansArray) {
+    for (const QJsonValue& amphibianValue : amphibiansArray) 
+    {
         QJsonObject amphibian = amphibianValue.toObject();
         QString speciesID = amphibian["species_id"].toString();
         QString name = amphibian["name"].toString();
         animals["amphibians"].append(name);
     }
 }
-// Get a random animal from each category
-QString Animal::getRandomBird() const 
-{
-    QVector<QString> birds = animals["birds"];
-    int index = QRandomGenerator::global()->bounded(birds.size());
-    return birds[index];
-}
 
-QString Animal::getRandomMammal() const 
+QString Animal::getRandomAnimal(const QString& category) const
 {
-    QVector<QString> mammals = animals["mammals"];
-    int index = QRandomGenerator::global()->bounded(mammals.size());
-    return mammals[index];
-}
-
-QString Animal::getRandomFish() const 
-{
-    QVector<QString> fishes = animals["fishes"];
-    int index = QRandomGenerator::global()->bounded(fishes.size());
-    return fishes[index];
-}
-
-QString Animal::getRandomReptile() const 
-{
-    QVector<QString> reptiles = animals["reptiles"];
-    int index = QRandomGenerator::global()->bounded(reptiles.size());
-    return reptiles[index];
-}
-
-QString Animal::getRandomAmphibian() const 
-{
-    QVector<QString> amphibians = animals["amphibians"];
-    int index = QRandomGenerator::global()->bounded(amphibians.size());
-    return amphibians[index];
+    QList<QString> animalList = animals[category];
+    if (!animalList.isEmpty()) {
+        int index = QRandomGenerator::global()->bounded(animalList.size());
+        return animalList[index];
+    }
+    return "";
 }

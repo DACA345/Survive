@@ -1,5 +1,5 @@
 {
-    "Fungi": [
+    "fungi": [
         {
             "plant_id": "PLT001",
             "name": "Beech Orange",
@@ -76,7 +76,7 @@
             "edible": false
         }
     ],
-    "Plant": [
+    "plant": [
         {
             "plant_id": "PLT016",
             "name": "Wineberry",
