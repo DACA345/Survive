@@ -42,7 +42,7 @@ jobs:
                     path: "${{ github.workspace }}/survive"
 
             - name: "Create archive"
-              uses: thedocto0/zip-release@0.7.1
+              uses: thedoctor0/zip-release@0.7.1
               with:
                 type: "zip"
                 directory: "${{ github.workspace }}"
@@ -50,7 +50,7 @@ jobs:
                 filename: "Survive.zip"                    
 
             - name: "Publish release"
-              uses: marvinpinto/action-automatic-release@latest
+              uses: marvinpinto/action-automatic-releases@latest
               with:
                 repo_token: ${{ secrets.PAT_TOKEN }}
                 automatic_release_tag: "latest"
