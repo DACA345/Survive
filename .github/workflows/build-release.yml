@@ -59,12 +59,6 @@ jobs:
                     name: "Survive-${{ env.RELEASE_TAG }}-win64.zip"
                     path: "${{ github.workspace }}/build/Survive-*-*.zip"
 
-            - name: "Upload installer artifact"
-              uses: actions/upload-artifact@v3
-              with:
-                    name: "Survive-${{ env.RELEASE_TAG }}-win64.exe"
-                    path: "${{ github.workspace }}/build/Survive-*-*.exe"
-
             - name: "Publish release"
               uses: ncipollo/release-action@v1
               with:
@@ -72,7 +66,7 @@ jobs:
                 artifactErrorsFailBuild: true
                 artifacts: "${{ github.workspace }}/build/Survive-*-*.*"
                 generateReleaseNotes: true                
-                name: "DACA: Survive - {{ env.RELEASE_TAG }}"
+                name: "DACA: Survive - ${{ env.RELEASE_TAG }}"
                 prerelease: true
                 tag: ${{ env.RELEASE_TAG }}
                 token: ${{ secrets.PAT_TOKEN }}
