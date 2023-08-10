@@ -4,6 +4,8 @@ add_library(${PROJECT_NAME}-Core
     "bar.cpp"
     "day.cpp"
     "engine.cpp"
+    "events.cpp"
+    "game.cpp"
     "level.cpp"
     "plant.cpp"
 )
