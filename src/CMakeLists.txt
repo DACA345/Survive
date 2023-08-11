@@ -9,6 +9,7 @@ qt_add_executable(Survive
     "ui/widgets/svgpushbutton.cpp"
     "ui/widgets/scalablewidget.cpp"
     "ui/mainmenu.cpp"
+    "ui/game.cpp"
     "util/resolution.cpp"
     "survivegame.cpp"
     "main.cpp"

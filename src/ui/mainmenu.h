@@ -16,9 +16,13 @@ class MainMenu : public ScalableWidget
         ~MainMenu();
 
     signals:
+        void newGameButtonClicked(const QString& id);
+
         void uiOptionChanged();
 
     public slots:
+        void onNewGameButtonClicked(const QString& id);
+
         void onUiOptionChanged();
 
         void displayNewGameMenu();

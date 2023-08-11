@@ -37,6 +37,7 @@ class NewGameMenu : public ScalableWidget
 
     signals:
         void newGameMenuClosed();
+        void levelSelected(const QString& id);
 
     private slots:
         void onNewGameMenuClosed();

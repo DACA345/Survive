@@ -18,6 +18,13 @@ void SurviveGame::resizeEvent(QResizeEvent* event)
     QMainWindow::resizeEvent(event);
 }
 
+void SurviveGame::onNewGame(const QString& id)
+{
+    game = new Game(id, this);
+
+    setCentralWidget(game);
+}
+
 void SurviveGame::setupUiSettings()
 {
     // Hide and reshow to cover changes
@@ -67,9 +74,10 @@ void SurviveGame::setupUi()
     setCentralWidget(mainMenu);
 
     connect(mainMenu, &MainMenu::uiOptionChanged, this, &SurviveGame::setupUiSettings);
+    connect(mainMenu, &MainMenu::newGameButtonClicked, this, &SurviveGame::onNewGame);
 }
 
 SurviveGame::~SurviveGame()
 {
-    delete mainMenu;
+    delete centralWidget();
 }

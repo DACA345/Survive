@@ -83,11 +83,10 @@ void NewGameMenu::displayLevels()
 
         levelsLayout->addWidget(levelButton, row, col);
 
-        //connect(levelButton, &QPushButton::clicked, this, [this, i]()
-        //    {
-        //    emit newGameMenuClosed();
-        //    emit levelSelected(levels[i]);
-        //});
+        connect(levelButton, &LevelInfoWidget::levelSelected ,this, [this](const QString& id)
+            {
+                emit levelSelected(id);
+        });
     }
 
     levelsWidget->setLayout(levelsLayout);

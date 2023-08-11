@@ -19,6 +19,13 @@ MainMenu::MainMenu(QWidget* parent)
     addWidget(menu, 0, 0, 1, 1);
 }
 
+void MainMenu::onNewGameButtonClicked(const QString& id)
+{
+    emit newGameButtonClicked(id);
+
+    closeNewGameMenu();
+}
+
 void MainMenu::onUiOptionChanged()
 {
     emit uiOptionChanged();
@@ -30,6 +37,7 @@ void MainMenu::displayNewGameMenu()
 
     // Setup connections
     connect(newGameMenu, &NewGameMenu::newGameMenuClosed, this, &MainMenu::closeNewGameMenu);
+    connect(newGameMenu, &NewGameMenu::levelSelected, this, &MainMenu::onNewGameButtonClicked);
 
     // Display the new game menu
     addWidget(newGameMenu, 0, 0, 1, 1);

@@ -2,6 +2,7 @@
 #include <QMainWindow>
 
 #include "ui/mainmenu.h"
+#include "ui/game.h"
 
 class SurviveGame : public QMainWindow
 {
@@ -11,12 +12,17 @@ class SurviveGame : public QMainWindow
         explicit SurviveGame(QWidget* parent = nullptr);
         ~SurviveGame();
 
+    private slots:
+        void onNewGame(const QString& id);
+
     private:
         void resizeEvent(QResizeEvent* event) override;
 
         void setupUiSettings();
         void setupUi();
         
-        MainMenu* mainMenu = nullptr;
+        MainMenu* mainMenu;
+        Game* game;
+
         bool windowSizeInitialized = false;
 };
