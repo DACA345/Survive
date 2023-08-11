@@ -1,0 +1,17 @@
+{
+  "background": "level.png",
+  "label": {
+    "file": "label.svg",
+    "offset": [ 8.3, 40 ],
+    "size": [ 83, 20 ]
+  },
+  "filters": {
+    "folder": "filters",
+    "hover": [
+      "hover_glow.svg"
+    ],
+    "normal": [
+      "default_glow.svg"
+    ]
+  }
+}

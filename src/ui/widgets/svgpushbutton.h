@@ -17,8 +17,8 @@ class SVGPushButton : public QPushButton
     private:
         void paintEvent(QPaintEvent* event) override;
 
-        void enterEvent(QEnterEvent* event);
-        void leaveEvent(QEvent* event);
+        void enterEvent(QEnterEvent* event) override;
+        void leaveEvent(QEvent* event) override;
 
         const int duration = 200;
         const double startOpacity = 1.0;

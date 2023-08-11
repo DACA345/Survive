@@ -1,6 +1,7 @@
 #pragma once
 #include <QGridLayout>
 #include <QPushButton>
+#include <QSvgRenderer>
 
 #include "../scalablewidget.h"
 
@@ -16,14 +17,25 @@ signals:
     void levelSelected(const QString& levelName);
 
 private:
-    void mousePressEvent(QMouseEvent* event) override;
+
     void paintEvent(QPaintEvent* event) override;
+    void mousePressEvent(QMouseEvent* event) override;
+    void enterEvent(QEnterEvent* event) override;
+    void leaveEvent(QEvent* event) override;
 
     void setupUi();
+    void loadGraphics();
 
     QString id;
     QString name;
+
+    QList<QSvgRenderer*> defaultFilters;
+    QList<QSvgRenderer*> hoverFilters;
+    QSvgRenderer* labelRenderer;
+    QRectF labelRect;
     QPixmap background;
+
+    bool isHovered = false;
 };
 
 

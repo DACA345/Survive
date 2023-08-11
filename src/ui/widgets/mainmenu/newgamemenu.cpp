@@ -1,6 +1,7 @@
 #include <QDirIterator>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QJsonArray>
 #include <QPainter>
 
 #include "newgamemenu.h"
@@ -18,20 +19,85 @@ LevelInfoWidget::LevelInfoWidget(const QString& levelJson, QWidget* parent)
     id = levelObj["level_id"].toString();
     name = levelObj["title_name"].toString();
 
-    QString pixmapPath = QString("mainmenu/levels/%1/level.png").arg(id);
-    background = QPixmap(Files::textureFilePath(pixmapPath));
-
     setupUi();
+    loadGraphics();
+
+    setCursor(Qt::PointingHandCursor);
 }
 
 void LevelInfoWidget::setupUi()
 {
 }
 
+void LevelInfoWidget::loadGraphics()
+{
+    QDir textureDir(Files::textureFilePath(QString("mainmenu/levels/%1").arg(id)));
+    QFile manifestJson = QFile(textureDir.filePath("manifest.json"));
+    manifestJson.open(QIODevice::ReadOnly);
+
+    QJsonDocument manifest = QJsonDocument::fromJson(manifestJson.readAll());
+    QJsonObject manifestObj = manifest.object();
+
+    QString backgroundFile = manifestObj["background"].toString();
+
+    QJsonObject labelObj = manifestObj["label"].toObject();
+    QString labelFile = labelObj["file"].toString();
+    QJsonArray offsetArray = labelObj["offset"].toArray();
+    QJsonArray sizeArray = labelObj["size"].toArray();
+
+    labelRenderer = new QSvgRenderer(textureDir.filePath(labelFile));
+    labelRect = QRectF(
+        offsetArray[0].toDouble() / 100,
+        offsetArray[1].toDouble() / 100,
+        sizeArray[0].toDouble() / 100,
+        sizeArray[1].toDouble() / 100
+    );
+
+
+    QJsonObject filtersObj = manifestObj["filters"].toObject();
+    QDir filtersDir(textureDir.filePath("filters"));
+
+    QJsonArray filterArray = filtersObj["normal"].toArray();
+    QJsonArray hoverArray = filtersObj["hover"].toArray();
+
+    for (const QJsonValue& filter : filterArray)
+    {
+        QString filterFile = filter.toString();
+
+        defaultFilters.append(new QSvgRenderer(filtersDir.filePath(filterFile)));
+    }
+
+    for (const QJsonValue& filter : hoverArray)
+    {
+        QString filterFile = filter.toString();
+
+        hoverFilters.append(new QSvgRenderer(filtersDir.filePath(filterFile)));
+    }
+
+    background = QPixmap(Files::textureFilePath(textureDir.filePath(backgroundFile)));
+
+}
+
 void LevelInfoWidget::paintEvent(QPaintEvent* event)
 {
     QPainter painter(this);
     painter.drawPixmap(0, 0, width(), height(), background);
+
+    QList<QSvgRenderer*>& filters = isHovered ? hoverFilters : defaultFilters;
+
+    for (QSvgRenderer* filter : filters)
+    {
+        filter->render(&painter, rect());
+    }
+
+    QRectF proportionRect = QRectF(
+        labelRect.left() * width(),
+        labelRect.top() * height(),
+        labelRect.width() * width(),
+        labelRect.height() * height()
+    );
+
+    labelRenderer->render(&painter, proportionRect);
 }
 
 void LevelInfoWidget::mousePressEvent(QMouseEvent* event)
@@ -39,8 +105,35 @@ void LevelInfoWidget::mousePressEvent(QMouseEvent* event)
     emit levelSelected(id);
 }
 
+void LevelInfoWidget::enterEvent(QEnterEvent* event)
+{
+    isHovered = true;
+    QWidget::enterEvent(event);
+
+    repaint();
+}
+
+void LevelInfoWidget::leaveEvent(QEvent* event)
+{
+    isHovered = false;
+    QWidget::leaveEvent(event);
+
+    repaint();
+}
+
 LevelInfoWidget::~LevelInfoWidget()
 {
+    for (QSvgRenderer* filter : defaultFilters)
+    {
+        delete filter;
+    }
+
+    for (QSvgRenderer* filter : hoverFilters)
+    {
+        delete filter;
+    }
+
+    delete labelRenderer;
 }
 
 NewGameMenu::NewGameMenu(QWidget* parent)
