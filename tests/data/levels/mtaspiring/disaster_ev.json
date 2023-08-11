@@ -1,0 +1,14 @@
+[
+    {
+        "event_id": "EVD-001",
+        "event_desc": "A Blizzard has happened"
+    },
+    {
+        "event_id": "EVD-002",
+        "event_desc": "An EarthQuake has happened"
+    },
+    {
+        "event_id": "EVD-003",
+        "event_desc": "An Avalanche has happened"
+    }
+]

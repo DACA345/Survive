@@ -44,3 +44,16 @@ int Bar::getValue() const
 {
 	return dataval; // return current value without modifying
 }
+
+// Define isEmpty bool method
+bool Bar::isEmpty() const
+{
+	if (dataval == 0)
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}
+}

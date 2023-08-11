@@ -1,5 +1,4 @@
 #include <gtest/gtest.h>
-#include <Core/Animal.h>
 #include <Core/Day.h>
 
 TEST(DayTests, MethodConstructorTest)
