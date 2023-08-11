@@ -1,6 +1,7 @@
 add_subdirectory(core)
 
 qt_add_executable(Survive
+    "config/files.cpp"
     "ui/widgets/mainmenu/loadgamemenu.cpp"
     "ui/widgets/mainmenu/newgamemenu.cpp"
     "ui/widgets/mainmenu/settingsmenu.cpp"

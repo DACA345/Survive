@@ -4,6 +4,29 @@
 
 #include "../scalablewidget.h"
 
+class LevelInfoWidget : public ScalableWidget
+{
+    Q_OBJECT
+
+public:
+    LevelInfoWidget(const QString& levelJson, QWidget* parent = nullptr);
+    ~LevelInfoWidget();
+
+signals:
+    void levelSelected(const QString& levelName);
+
+private:
+    void mousePressEvent(QMouseEvent* event) override;
+    void paintEvent(QPaintEvent* event) override;
+
+    void setupUi();
+
+    QString id;
+    QString name;
+    QPixmap background;
+};
+
+
 class NewGameMenu : public ScalableWidget
 {
     Q_OBJECT
@@ -19,22 +42,13 @@ class NewGameMenu : public ScalableWidget
         void onNewGameMenuClosed();
 
     private:
-        // NOTE(Callum): May need to be its own widget
-        struct LevelInfo
-        {
-            LevelInfo(const QString& path);
-
-            QString name;
-            // TODO(Callum): Add background pixmap
-        };
-
         void displayLevels();
         void setupUi();
 
         const int columns = 2;
 
-        QList<LevelInfo> levels;
-        QList<QPushButton*> levelButtons;
+        QList<QString> levelJsons;
+        QList<LevelInfoWidget*> levelButtons;
         QWidget* levelsWidget;
         QGridLayout* levelsLayout;
 
