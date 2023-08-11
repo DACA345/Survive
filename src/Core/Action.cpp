@@ -4,7 +4,7 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QJsonValue>
-#include <QRandomGenerator>
+#include <QRandomGenerator> 
 
 // Constructor that takes a file path to load events from a JSON file.
 Action::Action(const QString& filePath) {
@@ -46,3 +46,29 @@ void Action::loadActionsFromJson(const QString& filePath) {
         qWarning("Invalid JSON data");
     }
 }
+
+QString Action::getAction(const QString& category) {
+    // Create a list to store available actions within the specified category
+    QList<QString> availableActions;
+
+    // Iterate through the actions map and filter actions by the given category
+    for (const auto& action : actions) {
+        const QString& actionID = action.first;
+        const QString& actionDesc = action.second;
+        const QString& actionCategory = getCategoryByID(actionID); // Implement this function
+
+        if (actionCategory == category) {
+            availableActions.append(actionDesc);
+        }
+    }
+
+    // Randomly select an action description from the available actions
+    if (!availableActions.isEmpty()) {
+        int randomIndex = QRandomGenerator::global()->bounded(availableActions.size());
+        return availableActions[randomIndex];
+    }
+    else {
+        return ""; // No available actions in the given category
+    }
+}
+

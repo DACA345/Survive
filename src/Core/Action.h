@@ -13,10 +13,11 @@ public:
     void printAllActions() const;
 
     // Get random method 
-    QString getRandomAction() const;
+    QString getAction() const;
 
     // Print random method
     void printRandomAction() const;
+
 
 private:
     QMap<QString, QString> actions;
