@@ -40,6 +40,7 @@ void Action::loadActionsFromJson(const QString& filePath) {
 
             // Store the event information in the 'events' QMap.
             actions[actionID] = actionDesc;
+            actionCategories[actionID] = actionCategory;
         }
     }
     else {
@@ -55,7 +56,7 @@ QString Action::getAction(const QString& category) {
     for (const auto& action : actions) {
         const QString& actionID = action.first;
         const QString& actionDesc = action.second;
-        const QString& actionCategory = getCategoryByID(actionID); // Implement this function
+        const QString& actionCategory = getCategoryByActionID(actionID); // Implement this function
 
         if (actionCategory == category) {
             availableActions.append(actionDesc);
@@ -69,6 +70,15 @@ QString Action::getAction(const QString& category) {
     }
     else {
         return ""; // No available actions in the given category
+    }
+}
+
+QString Action::getCategoryByActionID(const QString& actionID) {
+    if (actionCategories.contains(actionID)) {
+        return actionCategories[actionID];
+    }
+    else {
+        return ""; // Action ID not found
     }
 }
 

@@ -1,210 +1,92 @@
 {
-   "Actions": [
-    {
-      "category": "generic",
-      "actions_id": "MTACT-01",
-      "act_desc": "Do nothing"
-    },
-    {
-      "category": "generic",
-      "actions_id": "MTACT-02",
-      "act_desc": "Return to base"
-    },
-    {
-      "category": "generic",
-      "actions_id": "MTACT-03",
-      "act_desc": "Keep exploring"
-    },
-    {
-      "category": "generic",
-      "actions_id": "MTACT-04",
-      "act_desc": "Find nothing"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-05",
-      "act_desc": "Read the letter"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-06",
-      "act_desc": "Go for a swim"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-07",
-      "act_desc": "Play stone skipping"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-08",
-      "act_desc": "Take a dip in the hot spring"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-09",
-      "act_desc": "Read the survival journal"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-10",
-      "act_desc": "Observe the stunning view"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-11",
-      "act_desc": "Have a moment of meditation"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-12",
-      "act_desc": "Go to the waterslide and play with it"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-13",
-      "act_desc": "Do some exercise"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-14",
-      "act_desc": "Went for a nap"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-15",
-      "act_desc": "Ask for some surival tips"
-    },
-    {
-      "category": "morale",
-      "actions_id": "MTACT-16",
-      "act_desc": "Greet the group of Maori "
-    },
-    {
-      "category": "food",
-      "actions_id": "MTACT-17",
-      "act_desc": "Cast the fishing rod to fish"
-    },
-    {
-      "category": "food",
-      "actions_id": "MTACT-18",
-      "act_desc": "Set the trap and wait patiently..."
-    },
-    {
-      "category": "food",
-      "actions_id": "MTACT-19",
-      "act_desc": "Search for foods"
-    },
-    {
-      "category": "food",
-      "actions_id": "MTACT-20",
-      "act_desc": "Find some dry fruits"
-    },
-    {
-      "category": "food",
-      "actions_id": "MTACT-21",
-      "act_desc": "Find some canned foods"
-    },
-    {
-      "category": "food",
-      "actions_id": "MTACT-22",
-      "act_desc": "Find some package snacks"
-    },
-    {
-      "category": "water",
-      "actions_id": "MTACT-23",
-      "act_desc": "Search for waters"
-    },
-    {
-      "category": "water",
-      "actions_id": "MTACT-24",
-      "act_desc": "Find some package beverages"
-    },
-    {
-      "category": "water",
-      "actions_id": "MTACT-25",
-      "act_desc": "Find some bottle water"
-    },
-    {
-      "category": "water",
-      "actions_id": "MTACT-26",
-      "act_desc": "Find some canned drink"
-    },
-    {
-      "category": "food",
-      "actions_id": "MTACT-27",
-      "act_desc": "Pick up the berries"
-    },
-    {
-      "category": "food",
-      "actions_id": "MTACT-28",
-      "act_desc": "Pick up the fungus"
-    },
-    {
-      "category": "food",
-      "actions_id": "MTACT-29",
-      "act_desc": "Claim the preserved food"
-    },
-    {
-      "category": "water",
-      "actions_id": "MTACT-30",
-      "act_desc": "Collect water from the spring"
-    },
-    {
-      "category": "water",
-      "actions_id": "MTACT-31",
-      "act_desc": "Collect the rainwater"
-    },
-    {
-      "category": "water",
-      "actions_id": "MTACT-32",
-      "act_desc": "Pick up the water purifier "
-    },
-    {
-      "category": "water",
-      "actions_id": "MTACT-33",
-      "act_desc": "Collect water from the well"
-    },
-    {
-      "category": "water",
-      "actions_id": "MTACT-34",
-      "act_desc": "Collect water from the broken pipe"
-    },
-    {
-      "category": "explore",
-      "actions_id": "MTACT-35",
-      "act_desc": "Take a photo "
-    },
-    {
-      "category": "explore",
-      "actions_id": "MTACT-36",
-      "act_desc": "Sneakily apporach them to have a better look"
-    },
-    {
-      "category": "explore",
-      "actions_id": "MTACT-37",
-      "act_desc": "Attack and kill the animal"
-    },
-    {
-      "category": "explore",
-      "actions_id": "MTACT-38",
-      "act_desc": "Tame the animal"
-    },
-    {
-      "category": "explore",
-      "actions_id": "MTACT-39",
-      "act_desc": "Reduce Food by {} to return base"
-    },
-    {
-      "category": "explore",
-      "actions_id": "MTACT-40",
-      "act_desc": "Reduce Water by {} to return base"
-    },
-    {
-      "category": "explore",
-      "actions_id": "MTACT-41",
-      "act_desc": "Reduce Morale by {} to return base"
-    }
-  ]
-
+  "Actions": {
+    "morale": [
+      {
+        "actions_id": "MTACT-01",
+        "act_desc": "Went for a walk around the track"
+      },
+      {
+        "actions_id": "MTACT-02",
+        "act_desc": "Go for a swim in the river"
+      },
+      {
+        "actions_id": "MTACT-03",
+        "act_desc": "Play stone skipping at the riverside"
+      },
+      {
+        "actions_id": "MTACT-04",
+        "act_desc": "Observe the stunning view"
+      },
+      {
+        "actions_id": "MTACT-05",
+        "act_desc": "Have a moment of meditation"
+      },
+      {
+        "actions_id": "MTACT-06",
+        "act_desc": "Do some exercise"
+      },
+      {
+        "actions_id": "MTACT-07",
+        "act_desc": "Went for a nap"
+      },
+      {
+        "actions_id": "MTACT-08",
+        "act_desc": "Lost in the forest"
+      },
+      {
+        "actions_id": "MTACT-09",
+        "act_desc": "Chased by some wild animals"
+      },
+      {
+        "actions_id": "MTACT-10",
+        "act_desc": "Slipped and fell into a hole"
+      }
+    ],
+    "food": [
+      {
+        "actions_id": "MTACT-11",
+        "act_desc": "Caught some"
+      },
+      {
+        "actions_id": "MTACT-12",
+        "act_desc": "Found some"
+      }
+    ],
+    "water": [
+      {
+        "actions_id": "MTACT-13",
+        "act_desc": "Collect water from a nearby spring"
+      },
+      {
+        "actions_id": "MTACT-14",
+        "act_desc": "Found some clean water"
+      },
+      {
+        "actions_id": "MTACT-15",
+        "act_desc": "Found some pack beverages"
+      },
+      {
+        "actions_id": "MTACT-16",
+        "act_desc": "Found some expired beverages"
+      },
+      {
+        "actions_id": "MTACT-17",
+        "act_desc": "Found some unclean water"
+      }
+    ],
+    "explore": [
+      {
+        "actions_id": "MTACT-18",
+        "act_desc": "Saw"
+      },
+      {
+        "actions_id": "MTACT-19",
+        "act_desc": "Encountered"
+      },
+      {
+        "actions_id": "MTACT-20",
+        "act_desc": "Found"
+      }
+    ]
+  }
 }
