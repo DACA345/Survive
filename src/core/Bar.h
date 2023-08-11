@@ -21,6 +21,9 @@ public:
 	// Method to get current value
 	int getValue() const;
 
+	// Method to return true/false if there's no more ints
+	bool isEmpty() const;
+
 private:
 	int dataval; // Variable to store the int value
 };

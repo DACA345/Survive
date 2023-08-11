@@ -2,7 +2,8 @@
 #include <QVector>
 #include <QMap>
 
-class Animal {
+class Animal 
+{
 public:
     // Constructor to initialize animals from JSON file
     Animal(const QString& filePath);
