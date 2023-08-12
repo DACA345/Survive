@@ -36,8 +36,6 @@ private:
     // Var for events
     Event disasters;
 
-    // Var for actions
-    Action actions;
 
     int getMenuChoice() const;
     void handleMenuChoice(int choice);
