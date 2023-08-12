@@ -3,5 +3,5 @@
 
 TEST(GAMEPLAYTEST, GameConstructorMethodTest)
 {
-	Game newGame("C:/Users/Andrew John/Source/Repos/DACA345/Survive/tests/data/levels/mtaspiring");
+	Game newGame("data/levels/mtaspiring");
 }
