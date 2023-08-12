@@ -3,7 +3,7 @@
 
 TEST(PlantTest, MethodConstructorTest)
 {
-    Plant testPlant("C:/Users/Andrew John/Source/Repos/DACA345/Survive/tests/data/levels/mtaspiring/plants.json");
+    Plant testPlant("data/levels/mtaspiring/plants.json");
 
     // Test for the "Fungi" category
     QPair<QString, bool> randomFungus = testPlant.getRandomPlant("fungi");
