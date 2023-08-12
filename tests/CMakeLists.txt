@@ -48,7 +48,7 @@ set_target_properties(${PROJECT_NAME}-config-test
 # Core tests
 add_executable(${PROJECT_NAME}-core-test
     "core/day-test.cpp"
- "core/animal-test.cpp" "core/animal-test.cpp" "core/plant-test.cpp" "core/event-test.cpp")
+ "core/animal-test.cpp" "core/animal-test.cpp" "core/plant-test.cpp" "core/event-test.cpp" "core/game-test.cpp")
 
 add_test(
     NAME ${PROJECT_NAME}-core-test
