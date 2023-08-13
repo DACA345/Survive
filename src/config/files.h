@@ -1,15 +1,14 @@
 #pragma once
 #include <QDir>
 
-#define LEVEL_FOLDER DIRECTORY_PATH "/levels"
-#define TEXTURE_FOLDER DIRECTORY_PATH "/textures"
-#define SAVE_FOLDER DIRECTORY_PATH "/saves"
+#define _PATH_JOIN(path1, path2) QDir::cleanPath(path1 + QDir::separator() + path2)
 
-#define LEVEL_FILE(path) LEVEL_FOLDER "/" path
-#define TEXTURE_FILE(path) TEXTURE_FOLDER "/" path
-#define SAVE_FILE(path) SAVE_FOLDER "/" path
+#define DIRECTORY_PATH QDir(QDir::current().filePath("..")).canonicalPath()
 
-namespace Files
-{
-    QString textureFilePath(const QString& path);
-}
+#define LEVEL_FOLDER _PATH_JOIN(DIRECTORY_PATH, "levels")
+#define TEXTURE_FOLDER _PATH_JOIN(DIRECTORY_PATH, "textures")
+#define SAVE_FOLDER _PATH_JOIN(DIRECTORY_PATH, "saves")
+
+#define LEVEL_FILE(path) _PATH_JOIN(LEVEL_FOLDER, QDir::cleanPath(path))
+#define TEXTURE_FILE(path) _PATH_JOIN(TEXTURE_FOLDER, QDir::cleanPath(path))
+#define SAVE_FILE(path) _PATH_JOIN(SAVE_FOLDER, QDir::cleanPath(path))

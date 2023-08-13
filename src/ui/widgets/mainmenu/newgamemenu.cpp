@@ -31,7 +31,7 @@ void LevelInfoWidget::setupUi()
 
 void LevelInfoWidget::loadGraphics()
 {
-    QDir textureDir(Files::textureFilePath(QString("mainmenu/levels/%1").arg(id)));
+    QDir textureDir(TEXTURE_FILE(QString("mainmenu/levels/%1").arg(id)));
     QFile manifestJson = QFile(textureDir.filePath("manifest.json"));
     manifestJson.open(QIODevice::ReadOnly);
 
@@ -74,7 +74,7 @@ void LevelInfoWidget::loadGraphics()
         hoverFilters.append(new QSvgRenderer(filtersDir.filePath(filterFile)));
     }
 
-    background = QPixmap(Files::textureFilePath(textureDir.filePath(backgroundFile)));
+    background = QPixmap(textureDir.filePath(backgroundFile));
 
 }
 
