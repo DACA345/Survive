@@ -1,7 +1,8 @@
 add_subdirectory(core)
 
-qt_add_executable(Survive
-    "config/files.cpp"
+# Configure Survive GUI as library
+add_library(${PROJECT_NAME}-Gui STATIC    
+    
     "ui/widgets/mainmenu/loadgamemenu.cpp"
     "ui/widgets/mainmenu/newgamemenu.cpp"
     "ui/widgets/mainmenu/settingsmenu.cpp"
@@ -12,17 +13,31 @@ qt_add_executable(Survive
     "ui/game.cpp"
     "util/resolution.cpp"
     "survivegame.cpp"
+)
+
+target_link_libraries(${PROJECT_NAME}-Gui
+    PRIVATE
+        Qt6::Core
+        Qt6::Gui
+        Qt6::Widgets
+        Qt6::SvgWidgets
+)
+
+# Create game executable
+
+qt_add_executable(Survive
     "main.cpp"
     "survive.rc"
 )
 
 target_link_libraries(Survive
     PRIVATE
+        ${PROJECT_NAME}-Core
+        ${PROJECT_NAME}-Gui
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
         Qt6::SvgWidgets
-        SurviveCore
 )
 
 set_target_properties(Survive
@@ -34,7 +49,6 @@ set_target_properties(Survive
 add_compile_definitions(Survive
     PRIVATE
         VERSION="${CMAKE_PROJECT_VERSION}"
-        DIRECTORY_PATH="${CMAKE_INSTALL_PREFIX}"
 )
 
 # Qt bundling with runtimes

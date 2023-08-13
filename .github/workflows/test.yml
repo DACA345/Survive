@@ -35,4 +35,4 @@ jobs:
               shell: pwsh
               run: |
                     cd ${{ github.workspace }}/build
-                    Get-ChildItem bin/Release/ -Filter Survive-*-test.exe | ForEach-Object { & $_.FullName }
+                    Get-ChildItem bin/test/Release/ -Filter Survive-*-test.exe | ForEach-Object { & $_.FullName }
