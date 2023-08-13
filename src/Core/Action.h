@@ -13,7 +13,9 @@ public:
     void printAllActions() const;
 
     // Get random method 
-    QString getAction() const;
+    QString getAction(const QString& category) const;
+
+    QString getCategoryByActionID(const QString& actionID) const;
 
     // Print random method
     void printRandomAction() const;
@@ -21,4 +23,5 @@ public:
 
 private:
     QMap<QString, QString> actions;
+    QMap<QString, QString> actionCategories;
 };
