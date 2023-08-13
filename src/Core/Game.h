@@ -16,9 +16,14 @@ public:
 private:
     // Setter for where the location should be
     std::string levelFolder;
-
     QString convertQlevelFolder = QString::fromStdString(levelFolder);
     
+    // Day counter
+    int dayCounter;
+
+    // Turn counter
+    int turns;
+
     // Var game bars
     Bar energyBar;
     Bar hungerBar;
@@ -44,8 +49,11 @@ private:
     void displayDaySummary() const;
     void displayGameOver() const;
     void displayLevelIntro() const;
-    void displayActionsMenu() const;
-    void displayEvents() const;
+
+    void findFood();
+    void findWater();
+    void explore();
+    void rest();
 
 };
 
