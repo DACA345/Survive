@@ -3,6 +3,9 @@
 
 #include "widgets/scalablewidget.h"
 
+/**
+ * @brief      This class describes the game instance.
+ */
 class Game : public ScalableWidget
 {
     Q_OBJECT
