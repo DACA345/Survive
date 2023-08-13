@@ -9,16 +9,14 @@ plant(convertQlevelFolder + "/plants.json"), // Initialize Plant
 disasters(convertQlevelFolder + "/disaster_ev.json") // Initialize Disaster
 
 {
-    // Initialize your game here, based on the chosen level
-    // Load data from the appropriate folder (e.g., "levels/mtaspiring")
-
     // Initialize Bar
-    Bar energyBar(10);
+    Bar energyBar(5);
     Bar hungerBar(10);
     Bar thirstBar(10);
 
+    dayCounter = 1; // Start with Day 1
+    turns = 5; // Initialize turns to 5
 
-    // You can also print a message to indicate that the game is initialized
     std::cout << "Game initialized for level: " << levelFolder << std::endl;
 }
 
@@ -27,10 +25,25 @@ void Game::run()
 {
     displayLevelIntro();
 
-    while (true) {
+    while (true) 
+    {
+        std::cout << "Day: " << dayCounter << std::endl;
+        std::cout << "Turns remaining: " << turns << std::endl;
         displayMainMenu();
         int choice = getMenuChoice();
         handleMenuChoice(choice);
+
+        if (turns == 1) {
+            std::cout << "Only 1 turn remaining!" << std::endl;
+        }
+        else if (turns == 0) {
+            displayDaySummary();
+            std::cout << "Day " << dayCounter << " ends!" << std::endl;
+            ++dayCounter; // Increment the day counter
+            turns = 5; // Reset the turn counter
+        }
+
+        std::cout << "*********************************" << std::endl;
     }
 }
 
@@ -42,42 +55,39 @@ int Game::getMenuChoice() const
     return choice;
 }
 
+void Game::displayMainMenu() const
+{
+    // Display the main menu options
+    std::cout << "Main Menu:" << std::endl;
+    std::cout << "1. Find Food" << std::endl;
+    std::cout << "2. Find Water" << std::endl;
+    std::cout << "3. Explore" << std::endl;
+    std::cout << "4. Rest" << std::endl;
+}
+
 void Game::handleMenuChoice(int choice)
 {
     switch (choice) {
     case 1:
-        // Handle actions menu
-        displayActionsMenu();
+        --turns; // Deduct a turn when a valid action is chosen
         break;
     case 2:
-        // Handle events
-        displayEvents();
+        --turns; // Deduct a turn when a valid action is chosen
         break;
     case 3:
-        // Handle day summary
-        displayDaySummary();
+        --turns; // Deduct a turn when a valid action is chosen
         break;
     case 4:
-        // Handle game over
-        displayGameOver();
+        --turns; // Deduct a turn when a valid action is chosen
         break;
     default:
         std::cout << "Invalid choice. Please select a valid option." << std::endl;
     }
 }
 
-void Game::displayMainMenu() const
-{
-    // Display the main menu options
-    std::cout << "Main Menu:" << std::endl;
-    std::cout << "1. Perform Actions" << std::endl;
-    std::cout << "2. View Events" << std::endl;
-    std::cout << "3. Display Day Summary" << std::endl;
-    std::cout << "4. Game Over" << std::endl;
-}
-
 void Game::displayDaySummary() const
 {
+    std::cout << "*********************************" << std::endl;
     // Display the summary for the day
     std::cout << "Day Summary:" << std::endl;
     // Display energy, hunger, thirst bars
@@ -86,29 +96,37 @@ void Game::displayDaySummary() const
     std::cout << "Thirst: " << thirstBar.getValue() << "/ 10" << std::endl;
     // Display other summary information...
 }
+ 
+void Game::findFood() 
+{
+    energyBar.minus(1);
+}
+
+void Game::findWater() 
+{
+    energyBar.minus(1);
+}
+
+void Game::explore()
+{
+    energyBar.minus(1);
+}
+
+void Game::rest() 
+{
+    energyBar.plus(1);
+}
 
 void Game::displayGameOver() const
 {
+    std::cout << "*********************************" << std::endl;
     // Display game over message
     std::cout << "Game Over! Thanks for playing." << std::endl;
 }
 
 void Game::displayLevelIntro() const
 {
+    std::cout << "*********************************" << std::endl;
     // Display level introduction message
     std::cout << "Welcome to the game! Level: " << levelFolder << std::endl;
-}
-
-void Game::displayActionsMenu() const
-{
-    // Display actions menu options
-    std::cout << "Actions Menu:" << std::endl;
-    // Display actions options...
-}
-
-void Game::displayEvents() const
-{
-    // Display current events in the game
-    std::cout << "Current Events:" << std::endl;
-    // Display event information...
 }

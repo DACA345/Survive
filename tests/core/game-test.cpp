@@ -4,4 +4,6 @@
 TEST(GAMEPLAYTEST, GameConstructorMethodTest)
 {
 	Game newGame("data/levels/mtaspiring");
+
+	newGame.run();
 }
