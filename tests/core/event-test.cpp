@@ -3,7 +3,7 @@
 
 TEST(eventTest, JSONConstructorTest)
 {
-	Event disasters("C:/Users/Andrew John/Source/Repos/DACA345/Survive/tests/data/levels/mtaspiring/disaster_ev.json");
+	Event disasters("data/levels/mtaspiring/disaster_ev.json");
 
 	// Print each disaster details
 	disasters.printAllEvents();

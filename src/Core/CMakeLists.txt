@@ -1,9 +1,14 @@
 add_library(SurviveCore
+    "Action.cpp"
     "Bar.cpp"
     "Day.cpp"
     "Engine.cpp"
     "Level.cpp"
- "Action.h" "Animal.cpp" "Plant.cpp" "Event.cpp" "Game.cpp")
+    "Animal.cpp"
+    "Plant.cpp"
+    "Event.cpp"
+    "Game.cpp"
+)
 
 target_link_libraries(SurviveCore
     PRIVATE
