@@ -1,0 +1,31 @@
+#include "winver.h"
+
+IDI_ICON1               ICON    "../textures/icon/icon.ico"
+
+VS_VERSION_INFO VERSIONINFO
+    FILEVERSION 0, 0, 1, 0
+    PRODUCTVERSION 0, 0, 1, 0
+    FILEFLAGS 0x0L
+    FILEFLAGSMASK 0x3fL
+    FILEOS 0x00040004L
+    FILETYPE 0x1L
+    FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "DACA"
+            VALUE "FileDescription", "DACA: Survive"
+            VALUE "FileVersion", "0.0.1.0"
+            VALUE "InternalName", "survive"
+            VALUE "OriginalFilename", "Survive.exe"
+            VALUE "ProductName", "DACA: Survive"
+            VALUE "ProductVersion", "0.0.1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END

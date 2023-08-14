@@ -1,5 +1,7 @@
 #include <QApplication>
-#include "SurviveGame.h"
+
+#include "survivegame.h"
+#include "config/files.h"
 
 int main(int argc, char* argv[])
 {
@@ -10,6 +12,7 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
 
     SurviveGame game;
+
     game.show();
 
     return app.exec();
