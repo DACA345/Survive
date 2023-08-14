@@ -1,6 +1,6 @@
 add_library(${PROJECT_NAME}-Core
-    "Engine.cpp"
-    "Level.cpp"
+    "engine.cpp"
+    "level.cpp"
 )
 
 target_link_libraries(${PROJECT_NAME}-Core
