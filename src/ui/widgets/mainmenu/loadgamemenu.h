@@ -3,6 +3,7 @@
 #include <QPushButton>
 
 #include "../scalablewidget.h"
+#include "../svgpushbutton.h"
 
 // NOTE(Callum): This is currently pretty much the same as NewGameMenu
 // Could be refactored to use a base class
@@ -42,9 +43,21 @@ class LoadGameMenu : public ScalableWidget
 
     private:
         /**
+         * @brief      Paint event handler. See QWidget paint.
+         *
+         * @param      event  The event
+         */
+        void paintEvent(QPaintEvent* event) override;
+
+        /**
          * @brief      Display a user's saves.
          */
         void displaySaves();
+
+        /**
+        * @brief      Loads the graphics.
+        */
+        void loadGraphics();
 
         /**
          * @brief      Sets up the UI.
@@ -58,5 +71,7 @@ class LoadGameMenu : public ScalableWidget
         QWidget* savesWidget;
         QGridLayout* savesLayout;
 
-        QPushButton* backButton;
+        SVGPushButton* backButton;
+
+        QPixmap background;
 };

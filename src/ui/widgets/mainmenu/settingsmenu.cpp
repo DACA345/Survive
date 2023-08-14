@@ -87,11 +87,11 @@ void SettingsMenu::setupUi()
     connect(backButton, &QPushButton::clicked, this, &SettingsMenu::onSettingsMenuClosed);
 
     // Add widgets
-    addWidget(title, 0.4, 0.0, 0.2, 0.1);
-    addWidget(resolutionLabel, 0.4, 0.2, 0.2, 0.1);
-    addWidget(resolutionOption, 0.4, 0.3, 0.2, 0.1);
-    addWidget(frameOption, 0.4, 0.4, 0.2, 0.1);
-    addWidget(backButton, 0.4, 0.85, 0.2, 0.1);
+    addWidget(title, 0.4, 0.075, 0.2, 0.0675);
+    addWidget(resolutionLabel, 0.45, 0.25, 0.12, 0.043);
+    addWidget(resolutionOption, 0.4, 0.325, 0.2, 0.1);
+    addWidget(frameOption, 0.4, 0.435, 0.2, 0.1);
+    addWidget(backButton, 0.45, 0.875, 0.1, 0.075);
 }
 
 void SettingsMenu::onResolutionOptionChanged()

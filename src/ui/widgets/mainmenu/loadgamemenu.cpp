@@ -1,4 +1,5 @@
 #include <QDirIterator>
+#include <QPainter>
 
 #include "loadgamemenu.h"
 #include "../../../config/files.h"
@@ -18,6 +19,7 @@ LoadGameMenu::LoadGameMenu(QWidget* parent)
         }
     }
 
+    loadGraphics();
     setupUi();
 }
 
@@ -54,15 +56,29 @@ void LoadGameMenu::displaySaves()
     addWidget(savesWidget, 0.1, 0.1, 0.8, 0.7);
 }
 
+void LoadGameMenu::paintEvent(QPaintEvent* event)
+{
+    ScalableWidget::paintEvent(event);
+
+    QPainter painter(this);
+
+    painter.drawPixmap(rect(), background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+}
+
+void LoadGameMenu::loadGraphics()
+{
+    background = QPixmap(TEXTURE_FILE("mainmenu/loadgame/background/image.png"));
+}
+
 void LoadGameMenu::setupUi()
 {
     displaySaves();
 
-    backButton = new QPushButton("Back", this);
+    backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/loadgame/text/back.svg"), this);
 
     connect(backButton, &QPushButton::clicked, this, &LoadGameMenu::onLoadGameMenuClosed);
 
-    addWidget(backButton, 0.4, 0.85, 0.2, 0.1);
+    addWidget(backButton, 0.45, 0.875, 0.1, 0.075);
 }
 
 LoadGameMenu::~LoadGameMenu()

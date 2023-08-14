@@ -185,7 +185,7 @@ void NewGameMenu::displayLevels()
 
     levelsWidget->setLayout(levelsLayout);
 
-    addWidget(levelsWidget, 0.1, 0.1, 0.8, 0.7);
+    addWidget(levelsWidget, 0.15, 0.15, 0.7, 0.7);
 }
 
 void NewGameMenu::paintEvent(QPaintEvent* event)
@@ -216,8 +216,8 @@ void NewGameMenu::setupUi()
     connect(backButton, &QPushButton::clicked, this, &NewGameMenu::onNewGameMenuClosed);
 
     // Add widgets
-    addWidget(title, 0.05, 0.05, 0.9, 0.1);
-    addWidget(backButton, 0.4, 0.85, 0.2, 0.1);
+    addWidget(title, 0.28, 0.05, 0.43, 0.07);
+    addWidget(backButton, 0.45, 0.875, 0.1, 0.075);
 }
 
 NewGameMenu::~NewGameMenu()
