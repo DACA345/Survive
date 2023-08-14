@@ -1,4 +1,3 @@
-#include "Event.h"
 #include <iostream>
 #include <QFile>
 #include <QJsonDocument>
@@ -6,6 +5,8 @@
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QDebug>
+
+#include "event.h"
 
 // Constructor that takes a file path to load events from a JSON file.
 Event::Event(const QString& filePath) {

@@ -1,4 +1,4 @@
-#include "Bar.h"
+#include "bar.h"
 
 // Define constructor
 Bar::Bar(int initialValue)

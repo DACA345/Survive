@@ -5,7 +5,7 @@
 #include <QJsonValue>
 #include <QRandomGenerator> 
 
-#include "Action.h"
+#include "action.h"
 
 // Constructor that takes a file path to load events from a JSON file.
 Action::Action(const QString& filePath) {

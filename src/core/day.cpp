@@ -1,4 +1,3 @@
-#include "Day.h"
 #include <iostream>
 #include <QFile>
 #include <QJsonDocument>
@@ -10,6 +9,8 @@
 #include <algorithm>
 #include <random>
 #include <sstream>
+
+#include "day.h"
 
 Day::Day(const std::string& filename)
 {

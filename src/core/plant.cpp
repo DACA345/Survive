@@ -1,4 +1,3 @@
-#include "Plant.h"
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -6,6 +5,8 @@
 #include <QJsonValue>
 #include <QPair>
 #include <QRandomGenerator>
+
+#include "plant.h"
 
 // Constructor to initialize animals from JSON file
 Plant::Plant(const QString& filePath)

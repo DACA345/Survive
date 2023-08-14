@@ -1,10 +1,11 @@
 #include <string>
-#include "Day.h"
-#include "Bar.h"
-#include "Animal.h"
-#include "Plant.h"
-#include "Event.h"
-#include "Action.h"
+
+#include "day.h"
+#include "bar.h"
+#include "animal.h"
+#include "plant.h"
+#include "event.h"
+#include "action.h"
 
 class Game 
 {

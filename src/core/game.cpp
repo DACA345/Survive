@@ -1,7 +1,8 @@
-#include "Game.h"
 #include <iostream>
 #include <string>
 #include <random>
+
+#include "game.h"
 
 Game::Game(const std::string& levelFolder) : levelFolder(levelFolder),
 climate(levelFolder + "/climate.json"), // Initialize climate data

@@ -1,4 +1,3 @@
-#include "Animal.h"
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -6,6 +5,7 @@
 #include <QJsonValue>
 #include <QRandomGenerator>
 
+#include "animal.h"
 
 // Constructor to initialize animals from JSON file
 Animal::Animal(const QString& filePath) 

@@ -53,7 +53,8 @@ add_executable(${PROJECT_NAME}-core-test
     "core/plant-test.cpp"
     "core/event-test.cpp"
     "core/bar-test.cpp"
-    "core/game-test.cpp")
+    "core/game-test.cpp"
+)
 
 add_test(
     NAME ${PROJECT_NAME}-core-test
@@ -98,11 +99,13 @@ add_dependencies(${PROJECT_NAME}-Tests
     ${PROJECT_NAME}-config-test
     ${PROJECT_NAME}-core-test
 )
+
 set_target_properties(${PROJECT_NAME}-Tests
     PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/test"
+)
 
 # Copy test data
 add_custom_command(
