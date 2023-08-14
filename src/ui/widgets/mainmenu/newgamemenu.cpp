@@ -102,7 +102,8 @@ void LevelInfoWidget::paintEvent(QPaintEvent* event)
 
 void LevelInfoWidget::mousePressEvent(QMouseEvent* event)
 {
-    emit levelSelected(id);
+    // NOTE(Callum): Suppressed until implemented
+    //emit levelSelected(id);
 }
 
 void LevelInfoWidget::enterEvent(QEnterEvent* event)
