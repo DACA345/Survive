@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <core/Action.h>
+#include <core/action.h>
 
 TEST(ActionTest, MethodConstructorTest)
 {

@@ -37,9 +37,6 @@ private:
     // Bool value to track if player can use that turn or not
     bool move;
 
-    // Array of month names
-    static const std::string months[12];
-
     // float for tracking temps
     float maxTemperature;
     float avgTemperature;
