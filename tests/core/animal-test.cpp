@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <core/animal.h>
 
-TEST(AnimalTests, MethodConstructorTest)
+TEST(AnimalTest, MethodConstructorTest)
 {
     // Test getting a random bird
     Animal animal("data/levels/mtaspiring/animals.json");

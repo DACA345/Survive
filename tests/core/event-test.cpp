@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <core/event.h>
 
-TEST(eventTest, JSONConstructorTest)
+TEST(EventTest, JSONConstructorTest)
 {
 	Event disasters("data/levels/mtaspiring/disaster_ev.json");
 
