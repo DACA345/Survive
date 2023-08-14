@@ -72,6 +72,11 @@ class SettingsMenu : public ScalableWidget
         void paintEvent(QPaintEvent* event) override;
 
         /**
+        * @brief      Loads the stylesheet.
+        */
+        void loadStylesheet();
+
+        /**
         * @brief      Loads the graphics.
         */
         void loadGraphics();

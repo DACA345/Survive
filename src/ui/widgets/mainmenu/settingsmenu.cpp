@@ -13,6 +13,7 @@ SettingsMenu::SettingsMenu(QWidget* parent)
     resize(parent->size());
     settings = new QSettings();
 
+    loadStylesheet();
     loadGraphics();
     setupUi();
 }
@@ -25,6 +26,14 @@ void SettingsMenu::paintEvent(QPaintEvent* event)
 
     painter.drawPixmap(rect(), background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
     painter.drawPixmap(rect(), overlay1.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+}
+
+void SettingsMenu::loadStylesheet()
+{
+    QFile file(TEXTURE_FILE("mainmenu/settings/style/style.qss"));
+    file.open(QFile::ReadOnly);
+    setStyleSheet(file.readAll());
+    file.close();
 }
 
 void SettingsMenu::loadGraphics()
