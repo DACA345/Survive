@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['level_6',['Level',['../d2/d9d/classLevel.html',1,'']]],
-  ['level_7',['level',['../d1/db6/classEngine.html#af27bc7ef4a413339ca74bdfd2de92653',1,'Engine']]],
-  ['level_8',['Level',['../d2/d9d/classLevel.html#abfcd0f6b6714662a35fb0f21962e5df3',1,'Level']]],
-  ['level_2ecpp_9',['Level.cpp',['../de/db3/Level_8cpp.html',1,'']]],
-  ['level_2eh_10',['Level.h',['../d9/da2/Level_8h.html',1,'']]],
-  ['levelinfo_11',['LevelInfo',['../de/d3c/structLevelInfo.html',1,'']]]
+  ['childinfo_5',['ChildInfo',['../d3/d37/structScalableWidget_1_1ChildInfo.html',1,'ScalableWidget']]],
+  ['closeloadgamemenu_6',['closeLoadGameMenu',['../d9/d0a/classMainMenu.html#ac57a2f39b3b28530cd2167d93e3ed05c',1,'MainMenu']]],
+  ['closenewgamemenu_7',['closeNewGameMenu',['../d9/d0a/classMainMenu.html#adde51da4c54753a02c5c6235d17cc7b8',1,'MainMenu']]],
+  ['closesettingsmenu_8',['closeSettingsMenu',['../d9/d0a/classMainMenu.html#ad8543adfae87ea970bee4b1a45142d4b',1,'MainMenu']]],
+  ['columns_9',['columns',['../da/d1e/classLoadGameMenu.html#aa8b54876576550a95fd93745bc0886c7',1,'LoadGameMenu::columns()'],['../d7/d63/classNewGameMenu.html#aefd654b9d35525f003d91d6479a8ea73',1,'NewGameMenu::columns()']]]
 ];

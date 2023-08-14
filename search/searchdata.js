@@ -1,30 +1,33 @@
 var indexSectionsWithContent =
 {
-  0: "deilmnrs~",
-  1: "els",
-  2: "elmrs",
-  3: "elms~",
-  4: "diln",
-  5: "d"
+  0: "_abcdefghilmnoprstuw~",
+  1: "ceglmns",
+  2: "r",
+  3: "efglmnrs",
+  4: "acdefglmnoprsu~",
+  5: "abcdefghilmnoprstw",
+  6: "_dlstu"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "files",
-  3: "functions",
-  4: "variables",
-  5: "pages"
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "variables",
+  6: "defines"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Files",
-  3: "Functions",
-  4: "Variables",
-  5: "Pages"
+  2: "Namespaces",
+  3: "Files",
+  4: "Functions",
+  5: "Variables",
+  6: "Macros"
 };
 

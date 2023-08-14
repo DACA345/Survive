@@ -25,7 +25,8 @@
 var NAVTREE =
 [
   [ "Survive", "index.html", [
-    [ "DACA: Survive <a href=\"https://github.com/DACA345/Survive/actions/workflows/release.yml\"><img src=\"https://github.com/DACA345/Survive/actions/workflows/release.yml/badge.svg\" alt=\"survive-build-release\"/></a> <a href=\"https://github.com/DACA345/Survive/actions/workflows/documentation.yml\"><img src=\"https://github.com/DACA345/Survive/actions/workflows/documentation.yml/badge.svg\" alt=\"survive-build-documentation\"/></a> <a href=\"https://github.com/DACA345/Survive/actions/workflows/test.yml\"><img src=\"https://github.com/DACA345/Survive/actions/workflows/test.yml/badge.svg\" alt=\"survive-build-tests\"/></a>", "index.html", [
+    [ "Namespaces", "namespaces.html", [
+      [ "Release packages", "index.html#autotoc_md0", null ],
       [ "How to build", "index.html#autotoc_md1", [
         [ "Requirements", "index.html#autotoc_md2", [
           [ "Building from the command line", "index.html#autotoc_md4", null ],
@@ -33,9 +34,15 @@ var NAVTREE =
         ] ]
       ] ],
       [ "Contributing", "index.html#autotoc_md6", [
-        [ "Setup pre-commit hooks", "index.html#autotoc_md7", null ],
-        [ "Git commit conventions", "index.html#autotoc_md8", null ],
-        [ "Branches", "index.html#autotoc_md9", null ]
+        [ "Developer documentation", "index.html#autotoc_md7", null ],
+        [ "Setup pre-commit hooks", "index.html#autotoc_md8", null ],
+        [ "Git commit conventions", "index.html#autotoc_md9", null ],
+        [ "Branches", "index.html#autotoc_md10", null ]
+      ] ],
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -52,7 +59,8 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
+        [ "Functions", "globals_func.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
