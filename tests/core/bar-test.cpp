@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <Core/Bar.h>
+#include <core/bar.h>
 
 TEST(BarTest, MethodTest)
 {

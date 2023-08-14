@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <Core/Event.h>
+#include <core/event.h>
 
 TEST(eventTest, JSONConstructorTest)
 {

@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <Core/Day.h>
+#include <core/day.h>
 
 TEST(DayTest, GetRandomTemperatureValueTest)
 {

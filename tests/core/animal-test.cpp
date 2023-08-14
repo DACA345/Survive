@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <Core/Animal.h>
+#include <core/animal.h>
 
 TEST(AnimalTests, MethodConstructorTest)
 {

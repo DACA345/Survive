@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <Core/Plant.h>
+#include <core/plant.h>
 
 TEST(PlantTest, MethodConstructorTest)
 {
