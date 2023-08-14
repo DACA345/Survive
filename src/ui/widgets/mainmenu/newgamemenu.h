@@ -1,9 +1,10 @@
 #pragma once
 #include <QGridLayout>
 #include <QPushButton>
-#include <QSvgRenderer>
+#include <QSvgWidget>
 
 #include "../scalablewidget.h"
+#include "../svgpushbutton.h"
 
 /**
  * @brief      This class describes a level information widget.
@@ -126,9 +127,21 @@ class NewGameMenu : public ScalableWidget
 
     private:
         /**
+         * @brief      Paint event handler. See QWidget paint.
+         *
+         * @param      event  The event
+         */
+        void paintEvent(QPaintEvent* event) override;
+
+        /**
          * @brief      Displays the available levels.
          */
         void displayLevels();
+
+        /**
+        * @brief      Loads graphics for the widget.
+        */
+        void loadGraphics();
 
         /**
          * @brief      Sets up the UI.
@@ -140,10 +153,16 @@ class NewGameMenu : public ScalableWidget
          */
         const int columns = 2;
 
+        // Ui attributes
+        QSvgWidget* title;
+
         QList<QString> levelJsons;
         QList<LevelInfoWidget*> levelButtons;
-        QWidget* levelsWidget;
         QGridLayout* levelsLayout;
+        QWidget* levelsWidget;
 
-        QPushButton* backButton;
+        SVGPushButton* backButton;
+
+        QPixmap background;
+        QPixmap overlay1;
 };

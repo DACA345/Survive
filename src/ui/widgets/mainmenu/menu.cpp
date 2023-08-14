@@ -35,9 +35,6 @@ void Menu::loadGraphics()
 void Menu::setupUi()
 {
     // Create game title
-    QFont titleFont = font();
-    titleFont.setPointSize(32);
-
     menuTitle = new QSvgWidget(TEXTURE_FILE("mainmenu/menu/text/title.svg"), this);
 
     // Create buttons for main menu

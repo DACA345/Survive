@@ -2,8 +2,10 @@
 #include <QSettings>
 #include <QComboBox>
 #include <QPushButton>
+#include <QSvgWidget>
 
 #include "../scalablewidget.h"
+#include "../svgpushbutton.h"
 
 /**
  * @brief      This class describes a settings menu.
@@ -63,14 +65,32 @@ class SettingsMenu : public ScalableWidget
 
     private:
         /**
+         * @brief      Paint event handler. See QWidget paint.
+         *
+         * @param      event  The event
+         */
+        void paintEvent(QPaintEvent* event) override;
+
+        /**
+        * @brief      Loads the graphics.
+        */
+        void loadGraphics();
+
+        /**
          * @brief      Sets up the UI.
          */
         void setupUi();
 
         QSettings* settings;
 
+        QSvgWidget* title;
+        QSvgWidget* resolutionLabel;
+
         QComboBox* resolutionOption;
         QComboBox* frameOption;
 
-        QPushButton* backButton;
+        SVGPushButton* backButton;
+
+        QPixmap background;
+        QPixmap overlay1;
 };

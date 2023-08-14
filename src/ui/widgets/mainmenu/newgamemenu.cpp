@@ -31,7 +31,7 @@ void LevelInfoWidget::setupUi()
 
 void LevelInfoWidget::loadGraphics()
 {
-    QDir textureDir(TEXTURE_FILE(QString("mainmenu/levels/%1").arg(id)));
+    QDir textureDir(TEXTURE_FILE(QString("mainmenu/newgame/%1").arg(id)));
     QFile manifestJson = QFile(textureDir.filePath("manifest.json"));
     manifestJson.open(QIODevice::ReadOnly);
 
@@ -46,6 +46,7 @@ void LevelInfoWidget::loadGraphics()
     QJsonArray sizeArray = labelObj["size"].toArray();
 
     labelRenderer = new QSvgRenderer(textureDir.filePath(labelFile));
+    labelRenderer->setAspectRatioMode(Qt::IgnoreAspectRatio);
     labelRect = QRectF(
         offsetArray[0].toDouble() / 100,
         offsetArray[1].toDouble() / 100,
@@ -75,7 +76,6 @@ void LevelInfoWidget::loadGraphics()
     }
 
     background = QPixmap(textureDir.filePath(backgroundFile));
-
 }
 
 void LevelInfoWidget::paintEvent(QPaintEvent* event)
@@ -151,6 +151,7 @@ NewGameMenu::NewGameMenu(QWidget* parent)
         }
     }
 
+    loadGraphics();
     setupUi();
 }
 
@@ -187,21 +188,42 @@ void NewGameMenu::displayLevels()
     addWidget(levelsWidget, 0.1, 0.1, 0.8, 0.7);
 }
 
+void NewGameMenu::paintEvent(QPaintEvent* event)
+{
+    QWidget::paintEvent(event);
+
+    QPainter painter(this);
+
+    painter.drawPixmap(rect(), background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+    painter.drawPixmap(rect(), overlay1.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+}
+
+void NewGameMenu::loadGraphics()
+{
+    background = QPixmap(TEXTURE_FILE("mainmenu/newgame/background/image.png"));
+    overlay1 = QPixmap(TEXTURE_FILE("mainmenu/newgame/background/overlay1.svg"));
+}
+
 void NewGameMenu::setupUi()
 {
+    title = new QSvgWidget(TEXTURE_FILE("mainmenu/newgame/text/title.svg"), this);
+
     displayLevels();
 
-    backButton = new QPushButton("Back", this);
+    backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/newgame/text/back.svg"), this);
 
     // Setup connections
     connect(backButton, &QPushButton::clicked, this, &NewGameMenu::onNewGameMenuClosed);
 
     // Add widgets
+    addWidget(title, 0.05, 0.05, 0.9, 0.1);
     addWidget(backButton, 0.4, 0.85, 0.2, 0.1);
 }
 
 NewGameMenu::~NewGameMenu()
 {
+    delete title;
+
     for (LevelInfoWidget* levelButton : levelButtons)
     {
         delete levelButton;
