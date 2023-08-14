@@ -5,6 +5,7 @@ on:
     workflows: [survive-build-tests]
     types: [completed]
     branches: [main]
+    tags: [v*, latest]
 
 
 jobs:
