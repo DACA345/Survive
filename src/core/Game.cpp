@@ -21,6 +21,11 @@ healthBar(10)
     move = true; // Initialize player to be able to move
     currentMonthIndex = 0; // Initialize monthindex to 1 (starts from january)
 
+    // Temp fix
+    maxTemperature = 10;
+    avgTemperature = 10;
+    minTemperature = 10;
+
     std::cout << "Game initialized for level: " << levelFolder << std::endl;
 }
 
@@ -295,8 +300,8 @@ void Game::updateTemperature()
 void Game::displayTemperature()
 {
     std::cout << "Temperature for Day " << dayCounter << ":" << std::endl;
-    std::cout << "Afternoon Temp: " << maxTemperature << " °C" << std::endl;
     std::cout << "Day/Evening Temp: " << avgTemperature << " °C" << std::endl;
+    std::cout << "Afternoon Temp: " << maxTemperature << " °C" << std::endl;
     std::cout << "Night Temp: " << minTemperature << " °C" << std::endl;
 }
 
