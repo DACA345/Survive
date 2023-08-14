@@ -38,6 +38,30 @@ void Day::loadClimateData(const std::string& filename)
             QJsonObject monthElement = val.toObject();
             ClimateData cd;
 
+            // Initialize each field to default values
+            cd.max_temperature.max = 0.0;
+            cd.max_temperature.average = 0.0;
+            cd.max_temperature.min = 0.0;
+
+            cd.avg_temperature.max = 0.0;
+            cd.avg_temperature.average = 0.0;
+            cd.avg_temperature.min = 0.0;
+
+            cd.min_temperature.max = 0.0;
+            cd.min_temperature.average = 0.0;
+            cd.min_temperature.min = 0.0;
+
+            cd.precipitation.max = 0.0;
+            cd.precipitation.average = 0.0;
+            cd.precipitation.min = 0.0;
+            cd.precipitation.sum = 0.0;
+
+            cd.snow_depth.max = 0.0;
+            cd.snow_depth.average = 0.0;
+            cd.snow_depth.min = 0.0;
+            cd.snow_depth.sum = 0.0;
+            cd.snow_depth.sum = 0.0;
+
             // Afternoon temp
             QJsonValue maxTemperatureValue = monthElement.value("max_temperature");
             if (maxTemperatureValue.isObject()) 
@@ -91,6 +115,7 @@ void Day::loadClimateData(const std::string& filename)
             }
 
             monthData.push_back(cd);
+            
         }
         climateData[it.key().toStdString()] = monthData;
     }
