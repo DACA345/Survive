@@ -34,8 +34,8 @@ jobs:
             - name: "Run unit tests"
               shell: pwsh
               run: |
-                    cd ${{ github.workspace }}/build
-                    Get-ChildItem bin/test/Release/ -Filter Survive-*-test.exe | ForEach-Object { & $_.FullName }
+                    cd ${{ github.workspace }}/build/bin/test/Release
+                    Get-ChildItem ./ -Filter Survive-*-test.exe | ForEach-Object { & $_.FullName }
 
             - name: Upload coverage reports to Codecov
               uses: codecov/codecov-action@v3
