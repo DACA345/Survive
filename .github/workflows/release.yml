@@ -1,11 +1,11 @@
 name: "survive-build-release"
 
 on:
-    push:
-        branches:
-            - main
-        tags:
-            - v*
+  workflow_run:
+    workflows: [survive-build-tests]
+    types: [completed]
+    branches: [main]
+
 
 jobs:
     build-release:
