@@ -37,5 +37,5 @@ jobs:
                     token: ${{ secrets.CODECOV_TOKEN }}
                     fail_ci_if_error: true
                     flags: unittests
-                    files: ./Survive-coverage.info
+                    files: ./build/Survive-coverage.info
                     verbose: true
