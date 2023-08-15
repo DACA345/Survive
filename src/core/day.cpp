@@ -17,10 +17,6 @@ Day::Day(const std::string& filename)
     loadClimateData(filename);
 }
 
-Day::Day(const QString& filename) {
-    loadClimateData(filename.toStdString());
-}
-
 void Day::loadClimateData(const std::string& filename) 
 {
     QFile file(QString::fromStdString(filename));

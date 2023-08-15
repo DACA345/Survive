@@ -29,9 +29,10 @@ struct ClimateData {
 class Day {
     public:
         Day(const std::string& filename);
-        Day(const QString& filename);
+
         const std::vector<ClimateData>& getMonthData(const std::string& month) const; // Method to return info for Month
         const std::vector<ClimateData>& getMonthData(int month);
+
         void printMonthClimate(const std::string& month) const;  // Method to print the data for the given month
         void printClimateData() const;  // Method to print the data
         float getRandomTemperatureValue(const Temperature& temperature) const;

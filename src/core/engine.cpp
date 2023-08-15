@@ -4,7 +4,7 @@
 Engine::Engine(const QString& levelId)
     : level(levelId)
 {
-    day = new Day(level.file("climate.json"));
+    day = new Day(level.file("climate.json").toStdString());
 }
 
 const Level& Engine::getLevel() const
