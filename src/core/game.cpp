@@ -16,16 +16,15 @@ healthBar(10)
 
 {
 
-    dayCounter = 1; // Start with Day 1
+    dayCounter = 0; // Start with Day 0
     turns = 5; // Initialize turns to 5
     alive = true; // Initialize player as alive
     move = true; // Initialize player to be able to move
     currentMonthIndex = 0; // Initialize monthindex to 1 (starts from january)
 
-    // Temp fix
-    maxTemperature = 10;
-    avgTemperature = 10;
-    minTemperature = 10;
+    maxTemperature = 0;
+    avgTemperature = 0;
+    minTemperature = 0;
 
     std::cout << "Game initialized for level: " << levelFolder << std::endl;
 }
@@ -43,7 +42,13 @@ void Game::run()
 
     while (alive)
     {
-
+        // Fix for temperature for day 1 missing
+        if (dayCounter == 0)
+        {
+            updateTemperature();
+            dayCounter++;
+        }
+        
         std::cout << "Day: " << dayCounter << std::endl;
         std::cout << "Month: " << months[currentMonthIndex] << std::endl;
         std::cout << "Turns remaining: " << turns << std::endl;
@@ -58,11 +63,8 @@ void Game::run()
         else if (turns == 0) {
             displayDaySummary();
             std::cout << "Day " << dayCounter << " ends!" << std::endl;
-            // Update the current month and temperature when a new day begins
-            updateMonth();
-            updateTemperature();
-            ++dayCounter; // Increment the day counter
-            turns = 5; // Reset the turn counter
+            // Call the startNewDay method
+            startNewDay();
         }
 
         std::cout << "*********************************" << std::endl;
@@ -270,12 +272,40 @@ bool Game::canMove() const
 
 void Game::updateMonth()
 {
-    // Alternate months every 30 or 31 days
+    // Alternate months every 30
     if (dayCounter == 30) 
     {
         currentMonthIndex = (currentMonthIndex + 1) % 12;
         
     }
+}
+
+void Game::triggerEvent()
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<float> dist(0.0, 1.0);
+
+    float probability = dist(gen);
+
+    if (probability <= 0.02) // 2% chance of a disaster
+    {
+        disasters.printRandomEvent();
+        healthBar.minus(4);
+    }
+    else
+    {
+        std::cout << "The day starts off peacefully." << std::endl;
+    }
+}
+
+void Game::startNewDay()
+{
+    updateMonth();
+    updateTemperature();
+    ++dayCounter; // Increment the day counter
+    turns = 5; // Reset the turn counter
+    triggerEvent(); // Trigger random event at new day
 }
 
 void Game::updateTemperature()

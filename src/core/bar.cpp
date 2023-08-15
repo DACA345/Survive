@@ -33,8 +33,8 @@ int Bar::minus(int val)
 {
     dataval -= val; // original value minus input
     // Apply limits after subtraction to ensure the health bar stays within bounds.
-    if (dataval < 0)
-        dataval = 0;
+    if (dataval < BAR_MIN)
+        dataval = BAR_MIN;
     return dataval; // return updated value
 }
 

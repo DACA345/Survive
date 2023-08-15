@@ -1,7 +1,4 @@
-#pragma once
-
 #include <string>
-
 #include "day.h"
 #include "bar.h"
 #include "animal.h"
@@ -81,6 +78,9 @@ private:
     void updateMonth(); // Method to update the current month
     void updateTemperature(); // Method to update the temps
     void displayTemperature(); // Method to display temps
+    void startNewDay(); // Starts a new day and update all necessary 
+
+    void triggerEvent(); // Method to randomly trigger an event during beginning of the day
 };
 
 
