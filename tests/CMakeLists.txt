@@ -134,7 +134,7 @@ set(GEN_COVERAGE_OUT ${CMAKE_BINARY_DIR}/gen_coverage.sh)
 configure_file(${GEN_COVERAGE_IN} ${GEN_COVERAGE_OUT} @ONLY)
 
 add_custom_target(${PROJECT_NAME}-Coverage
-    COMMAND ${GEN_COVERAGE_OUT}
+    COMMAND chmod +x ${GEN_COVERAGE_OUT} && ${GEN_COVERAGE_OUT}
     DEPENDS ${PROJECT_NAME}-Tests
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
     COMMENT "Generating coverage report..." VERBATIM
