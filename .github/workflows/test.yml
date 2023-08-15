@@ -5,39 +5,37 @@ on:
 
 jobs:
     build-test:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
 
         steps:
             - name: "Checkout repository"
               uses: actions/checkout@v3
   
-            - name: "Install support for Visual C++"
-              uses: ilammy/msvc-dev-cmd@v1.12.1
-  
             - name: "Install Qt"
               uses: jurplel/install-qt-action@v3.3.0
               with:
                     version: "6.3.2"
-                    host: "windows"
+                    host: "linux"
                     target: "desktop"
-                    arch: "win64_msvc2019_64"
+                    arch: "gcc_64"
                     dir: "${{ github.workspace }}/qt"
                     cache: true
+
+            - name: "Install lcov"
+              run: sudo apt-get install lcov
 
             - name: "Build Survive with tests"
               run: |
                     mkdir build
                     cd build
-                    cmake .. -A x64 -DBUILD_TESTS=ON -DBUILD_DOCUMENTATION=OFF -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/msvc2019_64"
-                    cmake --build . --config Release --target Survive-Tests
-
-            - name: "Run unit tests"
-              shell: pwsh
-              run: |
-                    cd ${{ github.workspace }}/build/bin/test/Release
-                    Get-ChildItem ./ -Filter Survive-*-test.exe | ForEach-Object { & $_.FullName }
+                    cmake .. -DBUILD_TESTS=ON -DBUILD_DOCUMENTATION=OFF -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/msvc2019_64" -DCMAKE_BUILD_TYPE=Debug
+                    cmake --build . --config Debug --target Survive-Coverage
 
             - name: Upload coverage reports to Codecov
               uses: codecov/codecov-action@v3
-              env:
-                    CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+              with:
+                    token: ${{ secrets.CODECOV_TOKEN }}
+                    fail_ci_if_error: true
+                    flags: unittests
+                    files: ./Survive-coverage.info
+                    verbose: true
