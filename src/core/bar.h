@@ -1,5 +1,7 @@
 #pragma once
 
+#define BAR_MAX 100
+
 class Bar
 {
 public:

@@ -1,4 +1,6 @@
 #pragma once
+#include <QLabel>
+#include <QPushButton>
 #include <QWidget>
 
 #include "widgets/scalablewidget.h"
@@ -15,6 +17,12 @@ class Game : public ScalableWidget
         Game(const QString& levelId, QWidget *parent = nullptr);
         ~Game();
 
+    private slots:
+        void onFindFood();
+        void onFindWater();
+        void onExplore();
+        void onRest();
+
     private:
         void paintEvent(QPaintEvent* event) override;
 
@@ -23,8 +31,20 @@ class Game : public ScalableWidget
         void loadGraphics();
 
         void setupUi();
+        void updateUi();
 
         Engine engine;
+
+        // Ui elements
+        QPushButton* findFoodButton;
+        QPushButton* findWaterButton;
+        QPushButton* exploreButton;
+        QPushButton* restButton;
+
+        QLabel* energyLabel;
+        QLabel* hungerLabel;
+        QLabel* thirstLabel;
+        QLabel* healthLabel;
 
         QPixmap background;
 };

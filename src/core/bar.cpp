@@ -7,7 +7,7 @@ Bar::Bar(int initialValue)
 }
 
 // Constructor with no parameter (defaults to 10)
-Bar::Bar() : dataval(10)
+Bar::Bar() : dataval(BAR_MAX)
 {
     // Since there is no parameter, the constructor will initialize dataval to 10.
 }
@@ -23,8 +23,8 @@ int Bar::plus(int val)
 {
     dataval += val; // original value plus input
     // Apply limits after addition to ensure the health bar stays within bounds.
-    if (dataval > 10)
-        dataval = 10;
+    if (dataval > BAR_MAX)
+        dataval = BAR_MAX;
     return dataval; // return updated value
 }
 
