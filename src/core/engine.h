@@ -1,13 +1,18 @@
 #pragma once
+
 #include "level.h"
+#include "day.h"
 
 class Engine
 {
 public:
-    Engine(Level& level);
+    Engine(const QString& levelId);
     ~Engine();
 
+    const Level& getLevel() const;
+
 private:
-    int day;
-    Level* level;
+    Day* day;
+
+    Level level;
 };

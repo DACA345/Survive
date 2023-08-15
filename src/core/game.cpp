@@ -292,9 +292,9 @@ void Game::updateTemperature()
         float minTemp = climate.getRandomTemperatureValue(data.min_temperature);
 
         // Update the temperature variables in your Game class
-        this->maxTemperature = maxTemp;
-        this->avgTemperature = avgTemp;
-        this->minTemperature = minTemp;
+        maxTemperature = maxTemp;
+        avgTemperature = avgTemp;
+        minTemperature = minTemp;
     }
 }
 

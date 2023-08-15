@@ -1,11 +1,18 @@
 #include "engine.h"
+#include "../config/files.h"
 
-Engine::Engine(Level& level)
+Engine::Engine(const QString& levelId)
+    : level(levelId)
 {
-    level = level;
+    day = new Day(level.file("climate.json"));
+}
+
+const Level& Engine::getLevel() const
+{
+    return level;
 }
 
 Engine::~Engine()
 {
-
+    delete day;
 }

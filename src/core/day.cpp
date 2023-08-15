@@ -17,6 +17,10 @@ Day::Day(const std::string& filename)
     loadClimateData(filename);
 }
 
+Day::Day(const QString& filename) {
+    loadClimateData(filename.toStdString());
+}
+
 void Day::loadClimateData(const std::string& filename) 
 {
     QFile file(QString::fromStdString(filename));
@@ -172,6 +176,11 @@ const std::vector<ClimateData>& Day::getMonthData(const std::string& month) cons
     }
 }
 
+const std::vector<ClimateData>& Day::getMonthData(int month)
+{
+    return getMonthData(Day::months[month - 1]);
+}
+
 // Method to get a random value between min and max temperature values
 float Day::getRandomTemperatureValue(const Temperature& temperature) const
 {
@@ -188,6 +197,16 @@ float Day::getRandomPrecipitationValue(const Precipitation& precipitation) const
     std::mt19937 gen(rd());
     std::uniform_real_distribution<float> dist(precipitation.min, precipitation.max);
     return dist(gen);
+}
+
+int Day::month() const
+{
+    return (day / 30) + 1;
+}
+
+void Day::nextDay()
+{
+    day++;
 }
 
 void Day::printMonthClimate(const std::string& month) const

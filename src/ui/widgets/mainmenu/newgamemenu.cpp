@@ -81,7 +81,7 @@ void LevelInfoWidget::loadGraphics()
 void LevelInfoWidget::paintEvent(QPaintEvent* event)
 {
     QPainter painter(this);
-    painter.drawPixmap(0, 0, width(), height(), background);
+    painter.drawPixmap(rect(), background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
 
     QList<QSvgRenderer*>& filters = isHovered ? hoverFilters : defaultFilters;
 
@@ -102,8 +102,7 @@ void LevelInfoWidget::paintEvent(QPaintEvent* event)
 
 void LevelInfoWidget::mousePressEvent(QMouseEvent* event)
 {
-    // NOTE(Callum): Suppressed until implemented
-    //emit levelSelected(id);
+    emit levelSelected(id);
 }
 
 void LevelInfoWidget::enterEvent(QEnterEvent* event)

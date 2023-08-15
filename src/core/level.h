@@ -1,20 +1,35 @@
 #pragma once
+
 #include <QString>
+
+#include "animal.h"
+#include "plant.h"
+#include "event.h"
+
+#include <QDebug>
 
 struct LevelInfo
 {
+    QString id;
     QString name;
 };
 
 class Level
 {
     public:
-        Level(QString name);
+        Level(const QString& id);
         ~Level();
 
-    protected:
-        virtual void setActions() = 0;
+        QString file(const QString& name) const;
+        
+        const LevelInfo& getInfo() const;
 
     private:
+        void loadLevel();
+
         LevelInfo info;
+
+        Animal animals;
+        Plant plants;
+        Event disasters;
 };

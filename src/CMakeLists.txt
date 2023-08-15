@@ -17,6 +17,7 @@ add_library(${PROJECT_NAME}-Gui STATIC
 
 target_link_libraries(${PROJECT_NAME}-Gui
     PRIVATE
+        ${PROJECT_NAME}-Core
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
@@ -32,7 +33,6 @@ qt_add_executable(Survive
 
 target_link_libraries(Survive
     PRIVATE
-        ${PROJECT_NAME}-Core
         ${PROJECT_NAME}-Gui
         Qt6::Core
         Qt6::Gui
