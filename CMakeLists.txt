@@ -54,6 +54,17 @@ add_feature_info(BUILD_DOCUMENTATION BUILD_DOCUMENTATION "Build doxygen document
 
 feature_summary(WHAT ALL)
 
+# Setup code coverage if supported
+if(BUILD_TESTS AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    include(CodeCoverage)
+    append_coverage_compiler_flags()
+    set(COVERAGE_EXCLUDES
+        "${CMAKE_SOURCE_DIR}/tests"
+        "${CMAKE_BINARY_DIR}/_deps"
+        "${QT6_INSTALL_PREFIX}"
+    )
+endif()
+
 add_subdirectory(src)
 
 # Documentation
