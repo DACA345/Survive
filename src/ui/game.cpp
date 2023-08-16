@@ -7,7 +7,7 @@
 #define ON_ACTION(action, engineAction) \
     void Game::on##action() \
     { \
-        handleActionResult(engine.##engineAction()); \
+        handleActionResult(engine.engineAction()); \
     }
 
 Game::Game(const QString& levelId, QWidget *parent)
