@@ -20,6 +20,15 @@
   </a>
 </p>
 
+<p align="center">
+    <a href="https://codecov.io/gh/DACA345/Survive"> 
+        <img src="https://codecov.io/gh/DACA345/Survive/graph/badge.svg?token=6O2KSPS27J"> 
+    </a>
+    <a href="https://app.codacy.com/gh/DACA345/Survive/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade">
+        <img src="https://app.codacy.com/project/badge/Grade/d6280242bbe94a0a9cdf151f49fb03fc"/>
+    </a>
+</p>
+
 DACA: Survive is an open source GUI based game in which you attempt to survive for as long as possible in real places using real data sets.
 
 ## Release packages
