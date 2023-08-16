@@ -28,3 +28,11 @@ add_custom_command(
         $<TARGET_FILE:Qt6::Core>
         $<TARGET_FILE_DIR:${PROJECT_NAME}-cli>
 )
+
+# Copy data for cli
+add_custom_command(
+    TARGET ${PROJECT_NAME}-cli POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/levels"
+        "$<TARGET_FILE_DIR:${PROJECT_NAME}-cli>/levels"
+)
