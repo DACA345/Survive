@@ -24,6 +24,16 @@ Engine::Engine(const QString& levelId)
     day = new Day(level.file("climate.json").toStdString());
 }
 
+double Engine::probability()
+{
+    return random.generateDouble();
+}
+
+bool Engine::chance(double probability)
+{
+    return this->probability() <= probability;
+}
+
 const Level& Engine::getLevel() const
 {
     return level;

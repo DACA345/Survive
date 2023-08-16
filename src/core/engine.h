@@ -1,5 +1,7 @@
 #pragma once
 
+#include <QRandomGenerator>
+
 #include "bar.h"
 #include "day.h"
 #include "level.h"
@@ -16,36 +18,41 @@ enum class ActionResult
 
 class Engine
 {
-public:
-    Engine(const QString& levelId);
-    ~Engine();
+    public:
+        Engine(const QString& levelId);
+        ~Engine();
 
-    const Level& getLevel() const;
+        double probability();
+        bool chance(double probability);
 
-    ActionResult findFood();
-    ActionResult findWater();
-    ActionResult explore();
-    ActionResult rest();
+        const Level& getLevel() const;
 
-    void nextDay();
+        ActionResult findFood();
+        ActionResult findWater();
+        ActionResult explore();
+        ActionResult rest();
 
-    short getTurns() const;
+        void nextDay();
 
-    int getEnergy() const;
-    int getHunger() const;
-    int getThirst() const;
-    int getHealth() const;
+        short getTurns() const;
 
-private:
-    short turns = ENGINE_INITIAL_TURNS;
+        int getEnergy() const;
+        int getHunger() const;
+        int getThirst() const;
+        int getHealth() const;
 
-    // Player bars
-    Bar energyBar;
-    Bar hungerBar;
-    Bar thirstBar;
-    Bar healthBar;
+    private:
+        short turns = ENGINE_INITIAL_TURNS;
 
-    Day* day;
+        QRandomGenerator random = QRandomGenerator::securelySeeded();
 
-    Level level;
+        // Player bars
+        Bar energyBar;
+        Bar hungerBar;
+        Bar thirstBar;
+        Bar healthBar;
+
+        Day* day;
+
+        Level level;
 };
