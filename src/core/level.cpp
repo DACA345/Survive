@@ -1,3 +1,4 @@
+#include "level.h"
 #include <QJsonDocument>
 #include <QJsonObject>
 
@@ -18,6 +19,11 @@ QString Level::file(const QString& name) const
 const LevelInfo& Level::getInfo() const
 {
     return info;
+}
+
+const LevelConfig& Level::getConfig() const
+{
+    return config;
 }
 
 void Level::loadLevel()

@@ -2,6 +2,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QWidget>
+#include <QSvgWidget>
 
 #include "widgets/scalablewidget.h"
 #include "../core/engine.h"
@@ -23,15 +24,18 @@ class Game : public ScalableWidget
         void onExplore();
         void onRest();
 
+        void nextDay();
+
     private:
         void paintEvent(QPaintEvent* event) override;
 
-        QString textureFile(const QString& name);
-
         void loadGraphics();
-
         void setupUi();
         void updateUi();
+
+        QString textureFile(const QString& name);
+        void handleActionResult(ActionResult result);
+        void endGame();
 
         Engine engine;
 
@@ -40,11 +44,13 @@ class Game : public ScalableWidget
         QPushButton* findWaterButton;
         QPushButton* exploreButton;
         QPushButton* restButton;
+        QPushButton* sleepButton;
 
-        QLabel* energyLabel;
-        QLabel* hungerLabel;
-        QLabel* thirstLabel;
-        QLabel* healthLabel;
+        QSvgWidget* bars;
+        QSvgWidget* healthBarFill;
+        QSvgWidget* thirstBarFill;
+        QSvgWidget* hungerBarFill;
+        QSvgWidget* energyBarFill;
 
         QPixmap background;
 };
