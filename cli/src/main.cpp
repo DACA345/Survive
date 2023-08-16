@@ -2,7 +2,7 @@
 
 int main(int argc, char** argv)
 {
-    Game newGame("data/levels/mtaspiring");
+    Game newGame("levels/mtaspiring");
     newGame.run();
     
     return 0;
