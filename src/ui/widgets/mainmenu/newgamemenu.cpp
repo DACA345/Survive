@@ -210,14 +210,14 @@ void NewGameMenu::setupUi()
 
     displayLevels();
 
-    backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/newgame/text/back.svg"), this);
+    backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/icons/return.svg"), this);
 
     // Setup connections
     connect(backButton, &QPushButton::clicked, this, &NewGameMenu::onNewGameMenuClosed);
 
     // Add widgets
     addWidget(title, 0.28, 0.05, 0.43, 0.07);
-    addWidget(backButton, 0.45, 0.875, 0.1, 0.075);
+    addWidget(backButton, 0.05, 0.025, 0.065, 0.09);
 }
 
 NewGameMenu::~NewGameMenu()

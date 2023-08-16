@@ -2,6 +2,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QWidget>
+#include <QSvgWidget>
 
 #include "widgets/scalablewidget.h"
 #include "../core/engine.h"
@@ -41,10 +42,11 @@ class Game : public ScalableWidget
         QPushButton* exploreButton;
         QPushButton* restButton;
 
-        QLabel* energyLabel;
-        QLabel* hungerLabel;
-        QLabel* thirstLabel;
-        QLabel* healthLabel;
+        QSvgWidget* bars;
+        QSvgWidget* healthBarFill;
+        QSvgWidget* thirstBarFill;
+        QSvgWidget* hungerBarFill;
+        QSvgWidget* energyBarFill;
 
         QPixmap background;
 };

@@ -9,6 +9,7 @@ Game::Game(const QString& levelId, QWidget *parent)
 {
     loadGraphics();
     setupUi();
+    updateUi();
 }
 
 void Game::paintEvent(QPaintEvent* event)
@@ -56,10 +57,11 @@ void Game::loadGraphics()
 
 void Game::setupUi()
 {
-    energyLabel = new QLabel(QString("Energy: %1").arg(engine.getEnergy()), this);
-    hungerLabel = new QLabel(QString("Hunger: %1").arg(engine.getHunger()), this);
-    thirstLabel = new QLabel(QString("Thirst: %1").arg(engine.getThirst()), this);
-    healthLabel = new QLabel(QString("Health: %1").arg(engine.getHealth()), this);
+    bars = new QSvgWidget(TEXTURE_FILE("ui/bars/bars.svg"), this);
+    healthBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/health.svg"), this);
+    thirstBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/thirst.svg"), this);
+    hungerBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/hunger.svg"), this);
+    energyBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/wellness.svg"), this);
 
     findFoodButton = new QPushButton("Find Food", this);
     findWaterButton = new QPushButton("Find Water", this);
@@ -71,10 +73,7 @@ void Game::setupUi()
     connect(exploreButton, &QPushButton::clicked, this, &Game::onExplore);
     connect(restButton, &QPushButton::clicked, this, &Game::onRest);
 
-    addWidget(energyLabel, 0.9, 0.1, 0.1, 0.1);
-    addWidget(hungerLabel, 0.9, 0.3, 0.1, 0.1);
-    addWidget(thirstLabel, 0.9, 0.5, 0.1, 0.1);
-    addWidget(healthLabel, 0.9, 0.7, 0.1, 0.1);
+    addWidget(bars, 1 - 0.295, 0.01, 0.285, 0.2);
 
     addWidget(findFoodButton, 0.1, 0.1, 0.2, 0.2);
     addWidget(findWaterButton, 0.1, 0.3, 0.2, 0.2);
@@ -84,10 +83,14 @@ void Game::setupUi()
 
 void Game::updateUi()
 {
-    energyLabel->setText(QString("Energy: %1").arg(engine.getEnergy()));
-    hungerLabel->setText(QString("Hunger: %1").arg(engine.getHunger()));
-    thirstLabel->setText(QString("Thirst: %1").arg(engine.getThirst()));
-    healthLabel->setText(QString("Health: %1").arg(engine.getHealth()));
+    // Bar updates
+    const double yGap = 0.015;
+    const double heightPercentage = 0.0385;
+
+    addWidget(healthBarFill, 0.7325, 0.011, 0.2575 * ((double) engine.getHealth() / (double) BAR_MAX), heightPercentage);
+    addWidget(thirstBarFill, 0.7325, 0.011 + yGap + heightPercentage, 0.2575 * ((double) engine.getThirst() / (double) BAR_MAX), heightPercentage);
+    addWidget(hungerBarFill, 0.7325, 0.011 + 2 * yGap + 2 * heightPercentage, 0.2575 * ((double) engine.getHunger() / (double) BAR_MAX), heightPercentage);
+    addWidget(energyBarFill, 0.7325, 0.011 + 3 * yGap + 3 * heightPercentage, 0.2575 * ((double) engine.getEnergy() / (double) BAR_MAX), heightPercentage);
 }
 
 Game::~Game()

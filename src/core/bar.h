@@ -1,6 +1,6 @@
 #pragma once
 
-#define BAR_MAX 10
+#define BAR_MAX 100
 #define BAR_MIN 0
 
 class Bar
