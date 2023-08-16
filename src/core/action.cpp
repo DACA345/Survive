@@ -3,83 +3,111 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QJsonValue>
-#include <QRandomGenerator> 
+#include <QRandomGenerator>
 
 #include "action.h"
 
-// Constructor that takes a file path to load events from a JSON file.
-Action::Action(const QString& filePath) {
+// Constructor to initialize animals from JSON file
+Action::Action(const QString& filePath)
+{
     loadActionsFromJson(filePath);
 }
 
-// Function to load events from a JSON file.
-void Action::loadActionsFromJson(const QString& filePath) {
-    // Open the JSON file.
+void Action::loadActionsFromJson(const QString& filePath)
+{
     QFile jsonFile(filePath);
-    if (!jsonFile.open(QIODevice::ReadOnly)) {
+
+    if (!jsonFile.open(QIODevice::ReadOnly))
+    {
         qWarning("Could not open actions JSON file");
         return;
     }
 
-    // Read the JSON data from the file.
     QByteArray jsonData = jsonFile.readAll();
     QJsonDocument doc = QJsonDocument::fromJson(jsonData);
 
-    // Check if the JSON data is an array.
-    if (doc.isArray()) {
-        QJsonArray jsonArray = doc.array();
-
-        // Iterate through each event object in the array.
-        for (const QJsonValue& actionValue : jsonArray) {
-            QJsonObject actionObject = actionValue.toObject();
-
-            // Extract event ID and description from the event object.
-            QString actionCategory = actionObject["category"].toString();
-            QString actionID = actionObject["actions_id"].toString();
-            QString actionDesc = actionObject["act_desc"].toString();
-            
-
-            // Store the event information in the 'events' QMap.
-            actions[actionID] = actionDesc;
-            actionCategories[actionID] = actionCategory;
-        }
-    }
-    else {
+    if (doc.isNull() || !doc.isObject())
+    {
         qWarning("Invalid JSON data");
+        return;
+    }
+
+    QJsonObject jsonObj = doc.object();
+
+    // Process morale
+    QJsonArray moraleArray = jsonObj["morale"].toArray();
+    for (const QJsonValue& moraleValue : moraleArray)
+    {
+        QJsonObject morale = moraleValue.toObject();
+        QString actionsID = morale["actions_id"].toString();
+        QString actDesc = morale["act_desc"].toString();
+        actions["morale"].append(actDesc);
+    }
+
+    // Process food
+    QJsonArray foodArray = jsonObj["food"].toArray();
+    for (const QJsonValue& foodValue : foodArray)
+    {
+        QJsonObject food = foodValue.toObject();
+        QString actionsID = food["actions_id"].toString();
+        QString actDesc = food["act_desc"].toString();
+        actions["food"].append(actDesc);
+    }
+
+    // Process water
+    QJsonArray waterArray = jsonObj["water"].toArray();
+    for (const QJsonValue& waterValue : waterArray)
+    {
+        QJsonObject water = waterValue.toObject();
+        QString actionsID = water["actions_id"].toString();
+        QString actDesc = water["act_desc"].toString();
+        actions["water"].append(actDesc);
+    }
+
+    // Process explore
+    QJsonArray exploreArray = jsonObj["explore"].toArray();
+    for (const QJsonValue& exploreValue : exploreArray)
+    {
+        QJsonObject explore = exploreValue.toObject();
+        QString actionsID = explore["actions_id"].toString();
+        QString actDesc = explore["act_desc"].toString();
+        actions["explore"].append(actDesc);
     }
 }
 
-QString Action::getAction(const QString& category) const {
-    // Create a list to store available actions within the specified category
-    QList<QString> availableActions;
-
-    // Iterate through the actions map and filter actions by the given category
-    for (auto i = actions.cbegin(), end = actions.cend(); i != end; ++i) {
-        const QString& actionID = i.key();
-        const QString& actionDesc = i.value();
-        const QString& actionCategory = getCategoryByActionID(actionID); // Implement this function
-
-        if (actionCategory == category) {
-            availableActions.append(actionDesc);
-        }
+QString Action::getRandomAction(const QString& category) const
+{
+    QList<QString> actionList = actions[category];
+    if (!actionList.isEmpty()) {
+        int index = QRandomGenerator::global()->bounded(actionList.size());
+        return actionList[index];
     }
-
-    // Randomly select an action description from the available actions
-    if (!availableActions.isEmpty()) {
-        int randomIndex = QRandomGenerator::global()->bounded(availableActions.size());
-        return availableActions[randomIndex];
-    }
-    else {
-        return ""; // No available actions in the given category
-    }
+    return "";
 }
 
-QString Action::getCategoryByActionID(const QString& actionID) const {
-    if (actionCategories.contains(actionID)) {
-        return actionCategories[actionID];
-    }
-    else {
-        return ""; // Action ID not found
-    }
-}
 
+// getActionMethod to be implemented
+//QString Action::getAction(const QString& category) const {
+//    // Create a list to store available actions within the specified category
+//    QList<QString> availableActions;
+//
+//    // Iterate through the actions map and filter actions by the given category
+//    for (auto i = actions.cbegin(), end = actions.cend(); i != end; ++i) {
+//        const QString& actionID = i.key();
+//        const QString& actionDesc = i.value();
+//        const QString& actionCategory = getCategoryByActionID(actionID); // Implement this function
+//
+//        if (actionCategory == category) {
+//            availableActions.append(actionDesc);
+//        }
+//    }
+//
+//    // Randomly select an action description from the available actions
+//    if (!availableActions.isEmpty()) {
+//        int randomIndex = QRandomGenerator::global()->bounded(availableActions.size());
+//        return availableActions[randomIndex];
+//    }
+//    else {
+//        return ""; // No available actions in the given category
+//    }
+//}

@@ -1,29 +1,20 @@
-#pragma once
-
 #include <QString>
+#include <QVector>
 #include <QMap>
 
-class Action {
+class Action
+{
 public:
-    // Constructor
+    // Constructor to initialize animals from JSON file
     Action(const QString& filePath);
 
-    // Load method
+    // Load animal data from JSON file
     void loadActionsFromJson(const QString& filePath);
 
-    // Print method
-    void printAllActions() const;
-
-    // Get random method 
-    QString getAction(const QString& category) const;
-
-    QString getCategoryByActionID(const QString& actionID) const;
-
-    // Print random method
-    void printRandomAction() const;
-
+    // Get random animal from category as input
+    QString getRandomAction(const QString& category) const;
 
 private:
-    QMap<QString, QString> actions;
-    QMap<QString, QString> actionCategories;
+    // Store animals categorized by species
+    QMap<QString, QVector<QString>> actions;
 };
