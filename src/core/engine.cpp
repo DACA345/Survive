@@ -1,8 +1,25 @@
 #include "engine.h"
+#include "engine.h"
 #include "../config/files.h"
 
+#define HANDLE_ACTION_INITIAL \
+    if (turns == 0) \
+        return ActionResult::NO_TURNS; \
+    else if (turns == 1 && turns--) \
+        return ActionResult::USED_TURNS; \
+    turns--;
+
+#define HANDLE_ACTION_FINAL \
+    if (energyBar.isEmpty() || hungerBar.isEmpty() || thirstBar.isEmpty() || healthBar.isEmpty()) \
+        return ActionResult::GAME_OVER; \
+    return ActionResult::SUCCESS; \
+
 Engine::Engine(const QString& levelId)
-    : level(levelId), energyBar(100), hungerBar(100), thirstBar(100), healthBar(100)
+    : level(levelId),
+        energyBar(BAR_MAX),
+        hungerBar(BAR_MAX),
+        thirstBar(BAR_MAX),
+        healthBar(BAR_MAX)
 {
     day = new Day(level.file("climate.json").toStdString());
 }
@@ -12,36 +29,63 @@ const Level& Engine::getLevel() const
     return level;
 }
 
-void Engine::findFood()
+ActionResult Engine::findFood()
 {
+    HANDLE_ACTION_INITIAL
+
     energyBar.minus(10);
     hungerBar.plus(10);
     thirstBar.plus(5);
     healthBar.plus(5);
+
+    HANDLE_ACTION_FINAL
 }
 
-void Engine::findWater()
+ActionResult Engine::findWater()
 {
+    HANDLE_ACTION_INITIAL
+
     energyBar.plus(10);
     hungerBar.plus(5);
     thirstBar.plus(10);
     healthBar.plus(5);
+
+    HANDLE_ACTION_FINAL
 }
 
-void Engine::explore()
+ActionResult Engine::explore()
 {
+    HANDLE_ACTION_INITIAL
+
     energyBar.minus(20);
     hungerBar.plus(10);
     thirstBar.minus(10);
     healthBar.minus(5);
+
+    HANDLE_ACTION_FINAL
 }
 
-void Engine::rest()
+ActionResult Engine::rest()
 {
+    HANDLE_ACTION_INITIAL
+
     energyBar.plus(20);
     hungerBar.minus(10);
     thirstBar.minus(10);
     healthBar.plus(5);
+
+    HANDLE_ACTION_FINAL
+}
+
+void Engine::nextDay()
+{
+    turns = ENGINE_INITIAL_TURNS;
+    day->nextDay();
+}
+
+short Engine::getTurns() const
+{
+    return turns;
 }
 
 int Engine::getEnergy() const

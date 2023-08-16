@@ -4,6 +4,16 @@
 #include "day.h"
 #include "level.h"
 
+#define ENGINE_INITIAL_TURNS 5
+
+enum class ActionResult
+{
+    NO_TURNS,
+    USED_TURNS,
+    GAME_OVER,
+    SUCCESS
+};
+
 class Engine
 {
 public:
@@ -12,10 +22,14 @@ public:
 
     const Level& getLevel() const;
 
-    void findFood();
-    void findWater();
-    void explore();
-    void rest();
+    ActionResult findFood();
+    ActionResult findWater();
+    ActionResult explore();
+    ActionResult rest();
+
+    void nextDay();
+
+    short getTurns() const;
 
     int getEnergy() const;
     int getHunger() const;
@@ -23,7 +37,7 @@ public:
     int getHealth() const;
 
 private:
-    short turns = 5;
+    short turns = ENGINE_INITIAL_TURNS;
 
     // Player bars
     Bar energyBar;
