@@ -87,7 +87,7 @@ const ActionInfo& Action::getRandomActionInCategory(const QString& category) con
     const QList<ActionInfo>& actionList = actions[category];
     if (actionList.isEmpty())
     {
-        qFatal("No animal found");
+        qFatal("No actions found");
     }
 
     return actionList[QRandomGenerator::global()->bounded(actionList.size())];

@@ -8,6 +8,7 @@
 #include "event.h"
 #include "action.h"
 #include "season.h"
+#include "explore.h"
 
 #define MAX_TURNS 5
 #define MIN_TURNS 0
@@ -71,6 +72,9 @@ private:
     // Var for seasons
     Season season; 
 
+    // Var for explores
+    Explore explore;
+
     bool isAlive() const;
     bool canMove() const;
     bool correctSeason(const QString& season) const;
@@ -85,7 +89,7 @@ private:
 
     void findFood();
     void findWater();
-    void explore();
+    void exploreOption();
     void rest();
 
     void updateMonth(); // Method to update the current month

@@ -27,6 +27,6 @@ public:
     QString getRandomActionCategory() const;
 
 private:
-    // Store animals categorized by species
+    // Store actions categorized by categories
     QMap<QString, QList<ActionInfo>> actions;
 };

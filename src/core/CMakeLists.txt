@@ -8,7 +8,9 @@ add_library(${PROJECT_NAME}-Core
     "game.cpp"
     "level.cpp"
     "plant.cpp"
- "season.cpp")
+    "season.cpp"
+    "explore.cpp"
+)
 
 target_link_libraries(${PROJECT_NAME}-Core
     PRIVATE

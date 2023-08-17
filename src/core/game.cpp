@@ -10,6 +10,7 @@ animal(convertQlevelFolder + "/animals.json"), // Initialize animal
 plant(convertQlevelFolder + "/plants.json"), // Initialize Plant
 events(convertQlevelFolder + "/events.json"), // Initialize Disaster
 season(convertQlevelFolder + "/season.json"), // Initialize season
+explore(convertQlevelFolder + "/explore.json"), // Initialize explore
 energyBar(10),
 hungerBar(10),
 thirstBar(10),
@@ -127,7 +128,7 @@ void Game::handleMenuChoice(int choice)
         --turns; // Deduct a turn when a valid action is chosen
         break;
     case 3:
-        explore();
+        exploreOption();
         --turns; // Deduct a turn when a valid action is chosen
         break;
     default:
@@ -228,12 +229,13 @@ void Game::findWater()
 
 }
 
-void Game::explore()
+void Game::exploreOption()
 {
     energyBar.minus(3);
     hungerBar.minus(2);
     thirstBar.minus(2);
-    std::cout << "Something cool happens or something bad happens" << std::endl;
+    const ExploreInfo& randomExplore = explore.getRandomExplore();
+    std::cout << "You " << randomExplore.eventName.toStdString() << ":" << randomExplore.category.toStdString() << std::endl;
 }
 
 void Game::rest() 
