@@ -38,7 +38,7 @@ class Engine
         ActionResult explore();
         ActionResult rest();
 
-        EventInfo nextDay();
+        const EventInfo& nextDay();
 
         short getTurns() const;
 
@@ -48,7 +48,7 @@ class Engine
         int getHealth() const;
 
     private:
-        EventInfo triggerDayEvent();
+        const EventInfo& triggerDayEvent();
 
         short turns = ENGINE_INITIAL_TURNS;
 

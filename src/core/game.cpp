@@ -291,18 +291,7 @@ void Game::triggerEvent()
     
     float probability = dist(gen);
 
-    EventInfo event;
-
-    if (probability <= 0.5) // 50% chance for the events from that season
-    {
-        event = events.getRandomEventForSeason(
-            season.getSeason(Day::monthFromInt(currentMonthIndex))
-        );
-    }
-    else
-    {
-        event = events.getRandomEvent();
-    }
+    const EventInfo& event = (probability <= 0.5) ? events.getRandomEventForSeason(season.getSeason(Day::monthFromInt(currentMonthIndex))) : events.getRandomEvent();
     
     float probForTrigger = dist(gen);
 

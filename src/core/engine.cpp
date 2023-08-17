@@ -144,7 +144,7 @@ ActionResult Engine::rest()
     HANDLE_ACTION_FINAL
 }
 
-EventInfo Engine::nextDay()
+const EventInfo& Engine::nextDay()
 {
     turns = ENGINE_INITIAL_TURNS;
     day->nextDay();
@@ -176,24 +176,15 @@ int Engine::getHealth() const
     return healthBar.getValue();
 }
 
-EventInfo Engine::triggerDayEvent()
+const EventInfo& Engine::triggerDayEvent()
 {
     const LevelConfig& config = level.getConfig();
 
-    EventInfo event;
-
-    if (chance(config.seasonEvent))
-    {
-        event = level.getEvents().getRandomEventForSeason(
-            level.getSeasons().getSeason(
-                day->monthId()
-            )
-        );
-    }
-    else
-    {
-        event = level.getEvents().getRandomEvent();
-    }
+    const EventInfo& event = chance(config.seasonEvent) ? level.getEvents().getRandomEventForSeason(
+        level.getSeasons().getSeason(
+            day->monthId()
+        )
+    ) : level.getEvents().getRandomEvent();
 
     bool didTrigger = level.getSeasons().getSeason(day->monthId()) == event.season
         ? chance(config.seasonEventTrigger) : chance(config.eventTrigger);

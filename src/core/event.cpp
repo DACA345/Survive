@@ -60,7 +60,7 @@ void Event::loadEventsFromJson(const QString& filePath) {
 
 QString Event::getRandomSeason() const
 {
-    const QList<QString> seasons = events.keys();
+    const QList<QString>& seasons = events.keys();
     if (seasons.empty())
     {
         qFatal("No seasons found");
@@ -71,15 +71,15 @@ QString Event::getRandomSeason() const
 }
 
 // Function to retrieve a random event description.
-EventInfo Event::getRandomEvent() const
+const EventInfo& Event::getRandomEvent() const
 {
     return getRandomEventForSeason(getRandomSeason());
 }
 
 // Function to retrieve a random event based on season.
-EventInfo Event::getRandomEventForSeason(const QString& season) const
+const EventInfo& Event::getRandomEventForSeason(const QString& season) const
 {
-    QList<EventInfo> matchingEvents = events[season];
+    const QList<EventInfo>& matchingEvents = events[season];
 
     int randomIndex = QRandomGenerator::global()->bounded(matchingEvents.size());
     return matchingEvents[randomIndex];

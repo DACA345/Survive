@@ -21,10 +21,10 @@ public:
     QString getRandomSeason() const;
 
     // Get random method 
-    EventInfo getRandomEvent() const;
+    const EventInfo& getRandomEvent() const;
 
     // Method to get random event for a given season
-    EventInfo getRandomEventForSeason(const QString& season) const;
+    const EventInfo& getRandomEventForSeason(const QString& season) const;
 
 private:
     QMap<QString, QList<EventInfo>> events;
