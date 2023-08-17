@@ -3,16 +3,28 @@
 #include "../config/files.h"
 
 #define HANDLE_ACTION_INITIAL \
+    const LevelConfig& config = level.getConfig(); \
+    ActionResult result; \
     if (turns == 0) \
-        return ActionResult::NO_TURNS; \
-    else if (turns == 1 && turns--) \
-        return ActionResult::USED_TURNS; \
+    { \
+        result.result = ActionBaseResult::NO_TURNS; \
+        return result; \
+    } \
+    else if (turns == 1 && turns--) {\
+        result.result = ActionBaseResult::USED_TURNS; \
+        return result; \
+    } \
     turns--;
 
 #define HANDLE_ACTION_FINAL \
-    if (energyBar.isEmpty() || hungerBar.isEmpty() || thirstBar.isEmpty() || healthBar.isEmpty()) \
-        return ActionResult::GAME_OVER; \
-    return ActionResult::SUCCESS; \
+    done: \
+        if (energyBar.isEmpty() || hungerBar.isEmpty() || thirstBar.isEmpty() || healthBar.isEmpty())\
+        { \
+            result.result = ActionBaseResult::GAME_OVER; \
+            return result; \
+        } \
+        result.result = ActionBaseResult::SUCCESS; \
+        return result;
 
 Engine::Engine(const QString& levelId)
     : level(levelId),
@@ -43,10 +55,35 @@ ActionResult Engine::findFood()
 {
     HANDLE_ACTION_INITIAL
 
-    energyBar.minus(10);
-    hungerBar.plus(10);
-    thirstBar.plus(5);
-    healthBar.plus(5);
+    if (chance(config.findFoodNothing))
+    {
+        result.message = "You found nothing.";
+        goto done;
+    }
+    else
+    {
+        if (chance(config.findFoodAnimal))
+        {
+            result.message = QString("You have found %1 and ate it.").arg(
+                level.getAnimals().getRandomAnimal("mammals")
+            );
+            hungerBar.plus(config.animalHunger);
+            goto done;
+        }
+        else
+        {
+            const PlantInfo& plant = level.getPlants().getRandomPlant();
+            hungerBar.plus(config.plantHunger);
+            result.message = QString("You have found %1: %2 and ate it.").arg(
+                plant.category
+            ).arg(plant.name);
+            if (!plant.edible)
+            {
+                healthBar.minus(config.plantPoison);
+            }
+            goto done;
+        }
+    }
 
     HANDLE_ACTION_FINAL
 }

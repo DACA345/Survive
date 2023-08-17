@@ -22,6 +22,10 @@ struct LevelConfig
     double findFoodNothing = 0.2;
     double findFoodAnimal = 0.2;
 
+    int animalHunger = 30;
+    int plantHunger = 10;
+    int plantPoison = 30;
+
     // Water
     double findWaterNothing = 0.2;
 
@@ -39,6 +43,10 @@ class Level
         
         const LevelInfo& getInfo() const;
         const LevelConfig& getConfig() const;
+
+        const Animal& getAnimals() const;
+        const Plant& getPlants() const;
+        const Event& getDisasters() const;
 
     private:
         void loadLevel();

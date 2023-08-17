@@ -112,19 +112,20 @@ QString Game::textureFile(const QString& name)
 
 void Game::handleActionResult(ActionResult result)
 {
-    if (result == ActionResult::NO_TURNS)
+    if (result.result == ActionBaseResult::NO_TURNS)
     {
         // Should never occur
         qFatal("No turns left");
         return;
     }
-    else if (result == ActionResult::GAME_OVER)
+    else if (result.result == ActionBaseResult::GAME_OVER)
     {
         // TODO(Callum): Display over and return to main menu
         endGame();
     }
     else
     {
+        qDebug() << result.message;
         updateUi();
     }
 }
