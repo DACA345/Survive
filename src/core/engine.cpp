@@ -92,10 +92,24 @@ ActionResult Engine::findWater()
 {
     HANDLE_ACTION_INITIAL
 
-    energyBar.plus(10);
-    hungerBar.plus(5);
-    thirstBar.plus(10);
-    healthBar.plus(5);
+    if (chance(config.findWaterNothing))
+    {
+        result.message = "You found nothing.";
+        goto done;
+    }
+    else
+    {
+        thirstBar.plus(config.waterThirst);
+        if (chance(config.findCleanWater))
+        {
+            result.message = "You have found clean water and drank it.";
+        }
+        else
+        {
+            healthBar.minus(config.waterPoison);
+            result.message = "You have found dirty water and drank it.";
+        }
+    }
 
     HANDLE_ACTION_FINAL
 }
@@ -116,10 +130,16 @@ ActionResult Engine::rest()
 {
     HANDLE_ACTION_INITIAL
 
-    energyBar.plus(20);
-    hungerBar.minus(10);
-    thirstBar.minus(10);
-    healthBar.plus(5);
+    energyBar.plus(config.restEnergy);
+    if (hungerBar.getValue() > config.restHungerHeal && thirstBar.getValue() > config.restThirstHeal)
+    {
+        result.message = "You awake feeling healthier.";
+        healthBar.plus(config.restHealth);
+    }
+    else
+    {
+        result.message = "You rested.";
+    }
 
     HANDLE_ACTION_FINAL
 }

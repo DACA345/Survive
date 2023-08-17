@@ -28,6 +28,17 @@ struct LevelConfig
 
     // Water
     double findWaterNothing = 0.2;
+    double findCleanWater = 0.2;
+    
+    int waterThirst = 20;
+    int waterPoison = 20;
+
+    // Rest
+    int restHungerHeal = 60;
+    int restThirstHeal = 60;
+
+    int restEnergy = 20;
+    int restHealth = 30;
 
     // Day events
     double disaster = 0.02;
