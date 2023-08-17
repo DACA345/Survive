@@ -297,7 +297,7 @@ void Game::triggerEvent()
 
     bool didTrigger = correctSeason(event.season) ? (probForTrigger <= 0.40) : (probForTrigger <= 0.05);
 
-    if (probForTrigger <= 0.40) // 40% chance of an event
+    if (didTrigger)
     {
         std::cout << event.event.toStdString() << std::endl;
         if (event.effect == "negative")
