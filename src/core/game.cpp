@@ -292,7 +292,6 @@ void Game::triggerEvent()
     float probability = dist(gen);
     
     QString currSeason = season.getSeason(QString::fromStdString(months[currentMonthIndex]));
-    std::cout << currSeason.toStdString() << "This is curr season: " << std::endl;
     QString evnt;
     QString evntSeason;
 
@@ -300,13 +299,11 @@ void Game::triggerEvent()
     {
         evnt = events.getRandomEventForSeason(currSeason);
         evntSeason = events.getSeasonForEvent(evnt);
-        std::cout << evnt.toStdString() << std::endl;
     }
     else
     {
         evnt = events.getRandomEvent();
         evntSeason = events.getSeasonForEvent(evnt);
-        std::cout << evnt.toStdString() << std::endl;
     }
     
     float probForTrigger = dist(gen);
