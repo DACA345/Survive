@@ -144,10 +144,11 @@ ActionResult Engine::rest()
     HANDLE_ACTION_FINAL
 }
 
-void Engine::nextDay()
+EventInfo Engine::nextDay()
 {
     turns = ENGINE_INITIAL_TURNS;
     day->nextDay();
+    return triggerDayEvent();
 }
 
 short Engine::getTurns() const
@@ -173,6 +174,50 @@ int Engine::getThirst() const
 int Engine::getHealth() const
 {
     return healthBar.getValue();
+}
+
+EventInfo Engine::triggerDayEvent()
+{
+    const LevelConfig& config = level.getConfig();
+
+    EventInfo event;
+
+    if (chance(config.seasonEvent))
+    {
+        event = level.getEvents().getRandomEventForSeason(
+            level.getSeasons().getSeason(
+                day->monthId()
+            )
+        );
+    }
+    else
+    {
+        event = level.getEvents().getRandomEvent();
+    }
+
+    bool didTrigger = level.getSeasons().getSeason(day->monthId()) == event.season
+        ? chance(config.seasonEventTrigger) : chance(config.eventTrigger);
+
+    if (didTrigger)
+    {
+        if (chance(config.seasonEventTrigger))
+        {
+            if (event.effect == "negative")
+            {
+                healthBar.minus(config.eventNegativeHealth);
+            }
+            else if (event.effect == "neutral")
+            {
+                // Morale bar implementation
+            }
+            else
+            {
+                healthBar.plus(config.eventPositiveHealth);
+            }
+        }
+    }
+
+    return event;
 }
 
 Engine::~Engine()

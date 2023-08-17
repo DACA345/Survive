@@ -290,69 +290,43 @@ void Game::triggerEvent()
     std::uniform_real_distribution<float> dist(0.0, 1.0);
     
     float probability = dist(gen);
-    
-    QString currSeason = season.getSeason(QString::fromStdString(months[currentMonthIndex]));
-    QString evnt;
-    QString evntSeason;
+
+    EventInfo event;
 
     if (probability <= 0.5) // 50% chance for the events from that season
     {
-        evnt = events.getRandomEventForSeason(currSeason);
-        evntSeason = events.getSeasonForEvent(evnt);
+        event = events.getRandomEventForSeason(
+            season.getSeason(Day::monthFromInt(currentMonthIndex))
+        );
     }
     else
     {
-        evnt = events.getRandomEvent();
-        evntSeason = events.getSeasonForEvent(evnt);
+        event = events.getRandomEvent();
     }
     
     float probForTrigger = dist(gen);
 
-    if (correctSeason(evntSeason))
+    bool didTrigger = correctSeason(event.season) ? (probForTrigger <= 0.40) : (probForTrigger <= 0.05);
+
+    if (probForTrigger <= 0.40) // 40% chance of an event
     {
-        if (probForTrigger <= 0.40) // 40% chance of an event
+        std::cout << event.event.toStdString() << std::endl;
+        if (event.effect == "negative")
         {
-            std::cout << evnt.toStdString() << std::endl;
-            if (events.getEffect(evnt) == "negative")
-            {
-                healthBar.minus(4);
-            }
-            else if(events.getEffect(evnt) == "neutral")
-            {
-                // Morale bar here!
-            }
-            else
-            {
-                healthBar.plus(4);
-            }
+            healthBar.minus(4);
+        }
+        else if(event.effect == "neutral")
+        {
+            // Morale bar here!
         }
         else
         {
-            std::cout << "The day starts off peacefully." << std::endl;
+            healthBar.plus(4);
         }
     }
     else
     {
-        if (probForTrigger <= 0.05) // 5% chance of an event
-        {
-            std::cout << evnt.toStdString() << std::endl;
-            if (events.getEffect(evnt) == "negative")
-            {
-                healthBar.minus(4);
-            }
-            else if (events.getEffect(evnt) == "neutral")
-            {
-                // Morale bar here!
-            }
-            else
-            {
-                healthBar.plus(4);
-            }
-        }
-        else
-        {
-            std::cout << "The day starts off peacefully." << std::endl;
-        }
+        std::cout << "The day starts off peacefully." << std::endl;
     }
 
 

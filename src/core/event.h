@@ -3,6 +3,13 @@
 #include <QString>
 #include <QMap>
 
+struct EventInfo
+{
+    QString event;
+    QString season;
+    QString effect;
+};
+
 class Event {
 public:
     // Constructor
@@ -11,25 +18,14 @@ public:
     // Load method
     void loadEventsFromJson(const QString& filePath);
 
+    QString getRandomSeason() const;
+
     // Get random method 
-    QString getRandomEvent() const;
-
-    // Get season for the event
-    QString getSeasonForEvent(const QString& eventDescription) const;
-
-    // Added method to get effect
-    QString getEffect(const QString& eventDescription) const;
+    EventInfo getRandomEvent() const;
 
     // Method to get random event for a given season
-    QString getRandomEventForSeason(const QString& season) const;
+    EventInfo getRandomEventForSeason(const QString& season) const;
 
 private:
-
-    struct EventData // Added this struct
-    {
-        QString season;
-        QString effect;
-    };
-
-    QMap<QString, EventData> events;
+    QMap<QString, QList<EventInfo>> events;
 };

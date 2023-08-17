@@ -26,7 +26,8 @@ struct ClimateData {
     Precipitation snow_depth;
 };
 
-class Day {
+class Day
+{
     public:
         Day(const std::string& filename);
 
@@ -38,14 +39,16 @@ class Day {
         float getRandomTemperatureValue(const Temperature& temperature) const;
         float getRandomPrecipitationValue(const Precipitation& precipitation) const;
 
+        static QString monthFromInt(int month);
+
         int month() const;
+        QString monthId() const;
         void nextDay();
 
-        const std::vector<std::string> months = { "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL",
-                                                  "AUG", "SEP", "OCT", "NOV", "DEC" };
+        static const std::vector<std::string> months;
     private:
         std::map<std::string, std::vector<ClimateData>> climateData;
         void loadClimateData(const std::string& filename);
 
         int day = 1;
-};      
+};

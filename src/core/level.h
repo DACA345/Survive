@@ -3,10 +3,9 @@
 #include <QString>
 
 #include "animal.h"
-#include "plant.h"
 #include "event.h"
-
-#include <QDebug>
+#include "plant.h"
+#include "season.h"
 
 struct LevelInfo
 {
@@ -40,8 +39,13 @@ struct LevelConfig
     int restEnergy = 20;
     int restHealth = 30;
 
-    // Day events
-    double disaster = 0.02;
+    // Events
+    double seasonEvent = 0.5;
+    double seasonEventTrigger = 0.4;
+    double eventTrigger = 0.05;
+
+    int eventNegativeHealth = 40;
+    int eventPositiveHealth = 40;
 };
 
 class Level
@@ -56,8 +60,9 @@ class Level
         const LevelConfig& getConfig() const;
 
         const Animal& getAnimals() const;
+        const Event& getEvents() const;
         const Plant& getPlants() const;
-        const Event& getDisasters() const;
+        const Season& getSeasons() const;
 
     private:
         void loadLevel();
@@ -66,6 +71,7 @@ class Level
         LevelConfig config;
 
         Animal animals;
+        Event events;
         Plant plants;
-        Event disasters;
+        Season seasons;
 };

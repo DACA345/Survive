@@ -9,7 +9,11 @@
 #include "../config/files.h"
 
 Level::Level(const QString& id)
-    : info{ id }, animals(file("animals.json")), plants(file("plants.json")), disasters(file("disaster_ev.json"))
+    : info{ id },
+        animals(file("animals.json")),
+        events(file("events.json")),
+        plants(file("plants.json")),
+        seasons(file("season.json"))
 {
     loadLevel();
 }
@@ -34,14 +38,19 @@ const Animal& Level::getAnimals() const
     return animals;
 }
 
+const Event& Level::getEvents() const
+{
+    return events;
+}
+
 const Plant& Level::getPlants() const
 {
     return plants;
 }
 
-const Event& Level::getDisasters() const
+const Season& Level::getSeasons() const
 {
-    return disasters;
+    return seasons;
 }
 
 void Level::loadLevel()

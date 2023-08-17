@@ -38,7 +38,7 @@ class Engine
         ActionResult explore();
         ActionResult rest();
 
-        void nextDay();
+        EventInfo nextDay();
 
         short getTurns() const;
 
@@ -48,6 +48,8 @@ class Engine
         int getHealth() const;
 
     private:
+        EventInfo triggerDayEvent();
+
         short turns = ENGINE_INITIAL_TURNS;
 
         QRandomGenerator random = QRandomGenerator::securelySeeded();

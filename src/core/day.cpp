@@ -12,6 +12,11 @@
 
 #include "day.h"
 
+const std::vector<std::string> Day::months = {
+    "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL",
+    "AUG", "SEP", "OCT", "NOV", "DEC"
+};
+
 Day::Day(const std::string& filename)
 {
     loadClimateData(filename);
@@ -195,9 +200,19 @@ float Day::getRandomPrecipitationValue(const Precipitation& precipitation) const
     return dist(gen);
 }
 
+QString Day::monthFromInt(int month)
+{
+    return QString::fromStdString(months[month]);
+}
+
 int Day::month() const
 {
     return (day / 30) + 1;
+}
+
+QString Day::monthId() const
+{
+    return monthFromInt(day);
 }
 
 void Day::nextDay()
