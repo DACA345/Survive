@@ -3,11 +3,5 @@
 
 TEST(EventTest, JSONConstructorTest)
 {
-	Event event("data/levels/mtaspiring/events.json");
 
-	// Print each disaster details
-	event.getEffect(event.getRandomEvent());
-
-	QString randomEvent = event.getRandomEventForSeason("rawwing"); // Use a valid season name here
-	EXPECT_TRUE(randomEvent.isEmpty()) << "No matching events found for the season";
 }

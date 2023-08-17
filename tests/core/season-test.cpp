@@ -1,16 +1,16 @@
 #include <gtest/gtest.h>
-#include <Core/season.h>
+#include <core/season.h>
 
 TEST(SeasonTest, MethodConstructorTest)
 {
     Season season("data/levels/mtaspiring/season.json");
 
-    EXPECT_STREQ(season.getSeason("JAN").toStdString().c_str(), "summer");
-    EXPECT_STREQ(season.getSeason("APR").toStdString().c_str(), "autumn");
-    EXPECT_STREQ(season.getSeason("JUL").toStdString().c_str(), "winter");
-    EXPECT_STREQ(season.getSeason("OCT").toStdString().c_str(), "spring");
-
-    EXPECT_STREQ(season.getSeason("RAW").toStdString().c_str(), "No seasons found");
+    EXPECT_EQ(season.getSeason("JAN"), "summer");
+    EXPECT_EQ(season.getSeason("APR"), "autumn");
+    EXPECT_EQ(season.getSeason("JUL"), "winter");
+    EXPECT_EQ(season.getSeason("OCT"), "spring");
+              
+    EXPECT_EQ(season.getSeason("RAW"), "No seasons found");
 }
 
 TEST(SeasonTest, MethodGetMonthTest)

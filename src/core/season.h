@@ -1,4 +1,5 @@
-#include <QString>
+#pragma once
+
 #include <QMap>
 
 class Season {

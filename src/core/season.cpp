@@ -1,8 +1,9 @@
-#include "season.h"
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
+
+#include "season.h"
 
 Season::Season(const QString& filename) 
 {
