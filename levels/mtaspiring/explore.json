@@ -1,0 +1,102 @@
+{
+  "encounter": [
+    {
+      "explore_ID": "EXENC01",
+      "event_name": "  some friendly native birds"
+    },
+    {
+      "explore_ID": "EXENC02",
+      "event_name": "  a playful group of Kea birds"
+    },
+    {
+      "explore_ID": "EXENC03",
+      "event_name": "  a group of wild alpine chamois"
+    },
+    {
+      "explore_ID": "EXENC04",
+      "event_name": "  a rare sighting of a native kiwi bird"
+    },
+    {
+      "explore_ID": "EXENC05",
+      "event_name": "  a group of mountain hares"
+    },
+    {
+      "explore_ID": "EXENC06",
+      "event_name": "  a herd of wild Alpine marmots"
+    },
+    {
+      "explore_ID": "EXENC07",
+      "event_name": "  a playful group of native mountain goats"
+    },
+    {
+      "explore_ID": "EXENC08",
+      "event_name": "  a friendly alpine butterfly"
+    },
+    {
+      "explore_ID": "EXENC09",
+      "event_name": "  a family of native mountain sheep"
+    },
+    {
+      "explore_ID": "EXENC10",
+      "event_name": "  a rare alpine bird in the wild"
+    }
+  ],
+  "see": [
+    {
+      "explore_ID": "EXSEE01",
+      "event_name": " a majestic native eagle soaring above"
+    },
+    {
+      "explore_ID": "EXSEE02",
+      "event_name": " a curious Alpine ibex running towards you"
+    },
+    {
+      "explore_ID": "EXSEE03",
+      "event_name": " a friendly native weka bird"
+    },
+    {
+      "explore_ID": "EXSEE04",
+      "event_name": " a group of mountain parrots playing"
+    },
+    {
+      "explore_ID": "EXSEE05",
+      "event_name": " a family of red deer grazing in the valley"
+    },
+    {
+      "explore_ID": "EXSEE06",
+      "event_name": " a group of Alpine ibex on a cliff"
+    }
+  ],
+  "find": [
+    {
+      "explore_ID": "EXFIN01",
+      "event_name": "a group of baby bird following their mother"
+    },
+    {
+      "explore_ID": "EXFIN02",
+      "event_name": "an injured deer"
+    },
+    {
+      "explore_ID": "EXFIN03",
+      "event_name": "a lost animal"
+    }
+  ],
+  "observe": [
+    {
+      "explore_ID": "EXOBS01",
+      "event_name": "a group of bird singing"
+    },
+    {
+      "explore_ID": "EXOBS02",
+      "event_name": "a group of deer running around"
+    },
+    {
+      "explore_ID": "EXOBS03",
+      "event_name": "a group of local Maori performing the haka"
+    },
+    {
+      "explore_ID": "EXOBS04",
+      "event_name": "the sound of singing parrots from distance"
+    }
+  ]
+}
