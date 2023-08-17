@@ -1,19 +1,16 @@
 #include <gtest/gtest.h>
 #include <core/plant.h>
 
-TEST(PlantTest, MethodConstructorTest)
+TEST(PlantTest, ValueTests)
 {
     Plant testPlant("data/levels/mtaspiring/plants.json");
 
     // Test for the "Fungi" category
-    QPair<QString, bool> randomFungus = testPlant.getRandomPlant("fungi");
-    ASSERT_FALSE(randomFungus.first.isEmpty());
-    std::cout << "Random Fungus: " << randomFungus.first.toStdString()
-        << ", Edible: " << (randomFungus.second ? "true" : "false") << std::endl;
+    EXPECT_NO_THROW(testPlant.getRandomPlantCategory());
+    EXPECT_NO_THROW(testPlant.getRandomPlant());
+    EXPECT_NO_THROW(testPlant.getRandomPlantInCategory("fungi"));
+    EXPECT_NO_THROW(testPlant.getRandomPlantInCategory("plant"));
 
-    // Test for the "Plant" category
-    QPair<QString, bool> randomPlant = testPlant.getRandomPlant("plant");
-    ASSERT_FALSE(randomPlant.first.isEmpty());
-    std::cout << "Random Plant: " << randomPlant.first.toStdString()
-        << ", Edible: " << (randomPlant.second ? "true" : "false") << std::endl;
+    ASSERT_FALSE(testPlant.getRandomPlant().name == "");
+    ASSERT_FALSE(testPlant.getRandomPlant().category == "");
 }

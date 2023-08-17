@@ -1,3 +1,5 @@
+#include "plant.h"
+#include "plant.h"
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -42,7 +44,7 @@ void Plant::loadPlantsFromJson(const QString& filePath)
         QJsonObject fungi = fungiValue.toObject();
         QString name = fungi["name"].toString();
         bool edible = fungi["edible"].toBool();
-        plants["fungi"].append(qMakePair(name, edible));
+        plants["fungi"].append(PlantInfo{ name, "fungi", edible });
     }
 
     // Process Plant
@@ -52,18 +54,34 @@ void Plant::loadPlantsFromJson(const QString& filePath)
         QJsonObject plant = plantValue.toObject();
         QString name = plant["name"].toString();
         bool edible = plant["edible"].toBool();
-        plants["plant"].append(qMakePair(name, edible));
+        plants["plant"].append(PlantInfo{ name, "plant", edible });
     }
 }
 
-// Method to print our random plant according to category and also return edible status
-QPair<QString, bool> Plant::getRandomPlant(const QString& category) 
+const PlantInfo& Plant::getRandomPlant() const
 {
-    QList<QPair<QString, bool>> plantList = plants[category];
-    if (!plantList.isEmpty()) 
+    return getRandomPlantInCategory(getRandomPlantCategory());
+}
+
+// Method to print our random plant according to category and also return edible status
+const PlantInfo& Plant::getRandomPlantInCategory(const QString& category) const
+{
+    const QList<PlantInfo>& plantList = plants[category];
+    if (plantList.isEmpty())
     {
-        int randomIndex = QRandomGenerator::global()->bounded(plantList.size());
-        return plantList[randomIndex];
+        qFatal("No plants found");
     }
-    return qMakePair("", false);
+
+    return plantList[QRandomGenerator::global()->bounded(plantList.size())];
+}
+
+QString Plant::getRandomPlantCategory() const
+{
+    const QList<QString>& plantCategory = plants.keys();
+    if (plantCategory.isEmpty())
+    {
+        qFatal("No plants found");
+    }
+
+    return plantCategory[QRandomGenerator::global()->bounded(plantCategory.size())];
 }

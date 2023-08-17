@@ -1,4 +1,7 @@
 #include "level.h"
+#include "level.h"
+#include "level.h"
+#include "level.h"
 #include <QJsonDocument>
 #include <QJsonObject>
 
@@ -24,6 +27,21 @@ const LevelInfo& Level::getInfo() const
 const LevelConfig& Level::getConfig() const
 {
     return config;
+}
+
+const Animal& Level::getAnimals() const
+{
+    return animals;
+}
+
+const Plant& Level::getPlants() const
+{
+    return plants;
+}
+
+const Event& Level::getDisasters() const
+{
+    return disasters;
 }
 
 void Level::loadLevel()

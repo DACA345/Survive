@@ -178,9 +178,9 @@ void Game::findFood()
         else
         {
             hungerBar.plus(1);
-            QPair<QString, bool> randomPlant = plant.getRandomPlant("fungi");
-            std::cout << "You have found " << randomPlant.first.toStdString() << std::endl;
-            if (randomPlant.second == false)
+            const PlantInfo& randomPlant = plant.getRandomPlant();
+            std::cout << "You have found " <<randomPlant.category.toStdString() << ": " << randomPlant.name.toStdString() << std::endl;
+            if (!randomPlant.edible)
             {
                 std::cout << "That was not edible ew " << std::endl;
                 healthBar.minus(3);
@@ -395,9 +395,9 @@ void Game::updateTemperature()
 void Game::displayTemperature()
 {
     std::cout << "Temperature for Day " << dayCounter << ":" << std::endl;
-    std::cout << "Day/Evening Temp: " << avgTemperature << " °C" << std::endl;
-    std::cout << "Afternoon Temp: " << maxTemperature << " °C" << std::endl;
-    std::cout << "Night Temp: " << minTemperature << " °C" << std::endl;
+    std::cout << "Day/Evening Temp: " << avgTemperature << " Celsius" << std::endl;
+    std::cout << "Afternoon Temp: " << maxTemperature << " Celsius" << std::endl;
+    std::cout << "Night Temp: " << minTemperature << " Celsius" << std::endl;
 }
 
 bool Game::correctSeason(const QString &seasons) const

@@ -8,12 +8,18 @@
 
 #define ENGINE_INITIAL_TURNS 5
 
-enum class ActionResult
+enum class ActionBaseResult
 {
     NO_TURNS,
     USED_TURNS,
     GAME_OVER,
     SUCCESS
+};
+
+struct ActionResult
+{
+    ActionBaseResult result;
+    QString message;
 };
 
 class Engine
