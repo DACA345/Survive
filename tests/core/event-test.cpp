@@ -3,7 +3,7 @@
 
 TEST(EventTest, JSONConstructorTest)
 {
-	Event event("data/levels/mtaspiring/disaster_ev.json");
+	Event event("data/levels/mtaspiring/events.json");
 
 	// Print each disaster details
 	event.getEffect(event.getRandomEvent());
