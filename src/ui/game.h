@@ -5,6 +5,7 @@
 #include <QSvgWidget>
 
 #include "widgets/scalablewidget.h"
+#include "widgets/game/resultwidget.h"
 #include "../core/engine.h"
 
 /**
@@ -34,12 +35,15 @@ class Game : public ScalableWidget
         void updateUi();
 
         QString textureFile(const QString& name);
+
         void handleActionResult(ActionResult result);
         void endGame();
 
         Engine engine;
 
         // Ui elements
+        ResultWidget* resultWidget;
+
         QPushButton* findFoodButton;
         QPushButton* findWaterButton;
         QPushButton* exploreButton;
