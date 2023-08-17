@@ -1,0 +1,67 @@
+[
+    {
+        "event_desc": "A Blizzard has happened",
+        "season": "winter",
+        "effect": "negative"
+    },
+    {
+        "event_desc": "An EarthQuake has happened",
+        "season": "none",
+        "effect": "negative"
+    },
+    {
+        "event_desc": "An Avalanche has happened",
+        "season": "winter",
+        "effect": "negative"
+    },
+    {
+        "event_desc": "A Heatwave has occurred",
+        "season": "summer",
+        "effect": "negative"
+    },
+    {
+        "event_desc": "A Tornado has hit",
+        "season": "spring",
+        "effect": "negative"
+    },
+    {
+        "event_desc": "A Flood has happened",
+        "season": "autumn",
+        "effect": "negative"
+    },
+    {
+        "event_desc": "A Volcanic Eruption has occurred",
+        "season": "none",
+        "effect": "negative"
+    },
+    {
+        "event_desc": "A Meteor Shower has occurred",
+        "season": "none",
+        "effect": "neutral"
+    },
+    {
+        "event_desc": "A Solar Eclipse is visible",
+        "season": "none",
+        "effect": "neutral"
+    },
+    {
+        "event_desc": "A Supermoon is visible",
+        "season": "none",
+        "effect": "neutral"
+    },
+    {
+        "event_desc": "A Comet passes by",
+        "season": "none",
+        "effect": "neutral"
+    },
+    {
+        "event_desc": "A Bountiful Harvest is ready",
+        "season": "autumn",
+        "effect": "positive"
+    },
+    {
+        "event_desc": "A Rare Flower Blooms",
+        "season": "spring",
+        "effect": "positive"
+    }
+]

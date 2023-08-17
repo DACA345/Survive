@@ -52,6 +52,7 @@ add_executable(${PROJECT_NAME}-core-test
     "core/plant-test.cpp"
     "core/event-test.cpp"
     "core/bar-test.cpp"
+    "core/season-test.cpp"
     "core/game-test.cpp"
 )
 

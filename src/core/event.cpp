@@ -27,33 +27,28 @@ void Event::loadEventsFromJson(const QString& filePath) {
     QJsonDocument doc = QJsonDocument::fromJson(jsonData);
 
     // Check if the JSON data is an array.
-    if (doc.isArray()) {
+    if (doc.isArray()) 
+    {
         QJsonArray jsonArray = doc.array();
 
         // Iterate through each event object in the array.
         for (const QJsonValue& eventValue : jsonArray) {
             QJsonObject eventObject = eventValue.toObject();
 
-            // Extract event ID and description from the event object.
-            QString eventId = eventObject["event_id"].toString();
+            // Extract description, season, and effect from the event object.
             QString eventDesc = eventObject["event_desc"].toString();
+            QString eventSeason = eventObject["season"].toString();
+            QString eventEffect = eventObject["effect"].toString(); // Added this line
 
             // Store the event information in the 'events' QMap.
-            events[eventId] = eventDesc;
+            EventData eventData;
+            eventData.season = eventSeason;
+            eventData.effect = eventEffect; // Added this line
+            events[eventDesc] = eventData;
         }
     }
     else {
         qWarning("Invalid JSON data");
-    }
-}
-
-// Function to print all events stored in the 'events' QMap.
-void Event::printAllEvents() const
-{
-    for (auto it = events.begin(); it != events.end(); ++it)
-    {
-        std::cout << "Event ID: " << it.key().toStdString() << std::endl;
-        std::cout << "Event Description: " << it.value().toStdString() << std::endl;
     }
 }
 
@@ -68,25 +63,56 @@ QString Event::getRandomEvent() const
         std::advance(it, randomIndex);
 
         // Return the description of the randomly selected event.
-        return it.value();
+        return it.key();
     }
     return QString(); // Return an empty string if there are no events
 }
 
-// Function to print a random event's ID and description.
-void Event::printRandomEvent() const
+// In your Event.cpp file, implement the new method:
+QString Event::getSeasonForEvent(const QString& eventDescription) const
 {
-    if (!events.isEmpty())
+    auto it = events.find(eventDescription);
+    if (it != events.end()) {
+        return it.value().season;
+    }
+    else 
     {
-        int randomIndex = QRandomGenerator::global()->bounded(events.size());
-        auto it = events.begin();
-        std::advance(it, randomIndex);
+        return "No available seasons";
+    }
+}
 
-        std::cout << "Random Event ID: " << it.key().toStdString() << std::endl;
-        std::cout << "Random Event Description: " << it.value().toStdString() << std::endl;
+// Function to retrieve the effect of an event.
+QString Event::getEffect(const QString& eventDescription) const
+{
+    auto it = events.find(eventDescription);
+    if (it != events.end()) 
+    {
+        return it.value().effect;
     }
     else
     {
-        std::cout << "No events available." << std::endl;
+        return "No effect available";
     }
+}
+
+// Function to retrieve a random event based on season.
+QString Event::getRandomEventForSeason(const QString& season) const
+{
+    QVector<QString> matchingEvents;
+
+    for (auto it = events.begin(); it != events.end(); ++it)
+    {
+        if (it.value().season == season)
+        {
+            matchingEvents.push_back(it.key());
+        }
+    }
+
+    if (!matchingEvents.isEmpty())
+    {
+        int randomIndex = QRandomGenerator::global()->bounded(matchingEvents.size());
+        return matchingEvents[randomIndex];
+    }
+
+    return QString(); // Return an empty string if no matching events found
 }

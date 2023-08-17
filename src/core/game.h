@@ -7,6 +7,10 @@
 #include "plant.h"
 #include "event.h"
 #include "action.h"
+#include "season.h"
+
+#define MAX_TURNS 5
+#define MIN_TURNS 0
 
 class Game 
 {
@@ -22,6 +26,9 @@ private:
     
     // Day counter
     int dayCounter;
+
+    // Total Days survived counter
+    int totalDays;
 
     // Month index to keep track of month
     int currentMonthIndex;
@@ -59,10 +66,14 @@ private:
     Plant plant;
 
     // Var for events
-    Event disasters;
+    Event events;
+
+    // Var for seasons
+    Season season; 
 
     bool isAlive() const;
     bool canMove() const;
+    bool correctSeason(const QString& season) const;
 
     int getMenuChoice() const;
     void handleMenuChoice(int choice);

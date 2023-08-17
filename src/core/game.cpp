@@ -8,16 +8,17 @@ Game::Game(const std::string& levelFolder) : levelFolder(levelFolder),
 climate(levelFolder + "/climate.json"), // Initialize climate data
 animal(convertQlevelFolder + "/animals.json"), // Initialize animal
 plant(convertQlevelFolder + "/plants.json"), // Initialize Plant
-disasters(convertQlevelFolder + "/disaster_ev.json"), // Initialize Disaster
+events(convertQlevelFolder + "/events.json"), // Initialize Disaster
+season(convertQlevelFolder + "/season.json"), // Initialize season
 energyBar(10),
 hungerBar(10),
 thirstBar(10),
 healthBar(10)
-
 {
 
     dayCounter = 0; // Start with Day 0
-    turns = 5; // Initialize turns to 5
+    totalDays = 0; // total days will start with 0
+    turns = MAX_TURNS; // Initialize num of turns to maximum
     alive = true; // Initialize player as alive
     move = true; // Initialize player to be able to move
     currentMonthIndex = 0; // Initialize monthindex to 1 (starts from january)
@@ -47,9 +48,10 @@ void Game::run()
         {
             updateTemperature();
             dayCounter++;
+            totalDays++;
         }
         
-        std::cout << "Day: " << dayCounter << std::endl;
+        std::cout << "Day: " << totalDays << std::endl;
         std::cout << "Month: " << months[currentMonthIndex] << std::endl;
         std::cout << "Turns remaining: " << turns << std::endl;
         displayMainMenu();
@@ -60,7 +62,7 @@ void Game::run()
         if (turns == 1) {
             std::cout << "Only 1 turn remaining!" << std::endl;
         }
-        else if (turns == 0) {
+        else if (turns == MIN_TURNS) {
             displayDaySummary();
             std::cout << "Day " << dayCounter << " ends!" << std::endl;
             // Call the startNewDay method
@@ -276,8 +278,9 @@ void Game::updateMonth()
     if (dayCounter == 30) 
     {
         currentMonthIndex = (currentMonthIndex + 1) % 12;
-        
+        dayCounter = 1;
     }
+
 }
 
 void Game::triggerEvent()
@@ -285,18 +288,77 @@ void Game::triggerEvent()
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_real_distribution<float> dist(0.0, 1.0);
-
+    
     float probability = dist(gen);
+    
+    QString currSeason = season.getSeason(QString::fromStdString(months[currentMonthIndex]));
+    std::cout << currSeason.toStdString() << "This is curr season: " << std::endl;
+    QString evnt;
+    QString evntSeason;
 
-    if (probability <= 0.02) // 2% chance of a disaster
+    if (probability <= 0.5) // 50% chance for the events from that season
     {
-        disasters.printRandomEvent();
-        healthBar.minus(4);
+        evnt = events.getRandomEventForSeason(currSeason);
+        evntSeason = events.getSeasonForEvent(evnt);
+        std::cout << evnt.toStdString() << std::endl;
     }
     else
     {
-        std::cout << "The day starts off peacefully." << std::endl;
+        evnt = events.getRandomEvent();
+        evntSeason = events.getSeasonForEvent(evnt);
+        std::cout << evnt.toStdString() << std::endl;
     }
+    
+    float probForTrigger = dist(gen);
+
+    if (correctSeason(evntSeason))
+    {
+        if (probForTrigger <= 0.40) // 40% chance of an event
+        {
+            std::cout << evnt.toStdString() << std::endl;
+            if (events.getEffect(evnt) == "negative")
+            {
+                healthBar.minus(4);
+            }
+            else if(events.getEffect(evnt) == "neutral")
+            {
+                // Morale bar here!
+            }
+            else
+            {
+                healthBar.plus(4);
+            }
+        }
+        else
+        {
+            std::cout << "The day starts off peacefully." << std::endl;
+        }
+    }
+    else
+    {
+        if (probForTrigger <= 0.05) // 5% chance of an event
+        {
+            std::cout << evnt.toStdString() << std::endl;
+            if (events.getEffect(evnt) == "negative")
+            {
+                healthBar.minus(4);
+            }
+            else if (events.getEffect(evnt) == "neutral")
+            {
+                // Morale bar here!
+            }
+            else
+            {
+                healthBar.plus(4);
+            }
+        }
+        else
+        {
+            std::cout << "The day starts off peacefully." << std::endl;
+        }
+    }
+
+
 }
 
 void Game::startNewDay()
@@ -304,7 +366,9 @@ void Game::startNewDay()
     updateMonth();
     updateTemperature();
     ++dayCounter; // Increment the day counter
-    turns = 5; // Reset the turn counter
+    ++totalDays; // increment total days
+    turns = MAX_TURNS;
+        // Reset the turn counter
     triggerEvent(); // Trigger random event at new day
 }
 
@@ -336,6 +400,19 @@ void Game::displayTemperature()
     std::cout << "Night Temp: " << minTemperature << " °C" << std::endl;
 }
 
+bool Game::correctSeason(const QString &seasons) const
+{
+    QString currMonth = QString::fromStdString(months[currentMonthIndex]);
+    QString currSeason = season.getSeason(currMonth);
+    if (seasons == currSeason)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
 void Game::displayGameOver() const
 {
