@@ -1,24 +1,32 @@
 #pragma once
 
-#include <QString>
-#include <QVector>
 #include <QMap>
+#include <QString>
+#include <QList>
+#include <QPair>
 
-class Animal 
+struct AnimalInfo
 {
+    QString speciesID;
+    QString category;
+    QString name;
+};
+
+class Animal {
 public:
     // Constructor to initialize animals from JSON file
     Animal(const QString& filePath);
 
-    // Load animal data from JSON file
+    // Method to load plants from json
     void loadAnimalsFromJson(const QString& filePath);
 
-    // Get random animal from category as input
-    QString getRandomAnimal(const QString& category) const;
+    // Method to return plant according to category and also it's status for edible or not
+    const AnimalInfo& getRandomAnimal() const;
+    const AnimalInfo& getRandomAnimalInCategory(const QString& category) const;
+    QString getRandomAnimalCategory() const;
 
 private:
-    // Store animals categorized by species
-    QMap<QString, QVector<QString>> animals;
+    QMap<QString, QList<AnimalInfo>> animals;
 };
 
 

@@ -1,5 +1,3 @@
-#include "plant.h"
-#include "plant.h"
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>

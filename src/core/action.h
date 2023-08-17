@@ -1,6 +1,16 @@
-#include <QString>
-#include <QVector>
+#pragma once
+
 #include <QMap>
+#include <QString>
+#include <QList>
+#include <QPair>
+
+struct ActionInfo
+{
+    QString actionsID;
+    QString actDesc;
+    QString category;
+};
 
 class Action
 {
@@ -11,10 +21,12 @@ public:
     // Load animal data from JSON file
     void loadActionsFromJson(const QString& filePath);
 
-    // Get random animal from category as input
-    QString getRandomAction(const QString& category) const;
+    // Method to return action according to category and also it's status for edible or not
+    const ActionInfo& getRandomAction() const;
+    const ActionInfo& getRandomActionInCategory(const QString& category) const;
+    QString getRandomActionCategory() const;
 
 private:
     // Store animals categorized by species
-    QMap<QString, QVector<QString>> actions;
+    QMap<QString, QList<ActionInfo>> actions;
 };

@@ -3,6 +3,7 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QJsonValue>
+#include <QPair>
 #include <QRandomGenerator>
 
 #include "action.h"
@@ -41,7 +42,7 @@ void Action::loadActionsFromJson(const QString& filePath)
         QJsonObject morale = moraleValue.toObject();
         QString actionsID = morale["actions_id"].toString();
         QString actDesc = morale["act_desc"].toString();
-        actions["morale"].append(actDesc);
+        actions["morale"].append(ActionInfo{ actionsID, "morale", actDesc });
     }
 
     // Process food
@@ -51,7 +52,7 @@ void Action::loadActionsFromJson(const QString& filePath)
         QJsonObject food = foodValue.toObject();
         QString actionsID = food["actions_id"].toString();
         QString actDesc = food["act_desc"].toString();
-        actions["food"].append(actDesc);
+        actions["food"].append(ActionInfo{ actionsID, "food", actDesc });
     }
 
     // Process water
@@ -61,7 +62,7 @@ void Action::loadActionsFromJson(const QString& filePath)
         QJsonObject water = waterValue.toObject();
         QString actionsID = water["actions_id"].toString();
         QString actDesc = water["act_desc"].toString();
-        actions["water"].append(actDesc);
+        actions["water"].append(ActionInfo{ actionsID, "water", actDesc });
     }
 
     // Process explore
@@ -71,43 +72,34 @@ void Action::loadActionsFromJson(const QString& filePath)
         QJsonObject explore = exploreValue.toObject();
         QString actionsID = explore["actions_id"].toString();
         QString actDesc = explore["act_desc"].toString();
-        actions["explore"].append(actDesc);
+        actions["explore"].append(ActionInfo{ actionsID, "explore", actDesc });
     }
 }
 
-QString Action::getRandomAction(const QString& category) const
+const ActionInfo& Action::getRandomAction() const
 {
-    QList<QString> actionList = actions[category];
-    if (!actionList.isEmpty()) {
-        int index = QRandomGenerator::global()->bounded(actionList.size());
-        return actionList[index];
-    }
-    return "";
+    return getRandomActionInCategory(getRandomActionCategory());
 }
 
+// Method to print our random action according to category
+const ActionInfo& Action::getRandomActionInCategory(const QString& category) const
+{
+    const QList<ActionInfo>& actionList = actions[category];
+    if (actionList.isEmpty())
+    {
+        qFatal("No animal found");
+    }
 
-// getActionMethod to be implemented
-//QString Action::getAction(const QString& category) const {
-//    // Create a list to store available actions within the specified category
-//    QList<QString> availableActions;
-//
-//    // Iterate through the actions map and filter actions by the given category
-//    for (auto i = actions.cbegin(), end = actions.cend(); i != end; ++i) {
-//        const QString& actionID = i.key();
-//        const QString& actionDesc = i.value();
-//        const QString& actionCategory = getCategoryByActionID(actionID); // Implement this function
-//
-//        if (actionCategory == category) {
-//            availableActions.append(actionDesc);
-//        }
-//    }
-//
-//    // Randomly select an action description from the available actions
-//    if (!availableActions.isEmpty()) {
-//        int randomIndex = QRandomGenerator::global()->bounded(availableActions.size());
-//        return availableActions[randomIndex];
-//    }
-//    else {
-//        return ""; // No available actions in the given category
-//    }
-//}
+    return actionList[QRandomGenerator::global()->bounded(actionList.size())];
+}
+
+QString Action::getRandomActionCategory() const
+{
+    const QList<QString>& actionCategory = actions.keys();
+    if (actionCategory.isEmpty())
+    {
+        qFatal("No actions found");
+    }
+
+    return actionCategory[QRandomGenerator::global()->bounded(actionCategory.size())];
+}
