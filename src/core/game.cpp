@@ -168,26 +168,28 @@ void Game::findFood()
     else
     {
         // Decide if it's an animal or a plant
-        bool isAnimal = (dist(gen) <= 0.2); // 20% chance for animal
+        bool isAnimal = (dist(gen) <= 0.3); // 30% chance for animal
 
         if (isAnimal)
         {
             hungerBar.plus(3);
-            std::cout << actions.getRandomAction("food").toStdString() << animal.getRandomAnimal("mammals").toStdString() << std::endl;
+            std::cout << actions.getRandomAction("food").toStdString() << "" << animal.getRandomAnimal("mammals").toStdString() << std::endl;
+            std::cout << "+3 in hunger bar!! " << std::endl;
         }
         else
         {
             hungerBar.plus(1);
             QPair<QString, bool> randomPlant = plant.getRandomPlant("fungi");
-            std::cout << actions.getRandomAction("food").toStdString() << randomPlant.first.toStdString() << std::endl;
+            std::cout << "You pick up some " << "" << randomPlant.first.toStdString() << std::endl;
             if (randomPlant.second == false)
             {
                 std::cout << "That was not edible ew " << std::endl;
                 healthBar.minus(3);
+                std::cout << "-3 in hunger bar!! " << std::endl;
             }
             else
             {
-                std::cout << "Ice cream so yum " << std::endl;
+                std::cout << "+1 in hunger bar!! " << std::endl;
             }
 
         }
@@ -217,11 +219,13 @@ void Game::findWater()
         if (cleanWater)
         {
             std::cout << "Clean water found " << std::endl;
+            std::cout << "+2 in thirst bar! " << std::endl;
         }
         else
         {
             healthBar.minus(2);
             std::cout << "Dirty water found " << std::endl;
+            std::cout << "-2 in thirst bar! " << std::endl;
         }
     }
 

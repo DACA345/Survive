@@ -44,11 +44,11 @@
   "food": [
     {
       "actions_id": "MTACT-11",
-      "act_desc": "Caught some"
+      "act_desc": "Caught "
     },
     {
       "actions_id": "MTACT-12",
-      "act_desc": "Found some"
+      "act_desc": "Got some "
     }
   ],
   "water": [
