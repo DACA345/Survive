@@ -2,203 +2,95 @@
   "Encounter": [
     {
       "ID": "EXENC01",
-      "Event name": "  some friendly native birds"
+      "event_name": "some friendly native birds"
     },
     {
       "ID": "EXENC02",
-      "Event name": "  a playful group of Kea birds"
+      "event_name": "a playful group of Kea birds"
     },
     {
       "ID": "EXENC03",
-      "Event name": "  a group of wild alpine chamois"
+      "event_name": "a group of wild alpine chamois"
     },
     {
       "ID": "EXENC04",
-      "Event name": "  a rare sighting of a native kiwi bird"
+      "event_name": "a rare sighting of a native kiwi bird"
     },
     {
       "ID": "EXENC05",
-      "Event name": "  a group of mountain hares"
+      "event_name": "a group of mountain hares"
     },
     {
       "ID": "EXENC06",
-      "Event name": "  a herd of wild Alpine marmots"
+      "event_name": "a herd of wild Alpine marmots"
     },
     {
       "ID": "EXENC07",
-      "Event name": "  a playful group of native mountain goats"
+      "event_name": "a playful group of native mountain goats"
     },
     {
       "ID": "EXENC08",
-      "Event name": "  a friendly alpine butterfly"
+      "event_name": "a friendly alpine butterfly"
     },
     {
       "ID": "EXENC09",
-      "Event name": "  a family of native mountain sheep"
+      "event_name": "a family of native mountain sheep"
     },
     {
       "ID": "EXENC10",
-      "Event name": "  a rare alpine bird in the wild"
-    }
-  ],
-  "See": [
+      "event_name": "a rare alpine bird in the wild"
+    },
     {
       "ID": "EXSEE01",
-      "Event name": " a majestic native eagle soaring above"
+      "event_name": "a majestic native eagle soaring above"
     },
     {
       "ID": "EXSEE02",
-      "Event name": " a curious Alpine ibex running towards you"
+      "event_name": "a curious Alpine ibex running towards you"
     },
     {
       "ID": "EXSEE03",
-      "Event name": " a friendly native weka bird"
+      "event_name": "a friendly native weka bird"
     },
     {
       "ID": "EXSEE04",
-      "Event name": " a group of mountain parrots playing"
+      "event_name": "a group of mountain parrots playing"
     },
     {
       "ID": "EXSEE05",
-      "Event name": " a family of red deer grazing in the valley"
+      "event_name": "a family of red deer grazing in the valley"
     },
     {
       "ID": "EXSEE06",
-      "Event name": " a group of Alpine ibex on a cliff"
-    }
-  ],
-  "Find": [
+      "event_name": "a group of Alpine ibex on a cliff"
+    },
     {
       "ID": "EXFIN01",
-      "Event name": "a group of baby bird following their mother"
+      "event_name": "a group of baby birds following their mother"
     },
     {
       "ID": "EXFIN02",
-      "Event name": "an injured deer"
+      "event_name": "an injured deer"
     },
     {
-      "Encounter": [
-        {
-          "ID": "EXENC01",
-          "Event name": "  some friendly native birds"
-        },
-        {
-          "ID": "EXENC02",
-          "Event name": "  a playful group of Kea birds"
-        },
-        {
-          "ID": "EXENC03",
-          "Event name": "  a group of wild alpine chamois"
-        },
-        {
-          "ID": "EXENC04",
-          "Event name": "  a rare sighting of a native kiwi bird"
-        },
-        {
-          "ID": "EXENC05",
-          "Event name": "  a group of mountain hares"
-        },
-        {
-          "ID": "EXENC06",
-          "Event name": "  a herd of wild Alpine marmots"
-        },
-        {
-          "ID": "EXENC07",
-          "Event name": "  a playful group of native mountain goats"
-        },
-        {
-          "ID": "EXENC08",
-          "Event name": "  a friendly alpine butterfly"
-        },
-        {
-          "ID": "EXENC09",
-          "Event name": "  a family of native mountain sheep"
-        },
-        {
-          "ID": "EXENC10",
-          "Event name": "  a rare alpine bird in the wild"
-        }
-      ],
-      "See": [
-        {
-          "ID": "EXSEE01",
-          "Event name": " a majestic native eagle soaring above"
-        },
-        {
-          "ID": "EXSEE02",
-          "Event name": " a curious Alpine ibex running towards you"
-        },
-        {
-          "ID": "EXSEE03",
-          "Event name": " a friendly native weka bird"
-        },
-        {
-          "ID": "EXSEE04",
-          "Event name": " a group of mountain parrots playing"
-        },
-        {
-          "ID": "EXSEE05",
-          "Event name": " a family of red deer grazing in the valley"
-        },
-        {
-          "ID": "EXSEE06",
-          "Event name": " a group of Alpine ibex on a cliff"
-        }
-      ],
-      "Find": [
-        {
-          "ID": "EXFIN01",
-          "Event name": "a group of baby bird following their mother"
-        },
-        {
-          "ID": "EXFIN02",
-          "Event name": "an injured deer"
-        },
-        {
-          "ID": "EXFIN03",
-          "Event name": "a lost animal"
-        }
-      ],
-      "Observe": [
-        {
-          "ID": "EXOBS01",
-          "Event name": "a group of bird singing"
-        },
-        {
-          "ID": "EXOBS02",
-          "Event name": "a group of deer running around"
-        },
-        {
-          "ID": "EXOBS03",
-          "Event name": "a group of local Maori performing the haka"
-        },
-        {
-          "ID": "EXOBS04",
-          "Event name": "the sound of singing parrorts from distance"
-        }
-      ]
-    }
-    {
       "ID": "EXFIN03",
-      "Event name": "a lost animal"
-    }
-  ],
-  "Observe": [
+      "event_name": "a lost animal"
+    },
     {
       "ID": "EXOBS01",
-      "Event name": "a group of bird singing"
+      "event_name": "a group of birds singing"
     },
     {
       "ID": "EXOBS02",
-      "Event name": "a group of deer running around"
+      "event_name": "a group of deer running around"
     },
     {
       "ID": "EXOBS03",
-      "Event name": "a group of local Maori performing the haka"
+      "event_name": "a group of local Maori performing the haka"
     },
     {
       "ID": "EXOBS04",
-      "Event name": "the sound of singing parrorts from distance"
+      "event_name": "the sound of singing parrots from a distance"
     }
   ]
 }

@@ -7,6 +7,7 @@
 #include "plant.h"
 #include "event.h"
 #include "action.h"
+#include "explore.h"
 
 class Game 
 {
@@ -60,6 +61,12 @@ private:
 
     // Var for events
     Event disasters;
+
+    // Var for actions
+    Action actions;
+
+    // Var for exploreEvent
+    Explore exploreEvent;
 
     bool isAlive() const;
     bool canMove() const;

@@ -9,6 +9,8 @@ climate(levelFolder + "/climate.json"), // Initialize climate data
 animal(convertQlevelFolder + "/animals.json"), // Initialize animal
 plant(convertQlevelFolder + "/plants.json"), // Initialize Plant
 disasters(convertQlevelFolder + "/disaster_ev.json"), // Initialize Disaster
+actions(convertQlevelFolder + "/actions.json"), // Initialize Action
+exploreEvent(convertQlevelFolder + "/explore_event.json"), //Initialize Encounter Event
 energyBar(10),
 hungerBar(10),
 thirstBar(10),
@@ -171,13 +173,13 @@ void Game::findFood()
         if (isAnimal)
         {
             hungerBar.plus(3);
-            std::cout << "You have found " << animal.getRandomAnimal("mammals").toStdString() << std::endl;
+            std::cout << actions.getRandomAction("food").toStdString() << animal.getRandomAnimal("mammals").toStdString() << std::endl;
         }
         else
         {
             hungerBar.plus(1);
             QPair<QString, bool> randomPlant = plant.getRandomPlant("fungi");
-            std::cout << "You have found " << randomPlant.first.toStdString() << std::endl;
+            std::cout << actions.getRandomAction("food").toStdString() << randomPlant.first.toStdString() << std::endl;
             if (randomPlant.second == false)
             {
                 std::cout << "That was not edible ew " << std::endl;
@@ -230,7 +232,7 @@ void Game::explore()
     energyBar.minus(3);
     hungerBar.minus(2);
     thirstBar.minus(2);
-    std::cout << "Something cool happens or something bad happens" << std::endl;
+    std::cout << "You encounter " << exploreEvent.getRandomExplores("Encounter").toStdString() << std::endl;
 }
 
 void Game::rest() 

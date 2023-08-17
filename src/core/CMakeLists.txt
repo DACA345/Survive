@@ -8,7 +8,7 @@ add_library(${PROJECT_NAME}-Core
     "game.cpp"
     "level.cpp"
     "plant.cpp"
-)
+ "explore.cpp" "explore.h")
 
 target_link_libraries(${PROJECT_NAME}-Core
     PRIVATE
