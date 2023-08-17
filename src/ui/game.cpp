@@ -45,6 +45,9 @@ void Game::loadGraphics()
 
 void Game::setupUi()
 {
+    resultWidget = new ResultWidget(this);
+    resultWidget->hide();
+
     bars = new QSvgWidget(TEXTURE_FILE("ui/bars/bars.svg"), this);
     healthBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/health.svg"), this);
     thirstBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/thirst.svg"), this);
@@ -63,6 +66,8 @@ void Game::setupUi()
     connect(exploreButton, &QPushButton::clicked, this, &Game::onExplore);
     connect(restButton, &QPushButton::clicked, this, &Game::onRest);
     connect(sleepButton, &QPushButton::clicked, this, &Game::nextDay);
+
+    addWidget(resultWidget, 0.3, 0.3, 0.4, 0.4);
 
     addWidget(bars, 1 - 0.295, 0.01, 0.285, 0.2);
 
@@ -125,7 +130,7 @@ void Game::handleActionResult(ActionResult result)
     }
     else
     {
-        qDebug() << result.message;
+        resultWidget->showResult(result);
         updateUi();
     }
 }
