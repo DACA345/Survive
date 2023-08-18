@@ -8,6 +8,10 @@
 
 #define ENGINE_INITIAL_TURNS 5
 
+/**
+ * @brief   This enum describes the results of an action
+ * 
+ */
 enum class ActionBaseResult
 {
     NO_TURNS,
@@ -16,18 +20,30 @@ enum class ActionBaseResult
     SUCCESS
 };
 
+/**
+ * @brief   This struct contain the result and message of an action
+ * 
+ */
 struct ActionResult
 {
     ActionBaseResult result;
     QString message;
 };
 
+/**
+ * @brief   This struct contain the Event Info of and also if it's triggered of an event
+ * 
+ */
 struct EventResult
 {
     const EventInfo& event;
     bool triggered;
 };
 
+/**
+ * @brief   This class describes the engine instance
+ * 
+ */
 class Engine
 {
     public:

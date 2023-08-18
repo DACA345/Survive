@@ -3,6 +3,10 @@
 #include <QString>
 #include <QMap>
 
+/**
+ * @brief   This struct describes the EventInfo
+ * 
+ */
 struct EventInfo
 {
     QString event;
@@ -10,6 +14,10 @@ struct EventInfo
     QString effect;
 };
 
+/**
+ * @brief   This class describes the event instance
+ * 
+ */
 class Event {
 public:
     // Constructor
@@ -27,5 +35,6 @@ public:
     const EventInfo& getRandomEventForSeason(const QString& season) const;
 
 private:
+    // Event elements
     QMap<QString, QList<EventInfo>> events;
 };

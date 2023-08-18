@@ -2,6 +2,10 @@
 
 #include <QMap>
 
+/**
+ * @brief   This class describes the season instance
+ * 
+ */
 class Season {
 public:
     Season(const QString& filename);

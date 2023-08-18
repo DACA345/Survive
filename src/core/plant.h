@@ -5,6 +5,10 @@
 #include <QList>
 #include <QPair>
 
+/**
+ * @brief   This struct contain the info of Plant
+ * 
+ */
 struct PlantInfo
 {
     QString name;
@@ -12,6 +16,10 @@ struct PlantInfo
     bool edible;
 };
 
+/**
+ * @brief   This class describe the plant instance
+ * 
+ */
 class Plant {
 public:
     // Constructor to initialize plants from JSON file

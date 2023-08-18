@@ -3,6 +3,10 @@
 #define BAR_MAX 100
 #define BAR_MIN 0
 
+/**
+ * @brief 	This class describes the bar instance
+ * 
+ */
 class Bar
 {
 public:

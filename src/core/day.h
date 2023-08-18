@@ -5,12 +5,20 @@
 #include <string>
 #include <QString>
 
+/**
+ * @brief This struct describes temperature information
+ * 
+ */
 struct Temperature {
     float max;
     float average;
     float min;
 };
 
+/**
+ * @brief This struct describes precipitation information
+ * 
+ */
 struct Precipitation {
     float max;
     float average;
@@ -18,6 +26,10 @@ struct Precipitation {
     float sum;
 };
 
+/**
+ * @brief This struct describes climate data
+ * 
+ */
 struct ClimateData {
     Temperature max_temperature;
     Temperature avg_temperature;
@@ -26,6 +38,10 @@ struct ClimateData {
     Precipitation snow_depth;
 };
 
+/**
+ * @brief   This class describes the Day instance
+ * 
+ */
 class Day
 {
     public:
