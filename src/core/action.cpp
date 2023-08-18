@@ -42,38 +42,9 @@ void Action::loadActionsFromJson(const QString& filePath)
         QJsonObject morale = moraleValue.toObject();
         QString actionsID = morale["actions_id"].toString();
         QString actDesc = morale["act_desc"].toString();
-        actions["morale"].append(ActionInfo{ actionsID, "morale", actDesc });
+        actions["morale"].append(ActionInfo{ actionsID, actDesc , "morale"  });
     }
 
-    // Process food
-    QJsonArray foodArray = jsonObj["food"].toArray();
-    for (const QJsonValue& foodValue : foodArray)
-    {
-        QJsonObject food = foodValue.toObject();
-        QString actionsID = food["actions_id"].toString();
-        QString actDesc = food["act_desc"].toString();
-        actions["food"].append(ActionInfo{ actionsID, "food", actDesc });
-    }
-
-    // Process water
-    QJsonArray waterArray = jsonObj["water"].toArray();
-    for (const QJsonValue& waterValue : waterArray)
-    {
-        QJsonObject water = waterValue.toObject();
-        QString actionsID = water["actions_id"].toString();
-        QString actDesc = water["act_desc"].toString();
-        actions["water"].append(ActionInfo{ actionsID, "water", actDesc });
-    }
-
-    // Process explore
-    QJsonArray exploreArray = jsonObj["explore"].toArray();
-    for (const QJsonValue& exploreValue : exploreArray)
-    {
-        QJsonObject explore = exploreValue.toObject();
-        QString actionsID = explore["actions_id"].toString();
-        QString actDesc = explore["act_desc"].toString();
-        actions["explore"].append(ActionInfo{ actionsID, "explore", actDesc });
-    }
 }
 
 const ActionInfo& Action::getRandomAction() const

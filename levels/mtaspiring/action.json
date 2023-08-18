@@ -1,0 +1,32 @@
+{
+  "morale": [
+    {
+      "actions_id": "MTACT-01",
+      "act_desc": "went for a walk around the track"
+    },
+    {
+      "actions_id": "MTACT-02",
+      "act_desc": "went for a swim in the river"
+    },
+    {
+      "actions_id": "MTACT-03",
+      "act_desc": "play stone skipping at the riverside"
+    },
+    {
+      "actions_id": "MTACT-04",
+      "act_desc": "observe the stunning view"
+    },
+    {
+      "actions_id": "MTACT-05",
+      "act_desc": "have a moment of meditation"
+    },
+    {
+      "actions_id": "MTACT-06",
+      "act_desc": "do some exercise"
+    },
+    {
+      "actions_id": "MTACT-07",
+      "act_desc": "went for a nap"
+    }
+  ]
+}

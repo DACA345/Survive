@@ -9,6 +9,7 @@
 #include "action.h"
 #include "season.h"
 #include "explore.h"
+#include "action.h"
 
 #define MAX_TURNS 5
 #define MIN_TURNS 0
@@ -75,6 +76,9 @@ private:
     // Var for explores
     Explore explore;
 
+    // Var for action rest
+    Action action;
+
     bool isAlive() const;
     bool canMove() const;
     bool correctSeason(const QString& season) const;
@@ -90,7 +94,7 @@ private:
     void findFood();
     void findWater();
     void exploreOption();
-    void rest();
+    void relax();
 
     void updateMonth(); // Method to update the current month
     void updateTemperature(); // Method to update the temps

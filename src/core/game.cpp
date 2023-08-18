@@ -11,6 +11,7 @@ plant(convertQlevelFolder + "/plants.json"), // Initialize Plant
 events(convertQlevelFolder + "/events.json"), // Initialize Disaster
 season(convertQlevelFolder + "/season.json"), // Initialize season
 explore(convertQlevelFolder + "/explore.json"), // Initialize explore
+action(convertQlevelFolder + "/action.json"), // Initialize explore
 energyBar(100),
 hungerBar(10),
 thirstBar(10),
@@ -89,7 +90,7 @@ void Game::displayMainMenu() const
     std::cout << "1. Find Food" << std::endl;
     std::cout << "2. Find Water" << std::endl;
     std::cout << "3. Explore" << std::endl;
-    std::cout << "4. Rest" << std::endl;
+    std::cout << "4. Relax" << std::endl;
     std::cout << "5. Display stats" << std::endl;
     std::cout << "6. Display temperature" << std::endl;
 }
@@ -108,13 +109,13 @@ void Game::handleMenuChoice(int choice)
     }
     
     if (choice == 4) {
-        rest();
+        relax();
         --turns; // Deduct a turn when a valid action is chosen
         return;
     }
 
     if (!canMove()) {
-        std::cout << "You don't have enough energy to perform an action." << std::endl;
+        std::cout << "You don't have enough energy to perform an action. You need to relax!" << std::endl;
         return;
     }
 
@@ -164,6 +165,7 @@ void Game::findFood()
     if (probability <= 0.2)
     {
         std::cout << "You found nothing while searching for food." << std::endl;
+        std::cout << "Energy -1" << std::endl;
         return;
     }
     else
@@ -176,6 +178,8 @@ void Game::findFood()
             hungerBar.plus(3);
             const AnimalInfo& randomAnimal = animal.getRandomAnimal();
             std::cout << "You have found " << randomAnimal.category.toStdString() << ": " << randomAnimal.name.toStdString() << std::endl;
+            std::cout << "Hunger +3" << std::endl;
+            std::cout << "Energy -1" << std::endl;
         }
         else
         {
@@ -184,12 +188,17 @@ void Game::findFood()
             std::cout << "You have found " <<randomPlant.category.toStdString() << ": " << randomPlant.name.toStdString() << std::endl;
             if (!randomPlant.edible)
             {
-                std::cout << "That was not edible ew " << std::endl;
                 healthBar.minus(3);
+                std::cout << "That was not edible ew " << std::endl;
+                std::cout << "Energy -1" << std::endl;
+                std::cout << "Health -3" << std::endl;
+                
             }
             else
             {
-                std::cout << "Ice cream so yum " << std::endl;
+                std::cout << "Nice that was edible! " << std::endl;
+                std::cout << "Energy -1" << std::endl;
+                std::cout << "Hunger +1" << std::endl;
             }
 
         }
@@ -219,11 +228,15 @@ void Game::findWater()
         if (cleanWater)
         {
             std::cout << "Clean water found " << std::endl;
+            std::cout << "Energy -1" << std::endl;
+            std::cout << "Thirst +2" << std::endl;
         }
         else
         {
             healthBar.minus(2);
             std::cout << "Dirty water found " << std::endl;
+            std::cout << "Energy -1" << std::endl;
+            std::cout << "Thirst -2" << std::endl;
         }
     }
 
@@ -246,7 +259,10 @@ void Game::exploreOption()
     // 20% chance of finding nothing
     if (probability <= 0.1)
     {
-        std::cout << "What a waste of turns!!." << std::endl;
+        std::cout << "This exploration is so boringggg!!." << std::endl;
+        std::cout << "Energy -3" << std::endl;
+        std::cout << "Hunger -2" << std::endl;
+        std::cout << "Thirst -2" << std::endl;
         return;
     }
     else
@@ -260,6 +276,9 @@ void Game::exploreOption()
             hungerBar.plus(3);
             const AnimalInfo& randomAnimal = animal.getRandomAnimal();
             std::cout << "You have found " << randomAnimal.category.toStdString() << ": " << randomAnimal.name.toStdString() << std::endl;
+            std::cout << "Energy -3" << std::endl;
+            std::cout << "Hunger +1" << std::endl;
+            std::cout << "Thirst -2" << std::endl;
         }
         else if (isPlant)
         {
@@ -270,10 +289,17 @@ void Game::exploreOption()
             {
                 std::cout << "That was not edible ew " << std::endl;
                 healthBar.minus(3);
+                std::cout << "Energy -3" << std::endl;
+                std::cout << "Hunger -2" << std::endl;
+                std::cout << "Thirst -2" << std::endl;
+                std::cout << "Health -3" << std::endl;
             }
             else
             {
                 std::cout << "Nice that was edible! " << std::endl;
+                std::cout << "Energy -3" << std::endl;
+                std::cout << "Hunger -1" << std::endl;
+                std::cout << "Thirst -2" << std::endl;
             }
 
         }
@@ -281,18 +307,24 @@ void Game::exploreOption()
         else {
             const ExploreInfo& randomExplore = explore.getRandomExplore();
             std::cout << "You " << randomExplore.category.toStdString() << ": " << randomExplore.eventName.toStdString() << std::endl;
+            std::cout << "Energy -3" << std::endl;
+            std::cout << "Hunger -2" << std::endl;
+            std::cout << "Thirst -2" << std::endl;
         }
     }
     
 }
 
-void Game::rest() 
+void Game::relax() 
 {
     energyBar.plus(2);
-    std::cout << "Ah yes good sleep" << std::endl;
+    const ActionInfo& randomAction = action.getRandomAction();
+    std::cout << "You " << randomAction.actDesc.toStdString() << std::endl;
+
     if (hungerBar.getValue() > 6 && thirstBar.getValue() > 6)
     {
         std::cout << "Wow you healed" << std::endl;
+        std::cout << "Energy +2" << std::endl;
         healthBar.plus(3);
     }
 }
