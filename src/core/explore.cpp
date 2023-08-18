@@ -42,7 +42,7 @@ void Explore::loadExploresFromJson(const QString& filePath)
         QJsonObject encounter = encounterValue.toObject();
         QString exploreID = encounter["explore_ID"].toString();
         QString eventName = encounter["event_name"].toString();
-        explores["encounter"].append(ExploreInfo{ exploreID, "encounter", eventName });
+        explores["encounter"].append(ExploreInfo{ exploreID, eventName, "encounter" });
     }
 
     // Process see
@@ -52,7 +52,7 @@ void Explore::loadExploresFromJson(const QString& filePath)
         QJsonObject see = seeValue.toObject();
         QString exploreID = see["explore_ID"].toString();
         QString eventName = see["event_name"].toString();
-        explores["see"].append(ExploreInfo{ exploreID, "see", eventName });
+        explores["see"].append(ExploreInfo{ exploreID, eventName, "see" });
     }
 
     // Process find
@@ -62,7 +62,7 @@ void Explore::loadExploresFromJson(const QString& filePath)
         QJsonObject find = findValue.toObject();
         QString exploreID = find["explore_ID"].toString();
         QString eventName = find["event_name"].toString();
-        explores["find"].append(ExploreInfo{ exploreID, "find", eventName });
+        explores["find"].append(ExploreInfo{ exploreID, eventName, "find" });
     }
 
     // Process observe
@@ -72,7 +72,7 @@ void Explore::loadExploresFromJson(const QString& filePath)
         QJsonObject observe = observeValue.toObject();
         QString exploreID = observe["actions_id"].toString();
         QString eventName = observe["act_desc"].toString();
-        explores["observe"].append(ExploreInfo{ exploreID, "observe", eventName });
+        explores["observe"].append(ExploreInfo{ exploreID, eventName, "observe" });
     }
 }
 
