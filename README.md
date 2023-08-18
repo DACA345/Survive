@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="DACA: Survive logo" width="250px" src="https://github.com/DACA345/Survive/textures/icon/icon.png">
+    <img alt="DACA: Survive logo" width="250px" src="https://github.com/DACA345/Survive/blob/main/textures/icon/icon.png?raw=true">
 </p>
 
 <h1 align="center">
