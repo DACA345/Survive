@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="DACA: Survive logo" width="250px" src="./textures/icon/icon.png">
+    <img alt="DACA: Survive logo" width="250px" src="https://github.com/DACA345/Survive/textures/icon/icon.png">
 </p>
 
 <h1 align="center">
@@ -66,6 +66,13 @@ Tagged pushes also auto generate a release with the tag name.
     - CMake Command Arguments: `-DQt6_INSTALL_PREFIX={Qt Install Path}/{Version}/{Build Type}`
 6. Select `(install) Survive.exe` as the target executable
 7. Run the project
+
+### CMake options
+- `-DCMAKE_INSTALL_PREFIX` - Sets the where the project will be installed to once fully built and deployed.
+- `-DQt6_INSTALL_PREFIX` - Sets the Qt install path. This is used to link with Qt.
+- `BUILD_TESTS` - Builds the tests. Default: `OFF`
+- `TEST_COVERAGE` - Builds the tests and compiles a coverage report. Default: `BUILD_TESTS`
+- `BUILD_DOCUMENTATION` - Builds the documentation. Default: `OFF`
 
 ## Contributing
 

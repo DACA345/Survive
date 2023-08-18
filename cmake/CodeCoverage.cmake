@@ -87,6 +87,10 @@
 #     - fix append_coverage_compiler_flags_to_target to correctly add flags
 #     - replace "-fprofile-arcs -ftest-coverage" with "--coverage" (equivalent)
 #
+# 2023-08-18, Callum Cooper
+#     - Fixed compiler checking failing for GCC
+#
+#
 # USAGE:
 #
 # 1. Copy this file into your cmake modules path.
@@ -158,9 +162,8 @@ foreach(LANG ${LANGUAGES})
     if("${CMAKE_${LANG}_COMPILER_VERSION}" VERSION_LESS 3)
       message(FATAL_ERROR "Clang version must be 3.0.0 or greater! Aborting...")
     endif()
-  elseif(NOT "${CMAKE_${LANG}_COMPILER_ID}" MATCHES "GNU"
-         AND NOT "${CMAKE_${LANG}_COMPILER_ID}" MATCHES "(LLVM)?[Ff]lang")
-    #message(FATAL_ERROR "Compiler is not GNU or Flang! Aborting...")
+  elseif(NOT CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    message(FATAL_ERROR "Compiler is not GNU or Flang! Aborting...")
   endif()
 endforeach()
 

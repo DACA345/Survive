@@ -130,13 +130,15 @@ gtest_discover_tests(
 )
 
 # Configure coverage
-set(GEN_COVERAGE_IN ${CMAKE_SOURCE_DIR}/tests/gen_coverage.sh.in)
-set(GEN_COVERAGE_OUT ${CMAKE_BINARY_DIR}/gen_coverage.sh)
-configure_file(${GEN_COVERAGE_IN} ${GEN_COVERAGE_OUT} @ONLY)
+if (TEST_COVERAGE)
+    set(GEN_COVERAGE_IN ${CMAKE_SOURCE_DIR}/tests/gen_coverage.sh.in)
+    set(GEN_COVERAGE_OUT ${CMAKE_BINARY_DIR}/gen_coverage.sh)
+    configure_file(${GEN_COVERAGE_IN} ${GEN_COVERAGE_OUT} @ONLY)
 
-add_custom_target(${PROJECT_NAME}-Coverage
-    COMMAND chmod +x ${GEN_COVERAGE_OUT} && ${GEN_COVERAGE_OUT}
-    DEPENDS ${PROJECT_NAME}-Tests
-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-    COMMENT "Generating coverage report..." VERBATIM
-)
+    add_custom_target(${PROJECT_NAME}-Coverage
+        COMMAND chmod +x ${GEN_COVERAGE_OUT} && ${GEN_COVERAGE_OUT}
+        DEPENDS ${PROJECT_NAME}-Tests
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+        COMMENT "Generating coverage report..." VERBATIM
+    )
+endif()
