@@ -70,8 +70,8 @@ void Explore::loadExploresFromJson(const QString& filePath)
     for (const QJsonValue& observeValue : observeArray)
     {
         QJsonObject observe = observeValue.toObject();
-        QString exploreID = observe["actions_id"].toString();
-        QString eventName = observe["act_desc"].toString();
+        QString exploreID = observe["explore_ID"].toString();
+        QString eventName = observe["event_name"].toString();
         explores["observe"].append(ExploreInfo{ exploreID, eventName, "observe" });
     }
 }

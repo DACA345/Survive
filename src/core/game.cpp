@@ -169,7 +169,7 @@ void Game::findFood()
     else
     {
         // Decide if it's an animal or a plant
-        bool isAnimal = (dist(gen) <= 0.2); // 20% chance for animal
+        bool isAnimal = (dist(gen) <= 0.4); // 20% chance for animal
 
         if (isAnimal)
         {
@@ -235,7 +235,7 @@ void Game::exploreOption()
     hungerBar.minus(2);
     thirstBar.minus(2);
     const ExploreInfo& randomExplore = explore.getRandomExplore();
-    std::cout << "You " << randomExplore.eventName.toStdString() << ":" << randomExplore.category.toStdString() << std::endl;
+    std::cout << "You " << randomExplore.category.toStdString() << ": " << randomExplore.eventName.toStdString() << std::endl;
 }
 
 void Game::rest() 
