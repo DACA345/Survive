@@ -11,7 +11,7 @@ plant(convertQlevelFolder + "/plants.json"), // Initialize Plant
 events(convertQlevelFolder + "/events.json"), // Initialize Disaster
 season(convertQlevelFolder + "/season.json"), // Initialize season
 explore(convertQlevelFolder + "/explore.json"), // Initialize explore
-energyBar(10),
+energyBar(100),
 hungerBar(10),
 thirstBar(10),
 healthBar(10)
@@ -234,8 +234,56 @@ void Game::exploreOption()
     energyBar.minus(3);
     hungerBar.minus(2);
     thirstBar.minus(2);
-    const ExploreInfo& randomExplore = explore.getRandomExplore();
-    std::cout << "You " << randomExplore.category.toStdString() << ": " << randomExplore.eventName.toStdString() << std::endl;
+
+    // Set up a random number generator
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<float> dist(0.0, 1.0);
+
+    // Generate a random probability
+    float probability = dist(gen);
+
+    // 20% chance of finding nothing
+    if (probability <= 0.1)
+    {
+        std::cout << "What a waste of turns!!." << std::endl;
+        return;
+    }
+    else
+    {
+        // Decide if it's an animal or a plant
+        bool isAnimal = (dist(gen) <= 0.1); // 10% chance for animal
+        bool isPlant = (dist(gen) <= 0.2); // 20% chance for plant
+
+        if (isAnimal)
+        {
+            hungerBar.plus(3);
+            const AnimalInfo& randomAnimal = animal.getRandomAnimal();
+            std::cout << "You have found " << randomAnimal.category.toStdString() << ": " << randomAnimal.name.toStdString() << std::endl;
+        }
+        else if (isPlant)
+        {
+            hungerBar.plus(1);
+            const PlantInfo& randomPlant = plant.getRandomPlant();
+            std::cout << "You have found " << randomPlant.category.toStdString() << ": " << randomPlant.name.toStdString() << std::endl;
+            if (!randomPlant.edible)
+            {
+                std::cout << "That was not edible ew " << std::endl;
+                healthBar.minus(3);
+            }
+            else
+            {
+                std::cout << "Nice that was edible! " << std::endl;
+            }
+
+        }
+
+        else {
+            const ExploreInfo& randomExplore = explore.getRandomExplore();
+            std::cout << "You " << randomExplore.category.toStdString() << ": " << randomExplore.eventName.toStdString() << std::endl;
+        }
+    }
+    
 }
 
 void Game::rest() 
