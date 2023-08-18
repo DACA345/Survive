@@ -8,12 +8,20 @@
 #include "plant.h"
 #include "season.h"
 
+/**
+ * @brief   This struct contain the id and name of a Level
+ * 
+ */
 struct LevelInfo
 {
     QString id;
     QString name;
 };
 
+/**
+ * @brief   This struct contains all probabilty of everything in level
+ * 
+ */
 // NOTE(Callum): Should maybe be level dependent in level.json
 struct LevelConfig
 {
@@ -58,6 +66,10 @@ struct LevelConfig
     int eventPositiveHealth = 40;
 };
 
+/**
+ * @brief   This class describes the level instance
+ * 
+ */
 class Level
 {
     public:
@@ -78,9 +90,11 @@ class Level
     private:
         void loadLevel();
 
+        // Game info
         LevelInfo info;
         LevelConfig config;
-
+        
+        // Game elements
         Animal animals;
         Event events;
         Explore explorer;

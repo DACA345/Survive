@@ -14,6 +14,10 @@
 #define MAX_TURNS 5
 #define MIN_TURNS 0
 
+/**
+ * @brief   This class describes the game instance
+ * 
+ */
 class Game 
 {
 public:
@@ -84,18 +88,19 @@ private:
     bool correctSeason(const QString& season) const;
 
     int getMenuChoice() const;
+    
     void handleMenuChoice(int choice);
-
     void displayMainMenu() const;
     void displayDaySummary() const;
     void displayGameOver() const;
     void displayLevelIntro() const;
 
+    // Player options
     void findFood();
     void findWater();
     void exploreOption();
     void relax();
-
+    
     void updateMonth(); // Method to update the current month
     void updateTemperature(); // Method to update the temps
     void displayTemperature(); // Method to display temps

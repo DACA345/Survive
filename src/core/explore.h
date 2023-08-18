@@ -3,7 +3,12 @@
 #include <QMap>
 #include <QString>
 #include <QList>
+#include <QPair>
 
+/**
+ * @brief   This struct describes the explore info
+ * 
+ */
 struct ExploreInfo
 {
     QString exploreID;
@@ -11,6 +16,10 @@ struct ExploreInfo
     QString category;
 };
 
+/**
+ * @brief   This class describes the explore instance
+ * 
+ */
 class Explore
 {
 public:
