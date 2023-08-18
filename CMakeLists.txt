@@ -46,23 +46,24 @@ include(FeatureSummary)
 
 option(BUILD_CLI "Build the command line version of the game." ON)
 option(BUILD_TESTS "Build the Google unit tests" ON)
+option(TEST_COVERAGE "Test the code coverage." BUILD_TESTS)
 option(BUILD_DOCUMENTATION "Build doxygen documentation - requires doxygen" ${DOXYGEN_FOUND})
 
 add_feature_info(BUILD_CLI BUILD_CLI "Build the command line version of the game.")
 add_feature_info(BUILD_TESTS BUILD_TESTS "Build the Google unit tests")
+add_feature_info(TEST_COVERAGE TEST_COVERAGE "Test the code coverage.")
 add_feature_info(BUILD_DOCUMENTATION BUILD_DOCUMENTATION "Build doxygen documentation - requires doxygen")
 
 feature_summary(WHAT ALL)
 
 # Setup code coverage if supported
-if(BUILD_TESTS AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-    include(CodeCoverage)
-    append_coverage_compiler_flags()
-    set(COVERAGE_EXCLUDES
-        "${CMAKE_SOURCE_DIR}/tests"
-        "${CMAKE_BINARY_DIR}/_deps"
-        "${QT6_INSTALL_PREFIX}"
-    )
+if(TEST_COVERAGE)
+    if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+        include(CodeCoverage)
+        append_coverage_compiler_flags()
+    else()
+        message(WARNING "Code coverage is only supported on GNU and Clang compilers.")
+    endif()
 endif()
 
 add_subdirectory(src)
