@@ -47,6 +47,9 @@ class Day
     public:
         Day(const std::string& filename);
 
+        static QString monthFromInt(int month);
+        static const std::vector<std::string> months;
+
         const std::vector<ClimateData>& getMonthData(const std::string& month) const; // Method to return info for Month
         const std::vector<ClimateData>& getMonthData(int month);
 
@@ -55,13 +58,11 @@ class Day
         float getRandomTemperatureValue(const Temperature& temperature) const;
         float getRandomPrecipitationValue(const Precipitation& precipitation) const;
 
-        static QString monthFromInt(int month);
-
+        int currentDay() const;
         int month() const;
         QString monthId() const;
         void nextDay();
 
-        static const std::vector<std::string> months;
     private:
         std::map<std::string, std::vector<ClimateData>> climateData;
         void loadClimateData(const std::string& filename);

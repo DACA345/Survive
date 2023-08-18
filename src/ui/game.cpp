@@ -49,6 +49,10 @@ void Game::loadGraphics()
 
 void Game::setupUi()
 {
+    notebookWidget = new NotebookWidget(engine.getDay().currentDay(), this);
+    // TODO(Callum): Remove once all setup
+    notebookWidget->hide();
+
     resultWidget = new ResultWidget(this);
     resultWidget->hide();
 
@@ -71,6 +75,7 @@ void Game::setupUi()
     connect(restButton, &QPushButton::clicked, this, &Game::onRest);
     connect(sleepButton, &QPushButton::clicked, this, &Game::nextDay);
 
+    addWidget(notebookWidget, 0.35, 0.125, 0.3, 0.75);
     addWidget(resultWidget, 0.3, 0.3, 0.4, 0.4);
 
     addWidget(bars, 1 - 0.295, 0.01, 0.285, 0.2);
@@ -155,6 +160,9 @@ void Game::endGame()
 
 Game::~Game()
 {
+    delete notebookWidget;
+    delete resultWidget;
+
     delete findFoodButton;
     delete findWaterButton;
     delete exploreButton;

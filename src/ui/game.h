@@ -5,6 +5,7 @@
 #include <QSvgWidget>
 
 #include "widgets/scalablewidget.h"
+#include "widgets/game/notebookwidget.h"
 #include "widgets/game/resultwidget.h"
 #include "../core/engine.h"
 
@@ -43,6 +44,7 @@ class Game : public ScalableWidget
         Engine engine;
 
         // Ui elements
+        NotebookWidget* notebookWidget;
         ResultWidget* resultWidget;
 
         QPushButton* findFoodButton;

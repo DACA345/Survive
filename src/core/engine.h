@@ -50,9 +50,10 @@ class Engine
         Engine(const QString& levelId);
         ~Engine();
 
-        double probability();
-        bool chance(double probability);
+        static double probability();
+        static bool chance(double probability);
 
+        const Day& getDay() const;
         const Level& getLevel() const;
 
         ActionResult findFood();
@@ -70,11 +71,12 @@ class Engine
         int getHealth() const;
 
     private:
+        static QRandomGenerator random;
+
         EventResult triggerDayEvent();
 
         short turns = ENGINE_INITIAL_TURNS;
 
-        QRandomGenerator random = QRandomGenerator::securelySeeded();
 
         // Player bars
         Bar energyBar;

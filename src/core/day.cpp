@@ -205,6 +205,11 @@ QString Day::monthFromInt(int month)
     return QString::fromStdString(months[month]);
 }
 
+int Day::currentDay() const
+{
+    return day;
+}
+
 int Day::month() const
 {
     return (day / 30) + 1;

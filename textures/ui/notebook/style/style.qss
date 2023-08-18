@@ -1,0 +1,4 @@
+QWidget {
+    font-family: "Comic Sans MS";
+    font-size: 24px;
+}

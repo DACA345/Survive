@@ -25,6 +25,8 @@
         result.result = ActionBaseResult::SUCCESS; \
         return result;
 
+QRandomGenerator Engine::random = QRandomGenerator::securelySeeded();
+
 Engine::Engine(const QString& levelId)
     : level(levelId),
         energyBar(BAR_MAX),
@@ -42,12 +44,17 @@ double Engine::probability()
 
 bool Engine::chance(double probability)
 {
-    return this->probability() <= probability;
+    return Engine::probability() <= probability;
 }
 
 const Level& Engine::getLevel() const
 {
     return level;
+}
+
+const Day& Engine::getDay() const
+{
+    return *day;
 }
 
 ActionResult Engine::findFood()
