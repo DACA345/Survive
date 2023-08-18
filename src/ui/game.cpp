@@ -84,7 +84,7 @@ void Game::updateBars()
 #define UI_BAR_X 0.73
 #define UI_BAR_WIDTH 0.26
 #define UI_BAR_Y 0.011
-#define UI_BAR_Y_GAP 0.0147
+#define UI_BAR_Y_GAP 0.01465
 #define UI_BAR_HEIGHT 0.0385
 
     addWidget(healthBarFill, UI_BAR_X, UI_BAR_Y, UI_BAR_WIDTH * ((double) engine.getHealth() / (double) BAR_MAX), UI_BAR_HEIGHT);
