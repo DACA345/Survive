@@ -130,7 +130,7 @@ gtest_discover_tests(
 )
 
 # Configure coverage
-if (TEST_COVERAGE)
+if(TEST_COVERAGE)
     set(GEN_COVERAGE_IN ${CMAKE_SOURCE_DIR}/tests/gen_coverage.sh.in)
     set(GEN_COVERAGE_OUT ${CMAKE_BINARY_DIR}/gen_coverage.sh)
     configure_file(${GEN_COVERAGE_IN} ${GEN_COVERAGE_OUT} @ONLY)

@@ -45,7 +45,7 @@ include(FindLibCheck)
 include(FeatureSummary)
 
 option(BUILD_CLI "Build the command line version of the game." ON)
-option(BUILD_TESTS "Build the Google unit tests" ON)
+option(BUILD_TESTS "Build the Google unit tests." ON)
 option(TEST_COVERAGE "Test the code coverage." ${BUILD_TESTS})
 option(BUILD_DOCUMENTATION "Build doxygen documentation - requires doxygen" ${DOXYGEN_FOUND})
 

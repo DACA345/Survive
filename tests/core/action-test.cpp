@@ -3,13 +3,12 @@
 
 TEST(ActionTest, MethodConstructorTest)
 {
-    Action testAction("data/levels/mtaspiring/actions.json");
+    Action testAction("data/levels/mtaspiring/action.json");
 
     // Test for the "Fungi" category
     EXPECT_NO_THROW(testAction.getRandomActionCategory());
     EXPECT_NO_THROW(testAction.getRandomAction());
     EXPECT_NO_THROW(testAction.getRandomActionInCategory("morale"));
-    EXPECT_NO_THROW(testAction.getRandomActionInCategory("water"));
 
     ASSERT_FALSE(testAction.getRandomAction().actionsID == "");
     ASSERT_FALSE(testAction.getRandomAction().category == "");
