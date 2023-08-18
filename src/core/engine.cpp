@@ -119,10 +119,22 @@ ActionResult Engine::explore()
 {
     HANDLE_ACTION_INITIAL
 
-    energyBar.minus(20);
-    hungerBar.plus(10);
-    thirstBar.minus(10);
-    healthBar.minus(5);
+    hungerBar.minus(config.exploreHunger);
+    thirstBar.minus(config.exploreThirst);
+
+    if (chance(config.exploreNothing))
+    {
+        energyBar.minus(config.exploreNothingEnergy);
+        result.message = "You explored the surrounding area but did not find anything.";
+        goto done;
+    }
+    else
+    {
+        ExploreInfo explore = level.getExplorer().getRandomExplore();
+
+        energyBar.minus(config.exploreEnergy);
+        result.message = QString("You %1 %2.").arg(explore.category).arg(explore.eventName);
+    }
 
     HANDLE_ACTION_FINAL
 }

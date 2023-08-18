@@ -12,6 +12,7 @@ Level::Level(const QString& id)
     : info{ id },
         animals(file("animals.json")),
         events(file("events.json")),
+        explorer(file("explore.json")),
         plants(file("plants.json")),
         seasons(file("season.json"))
 {
@@ -41,6 +42,11 @@ const Animal& Level::getAnimals() const
 const Event& Level::getEvents() const
 {
     return events;
+}
+
+const Explore& Level::getExplorer() const
+{
+    return explorer;
 }
 
 const Plant& Level::getPlants() const

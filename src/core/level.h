@@ -4,6 +4,7 @@
 
 #include "animal.h"
 #include "event.h"
+#include "explore.h"
 #include "plant.h"
 #include "season.h"
 
@@ -39,6 +40,15 @@ struct LevelConfig
     int restEnergy = 20;
     int restHealth = 30;
 
+    // Explore
+    double exploreNothing = 0.2;
+
+    int exploreHunger = 10;
+    int exploreThirst = 10;
+
+    int exploreNothingEnergy = 10;
+    int exploreEnergy = 30;
+
     // Events
     double seasonEvent = 0.5;
     double seasonEventTrigger = 0.4;
@@ -61,6 +71,7 @@ class Level
 
         const Animal& getAnimals() const;
         const Event& getEvents() const;
+        const Explore& getExplorer() const;
         const Plant& getPlants() const;
         const Season& getSeasons() const;
 
@@ -72,6 +83,7 @@ class Level
 
         Animal animals;
         Event events;
+        Explore explorer;
         Plant plants;
         Season seasons;
 };
