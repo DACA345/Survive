@@ -1,5 +1,4 @@
 #include "engine.h"
-#include "engine.h"
 #include "../config/files.h"
 
 #define HANDLE_ACTION_INITIAL \
@@ -157,7 +156,7 @@ ActionResult Engine::rest()
     HANDLE_ACTION_FINAL
 }
 
-const EventInfo& Engine::nextDay()
+EventResult Engine::nextDay()
 {
     turns = ENGINE_INITIAL_TURNS;
     day->nextDay();
@@ -189,7 +188,7 @@ int Engine::getHealth() const
     return healthBar.getValue();
 }
 
-const EventInfo& Engine::triggerDayEvent()
+EventResult Engine::triggerDayEvent()
 {
     const LevelConfig& config = level.getConfig();
 
@@ -204,24 +203,21 @@ const EventInfo& Engine::triggerDayEvent()
 
     if (didTrigger)
     {
-        if (chance(config.seasonEventTrigger))
+        if (event.effect == "negative")
         {
-            if (event.effect == "negative")
-            {
-                healthBar.minus(config.eventNegativeHealth);
-            }
-            else if (event.effect == "neutral")
-            {
-                // Morale bar implementation
-            }
-            else
-            {
-                healthBar.plus(config.eventPositiveHealth);
-            }
+            healthBar.minus(config.eventNegativeHealth);
+        }
+        else if (event.effect == "neutral")
+        {
+            // Morale bar implementation
+        }
+        else
+        {
+            healthBar.plus(config.eventPositiveHealth);
         }
     }
 
-    return event;
+    return { event, didTrigger };
 }
 
 Engine::~Engine()

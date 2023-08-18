@@ -3,7 +3,6 @@
 #include <QMap>
 #include <QString>
 #include <QList>
-#include <QPair>
 
 struct ExploreInfo
 {

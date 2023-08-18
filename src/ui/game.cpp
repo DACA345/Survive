@@ -34,10 +34,10 @@ ON_ACTION(Rest, rest)
 
 void Game::nextDay()
 {
-    const EventInfo& event = engine.nextDay();
-    // NOTE(Callum): Temporary fix
-    if (event.event != QString())
-        resultWidget->showResult({ActionBaseResult::SUCCESS, event.event });
+    EventResult event = engine.nextDay();
+    // NOTE(Callum): Temporary fix to display the event
+    if (event.triggered)
+        resultWidget->showResult({ActionBaseResult::SUCCESS, event.event.event });
 
     updateUi();
 }
