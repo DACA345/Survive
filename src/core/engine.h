@@ -22,6 +22,12 @@ struct ActionResult
     QString message;
 };
 
+struct EventResult
+{
+    const EventInfo& event;
+    bool triggered;
+};
+
 class Engine
 {
     public:
@@ -38,7 +44,7 @@ class Engine
         ActionResult explore();
         ActionResult rest();
 
-        const EventInfo& nextDay();
+        EventResult nextDay();
 
         short getTurns() const;
 
@@ -48,7 +54,7 @@ class Engine
         int getHealth() const;
 
     private:
-        const EventInfo& triggerDayEvent();
+        EventResult triggerDayEvent();
 
         short turns = ENGINE_INITIAL_TURNS;
 
