@@ -32,6 +32,7 @@ class Game : public ScalableWidget
 
         void loadGraphics();
         void setupUi();
+        void updateBars();
         void updateUi();
 
         QString textureFile(const QString& name);

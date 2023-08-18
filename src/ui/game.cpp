@@ -56,7 +56,7 @@ void Game::setupUi()
     healthBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/health.svg"), this);
     thirstBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/thirst.svg"), this);
     hungerBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/hunger.svg"), this);
-    energyBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/wellness.svg"), this);
+    energyBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/energy.svg"), this);
 
     findFoodButton = new QPushButton("Find Food", this);
     findWaterButton = new QPushButton("Find Water", this);
@@ -82,16 +82,25 @@ void Game::setupUi()
     addWidget(sleepButton, 0.45, 0.85, 0.1, 0.1);
 }
 
-void Game::updateUi()
+void Game::updateBars()
 {
     // Bar updates
-    const double yGap = 0.01475;
-    const double heightPercentage = 0.0385;
+#define UI_BAR_X 0.73
+#define UI_BAR_WIDTH 0.26
+#define UI_BAR_Y 0.011
+#define UI_BAR_Y_GAP 0.0147
+#define UI_BAR_HEIGHT 0.0385
 
-    addWidget(healthBarFill, 0.7325, 0.011, 0.2575 * ((double) engine.getHealth() / (double) BAR_MAX), heightPercentage);
-    addWidget(thirstBarFill, 0.7325, 0.011 + yGap + heightPercentage, 0.2575 * ((double) engine.getThirst() / (double) BAR_MAX), heightPercentage);
-    addWidget(hungerBarFill, 0.7325, 0.011 + 2 * yGap + 2 * heightPercentage, 0.2575 * ((double) engine.getHunger() / (double) BAR_MAX), heightPercentage);
-    addWidget(energyBarFill, 0.7325, 0.011 + 3 * yGap + 3 * heightPercentage, 0.2575 * ((double) engine.getEnergy() / (double) BAR_MAX), heightPercentage);
+    addWidget(healthBarFill, UI_BAR_X, UI_BAR_Y, UI_BAR_WIDTH * ((double) engine.getHealth() / (double) BAR_MAX), UI_BAR_HEIGHT);
+    addWidget(thirstBarFill, UI_BAR_X, UI_BAR_Y + UI_BAR_Y_GAP + UI_BAR_HEIGHT, UI_BAR_WIDTH * ((double) engine.getThirst() / (double) BAR_MAX), UI_BAR_HEIGHT);
+    addWidget(hungerBarFill, UI_BAR_X, UI_BAR_Y + 2 * UI_BAR_Y_GAP + 2 * UI_BAR_HEIGHT, UI_BAR_WIDTH * ((double) engine.getHunger() / (double) BAR_MAX), UI_BAR_HEIGHT);
+    addWidget(energyBarFill, UI_BAR_X, UI_BAR_Y + 3 * UI_BAR_Y_GAP + 3 * UI_BAR_HEIGHT, UI_BAR_WIDTH * ((double) engine.getEnergy() / (double) BAR_MAX), UI_BAR_HEIGHT);
+
+}
+
+void Game::updateUi()
+{
+    updateBars();
 
     // Disable actions when turns used up
     if (engine.getTurns() <= 0)
