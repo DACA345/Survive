@@ -41,22 +41,6 @@ class Menu : public ScalableWidget
          */
         void settingsMenuOpened();
 
-    private slots:
-        /**
-         * @brief      Called when new game menu opened.
-         */
-        void onNewGameMenuOpened();
-
-        /**
-         * @brief      Called when load game menu opened.
-         */
-        void onLoadGameMenuOpened();
-
-        /**
-         * @brief      Called when settings menu opened.
-         */
-        void onSettingsMenuOpened();
-
     private:
         /**
          * @brief      Paint event handler. See QWidget paint.

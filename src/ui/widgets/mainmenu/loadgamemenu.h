@@ -35,12 +35,6 @@ class LoadGameMenu : public ScalableWidget
          */
         void loadGameMenuClosed();
 
-    private slots:
-        /**
-         * @brief      Called when load game menu closed.
-         */
-        void onLoadGameMenuClosed();
-
     private:
         /**
          * @brief      Paint event handler. See QWidget paint.

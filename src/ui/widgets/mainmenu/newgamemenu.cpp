@@ -155,11 +155,6 @@ NewGameMenu::NewGameMenu(QWidget* parent)
     setupUi();
 }
 
-void NewGameMenu::onNewGameMenuClosed()
-{
-    emit newGameMenuClosed();
-}
-
 void NewGameMenu::displayLevels()
 {
     levelsWidget = new QWidget(this);
@@ -213,7 +208,7 @@ void NewGameMenu::setupUi()
     backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/icons/return.svg"), this);
 
     // Setup connections
-    connect(backButton, &QPushButton::clicked, this, &NewGameMenu::onNewGameMenuClosed);
+    connect(backButton, &QPushButton::clicked, this, &NewGameMenu::newGameMenuClosed);
 
     // Add widgets
     addWidget(title, 0.28, 0.05, 0.43, 0.07);

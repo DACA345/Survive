@@ -84,7 +84,7 @@ void SettingsMenu::setupUi()
     // Setup connections
     connect(resolutionOption, &QComboBox::currentIndexChanged, this, &SettingsMenu::onResolutionOptionChanged);
     connect(frameOption, &QComboBox::currentIndexChanged, this, &SettingsMenu::onFrameOptionChanged);
-    connect(backButton, &QPushButton::clicked, this, &SettingsMenu::onSettingsMenuClosed);
+    connect(backButton, &QPushButton::clicked, this, &SettingsMenu::settingsMenuClosed);
 
     // Add widgets
     addWidget(title, 0.4, 0.075, 0.2, 0.0675);
@@ -106,11 +106,6 @@ void SettingsMenu::onFrameOptionChanged()
     int frame = frameOption->currentData().value<int>();
     settings->setValue("gui/frame", frame);
     emit frameOptionChanged(frame);
-}
-
-void SettingsMenu::onSettingsMenuClosed()
-{
-    emit settingsMenuClosed();
 }
 
 SettingsMenu::~SettingsMenu()

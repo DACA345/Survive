@@ -49,11 +49,6 @@ class MainMenu : public ScalableWidget
         void onNewGameButtonClicked(const QString& id);
 
         /**
-         * @brief      Called when a UI option changed.
-         */
-        void onUiOptionChanged();
-
-        /**
          * @brief      Displays the new game menu.
          */
         void displayNewGameMenu();

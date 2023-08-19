@@ -44,9 +44,9 @@ void Menu::setupUi()
     exitButton = new SVGPushButton(TEXTURE_FILE("mainmenu/menu/text/exit.svg"), this);
 
     // Setup button signals
-    connect(newGameButton, &QPushButton::clicked, this, &Menu::onNewGameMenuOpened);
-    connect(loadGameButton, &QPushButton::clicked, this, &Menu::onLoadGameMenuOpened);
-    connect(settingsButton, &QPushButton::clicked, this, &Menu::onSettingsMenuOpened);
+    connect(newGameButton, &QPushButton::clicked, this, &Menu::newGameMenuOpened);
+    connect(loadGameButton, &QPushButton::clicked, this, &Menu::loadGameMenuOpened);
+    connect(settingsButton, &QPushButton::clicked, this, &Menu::settingsMenuOpened);
     connect(exitButton, &QPushButton::clicked, this, &QApplication::quit);
 
     // Setup graphics
@@ -59,21 +59,6 @@ void Menu::setupUi()
     addWidget(loadGameButton, 0.055, 0.585, 0.31, 0.075);
     addWidget(settingsButton, 0.055, 0.72, 0.265, 0.075);
     addWidget(exitButton, 0.055, 0.855, 0.115, 0.075);
-}
-
-void Menu::onNewGameMenuOpened()
-{
-    emit newGameMenuOpened();
-}
-
-void Menu::onLoadGameMenuOpened()
-{
-    emit loadGameMenuOpened();
-}
-
-void Menu::onSettingsMenuOpened()
-{
-    emit settingsMenuOpened();
 }
 
 Menu::~Menu()

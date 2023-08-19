@@ -42,9 +42,6 @@ class SettingsMenu : public ScalableWidget
          */
         void frameOptionChanged(int frame);
 
-        /**
-         * @brief      Emitted when the settings menu is closed.
-         */
         void settingsMenuClosed();
 
     private slots:
@@ -57,11 +54,6 @@ class SettingsMenu : public ScalableWidget
          * @brief      Called when frame option changed.
          */
         void onFrameOptionChanged();
-
-        /**
-         * @brief      Called when settings menu closed.
-         */
-        void onSettingsMenuClosed();
 
     private:
         /**

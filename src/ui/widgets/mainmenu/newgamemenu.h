@@ -119,12 +119,6 @@ class NewGameMenu : public ScalableWidget
          */
         void levelSelected(const QString& id);
 
-    private slots:
-        /**
-         * @brief      Called when new game menu closed.
-         */
-        void onNewGameMenuClosed();
-
     private:
         /**
          * @brief      Paint event handler. See QWidget paint.
