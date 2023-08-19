@@ -47,10 +47,6 @@ class Game : public ScalableWidget
         NotebookWidget* notebookWidget;
         ResultWidget* resultWidget;
 
-        QPushButton* findFoodButton;
-        QPushButton* findWaterButton;
-        QPushButton* exploreButton;
-        QPushButton* restButton;
         QPushButton* sleepButton;
 
         QSvgWidget* bars;

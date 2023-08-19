@@ -50,8 +50,6 @@ void Game::loadGraphics()
 void Game::setupUi()
 {
     notebookWidget = new NotebookWidget(engine.getDay().currentDay(), this);
-    // TODO(Callum): Remove once all setup
-    notebookWidget->hide();
 
     resultWidget = new ResultWidget(this);
     resultWidget->hide();
@@ -62,17 +60,14 @@ void Game::setupUi()
     hungerBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/hunger.svg"), this);
     energyBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/energy.svg"), this);
 
-    findFoodButton = new QPushButton("Find Food", this);
-    findWaterButton = new QPushButton("Find Water", this);
-    exploreButton = new QPushButton("Explore", this);
-    restButton = new QPushButton("Rest", this);
     sleepButton = new QPushButton("Sleep", this);
     sleepButton->hide();
 
-    connect(findFoodButton, &QPushButton::clicked, this, &Game::onFindFood);
-    connect(findWaterButton, &QPushButton::clicked, this, &Game::onFindWater);
-    connect(exploreButton, &QPushButton::clicked, this, &Game::onExplore);
-    connect(restButton, &QPushButton::clicked, this, &Game::onRest);
+    connect(notebookWidget, &NotebookWidget::findFood, this, &Game::onFindFood);
+    connect(notebookWidget, &NotebookWidget::findWater, this, &Game::onFindWater);
+    connect(notebookWidget, &NotebookWidget::explore, this, &Game::onExplore);
+    connect(notebookWidget, &NotebookWidget::rest, this, &Game::onRest);
+
     connect(sleepButton, &QPushButton::clicked, this, &Game::nextDay);
 
     addWidget(notebookWidget, 0.35, 0.125, 0.3, 0.75);
@@ -80,10 +75,6 @@ void Game::setupUi()
 
     addWidget(bars, 1 - 0.295, 0.01, 0.285, 0.2);
 
-    addWidget(findFoodButton, 0.1, 0.1, 0.2, 0.2);
-    addWidget(findWaterButton, 0.1, 0.3, 0.2, 0.2);
-    addWidget(exploreButton, 0.1, 0.5, 0.2, 0.2);
-    addWidget(restButton, 0.1, 0.7, 0.2, 0.2);
     addWidget(sleepButton, 0.45, 0.85, 0.1, 0.1);
 }
 
@@ -110,21 +101,13 @@ void Game::updateUi()
     // Disable actions when turns used up
     if (engine.getTurns() <= 0)
     {
-        findFoodButton->setEnabled(false);
-        findWaterButton->setEnabled(false);
-        exploreButton->setEnabled(false);
-        restButton->setEnabled(false);
-
+        notebookWidget->hide();
         sleepButton->show();
     }
     else
     {
-        findFoodButton->setEnabled(true);
-        findWaterButton->setEnabled(true);
-        exploreButton->setEnabled(true);
-        restButton->setEnabled(true);
-
         sleepButton->hide();
+        notebookWidget->show();
     }
 }
 
@@ -162,12 +145,6 @@ Game::~Game()
 {
     delete notebookWidget;
     delete resultWidget;
-
-    delete findFoodButton;
-    delete findWaterButton;
-    delete exploreButton;
-    delete sleepButton;
-    delete restButton;
 
     delete bars;
     delete healthBarFill;

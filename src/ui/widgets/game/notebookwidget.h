@@ -15,6 +15,13 @@ class NotebookWidget : public DraggableWidget
         explicit NotebookWidget(int day, QWidget* parent = nullptr);
         ~NotebookWidget();
 
+    signals:
+        void findFood();
+        void findWater();
+        void explore();
+        void rest();
+        void close();
+
     private:
         void paintEvent(QPaintEvent* event) override;
 

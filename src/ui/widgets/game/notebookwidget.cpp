@@ -45,6 +45,10 @@ void NotebookWidget::setupUi()
     restButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/text/rest.svg"), this);
     closeButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/text/return.svg"), this);
 
+    connect(findFoodButton, &QPushButton::clicked, this, &NotebookWidget::findFood);
+    connect(findWaterButton, &QPushButton::clicked, this, &NotebookWidget::findWater);
+    connect(exploreButton, &QPushButton::clicked, this, &NotebookWidget::explore);
+    connect(restButton, &QPushButton::clicked, this, &NotebookWidget::rest);
     connect(closeButton, &QPushButton::clicked, this, &NotebookWidget::hide);
 
     addWidget(titleLabel, 0, 0.05, 1, 0.2);
