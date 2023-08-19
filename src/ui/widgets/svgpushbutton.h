@@ -20,7 +20,7 @@ class SVGPushButton : public QPushButton
          * @param[in]  path    The path
          * @param      parent  The parent
          */
-        SVGPushButton(const QString& path, QWidget *parent = nullptr);
+        explicit SVGPushButton(const QString& path, QWidget *parent = nullptr);
 
         /**
          * @brief      Destroys the object.

@@ -20,7 +20,7 @@ class SettingsMenu : public ScalableWidget
          *
          * @param      parent  The parent
          */
-        SettingsMenu(QWidget* parent = nullptr);
+        explicit SettingsMenu(QWidget* parent = nullptr);
 
         /**
          * @brief      Destroys the object.

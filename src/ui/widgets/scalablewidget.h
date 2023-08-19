@@ -1,4 +1,5 @@
 #pragma once
+
 #include <QWidget>
 
 /**
@@ -14,7 +15,7 @@ class ScalableWidget : public QWidget
          *
          * @param      parent  The parent
          */
-        ScalableWidget(QWidget* parent = nullptr);
+        explicit ScalableWidget(QWidget* parent = nullptr);
 
         /**
          * @brief      Destroys the object.
@@ -28,6 +29,8 @@ class ScalableWidget : public QWidget
          * @param      event  The event
          */
         void resizeEvent(QResizeEvent* event) override;
+
+        void redraw();
 
         /**
          * @brief      Adds a widget which will be scaled.

@@ -2,35 +2,36 @@
 
 #include <QLabel>
 
+#include "../draggablewidget.h"
 #include "../scalablewidget.h"
 #include "../svgpushbutton.h"
 #include "../../../core/engine.h"
 
-class NotebookWidget : public ScalableWidget
+class NotebookWidget : public DraggableWidget
 {
     Q_OBJECT
 
-public:
-    NotebookWidget(int day, QWidget* parent = nullptr);
-    ~NotebookWidget();
+    public:
+        explicit NotebookWidget(int day, QWidget* parent = nullptr);
+        ~NotebookWidget();
 
-private:
-    void paintEvent(QPaintEvent* event) override;
+    private:
+        void paintEvent(QPaintEvent* event) override;
 
-    void loadStylesheet();
-    void loadGraphics();
-    void setupUi();
+        void loadStylesheet();
+        void loadGraphics();
+        void setupUi();
 
-    int day;
+        int day;
 
-    // Ui elements
-    QLabel* titleLabel;
+        // Ui elements
+        QLabel* titleLabel;
 
-    SVGPushButton* findFoodButton;
-    SVGPushButton* findWaterButton;
-    SVGPushButton* exploreButton;
-    SVGPushButton* restButton;
-    SVGPushButton* closeButton;
+        SVGPushButton* findFoodButton;
+        SVGPushButton* findWaterButton;
+        SVGPushButton* exploreButton;
+        SVGPushButton* restButton;
+        SVGPushButton* closeButton;
 
-    QPixmap background;
+        QPixmap background;
 };

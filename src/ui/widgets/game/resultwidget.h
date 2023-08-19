@@ -11,7 +11,7 @@ class ResultWidget : public ScalableWidget
     Q_OBJECT
 
     public:
-        ResultWidget(QWidget *parent = nullptr);
+        explicit ResultWidget(QWidget *parent = nullptr);
         ~ResultWidget();
 
         void showResult(ActionResult result);

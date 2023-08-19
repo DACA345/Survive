@@ -22,7 +22,7 @@ class LoadGameMenu : public ScalableWidget
          *
          * @param      parent  The parent
          */
-        LoadGameMenu(QWidget *parent = nullptr);
+        explicit LoadGameMenu(QWidget *parent = nullptr);
 
         /**
          * @brief      Destroys the object.

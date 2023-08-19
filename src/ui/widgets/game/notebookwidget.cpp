@@ -4,7 +4,7 @@
 #include "../../../config/files.h"
 
 NotebookWidget::NotebookWidget(int day, QWidget* parent)
-    : ScalableWidget(parent)
+    : DraggableWidget(parent)
 {
     this->day = day;
 

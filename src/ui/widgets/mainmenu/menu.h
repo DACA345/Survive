@@ -18,7 +18,7 @@ class Menu : public ScalableWidget
          *
          * @param      parent  The parent
          */
-        Menu(QWidget *parent = nullptr);
+        explicit Menu(QWidget *parent = nullptr);
 
         /**
          * @brief      Destroys the object.
