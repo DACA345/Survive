@@ -76,6 +76,9 @@ Tagged pushes also auto generate a release with the tag name.
 
 ## Contributing
 
+### Roadmap/Planning
+The trello board for development and feature integration can be found [here](https://trello.com/b/NzhqGrRe/survive).
+
 ### Developer documentation
 The developer documentation can be found [here](https://daca345.github.io/Survive/).
 
