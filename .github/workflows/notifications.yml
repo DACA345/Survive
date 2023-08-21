@@ -16,5 +16,5 @@ jobs:
               with:
                     args: |
                         "# Survive Build Notification"
-                        "### ${{ github.event.workflow_run.actor.login}} - ${{github.event.workflow.name }}"
-                        "#### ${{ github.event.workflow_run.conclusion == 'success' && 'Success' || 'Failed' }}"
+                        "## ${{ github.event.workflow_run.actor.login}} - ${{github.event.workflow.name }}"
+                        "### ${{ github.event.workflow_run.conclusion == 'success' && 'Success' || 'Failed' }}"
