@@ -68,8 +68,8 @@ Tagged pushes also auto generate a release with the tag name.
 7. Run the project
 
 ### CMake options
-- `-DCMAKE_INSTALL_PREFIX` - Sets the where the project will be installed to once fully built and deployed.
-- `-DQt6_INSTALL_PREFIX` - Sets the Qt install path. This is used to link with Qt.
+- `CMAKE_INSTALL_PREFIX` - Sets the where the project will be installed to once fully built and deployed.
+- `Qt6_INSTALL_PREFIX` - Sets the Qt install path. This is used to link with Qt.
 - `BUILD_TESTS` - Builds the tests. Default: `OFF`
 - `TEST_COVERAGE` - Builds the tests and compiles a coverage report. Default: `BUILD_TESTS`
 - `BUILD_DOCUMENTATION` - Builds the documentation. Default: `OFF`
