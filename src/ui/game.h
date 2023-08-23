@@ -5,6 +5,7 @@
 #include <QSvgWidget>
 
 #include "widgets/scalablewidget.h"
+#include "widgets/svgpushbutton.h"
 #include "widgets/game/notebookwidget.h"
 #include "widgets/game/resultwidget.h"
 #include "../core/engine.h"
@@ -44,6 +45,7 @@ class Game : public ScalableWidget
         Engine engine;
 
         // Ui elements
+        SVGPushButton* notebookButton;
         NotebookWidget* notebookWidget;
         ResultWidget* resultWidget;
 

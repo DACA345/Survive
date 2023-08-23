@@ -49,6 +49,8 @@ void Game::loadGraphics()
 
 void Game::setupUi()
 {
+    notebookButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/icon.svg"), this);
+    notebookButton->hide();
     notebookWidget = new NotebookWidget(engine.getDay().currentDay(), this);
 
     resultWidget = new ResultWidget(this);
@@ -63,13 +65,18 @@ void Game::setupUi()
     sleepButton = new QPushButton("Sleep", this);
     sleepButton->hide();
 
+    connect(notebookButton, &QPushButton::clicked, notebookWidget, &NotebookWidget::show);
+    connect(notebookButton, &QPushButton::clicked, notebookButton, &SVGPushButton::hide);
+
     connect(notebookWidget, &NotebookWidget::findFood, this, &Game::onFindFood);
     connect(notebookWidget, &NotebookWidget::findWater, this, &Game::onFindWater);
     connect(notebookWidget, &NotebookWidget::explore, this, &Game::onExplore);
     connect(notebookWidget, &NotebookWidget::rest, this, &Game::onRest);
+    connect(notebookWidget, &NotebookWidget::close, notebookButton, &SVGPushButton::show);
 
     connect(sleepButton, &QPushButton::clicked, this, &Game::nextDay);
 
+    addWidget(notebookButton, 0.01, 0.85, 0.06, 0.14);
     addWidget(notebookWidget, 0.35, 0.125, 0.3, 0.75);
     addWidget(resultWidget, 0.3, 0.3, 0.4, 0.4);
 
@@ -143,6 +150,7 @@ void Game::endGame()
 
 Game::~Game()
 {
+    delete notebookButton;
     delete notebookWidget;
     delete resultWidget;
 

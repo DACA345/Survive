@@ -50,6 +50,7 @@ void NotebookWidget::setupUi()
     connect(exploreButton, &QPushButton::clicked, this, &NotebookWidget::explore);
     connect(restButton, &QPushButton::clicked, this, &NotebookWidget::rest);
     connect(closeButton, &QPushButton::clicked, this, &NotebookWidget::hide);
+    connect(closeButton, &QPushButton::clicked, this, &NotebookWidget::close);
 
     addWidget(titleLabel, 0, 0.05, 1, 0.2);
 
