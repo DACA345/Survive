@@ -31,7 +31,6 @@ add_custom_command(
     TARGET ${PROJECT_NAME}-config-test POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         $<TARGET_FILE:Qt6::Core>
-        $<TARGET_FILE:Qt6::Core>
         $<TARGET_FILE:Qt6::Gui>
         $<TARGET_FILE:Qt6::Widgets>
         $<TARGET_FILE:Qt6::SvgWidgets>
@@ -47,12 +46,24 @@ set_target_properties(${PROJECT_NAME}-config-test
 
 # Core tests
 add_executable(${PROJECT_NAME}-core-test
+    "core/action-test.cpp"
     "core/day-test.cpp"
+    "core/animal-test.cpp"
+    "core/plant-test.cpp"
+    "core/event-test.cpp"
+    "core/bar-test.cpp"
+    "core/season-test.cpp"
+    "core/explore-test.cpp"
 )
 
 add_test(
     NAME ${PROJECT_NAME}-core-test
     COMMAND ${PROJECT_NAME}-core-test
+)
+
+set_target_properties(${PROJECT_NAME}-core-test
+    PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/tests"
 )
 
 target_include_directories(${PROJECT_NAME}-core-test
@@ -67,6 +78,7 @@ target_link_libraries(${PROJECT_NAME}-core-test
         Qt6::Core
 )
 
+# Copy DLLs
 add_custom_command(
     TARGET ${PROJECT_NAME}-core-test POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
@@ -87,6 +99,7 @@ add_dependencies(${PROJECT_NAME}-Tests
     ${PROJECT_NAME}-config-test
     ${PROJECT_NAME}-core-test
 )
+
 set_target_properties(${PROJECT_NAME}-Tests
     PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
@@ -94,8 +107,38 @@ set_target_properties(${PROJECT_NAME}-Tests
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/test"
 )
 
+# Copy test data
+add_custom_command(
+    TARGET ${PROJECT_NAME}-core-test POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/data"
+        "$<TARGET_FILE_DIR:${PROJECT_NAME}-core-test>/data"
+)
+
+add_custom_command(
+    TARGET ${PROJECT_NAME}-Tests POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/data"
+        "$<TARGET_FILE_DIR:${PROJECT_NAME}-core-test>/data"
+)
+
 # CMake test discovery
 include(GoogleTest)
 gtest_discover_tests(
     ${PROJECT_NAME}-core-test
+    ${PROJECT_NAME}-config-test
 )
+
+# Configure coverage
+if(TEST_COVERAGE)
+    set(GEN_COVERAGE_IN ${CMAKE_SOURCE_DIR}/tests/gen_coverage.sh.in)
+    set(GEN_COVERAGE_OUT ${CMAKE_BINARY_DIR}/gen_coverage.sh)
+    configure_file(${GEN_COVERAGE_IN} ${GEN_COVERAGE_OUT} @ONLY)
+
+    add_custom_target(${PROJECT_NAME}-Coverage
+        COMMAND chmod +x ${GEN_COVERAGE_OUT} && ${GEN_COVERAGE_OUT}
+        DEPENDS ${PROJECT_NAME}-Tests
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+        COMMENT "Generating coverage report..." VERBATIM
+    )
+endif()

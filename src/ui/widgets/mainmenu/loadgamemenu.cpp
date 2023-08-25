@@ -23,11 +23,6 @@ LoadGameMenu::LoadGameMenu(QWidget* parent)
     setupUi();
 }
 
-void LoadGameMenu::onLoadGameMenuClosed()
-{
-    emit loadGameMenuClosed();
-}
-
 void LoadGameMenu::displaySaves()
 {
     savesWidget = new QWidget(this);
@@ -74,11 +69,11 @@ void LoadGameMenu::setupUi()
 {
     displaySaves();
 
-    backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/loadgame/text/back.svg"), this);
+    backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/icons/return.svg"), this);
 
-    connect(backButton, &QPushButton::clicked, this, &LoadGameMenu::onLoadGameMenuClosed);
+    connect(backButton, &QPushButton::clicked, this, &LoadGameMenu::loadGameMenuClosed);
 
-    addWidget(backButton, 0.45, 0.875, 0.1, 0.075);
+    addWidget(backButton, 0.05, 0.025, 0.065, 0.09);
 }
 
 LoadGameMenu::~LoadGameMenu()

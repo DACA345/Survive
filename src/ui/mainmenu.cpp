@@ -26,11 +26,6 @@ void MainMenu::onNewGameButtonClicked(const QString& id)
     closeNewGameMenu();
 }
 
-void MainMenu::onUiOptionChanged()
-{
-    emit uiOptionChanged();
-}
-
 void MainMenu::displayNewGameMenu()
 {
     newGameMenu = new NewGameMenu(this);

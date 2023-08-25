@@ -79,19 +79,19 @@ void SettingsMenu::setupUi()
         )
     );
 
-    backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/settings/text/back.svg"), this);
+    backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/icons/return.svg"), this);
 
     // Setup connections
     connect(resolutionOption, &QComboBox::currentIndexChanged, this, &SettingsMenu::onResolutionOptionChanged);
     connect(frameOption, &QComboBox::currentIndexChanged, this, &SettingsMenu::onFrameOptionChanged);
-    connect(backButton, &QPushButton::clicked, this, &SettingsMenu::onSettingsMenuClosed);
+    connect(backButton, &QPushButton::clicked, this, &SettingsMenu::settingsMenuClosed);
 
     // Add widgets
     addWidget(title, 0.4, 0.075, 0.2, 0.0675);
     addWidget(resolutionLabel, 0.45, 0.25, 0.12, 0.043);
     addWidget(resolutionOption, 0.4, 0.325, 0.2, 0.1);
     addWidget(frameOption, 0.4, 0.435, 0.2, 0.1);
-    addWidget(backButton, 0.45, 0.875, 0.1, 0.075);
+    addWidget(backButton, 0.05, 0.025, 0.065, 0.09);
 }
 
 void SettingsMenu::onResolutionOptionChanged()
@@ -106,11 +106,6 @@ void SettingsMenu::onFrameOptionChanged()
     int frame = frameOption->currentData().value<int>();
     settings->setValue("gui/frame", frame);
     emit frameOptionChanged(frame);
-}
-
-void SettingsMenu::onSettingsMenuClosed()
-{
-    emit settingsMenuClosed();
 }
 
 SettingsMenu::~SettingsMenu()

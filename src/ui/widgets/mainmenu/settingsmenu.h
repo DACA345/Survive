@@ -20,7 +20,7 @@ class SettingsMenu : public ScalableWidget
          *
          * @param      parent  The parent
          */
-        SettingsMenu(QWidget* parent = nullptr);
+        explicit SettingsMenu(QWidget* parent = nullptr);
 
         /**
          * @brief      Destroys the object.
@@ -42,9 +42,6 @@ class SettingsMenu : public ScalableWidget
          */
         void frameOptionChanged(int frame);
 
-        /**
-         * @brief      Emitted when the settings menu is closed.
-         */
         void settingsMenuClosed();
 
     private slots:
@@ -57,11 +54,6 @@ class SettingsMenu : public ScalableWidget
          * @brief      Called when frame option changed.
          */
         void onFrameOptionChanged();
-
-        /**
-         * @brief      Called when settings menu closed.
-         */
-        void onSettingsMenuClosed();
 
     private:
         /**

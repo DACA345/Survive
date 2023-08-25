@@ -1,0 +1,6 @@
+{
+    "summer": [ "JAN", "FEB", "DEC" ],
+    "autumn": [ "MAR", "APR", "MAY" ],
+    "winter": [ "JUN", "JUL", "AUG" ],
+    "spring": [ "SEP", "OCT", "NOV" ]
+}

@@ -20,7 +20,7 @@ class MainMenu : public ScalableWidget
          *
          * @param      parent  The parent
          */
-        MainMenu(QWidget* parent = nullptr);
+        explicit MainMenu(QWidget* parent = nullptr);
 
         /**
          * @brief      Destroys the object.
@@ -47,11 +47,6 @@ class MainMenu : public ScalableWidget
          * @param[in]  id    The identifier
          */
         void onNewGameButtonClicked(const QString& id);
-
-        /**
-         * @brief      Called when a UI option changed.
-         */
-        void onUiOptionChanged();
 
         /**
          * @brief      Displays the new game menu.

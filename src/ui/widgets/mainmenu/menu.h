@@ -18,7 +18,7 @@ class Menu : public ScalableWidget
          *
          * @param      parent  The parent
          */
-        Menu(QWidget *parent = nullptr);
+        explicit Menu(QWidget *parent = nullptr);
 
         /**
          * @brief      Destroys the object.
@@ -40,22 +40,6 @@ class Menu : public ScalableWidget
          * @brief      Emitted when the settings menu is opened.
          */
         void settingsMenuOpened();
-
-    private slots:
-        /**
-         * @brief      Called when new game menu opened.
-         */
-        void onNewGameMenuOpened();
-
-        /**
-         * @brief      Called when load game menu opened.
-         */
-        void onLoadGameMenuOpened();
-
-        /**
-         * @brief      Called when settings menu opened.
-         */
-        void onSettingsMenuOpened();
 
     private:
         /**

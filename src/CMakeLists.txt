@@ -1,14 +1,16 @@
 add_subdirectory(core)
 
 # Configure Survive GUI as library
-add_library(${PROJECT_NAME}-Gui STATIC    
-    
+add_library(${PROJECT_NAME}-Gui STATIC
+    "ui/widgets/game/notebookwidget.cpp"
+    "ui/widgets/game/resultwidget.cpp"
     "ui/widgets/mainmenu/loadgamemenu.cpp"
     "ui/widgets/mainmenu/newgamemenu.cpp"
     "ui/widgets/mainmenu/settingsmenu.cpp"
     "ui/widgets/mainmenu/menu.cpp"
-    "ui/widgets/svgpushbutton.cpp"
+    "ui/widgets/draggablewidget.cpp"
     "ui/widgets/scalablewidget.cpp"
+    "ui/widgets/svgpushbutton.cpp"
     "ui/mainmenu.cpp"
     "ui/game.cpp"
     "util/resolution.cpp"
@@ -17,6 +19,7 @@ add_library(${PROJECT_NAME}-Gui STATIC
 
 target_link_libraries(${PROJECT_NAME}-Gui
     PRIVATE
+        ${PROJECT_NAME}-Core
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
@@ -32,7 +35,6 @@ qt_add_executable(Survive
 
 target_link_libraries(Survive
     PRIVATE
-        ${PROJECT_NAME}-Core
         ${PROJECT_NAME}-Gui
         Qt6::Core
         Qt6::Gui

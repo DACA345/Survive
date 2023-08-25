@@ -15,6 +15,11 @@ void ScalableWidget::resizeEvent(QResizeEvent* event)
         return;
     }
 
+    redraw();
+}
+
+void ScalableWidget::redraw()
+{
     for (auto widget : widgets.keys())
     {
         setScaledGeometry(widget);

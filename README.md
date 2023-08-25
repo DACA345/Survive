@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="DACA: Survive logo" width="250px" src="./textures/icon/icon.png">
+    <img alt="DACA: Survive logo" width="250px" src="https://github.com/DACA345/Survive/blob/main/textures/icon/icon.png?raw=true">
 </p>
 
 <h1 align="center">
@@ -18,6 +18,15 @@
   <a href="https://github.com/DACA345/Survive/actions">
     <img src="https://github.com/DACA345/Survive/actions/workflows/documentation.yml/badge.svg" alt="Documentation status badge">
   </a>
+</p>
+
+<p align="center">
+    <a href="https://codecov.io/gh/DACA345/Survive"> 
+        <img src="https://codecov.io/gh/DACA345/Survive/graph/badge.svg?token=6O2KSPS27J"> 
+    </a>
+    <a href="https://app.codacy.com/gh/DACA345/Survive/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade">
+        <img src="https://app.codacy.com/project/badge/Grade/d6280242bbe94a0a9cdf151f49fb03fc"/>
+    </a>
 </p>
 
 DACA: Survive is an open source GUI based game in which you attempt to survive for as long as possible in real places using real data sets.
@@ -58,7 +67,17 @@ Tagged pushes also auto generate a release with the tag name.
 6. Select `(install) Survive.exe` as the target executable
 7. Run the project
 
+### CMake options
+- `CMAKE_INSTALL_PREFIX` - Sets the where the project will be installed to once fully built and deployed.
+- `Qt6_INSTALL_PREFIX` - Sets the Qt install path. This is used to link with Qt.
+- `BUILD_TESTS` - Builds the tests. Default: `OFF`
+- `TEST_COVERAGE` - Builds the tests and compiles a coverage report. Default: `BUILD_TESTS`
+- `BUILD_DOCUMENTATION` - Builds the documentation. Default: `OFF`
+
 ## Contributing
+
+### Roadmap/Planning
+The trello board for development and feature integration can be found [here](https://trello.com/b/NzhqGrRe/survive).
 
 ### Developer documentation
 The developer documentation can be found [here](https://daca345.github.io/Survive/).

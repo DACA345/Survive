@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 # Project information
 project(
     "Survive"
-    VERSION 0.0.2
+    VERSION 0.0.3
     LANGUAGES CXX
     DESCRIPTION "C++ survival game based on real world data."
     HOMEPAGE_URL https://github.com/DACA345/Survive
@@ -44,18 +44,32 @@ include(FindLibCheck)
 # Features
 include(FeatureSummary)
 
-option(BUILD_TESTS "Build the Google unit tests" ON)
+option(BUILD_CLI "Build the command line version of the game." ON)
+option(BUILD_TESTS "Build the Google unit tests." ON)
+option(TEST_COVERAGE "Test the code coverage." ${BUILD_TESTS})
 option(BUILD_DOCUMENTATION "Build doxygen documentation - requires doxygen" ${DOXYGEN_FOUND})
 
+add_feature_info(BUILD_CLI BUILD_CLI "Build the command line version of the game.")
 add_feature_info(BUILD_TESTS BUILD_TESTS "Build the Google unit tests")
+add_feature_info(TEST_COVERAGE TEST_COVERAGE "Test the code coverage.")
 add_feature_info(BUILD_DOCUMENTATION BUILD_DOCUMENTATION "Build doxygen documentation - requires doxygen")
 
 feature_summary(WHAT ALL)
 
+# Setup code coverage if supported
+if(TEST_COVERAGE)
+    if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+        include(CodeCoverage)
+        append_coverage_compiler_flags()
+    else()
+        message(WARNING "Code coverage is only supported on GNU and Clang compilers.")
+    endif()
+endif()
+
 add_subdirectory(src)
 
 # Documentation
-if (BUILD_DOCUMENTATION AND DOXYGEN_FOUND)
+if(BUILD_DOCUMENTATION AND DOXYGEN_FOUND)
     set(DOXYGEN_IN "${CMAKE_SOURCE_DIR}/doc/doxy.config.in")
     set(DOXYGEN_OUT "${CMAKE_CURRENT_BINARY_DIR}/doc/doxy.config")
 
@@ -76,7 +90,7 @@ elseif(BUILD_DOCUMENTATION AND NOT DOXYGEN_FOUND)
 endif()
 
 # Tests
-if (BUILD_TESTS)
+if(BUILD_TESTS)
     # Download and install googletest
     include(FetchContent)
     FetchContent_Declare(
@@ -89,4 +103,8 @@ if (BUILD_TESTS)
     FetchContent_MakeAvailable(googletest)
 
     add_subdirectory(tests)
+endif()
+
+if(BUILD_CLI) 
+    add_subdirectory(cli)
 endif()

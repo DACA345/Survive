@@ -81,7 +81,7 @@ void LevelInfoWidget::loadGraphics()
 void LevelInfoWidget::paintEvent(QPaintEvent* event)
 {
     QPainter painter(this);
-    painter.drawPixmap(0, 0, width(), height(), background);
+    painter.drawPixmap(rect(), background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
 
     QList<QSvgRenderer*>& filters = isHovered ? hoverFilters : defaultFilters;
 
@@ -102,8 +102,7 @@ void LevelInfoWidget::paintEvent(QPaintEvent* event)
 
 void LevelInfoWidget::mousePressEvent(QMouseEvent* event)
 {
-    // NOTE(Callum): Suppressed until implemented
-    //emit levelSelected(id);
+    emit levelSelected(id);
 }
 
 void LevelInfoWidget::enterEvent(QEnterEvent* event)
@@ -156,11 +155,6 @@ NewGameMenu::NewGameMenu(QWidget* parent)
     setupUi();
 }
 
-void NewGameMenu::onNewGameMenuClosed()
-{
-    emit newGameMenuClosed();
-}
-
 void NewGameMenu::displayLevels()
 {
     levelsWidget = new QWidget(this);
@@ -211,14 +205,14 @@ void NewGameMenu::setupUi()
 
     displayLevels();
 
-    backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/newgame/text/back.svg"), this);
+    backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/icons/return.svg"), this);
 
     // Setup connections
-    connect(backButton, &QPushButton::clicked, this, &NewGameMenu::onNewGameMenuClosed);
+    connect(backButton, &QPushButton::clicked, this, &NewGameMenu::newGameMenuClosed);
 
     // Add widgets
     addWidget(title, 0.28, 0.05, 0.43, 0.07);
-    addWidget(backButton, 0.45, 0.875, 0.1, 0.075);
+    addWidget(backButton, 0.05, 0.025, 0.065, 0.09);
 }
 
 NewGameMenu::~NewGameMenu()

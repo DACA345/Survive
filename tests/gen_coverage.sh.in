@@ -1,0 +1,23 @@
+#!/bin/bash
+
+lcov --capture --initial --directory . --output-file Survive-coverage-base.info
+cd @CMAKE_BINARY_DIR@/bin/test
+
+for test in `ls Survive-*-test*`; do
+    ./$test
+    exit_code=$?
+
+    if [ $exit_code -ne 0 ]; then
+        echo "Test $test failed with exit code $exit_code"
+        exit $exit_code
+    fi
+done
+
+cd -
+
+lcov --capture --directory . --output-file Survive-coverage-test.info
+lcov --add-tracefile Survive-coverage-base.info --add-tracefile Survive-coverage-test.info --output-file Survive-coverage-total.info
+lcov -e Survive-coverage-total.info "@CMAKE_SOURCE_DIR@/src/*" --output-file Survive-coverage.info
+genhtml Survive-coverage.info --output-directory html
+
+rm Survive-coverage-base.info Survive-coverage-test.info Survive-coverage-total.info

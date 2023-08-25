@@ -20,7 +20,7 @@ public:
      * @param[in]  levelJson  The level json
      * @param      parent     The parent
      */
-    LevelInfoWidget(const QString& levelJson, QWidget* parent = nullptr);
+    explicit LevelInfoWidget(const QString& levelJson, QWidget* parent = nullptr);
 
     /**
      * @brief      Destroys the object.
@@ -118,12 +118,6 @@ class NewGameMenu : public ScalableWidget
          * @param[in]  id    The identifier
          */
         void levelSelected(const QString& id);
-
-    private slots:
-        /**
-         * @brief      Called when new game menu closed.
-         */
-        void onNewGameMenuClosed();
 
     private:
         /**
