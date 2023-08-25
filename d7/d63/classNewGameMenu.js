@@ -6,7 +6,6 @@ var classNewGameMenu =
     [ "levelSelected", "d7/d63/classNewGameMenu.html#aee37b654b6918ce25edd1efc7acc28ab", null ],
     [ "loadGraphics", "d7/d63/classNewGameMenu.html#a04436d4fe18096968a00dc880310f725", null ],
     [ "newGameMenuClosed", "d7/d63/classNewGameMenu.html#a46329ea3e246d326143c86287d89c419", null ],
-    [ "onNewGameMenuClosed", "d7/d63/classNewGameMenu.html#a87b4280354ff1b9b2bac62769d67a7e9", null ],
     [ "paintEvent", "d7/d63/classNewGameMenu.html#a9d48113977b1cade7728ed5ae790e84e", null ],
     [ "setupUi", "d7/d63/classNewGameMenu.html#a8f10c5c8a61230a2c646fa150181465c", null ],
     [ "backButton", "d7/d63/classNewGameMenu.html#a8f09dcf48552027bfba1955ef3b51b8e", null ],

@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.2</span>
+   &#160;<span id="projectnumber">0.0.3</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -85,20 +85,93 @@ $(document).ready(function(){initNavTree('d1/d55/engine_8h.html','../../'); init
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">engine.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../de/d09/level_8h_source.html">level.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;QRandomGenerator&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d34/bar_8h_source.html">bar.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dd5/day_8h_source.html">day.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d09/level_8h_source.html">level.h</a>&quot;</code><br />
 </div>
 <p><a href="../../d1/d55/engine_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html">Engine</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ddf/structActionResult.html">ActionResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct contain the result and message of an action.  <a href="../../d9/ddf/structActionResult.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d28/structEventResult.html">EventResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct contain the <a class="el" href="../../d5/da5/classEvent.html" title="This class describes the event instance.">Event</a> Info of and also if it's triggered of an event.  <a href="../../d0/d28/structEventResult.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html">Engine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class describes the engine instance.  <a href="../../d1/db6/classEngine.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a882ece3eb0418b963eaf405d8c143aa5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d55/engine_8h.html#a882ece3eb0418b963eaf405d8c143aa5">ENGINE_INITIAL_TURNS</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a882ece3eb0418b963eaf405d8c143aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a8b275bd8aa3e3edd79e656886c0870db"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870db">ActionBaseResult</a> { <a class="el" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f">NO_TURNS</a>
+, <a class="el" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbacd653f9d1c9a93ff3858630b0d63e9c9">USED_TURNS</a>
+, <a class="el" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaf8454a27e1df41397bf42444fe5aa45b">GAME_OVER</a>
+, <a class="el" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbad0749aaba8b833466dfcbb0428e4f89c">SUCCESS</a>
+ }</td></tr>
+<tr class="memdesc:a8b275bd8aa3e3edd79e656886c0870db"><td class="mdescLeft">&#160;</td><td class="mdescRight">This enum describes the results of an action.  <a href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870db">More...</a><br /></td></tr>
+<tr class="separator:a8b275bd8aa3e3edd79e656886c0870db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a882ece3eb0418b963eaf405d8c143aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a882ece3eb0418b963eaf405d8c143aa5">&#9670;&nbsp;</a></span>ENGINE_INITIAL_TURNS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ENGINE_INITIAL_TURNS&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a8b275bd8aa3e3edd79e656886c0870db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b275bd8aa3e3edd79e656886c0870db">&#9670;&nbsp;</a></span>ActionBaseResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870db">ActionBaseResult</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This enum describes the results of an action. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f"></a>NO_TURNS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8b275bd8aa3e3edd79e656886c0870dbacd653f9d1c9a93ff3858630b0d63e9c9"></a>USED_TURNS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8b275bd8aa3e3edd79e656886c0870dbaf8454a27e1df41397bf42444fe5aa45b"></a>GAME_OVER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8b275bd8aa3e3edd79e656886c0870dbad0749aaba8b833466dfcbb0428e4f89c"></a>SUCCESS&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

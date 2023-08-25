@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['displaylevels_213',['displayLevels',['../d7/d63/classNewGameMenu.html#a4bf6044dd4d01f4a23b52e69267ccb92',1,'NewGameMenu']]],
-  ['displayloadgamemenu_214',['displayLoadGameMenu',['../d9/d0a/classMainMenu.html#aca0ca25d89308070758ac7304c24c0ed',1,'MainMenu']]],
-  ['displaynewgamemenu_215',['displayNewGameMenu',['../d9/d0a/classMainMenu.html#a2ca36bb7cd15e97067ca6263063e6524',1,'MainMenu']]],
-  ['displaysaves_216',['displaySaves',['../da/d1e/classLoadGameMenu.html#a7b8906b0df7fbd3dc47ba1f72f5f8742',1,'LoadGameMenu']]],
-  ['displaysettingsmenu_217',['displaySettingsMenu',['../d9/d0a/classMainMenu.html#af91cb54b3d8085bf2c6a7152dd1b1730',1,'MainMenu']]]
+  ['canmove_512',['canMove',['../d9/d68/classGame.html#ac6dccee05c1de13095bf8cae8fb3f4fe',1,'Game']]],
+  ['chance_513',['chance',['../d1/db6/classEngine.html#aa49530dad40a534f917c1c1de8d2754e',1,'Engine']]],
+  ['close_514',['close',['../db/d4c/classNotebookWidget.html#ac50484c33621bc848b5e69b30c1840fe',1,'NotebookWidget']]],
+  ['closeloadgamemenu_515',['closeLoadGameMenu',['../d9/d0a/classMainMenu.html#ac57a2f39b3b28530cd2167d93e3ed05c',1,'MainMenu']]],
+  ['closenewgamemenu_516',['closeNewGameMenu',['../d9/d0a/classMainMenu.html#adde51da4c54753a02c5c6235d17cc7b8',1,'MainMenu']]],
+  ['closesettingsmenu_517',['closeSettingsMenu',['../d9/d0a/classMainMenu.html#ad8543adfae87ea970bee4b1a45142d4b',1,'MainMenu']]],
+  ['correctseason_518',['correctSeason',['../d9/d68/classGame.html#a7133e3a8ce27144b4927ded0c7fbc24c',1,'Game']]],
+  ['currentday_519',['currentDay',['../d8/d0d/classDay.html#a33cd88c03561ce627030a4a9460ae95f',1,'Day']]]
 ];

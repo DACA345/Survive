@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.2</span>
+   &#160;<span id="projectnumber">0.0.3</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -84,12 +84,97 @@ $(document).ready(function(){initNavTree('da/d5c/engine_8cpp.html','../../'); in
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">engine.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d1/d55/engine_8h_source.html">engine.h</a>&quot;</code><br />
-</div></div><!-- contents -->
+<code>#include &quot;<a class="el" href="../../dd/d20/files_8h_source.html">../config/files.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a6caf910294519e4041f425a50facd503"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/engine_8cpp.html#a6caf910294519e4041f425a50facd503">SAVE_FILE</a>(path)&#160;&#160;&#160;<a class="el" href="../../dd/d20/files_8h.html#a537f2c9bc5d99c5e11186860e99eb86c">_PATH_JOIN</a>(<a class="el" href="../../dd/d20/files_8h.html#a9413d72dc356c6e5c11b7577c1f1db1a">SAVE_FOLDER</a>, QDir::cleanPath(path))</td></tr>
+<tr class="separator:a6caf910294519e4041f425a50facd503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f378057cbae2c26c5aef028fcd4404d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/engine_8cpp.html#a6f378057cbae2c26c5aef028fcd4404d">HANDLE_ACTION_INITIAL</a></td></tr>
+<tr class="separator:a6f378057cbae2c26c5aef028fcd4404d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ce76f919b860da7f8f53b8c6409e69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/engine_8cpp.html#a33ce76f919b860da7f8f53b8c6409e69">HANDLE_ACTION_FINAL</a></td></tr>
+<tr class="separator:a33ce76f919b860da7f8f53b8c6409e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a33ce76f919b860da7f8f53b8c6409e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ce76f919b860da7f8f53b8c6409e69">&#9670;&nbsp;</a></span>HANDLE_ACTION_FINAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HANDLE_ACTION_FINAL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    done: \</div>
+<div class="line">        if (energyBar.isEmpty() || hungerBar.isEmpty() || thirstBar.isEmpty() || healthBar.isEmpty())\</div>
+<div class="line">        { \</div>
+<div class="line">            result.result = <a class="code" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaf8454a27e1df41397bf42444fe5aa45b">ActionBaseResult::GAME_OVER</a>; \</div>
+<div class="line">            return result; \</div>
+<div class="line">        } \</div>
+<div class="line">        result.result = <a class="code" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbad0749aaba8b833466dfcbb0428e4f89c">ActionBaseResult::SUCCESS</a>; \</div>
+<div class="line">        return result;</div>
+<div class="ttc" id="aengine_8h_html_a8b275bd8aa3e3edd79e656886c0870dbad0749aaba8b833466dfcbb0428e4f89c"><div class="ttname"><a href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbad0749aaba8b833466dfcbb0428e4f89c">ActionBaseResult::SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div></div>
+<div class="ttc" id="aengine_8h_html_a8b275bd8aa3e3edd79e656886c0870dbaf8454a27e1df41397bf42444fe5aa45b"><div class="ttname"><a href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaf8454a27e1df41397bf42444fe5aa45b">ActionBaseResult::GAME_OVER</a></div><div class="ttdeci">@ GAME_OVER</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6f378057cbae2c26c5aef028fcd4404d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f378057cbae2c26c5aef028fcd4404d">&#9670;&nbsp;</a></span>HANDLE_ACTION_INITIAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HANDLE_ACTION_INITIAL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">const</span> <a class="code" href="../../d5/d26/structLevelConfig.html">LevelConfig</a>&amp; config = level.getConfig(); \</div>
+<div class="line">    ActionResult result; \</div>
+<div class="line">    if (turns == 0) \</div>
+<div class="line">    { \</div>
+<div class="line">        result.result = <a class="code" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f">ActionBaseResult::NO_TURNS</a>; \</div>
+<div class="line">        return result; \</div>
+<div class="line">    } \</div>
+<div class="line">    else <span class="keywordflow">if</span> (turns == 1 &amp;&amp; turns--) {\</div>
+<div class="line">        result.result = <a class="code" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbacd653f9d1c9a93ff3858630b0d63e9c9">ActionBaseResult::USED_TURNS</a>; \</div>
+<div class="line">        return result; \</div>
+<div class="line">    } \</div>
+<div class="line">    turns--;</div>
+<div class="ttc" id="aengine_8h_html_a8b275bd8aa3e3edd79e656886c0870dbacd653f9d1c9a93ff3858630b0d63e9c9"><div class="ttname"><a href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbacd653f9d1c9a93ff3858630b0d63e9c9">ActionBaseResult::USED_TURNS</a></div><div class="ttdeci">@ USED_TURNS</div></div>
+<div class="ttc" id="aengine_8h_html_a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f"><div class="ttname"><a href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f">ActionBaseResult::NO_TURNS</a></div><div class="ttdeci">@ NO_TURNS</div></div>
+<div class="ttc" id="astructLevelConfig_html"><div class="ttname"><a href="../../d5/d26/structLevelConfig.html">LevelConfig</a></div><div class="ttdoc">This struct contains all probabilty of everything in level.</div><div class="ttdef"><b>Definition:</b> level.h:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6caf910294519e4041f425a50facd503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6caf910294519e4041f425a50facd503">&#9670;&nbsp;</a></span>SAVE_FILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAVE_FILE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">path</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="../../dd/d20/files_8h.html#a537f2c9bc5d99c5e11186860e99eb86c">_PATH_JOIN</a>(<a class="el" href="../../dd/d20/files_8h.html#a9413d72dc356c6e5c11b7577c1f1db1a">SAVE_FOLDER</a>, QDir::cleanPath(path))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

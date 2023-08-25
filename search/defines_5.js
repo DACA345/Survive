@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ui_5fsettings_5fframe_5fframeless_338',['UI_SETTINGS_FRAME_FRAMELESS',['../de/d60/settings_8h.html#ac9678fdd35eeb37ef1426e62c7f01372',1,'settings.h']]],
-  ['ui_5fsettings_5fframe_5ffullscreen_339',['UI_SETTINGS_FRAME_FULLSCREEN',['../de/d2c/survivegame_8cpp.html#aec919391d46a18be6d989c6dda5cb0a0',1,'settings.h']]],
-  ['ui_5fsettings_5fframe_5fnormal_340',['UI_SETTINGS_FRAME_NORMAL',['../de/d60/settings_8h.html#a1a76280c6c8f5766e31405f46828e3e1',1,'settings.h']]]
+  ['level_5ffile_835',['LEVEL_FILE',['../dd/d20/files_8h.html#a0635f3c08c0076a1e4ebc0bd2cc43d8a',1,'files.h']]],
+  ['level_5ffolder_836',['LEVEL_FOLDER',['../dd/d20/files_8h.html#accce7684839edda9cbbcd5304bfcc47b',1,'files.h']]]
 ];

@@ -1,7 +1,28 @@
 var classEngine =
 [
-    [ "Engine", "d1/db6/classEngine.html#a394c2cdb7ad41168776f187c92b94184", null ],
+    [ "Engine", "d1/db6/classEngine.html#aedb11fac8192eb316e4f14263c68a131", null ],
     [ "~Engine", "d1/db6/classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a", null ],
-    [ "day", "d1/db6/classEngine.html#a8540bf9daf6d6334f2242e75442ff853", null ],
-    [ "level", "d1/db6/classEngine.html#af27bc7ef4a413339ca74bdfd2de92653", null ]
+    [ "chance", "d1/db6/classEngine.html#aa49530dad40a534f917c1c1de8d2754e", null ],
+    [ "explore", "d1/db6/classEngine.html#a368e557419631257151d5122d3b04170", null ],
+    [ "findFood", "d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7", null ],
+    [ "findWater", "d1/db6/classEngine.html#a1eacb1f22a2c741ad6f6bf931fd99b3e", null ],
+    [ "getDay", "d1/db6/classEngine.html#ab77d0c24d9532e46a4a27611243e8ea9", null ],
+    [ "getEnergy", "d1/db6/classEngine.html#a6c20c20a974e249fa792354d957be052", null ],
+    [ "getHealth", "d1/db6/classEngine.html#ad996bf8fc66d92d492e0a6f947c89800", null ],
+    [ "getHunger", "d1/db6/classEngine.html#a9e087290c5d697dae036cc8e87bf9ac5", null ],
+    [ "getLevel", "d1/db6/classEngine.html#a17dd9ff16d910b9737868480c3f5f1fd", null ],
+    [ "getThirst", "d1/db6/classEngine.html#af73658922dc978cef5ff8b227d55c8f9", null ],
+    [ "getTurns", "d1/db6/classEngine.html#aaa934d330c26fe3e338a551799c037fa", null ],
+    [ "nextDay", "d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2", null ],
+    [ "probability", "d1/db6/classEngine.html#a48c5027bb02dc46b85c9dc32f1a8e6f9", null ],
+    [ "rest", "d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865", null ],
+    [ "triggerDayEvent", "d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c", null ],
+    [ "day", "d1/db6/classEngine.html#ae3ff7a34641f80ab5fadff6d13c19f8d", null ],
+    [ "energyBar", "d1/db6/classEngine.html#a946fcf5fecd76fb1f0041858e2584d43", null ],
+    [ "healthBar", "d1/db6/classEngine.html#ad1a229f00aaeb544513f1da805053d7d", null ],
+    [ "hungerBar", "d1/db6/classEngine.html#a210f69f92e6019c3e9ca7e41d3336ba6", null ],
+    [ "level", "d1/db6/classEngine.html#ab756a4319c3526733c07c874009cb221", null ],
+    [ "random", "d1/db6/classEngine.html#abbfaab481c4a8f7fd4aa896665bd7852", null ],
+    [ "thirstBar", "d1/db6/classEngine.html#a00051a716e42f444eb4563be402a29c4", null ],
+    [ "turns", "d1/db6/classEngine.html#a83a30f3e5d175f9296a79e5a91e4f971", null ]
 ];

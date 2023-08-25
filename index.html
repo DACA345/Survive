@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.2</span>
+   &#160;<span id="projectnumber">0.0.3</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -89,12 +89,14 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p align="center"><a class="anchor" id="md__home_runner_work_Survive_Survive_README"></a> </p>
-<p><img src="./textures/icon/icon.png" alt="DACA: Survive logo" width="250px" class="inline"/> </p>
+<p><img src="https://github.com/DACA345/Survive/blob/main/textures/icon/icon.png?raw=true" alt="DACA: Survive logo" width="250px" class="inline"/> </p>
 <h1 align="center">DACA: Survive </h1>
 <p align="center"></p>
 <p><a href="https://github.com/DACA345/Survive/actions"><img src="https://github.com/DACA345/Survive/actions/workflows/release.yml/badge.svg" alt="Release status badge" style="pointer-events: none;" class="inline"/> </a></p>
 <p><a href="https://github.com/DACA345/Survive/actions"><img src="https://github.com/DACA345/Survive/actions/workflows/test.yml/badge.svg" alt="Unit test status badge" style="pointer-events: none;" class="inline"/> </a></p>
 <p><a href="https://github.com/DACA345/Survive/actions"><img src="https://github.com/DACA345/Survive/actions/workflows/documentation.yml/badge.svg" alt="Documentation status badge" style="pointer-events: none;" class="inline"/> </a> </p>
+<p align="center"></p>
+<p><a href="https://codecov.io/gh/DACA345/Survive"><img src="https://codecov.io/gh/DACA345/Survive/graph/badge.svg?token=6O2KSPS27J" alt="" style="pointer-events: none;" class="inline"/> </a> <a href="https://app.codacy.com/gh/DACA345/Survive/dashboard?utm_source=gh&amp;utm_medium=referral&amp;utm_content=&amp;utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/d6280242bbe94a0a9cdf151f49fb03fc" alt="" class="inline"/> </a> </p>
 <p>DACA: Survive is an open source GUI based game in which you attempt to survive for as long as possible in real places using real data sets.</p>
 <h2><a class="anchor" id="autotoc_md0"></a>
 Release packages</h2>
@@ -146,13 +148,25 @@ Building with Visual Studio</h4>
 <li>Select <code>(install) Survive.exe</code> as the target executable</li>
 <li>Run the project</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h3><a class="anchor" id="autotoc_md6"></a>
+CMake options</h3>
+<ul>
+<li><code>CMAKE_INSTALL_PREFIX</code> - Sets the where the project will be installed to once fully built and deployed.</li>
+<li><code>Qt6_INSTALL_PREFIX</code> - Sets the Qt install path. This is used to link with Qt.</li>
+<li><code>BUILD_TESTS</code> - Builds the tests. Default: <code>OFF</code></li>
+<li><code>TEST_COVERAGE</code> - Builds the tests and compiles a coverage report. Default: <code>BUILD_TESTS</code></li>
+<li><code>BUILD_DOCUMENTATION</code> - Builds the documentation. Default: <code>OFF</code></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Contributing</h2>
-<h3><a class="anchor" id="autotoc_md7"></a>
+<h3><a class="anchor" id="autotoc_md8"></a>
+Roadmap/Planning</h3>
+<p>The trello board for development and feature integration can be found <a href="https://trello.com/b/NzhqGrRe/survive">here</a>.</p>
+<h3><a class="anchor" id="autotoc_md9"></a>
 Developer documentation</h3>
 <p>The developer documentation can be found <a href="https://daca345.github.io/Survive/">here</a>.</p>
 <p>This is auto generated from the code using <a href="https://www.doxygen.nl/index.html">Doxygen</a> on each push to the main branch.</p>
-<h3><a class="anchor" id="autotoc_md8"></a>
+<h3><a class="anchor" id="autotoc_md10"></a>
 Setup pre-commit hooks</h3>
 <p>Pre-commit hooks are used to format code and check files.</p>
 <p>To setup the pre-commit hooks follow these steps: </p><h6>Note: Ensure you select the add to path box when installing python.</h6>
@@ -163,10 +177,10 @@ Setup pre-commit hooks</h3>
 <li>Install the git commit hooks using pre-commit <code>pre-commit install --hook-type commit-msg</code></li>
 </ol>
 <p>Whenever you commit your code it will be automatically formatted to follow the conventions.</p>
-<h3><a class="anchor" id="autotoc_md9"></a>
+<h3><a class="anchor" id="autotoc_md11"></a>
 Git commit conventions</h3>
 <p>Commits must follow the <a href="https://www.conventionalcommits.org/en/v1.0.0/">conventional commit format</a>.</p>
-<h3><a class="anchor" id="autotoc_md10"></a>
+<h3><a class="anchor" id="autotoc_md12"></a>
 Branches</h3>
 <p>The main repository branch is locked for editing. Please create a branch with the naming convention: <code>username/branch-feature</code>. Then submit a <a href="https://github.com/DACA345/Survive/pulls">pull request</a> and it will be merged once reviewed. </p>
 </div></div><!-- PageDoc -->

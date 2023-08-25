@@ -1,5 +1,27 @@
 var searchData=
 [
-  ['addwidget_1',['addWidget',['../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e',1,'ScalableWidget']]],
-  ['animationgroup_2',['animationGroup',['../d7/d1f/classSVGPushButton.html#a7f03ce786f71a8ed35c900729f7e0c7e',1,'SVGPushButton']]]
+  ['actdesc_1',['actDesc',['../de/dc4/structActionInfo.html#a47393009a23668e7ae8eddc03deaeb07',1,'ActionInfo']]],
+  ['action_2',['Action',['../db/d09/classAction.html',1,'']]],
+  ['action_3',['action',['../d9/d68/classGame.html#a86cff7b1c0e6ae2530e24f78be78ec6e',1,'Game']]],
+  ['action_4',['Action',['../db/d09/classAction.html#ae3aca52ab63deb4da5bc1f5c1cfba15b',1,'Action']]],
+  ['action_2ecpp_5',['action.cpp',['../d1/d83/action_8cpp.html',1,'']]],
+  ['action_2eh_6',['action.h',['../d7/d61/action_8h.html',1,'']]],
+  ['actionbaseresult_7',['ActionBaseResult',['../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870db',1,'engine.h']]],
+  ['actioninfo_8',['ActionInfo',['../de/dc4/structActionInfo.html',1,'']]],
+  ['actionresult_9',['ActionResult',['../d9/ddf/structActionResult.html',1,'']]],
+  ['actions_10',['actions',['../db/d09/classAction.html#a324020b3edd9a72503bc7c47a3ded6aa',1,'Action']]],
+  ['actionsid_11',['actionsID',['../de/dc4/structActionInfo.html#aa08b6c9db884a62f0624c4c14df59970',1,'ActionInfo']]],
+  ['addwidget_12',['addWidget',['../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e',1,'ScalableWidget']]],
+  ['alive_13',['alive',['../d9/d68/classGame.html#a2a31534f8dba4f03f7956004127c428b',1,'Game']]],
+  ['animal_14',['animal',['../d9/d68/classGame.html#aab3d936151ac3eb1d8bad87a13a9bc7a',1,'Game']]],
+  ['animal_15',['Animal',['../d7/dac/classAnimal.html#a1ee1be2c28263069f1d6983ace57d72c',1,'Animal::Animal()'],['../d7/dac/classAnimal.html',1,'Animal']]],
+  ['animal_2ecpp_16',['animal.cpp',['../d2/db1/animal_8cpp.html',1,'']]],
+  ['animal_2eh_17',['animal.h',['../d1/dc4/animal_8h.html',1,'']]],
+  ['animalhunger_18',['animalHunger',['../d5/d26/structLevelConfig.html#a4de097aad287db93ce2ac7977da6cfad',1,'LevelConfig']]],
+  ['animalinfo_19',['AnimalInfo',['../d3/d93/structAnimalInfo.html',1,'']]],
+  ['animals_20',['animals',['../d7/dac/classAnimal.html#a832692ac3eb8f34e45a765bd6a2ee502',1,'Animal::animals()'],['../d2/d9d/classLevel.html#a887fb7d333cbc88443b7c835c7964351',1,'Level::animals()']]],
+  ['animationgroup_21',['animationGroup',['../d7/d1f/classSVGPushButton.html#a7f03ce786f71a8ed35c900729f7e0c7e',1,'SVGPushButton']]],
+  ['average_22',['average',['../da/dfe/structTemperature.html#acca193afec173028cc20a65eb7fbbe7b',1,'Temperature::average()'],['../da/dbb/structPrecipitation.html#ac9477c731ad7d46aa3c78b348fd34a22',1,'Precipitation::average()']]],
+  ['avg_5ftemperature_23',['avg_temperature',['../dd/d8f/structClimateData.html#ace1070c1309b5414c39c3882cefd3acb',1,'ClimateData']]],
+  ['avgtemperature_24',['avgTemperature',['../d9/d68/classGame.html#a9484c61ccd459578793103d44c06b85b',1,'Game']]]
 ];

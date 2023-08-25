@@ -31,13 +31,15 @@ var NAVTREE =
         [ "Requirements", "index.html#autotoc_md2", [
           [ "Building from the command line", "index.html#autotoc_md4", null ],
           [ "Building with Visual Studio", "index.html#autotoc_md5", null ]
-        ] ]
+        ] ],
+        [ "CMake options", "index.html#autotoc_md6", null ]
       ] ],
-      [ "Contributing", "index.html#autotoc_md6", [
-        [ "Developer documentation", "index.html#autotoc_md7", null ],
-        [ "Setup pre-commit hooks", "index.html#autotoc_md8", null ],
-        [ "Git commit conventions", "index.html#autotoc_md9", null ],
-        [ "Branches", "index.html#autotoc_md10", null ]
+      [ "Contributing", "index.html#autotoc_md7", [
+        [ "Roadmap/Planning", "index.html#autotoc_md8", null ],
+        [ "Developer documentation", "index.html#autotoc_md9", null ],
+        [ "Setup pre-commit hooks", "index.html#autotoc_md10", null ],
+        [ "Git commit conventions", "index.html#autotoc_md11", null ],
+        [ "Branches", "index.html#autotoc_md12", null ]
       ] ],
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -50,8 +52,8 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -60,6 +62,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -68,7 +71,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"d8/ddb/classMenu.html#a34d27642cb7fb04b439605eda5546188",
+"dd/d8f/structClimateData.html#a8b75b179d66a10e6a9e68a19120dd667"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

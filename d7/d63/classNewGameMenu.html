@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.2</span>
+   &#160;<span id="projectnumber">0.0.3</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -87,7 +87,6 @@ $(document).ready(function(){initNavTree('d7/d63/classNewGameMenu.html','../../'
   <div class="summary">
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../db/d9b/classNewGameMenu-members.html">List of all members</a>  </div>
@@ -135,12 +134,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a170dc385cad7aea4385a706579f50078 inherit pub_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the object.  <a href="../../de/d1f/classScalableWidget.html#a170dc385cad7aea4385a706579f50078">More...</a><br /></td></tr>
 <tr class="separator:a170dc385cad7aea4385a706579f50078 inherit pub_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
-Private Slots</h2></td></tr>
-<tr class="memitem:a87b4280354ff1b9b2bac62769d67a7e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d63/classNewGameMenu.html#a87b4280354ff1b9b2bac62769d67a7e9">onNewGameMenuClosed</a> ()</td></tr>
-<tr class="memdesc:a87b4280354ff1b9b2bac62769d67a7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when new game menu closed.  <a href="../../d7/d63/classNewGameMenu.html#a87b4280354ff1b9b2bac62769d67a7e9">More...</a><br /></td></tr>
-<tr class="separator:a87b4280354ff1b9b2bac62769d67a7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a9d48113977b1cade7728ed5ae790e84e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d63/classNewGameMenu.html#a9d48113977b1cade7728ed5ae790e84e">paintEvent</a> (QPaintEvent *event) override</td></tr>
@@ -183,6 +176,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a00632e6e9659c540792c769709c6d9ef inherit pro_methods_classScalableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#a00632e6e9659c540792c769709c6d9ef">resizeEvent</a> (QResizeEvent *event) override</td></tr>
 <tr class="memdesc:a00632e6e9659c540792c769709c6d9ef inherit pro_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize event handler.  <a href="../../de/d1f/classScalableWidget.html#a00632e6e9659c540792c769709c6d9ef">More...</a><br /></td></tr>
 <tr class="separator:a00632e6e9659c540792c769709c6d9ef inherit pro_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af769d275d2664e813043ed4eaa6a2589 inherit pro_methods_classScalableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#af769d275d2664e813043ed4eaa6a2589">redraw</a> ()</td></tr>
+<tr class="separator:af769d275d2664e813043ed4eaa6a2589 inherit pro_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74163033b7dc31eedbcbbfa6ac58df6e inherit pro_methods_classScalableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e">addWidget</a> (QWidget *widget, double percentX, double percentY, double percentSizeX, double percentSizeY)</td></tr>
 <tr class="memdesc:a74163033b7dc31eedbcbbfa6ac58df6e inherit pro_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a widget which will be scaled.  <a href="../../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e">More...</a><br /></td></tr>
 <tr class="separator:a74163033b7dc31eedbcbbfa6ac58df6e inherit pro_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -358,36 +353,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Emitted when the new game menu is closed. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d0a/classMainMenu.html#a2ca36bb7cd15e97067ca6263063e6524">MainMenu::displayNewGameMenu()</a>, and <a class="el" href="../../d7/d63/classNewGameMenu.html#a87b4280354ff1b9b2bac62769d67a7e9">onNewGameMenuClosed()</a>.</p>
-
-</div>
-</div>
-<a id="a87b4280354ff1b9b2bac62769d67a7e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87b4280354ff1b9b2bac62769d67a7e9">&#9670;&nbsp;</a></span>onNewGameMenuClosed</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NewGameMenu::onNewGameMenuClosed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Called when new game menu closed. </p>
-
-<p class="reference">Referenced by <a class="el" href="../../d7/d63/classNewGameMenu.html#a8f10c5c8a61230a2c646fa150181465c">setupUi()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d9/d0a/classMainMenu.html#a2ca36bb7cd15e97067ca6263063e6524">MainMenu::displayNewGameMenu()</a>, and <a class="el" href="../../d7/d63/classNewGameMenu.html#a8f10c5c8a61230a2c646fa150181465c">setupUi()</a>.</p>
 
 </div>
 </div>

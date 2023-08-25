@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['game_168',['Game',['../d9/d68/classGame.html',1,'']]]
+  ['childinfo_425',['ChildInfo',['../d3/d37/structScalableWidget_1_1ChildInfo.html',1,'ScalableWidget']]],
+  ['climatedata_426',['ClimateData',['../dd/d8f/structClimateData.html',1,'']]]
 ];

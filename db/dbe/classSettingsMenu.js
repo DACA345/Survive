@@ -7,7 +7,6 @@ var classSettingsMenu =
     [ "loadStylesheet", "db/dbe/classSettingsMenu.html#abb1b26cef025126ea057c6a8a952c38a", null ],
     [ "onFrameOptionChanged", "db/dbe/classSettingsMenu.html#a1789cb98e00b3450762f9723011b23a4", null ],
     [ "onResolutionOptionChanged", "db/dbe/classSettingsMenu.html#a6ab63a774b7a1aa3c742b563bfd30b96", null ],
-    [ "onSettingsMenuClosed", "db/dbe/classSettingsMenu.html#a8938e69861d3d8a6904fe8bdf85cf280", null ],
     [ "paintEvent", "db/dbe/classSettingsMenu.html#a2f64948c8309e04d2e49aa52e3282a59", null ],
     [ "resolutionOptionChanged", "db/dbe/classSettingsMenu.html#a5a0e505222332b9add757185229584eb", null ],
     [ "settingsMenuClosed", "db/dbe/classSettingsMenu.html#a087517f57c46fd12e3817eb2e6488f30", null ],

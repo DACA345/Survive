@@ -5,7 +5,6 @@ var classLoadGameMenu =
     [ "displaySaves", "da/d1e/classLoadGameMenu.html#a7b8906b0df7fbd3dc47ba1f72f5f8742", null ],
     [ "loadGameMenuClosed", "da/d1e/classLoadGameMenu.html#a907f1c663cb386f40267bc45bfbd5c78", null ],
     [ "loadGraphics", "da/d1e/classLoadGameMenu.html#a482df2657aa0a4b60e9b2d277f7bbc89", null ],
-    [ "onLoadGameMenuClosed", "da/d1e/classLoadGameMenu.html#a7dbaafa3d9f817680f2ce002757fbe92", null ],
     [ "paintEvent", "da/d1e/classLoadGameMenu.html#ac86159716ee015924603b5fa6e89730a", null ],
     [ "setupUi", "da/d1e/classLoadGameMenu.html#a1ac4cdb1297b3dd7dad0c5bb043333f6", null ],
     [ "backButton", "da/d1e/classLoadGameMenu.html#af1f3fdeb6d42a784ca3cc2b96f9eea23", null ],

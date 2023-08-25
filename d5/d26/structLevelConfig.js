@@ -1,0 +1,26 @@
+var structLevelConfig =
+[
+    [ "animalHunger", "d5/d26/structLevelConfig.html#a4de097aad287db93ce2ac7977da6cfad", null ],
+    [ "eventNegativeHealth", "d5/d26/structLevelConfig.html#a14e0b8da47ec8b4b7c828a385905908a", null ],
+    [ "eventPositiveHealth", "d5/d26/structLevelConfig.html#a0f2ccbf645922f3a3196f68bf0d55212", null ],
+    [ "eventTrigger", "d5/d26/structLevelConfig.html#a39d845605bd63443673bba2020b18fee", null ],
+    [ "exploreEnergy", "d5/d26/structLevelConfig.html#a81ab22b9f511ccb66318030f1081d247", null ],
+    [ "exploreHunger", "d5/d26/structLevelConfig.html#a9ce28d1e1409a6c4c43ce88b7b198b8a", null ],
+    [ "exploreNothing", "d5/d26/structLevelConfig.html#a6e1ef10ff04e445d4cc442e903d179b9", null ],
+    [ "exploreNothingEnergy", "d5/d26/structLevelConfig.html#a28b6cc8732cf0ca23df80f6d3fcf4fc9", null ],
+    [ "exploreThirst", "d5/d26/structLevelConfig.html#ab1ce624ee1dcd66538091fb200cd1367", null ],
+    [ "findCleanWater", "d5/d26/structLevelConfig.html#abfd1fbfe9ba52a710813a3eb4f8d3a39", null ],
+    [ "findFoodAnimal", "d5/d26/structLevelConfig.html#af79f86c9b20d721b0503b145de3dae92", null ],
+    [ "findFoodNothing", "d5/d26/structLevelConfig.html#a74c9711f8b67963dcabcc62a1c3d8289", null ],
+    [ "findWaterNothing", "d5/d26/structLevelConfig.html#a0070dc0ce03da4695ad3551173686c25", null ],
+    [ "plantHunger", "d5/d26/structLevelConfig.html#a570bd7291355bdc38e75449fe6be1da2", null ],
+    [ "plantPoison", "d5/d26/structLevelConfig.html#a5a515066c69ea72dbdc65b3961474b0e", null ],
+    [ "restEnergy", "d5/d26/structLevelConfig.html#a3a97b91b92c0d8304102ea73e3291dc1", null ],
+    [ "restHealth", "d5/d26/structLevelConfig.html#af76ffb27c44f30f7040d02939fbbd7e6", null ],
+    [ "restHungerHeal", "d5/d26/structLevelConfig.html#aeae7e75e9ac8f14548c9450d9bd4948e", null ],
+    [ "restThirstHeal", "d5/d26/structLevelConfig.html#a6d96c4791a629fee0a518f688c1e4a0a", null ],
+    [ "seasonEvent", "d5/d26/structLevelConfig.html#a0224bb11212666c7271bb3d185dc37ee", null ],
+    [ "seasonEventTrigger", "d5/d26/structLevelConfig.html#a9d0426d885a7558a235d75216504d765", null ],
+    [ "waterPoison", "d5/d26/structLevelConfig.html#a3919a5dee3977a5e89bd717ef08df8c9", null ],
+    [ "waterThirst", "d5/d26/structLevelConfig.html#a5bbfa486c82cbe9303eb7e119def748c", null ]
+];

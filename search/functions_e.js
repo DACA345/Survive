@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['_7eengine_266',['~Engine',['../d1/db6/classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a',1,'Engine']]],
-  ['_7egame_267',['~Game',['../d9/d68/classGame.html#ae3d112ca6e0e55150d2fdbc704474530',1,'Game']]],
-  ['_7elevel_268',['~Level',['../d2/d9d/classLevel.html#a249eac1e8f19ff44134efa5e986feaca',1,'Level']]],
-  ['_7elevelinfowidget_269',['~LevelInfoWidget',['../da/d89/classLevelInfoWidget.html#a45f85209e47323deb28592fbc07d84fd',1,'LevelInfoWidget']]],
-  ['_7eloadgamemenu_270',['~LoadGameMenu',['../da/d1e/classLoadGameMenu.html#aa03751f6c89b28d906d44e8926f0a6f5',1,'LoadGameMenu']]],
-  ['_7emainmenu_271',['~MainMenu',['../d9/d0a/classMainMenu.html#a0a19ddba3ac52bf39c09b579171c98f2',1,'MainMenu']]],
-  ['_7emenu_272',['~Menu',['../d8/ddb/classMenu.html#a831387f51358cfb88cd018e1777bc980',1,'Menu']]],
-  ['_7enewgamemenu_273',['~NewGameMenu',['../d7/d63/classNewGameMenu.html#a169d9bf9e187bf3bf910f064d9e7dab4',1,'NewGameMenu']]],
-  ['_7escalablewidget_274',['~ScalableWidget',['../de/d1f/classScalableWidget.html#a170dc385cad7aea4385a706579f50078',1,'ScalableWidget']]],
-  ['_7esettingsmenu_275',['~SettingsMenu',['../db/dbe/classSettingsMenu.html#ac2abb1dcd62821fdd7cdcdfa28d634c3',1,'SettingsMenu']]],
-  ['_7esurvivegame_276',['~SurviveGame',['../dd/d67/classSurviveGame.html#abbbb42a92aba1059ee0affd5df20c024',1,'SurviveGame']]],
-  ['_7esvgpushbutton_277',['~SVGPushButton',['../d7/d1f/classSVGPushButton.html#a933b28fbfa0fd652567b084fb7ec7589',1,'SVGPushButton']]]
+  ['redraw_631',['redraw',['../de/d1f/classScalableWidget.html#af769d275d2664e813043ed4eaa6a2589',1,'ScalableWidget']]],
+  ['relax_632',['relax',['../d9/d68/classGame.html#a8dce26b00c331b2c98fa9ba54a5d5aeb',1,'Game']]],
+  ['removewidget_633',['removeWidget',['../de/d1f/classScalableWidget.html#a7083edda78605d50481c395624534504',1,'ScalableWidget']]],
+  ['resizeevent_634',['resizeEvent',['../dd/d67/classSurviveGame.html#a548e88ab18f95e262106a2b220c4212c',1,'SurviveGame::resizeEvent()'],['../de/d1f/classScalableWidget.html#a00632e6e9659c540792c769709c6d9ef',1,'ScalableWidget::resizeEvent()']]],
+  ['resolutionoptionchanged_635',['resolutionOptionChanged',['../db/dbe/classSettingsMenu.html#a5a0e505222332b9add757185229584eb',1,'SettingsMenu']]],
+  ['rest_636',['rest',['../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865',1,'Engine::rest()'],['../db/d4c/classNotebookWidget.html#a2e514d7b0b403dbd91efa24d7b24fc36',1,'NotebookWidget::rest()']]],
+  ['resultwidget_637',['ResultWidget',['../d2/dad/classResultWidget.html#a0d2d24e77564bf4f16d822b3ad20fb52',1,'ResultWidget']]],
+  ['run_638',['run',['../d9/d68/classGame.html#a1ab78f5ed0d5ea879157357cf2fb2afa',1,'Game']]]
 ];

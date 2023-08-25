@@ -1,12 +1,20 @@
 var searchData=
 [
-  ['name_77',['name',['../de/d3c/structLevelInfo.html#a06cb05dd3dc34b4b722ace49458c57bc',1,'LevelInfo::name()'],['../da/d89/classLevelInfoWidget.html#a4112c8b9d1794caba1797d8f13b8cc5f',1,'LevelInfoWidget::name()']]],
-  ['newgamebutton_78',['newGameButton',['../d8/ddb/classMenu.html#a8ca778e58194cd23a87d7c67c6e2849e',1,'Menu']]],
-  ['newgamebuttonclicked_79',['newGameButtonClicked',['../d9/d0a/classMainMenu.html#a2837c6424731715203df0013a48ee9f1',1,'MainMenu']]],
-  ['newgamemenu_80',['NewGameMenu',['../d7/d63/classNewGameMenu.html',1,'NewGameMenu'],['../d7/d63/classNewGameMenu.html#a3802b59e716e5f1c5091427efc0f3827',1,'NewGameMenu::NewGameMenu()']]],
-  ['newgamemenu_81',['newGameMenu',['../d9/d0a/classMainMenu.html#a8dcca16ffb871824ff66b49b8824ead4',1,'MainMenu']]],
-  ['newgamemenu_2ecpp_82',['newgamemenu.cpp',['../d1/d3d/newgamemenu_8cpp.html',1,'']]],
-  ['newgamemenu_2eh_83',['newgamemenu.h',['../dc/db7/newgamemenu_8h.html',1,'']]],
-  ['newgamemenuclosed_84',['newGameMenuClosed',['../d7/d63/classNewGameMenu.html#a46329ea3e246d326143c86287d89c419',1,'NewGameMenu']]],
-  ['newgamemenuopened_85',['newGameMenuOpened',['../d8/ddb/classMenu.html#ad1788e640478e437dd628c4db90fdc3d',1,'Menu']]]
+  ['name_248',['name',['../da/d89/classLevelInfoWidget.html#a4112c8b9d1794caba1797d8f13b8cc5f',1,'LevelInfoWidget::name()'],['../d3/d93/structAnimalInfo.html#a00bf3c4b84ccaa210ea4e8dad2af869c',1,'AnimalInfo::name()'],['../de/d3c/structLevelInfo.html#a06cb05dd3dc34b4b722ace49458c57bc',1,'LevelInfo::name()'],['../d0/d4a/structPlantInfo.html#aa7f387277c6f3b5728e1acea7ad18ed0',1,'PlantInfo::name()']]],
+  ['newgamebutton_249',['newGameButton',['../d8/ddb/classMenu.html#a8ca778e58194cd23a87d7c67c6e2849e',1,'Menu']]],
+  ['newgamebuttonclicked_250',['newGameButtonClicked',['../d9/d0a/classMainMenu.html#a2837c6424731715203df0013a48ee9f1',1,'MainMenu']]],
+  ['newgamemenu_251',['NewGameMenu',['../d7/d63/classNewGameMenu.html',1,'']]],
+  ['newgamemenu_252',['newGameMenu',['../d9/d0a/classMainMenu.html#a8dcca16ffb871824ff66b49b8824ead4',1,'MainMenu']]],
+  ['newgamemenu_253',['NewGameMenu',['../d7/d63/classNewGameMenu.html#a3802b59e716e5f1c5091427efc0f3827',1,'NewGameMenu']]],
+  ['newgamemenu_2ecpp_254',['newgamemenu.cpp',['../d1/d3d/newgamemenu_8cpp.html',1,'']]],
+  ['newgamemenu_2eh_255',['newgamemenu.h',['../dc/db7/newgamemenu_8h.html',1,'']]],
+  ['newgamemenuclosed_256',['newGameMenuClosed',['../d7/d63/classNewGameMenu.html#a46329ea3e246d326143c86287d89c419',1,'NewGameMenu']]],
+  ['newgamemenuopened_257',['newGameMenuOpened',['../d8/ddb/classMenu.html#ad1788e640478e437dd628c4db90fdc3d',1,'Menu']]],
+  ['nextday_258',['nextDay',['../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2',1,'Engine::nextDay()'],['../d9/d68/classGame.html#a2ecfb6810e73d4445f3905da4cd89681',1,'Game::nextDay()'],['../d8/d0d/classDay.html#acdc88e7be965b37df5f9285d1653034b',1,'Day::nextDay()']]],
+  ['no_5fturns_259',['NO_TURNS',['../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f',1,'engine.h']]],
+  ['notebookbutton_260',['notebookButton',['../d9/d68/classGame.html#ad2162e254d53bfb3cada34a2d8d20877',1,'Game']]],
+  ['notebookwidget_261',['notebookWidget',['../d9/d68/classGame.html#a2b07f9ac482d9d13505903f6319ec264',1,'Game']]],
+  ['notebookwidget_262',['NotebookWidget',['../db/d4c/classNotebookWidget.html#adccd54f327e6ac7173c67e7fed29fac2',1,'NotebookWidget::NotebookWidget()'],['../db/d4c/classNotebookWidget.html',1,'NotebookWidget']]],
+  ['notebookwidget_2ecpp_263',['notebookwidget.cpp',['../de/d08/notebookwidget_8cpp.html',1,'']]],
+  ['notebookwidget_2eh_264',['notebookwidget.h',['../da/daf/notebookwidget_8h.html',1,'']]]
 ];
