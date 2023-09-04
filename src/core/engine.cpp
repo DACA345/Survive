@@ -136,10 +136,43 @@ ActionResult Engine::explore()
     }
     else
     {
-        ExploreInfo explore = level.getExplorer().getRandomExplore();
+        // NOTE(Callum): Code copied from findFood
+        // Difficult to turn into a function, but should be done at some point
+        if (chance(config.exploreAnimal))
+        {
+            const AnimalInfo& animal = level.getAnimals().getRandomAnimal();
 
-        energyBar.minus(config.exploreEnergy);
-        result.message = QString("You %1 %2.").arg(explore.category).arg(explore.eventName);
+            hungerBar.plus(config.animalHunger);
+
+            result.message = QString("You have found %1 and ate it.").arg(
+                animal.category
+            ).arg(animal.name);
+
+            goto done;
+        }
+        else if (chance(config.explorePlant))
+        {
+            const PlantInfo& plant = level.getPlants().getRandomPlant();
+
+            hungerBar.plus(config.plantHunger);
+            result.message = QString("You have found %1: %2 and ate it.").arg(
+                plant.category
+            ).arg(plant.name);
+
+            if (!plant.edible)
+            {
+                healthBar.minus(config.plantPoison);
+            }
+
+            goto done;
+        }
+        else
+        {
+            const ExploreInfo& explore = level.getExplorer().getRandomExplore();
+
+            energyBar.minus(config.exploreEnergy);
+            result.message = QString("You %1 %2.").arg(explore.category).arg(explore.eventName);
+        }
     }
 
     HANDLE_ACTION_FINAL

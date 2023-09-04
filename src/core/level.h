@@ -22,7 +22,7 @@ struct LevelInfo
  * @brief   This struct contains all probabilty of everything in level
  * 
  */
-// NOTE(Callum): Should maybe be level dependent in level.json
+// TODO(Callum): Should be from a json in levels/
 struct LevelConfig
 {
     // Action probabilities
@@ -49,7 +49,9 @@ struct LevelConfig
     int restHealth = 30;
 
     // Explore
-    double exploreNothing = 0.2;
+    double exploreNothing = 0.1;
+    double exploreAnimal = 0.1;
+    double explorePlant = 0.2;
 
     int exploreHunger = 10;
     int exploreThirst = 10;
