@@ -9,9 +9,8 @@
         result.result = ActionBaseResult::NO_TURNS; \
         return result; \
     } \
-    else if (turns == 1 && turns--) {\
+    else if (turns == 1) {\
         result.result = ActionBaseResult::USED_TURNS; \
-        return result; \
     } \
     turns--;
 

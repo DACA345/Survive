@@ -37,7 +37,9 @@ void Game::nextDay()
     EventResult event = engine.nextDay();
     // NOTE(Callum): Temporary fix to display the event
     if (event.triggered)
-        resultWidget->showResult({ActionBaseResult::SUCCESS, event.event.event });
+    {
+        resultWidget->showResult({ ActionBaseResult::SUCCESS, event.event.event });
+    }
 
     updateUi();
 }
