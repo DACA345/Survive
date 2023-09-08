@@ -76,7 +76,7 @@ void Plant::loadPlantsFromJson(const QString& filePath)
         plantData.effect.moraleBar = plantEffect["moraleBar"].toInt();
         plantData.effect.energyBar = plantEffect["energyBar"].toInt();
 
-        plants["fungi"].append(plantData);
+        plants["plant"].append(plantData);
     }
 }
 
