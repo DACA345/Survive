@@ -426,9 +426,9 @@ void Game::updateTemperature()
     for (const ClimateData& data : currentMonthData)
     {
         // Get random values for temperature fields and update them in your temperature variables
-        float maxTemp = climate.getRandomTemperatureValue(data.max_temperature);
-        float avgTemp = climate.getRandomTemperatureValue(data.avg_temperature);
-        float minTemp = climate.getRandomTemperatureValue(data.min_temperature);
+        float maxTemp = climate.getRandomTemperatureValue(data.maxTemperature);
+        float avgTemp = climate.getRandomTemperatureValue(data.avgTemperature);
+        float minTemp = climate.getRandomTemperatureValue(data.minTemperature);
 
         // Update the temperature variables in your Game class
         maxTemperature = maxTemp;

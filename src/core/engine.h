@@ -47,45 +47,165 @@ struct EventResult
 class Engine
 {
     public:
+        /**
+         * @brief      Construct a new engine instance from a level id.
+         *
+         * @param[in]  levelId  The level identifier
+         */
         Engine(const QString& levelId);
+
+        /**
+         * @brief      Destroys the object.
+         */
         ~Engine();
 
+        /**
+         * @brief      Generates a random double between 0, 1.
+         *
+         * @return     Random double between 0, 1/
+         */
         static double probability();
+
+        /**
+         * @brief      Determine if a probability will hit.
+         *
+         * @param[in]  probability  The probability
+         *
+         * @return     True if probability was reached, false otherwise.
+         */
         static bool chance(double probability);
 
+        /**
+         * @brief      Gets the day.
+         *
+         * @return     The day.
+         */
         const Day& getDay() const;
+
+        /**
+         * @brief      Gets the level.
+         *
+         * @return     The level.
+         */
         const Level& getLevel() const;
 
+        /**
+         * @brief      Action for finding food.
+         *
+         * @return     The action result.
+         */
         ActionResult findFood();
+
+        /**
+         * @brief      Action for finding water.
+         *
+         * @return     The action result.
+         */
         ActionResult findWater();
+
+        /**
+         * @brief      Action for exploring.
+         *
+         * @return     The action result.
+         */
         ActionResult explore();
+
+        /**
+         * @brief      Action for resting.
+         *
+         * @return     The action result.
+         */
         ActionResult rest();
 
+        /**
+         * @brief      Progress to the next day.
+         *
+         * @return     The event of the new day.
+         */
         EventResult nextDay();
 
+        /**
+         * @brief      Gets the turns.
+         *
+         * @return     The turns.
+         */
         short getTurns() const;
 
+        /**
+         * @brief      Gets the user's energy.
+         *
+         * @return     The energy.
+         */
         int getEnergy() const;
+
+        /**
+         * @brief      Gets the user's hunger.
+         *
+         * @return     The hunger.
+         */
         int getHunger() const;
+
+        /**
+         * @brief      Gets the user's thirst.
+         *
+         * @return     The thirst.
+         */
         int getThirst() const;
+
+        /**
+         * @brief      Gets the user's health.
+         *
+         * @return     The health.
+         */
         int getHealth() const;
 
     private:
+        /**
+         * The random generator.
+         */
         static QRandomGenerator random;
 
+        /**
+         * @brief      Trigger the day's event.
+         *
+         * @return     The event result.
+         */
         EventResult triggerDayEvent();
 
+        /**
+         * The current turns.
+         */
         short turns = ENGINE_INITIAL_TURNS;
 
 
-        // Player bars
+        /**
+         * The energy bar.
+         */
         Bar energyBar;
+
+        /**
+         * The hunger bar.
+         */
         Bar hungerBar;
+
+        /**
+         * The thirst bar.
+         */
         Bar thirstBar;
+
+        /**
+         * The health bar.
+         */
         Bar healthBar;
         Bar moraleBar;
 
+        /**
+         * The current day.
+         */
         Day* day;
 
+        /**
+         * The level.
+         */
         Level level;
 };

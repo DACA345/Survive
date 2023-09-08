@@ -5,6 +5,9 @@
 #include <QList>
 #include <QPair>
 
+/**
+ * @brief      Struct representation of the JSON action info.
+ */
 struct ActionInfo
 {
     QString actionsID;
@@ -12,21 +15,53 @@ struct ActionInfo
     QString category;
 };
 
+/**
+ * @brief      This class contains the actions from a JSON.
+ */
 class Action
 {
 public:
-    // Constructor to initialize animals from JSON file
+    /**
+     * @brief      Constructs a new instance from a JSON of actions.
+     * @see        loadActionsFromJson
+     *
+     * @param[in]  filePath  The file path
+     */
     Action(const QString& filePath);
 
-    // Load animal data from JSON file
+    /**
+     * @brief      Loads the actions from json.
+     *
+     * @param[in]  filePath  The file path
+     */
     void loadActionsFromJson(const QString& filePath);
 
-    // Method to return action according to category and also it's status for edible or not
+    /**
+     * @brief      Gets a random action.
+     *
+     * @return     The random action.
+     */
     const ActionInfo& getRandomAction() const;
+
+    /**
+     * @brief      Gets a random action in category.
+     *
+     * @param[in]  category  The category
+     *
+     * @return     The random action in the category.
+     */
     const ActionInfo& getRandomActionInCategory(const QString& category) const;
+
+    /**
+     * @brief      Gets a random category of actions.
+     *
+     * @return     The random action category.
+     */
     QString getRandomActionCategory() const;
 
 private:
-    // Store actions categorized by categories
+    /**
+     * Stores the actions per category.
+     */
     QMap<QString, QList<ActionInfo>> actions;
 };

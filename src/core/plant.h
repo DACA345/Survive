@@ -35,18 +35,48 @@ struct PlantInfo
  * 
  */
 class Plant {
-public:
-    // Constructor to initialize plants from JSON file
-    Plant(const QString& filePath);
+    public:
+        /**
+         * @brief      Constructs a new instance from a JSON of plants.
+         * @see        loadPlantsFromJson
+         * 
+         * @param[in]  filePath  The file path
+         */
+        Plant(const QString& filePath);
 
-    // Method to load plants from json
-    void loadPlantsFromJson(const QString& filePath);
-    
-    // Method to return plant according to category and also it's status for edible or not
-    const PlantInfo& getRandomPlant() const;
-    const PlantInfo& getRandomPlantInCategory(const QString& category) const;
-    QString getRandomPlantCategory() const;
+        /**
+         * @brief      Loads the plants from a JSON.
+         *
+         * @param[in]  filePath  The file path
+         */
+        void loadPlantsFromJson(const QString& filePath);
+        
+        /**
+         * @brief      Gets a random plant.
+         *
+         * @return     The random plant.
+         */
+        const PlantInfo& getRandomPlant() const;
 
-private:
-    QMap<QString, QList<PlantInfo>> plants;
+        /**
+         * @brief      Gets a random plant in the category.
+         *
+         * @param[in]  category  The category
+         *
+         * @return     The random plant in the category.
+         */
+        const PlantInfo& getRandomPlantInCategory(const QString& category) const;
+
+        /**
+         * @brief      Gets a random plant category.
+         *
+         * @return     The random plant category.
+         */
+        QString getRandomPlantCategory() const;
+
+    private:
+        /**
+         * Stores the plants per category.
+         */
+        QMap<QString, QList<PlantInfo>> plants;
 };
