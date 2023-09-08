@@ -47,5 +47,5 @@ int Bar::getValue() const
 // Define isEmpty bool method
 bool Bar::isEmpty() const
 {
-    return dataval == 0;
+    return dataval == BAR_MIN;
 }
