@@ -38,7 +38,8 @@ void Event::loadEventsFromJson(const QString& filePath) {
             // Extract description, season, and effect from the event object.
             QString eventDesc = eventObject["event_desc"].toString();
             QString eventSeason = eventObject["season"].toString();
-            QString eventEffect = eventObject["effect"].toString(); // Added this line
+            QJsonObject eventEffect = eventObject["effect"].toObject(); // Added this line
+
 
             if (!events.contains(eventSeason))
             {
@@ -49,7 +50,11 @@ void Event::loadEventsFromJson(const QString& filePath) {
             EventInfo eventData;
             eventData.event = eventDesc;
             eventData.season = eventSeason;
-            eventData.effect = eventEffect; // Added this line
+            eventData.effect.healthBar = eventEffect.value("healthBar").toInt();
+            eventData.effect.thirstBar = eventEffect.value("thirstBar").toInt();
+            eventData.effect.hungerBar = eventEffect.value("hungerBar").toInt();
+            eventData.effect.moraleBar = eventEffect.value("moraleBar").toInt();
+            eventData.effect.energyBar = eventEffect.value("energyBar").toInt();
             events[eventSeason].append(eventData);
         }
     }

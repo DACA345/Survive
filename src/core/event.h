@@ -4,14 +4,27 @@
 #include <QMap>
 
 /**
+* @brief    This struct describes the EventEffect
+*
+*/
+struct EventEffect
+{
+    int healthBar;
+    int thirstBar;
+    int hungerBar;
+    int moraleBar;
+    int energyBar;
+};
+
+/**
  * @brief   This struct describes the EventInfo
  * 
  */
 struct EventInfo
 {
-    QString event;
+    QString event;  
     QString season;
-    QString effect;
+    EventEffect effect;
 };
 
 /**

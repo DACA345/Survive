@@ -61,6 +61,7 @@ private:
     Bar hungerBar;
     Bar thirstBar;
     Bar healthBar;
+    Bar moraleBar;
 
     // Var for climate data
     Day climate;

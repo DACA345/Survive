@@ -15,7 +15,8 @@ action(convertQlevelFolder + "/action.json"), // Initialize explore
 energyBar(100),
 hungerBar(10),
 thirstBar(10),
-healthBar(10)
+healthBar(10),
+moraleBar(10)
 {
 
     dayCounter = 0; // Start with Day 0
@@ -383,18 +384,11 @@ void Game::triggerEvent()
     if (didTrigger)
     {
         std::cout << event.event.toStdString() << std::endl;
-        if (event.effect == "negative")
-        {
-            healthBar.minus(4);
-        }
-        else if(event.effect == "neutral")
-        {
-            // Morale bar here!
-        }
-        else
-        {
-            healthBar.plus(4);
-        }
+        healthBar.plus(event.effect.healthBar);
+        thirstBar.plus(event.effect.thirstBar);
+        hungerBar.plus(event.effect.hungerBar);
+        energyBar.plus(event.effect.energyBar);
+        moraleBar.plus(event.effect.moraleBar);
     }
     else
     {

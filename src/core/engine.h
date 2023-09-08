@@ -83,6 +83,7 @@ class Engine
         Bar hungerBar;
         Bar thirstBar;
         Bar healthBar;
+        Bar moraleBar;
 
         Day* day;
 

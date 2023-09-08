@@ -31,7 +31,8 @@ Engine::Engine(const QString& levelId)
         energyBar(BAR_MAX),
         hungerBar(BAR_MAX),
         thirstBar(BAR_MAX),
-        healthBar(BAR_MAX)
+        healthBar(BAR_MAX),
+        moraleBar(BAR_MAX)
 {
     day = new Day(level.file("climate.json").toStdString());
 }
@@ -242,18 +243,11 @@ EventResult Engine::triggerDayEvent()
 
     if (didTrigger)
     {
-        if (event.effect == "negative")
-        {
-            healthBar.minus(config.eventNegativeHealth);
-        }
-        else if (event.effect == "neutral")
-        {
-            // Morale bar implementation
-        }
-        else
-        {
-            healthBar.plus(config.eventPositiveHealth);
-        }
+        healthBar.plus(event.effect.healthBar);
+        thirstBar.plus(event.effect.thirstBar);
+        hungerBar.plus(event.effect.hungerBar);
+        energyBar.plus(event.effect.energyBar);
+        moraleBar.plus(event.effect.moraleBar);
     }
 
     return { event, didTrigger };
