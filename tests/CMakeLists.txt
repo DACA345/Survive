@@ -47,13 +47,16 @@ set_target_properties(${PROJECT_NAME}-config-test
 # Core tests
 add_executable(${PROJECT_NAME}-core-test
     "core/action-test.cpp"
-    "core/day-test.cpp"
     "core/animal-test.cpp"
-    "core/plant-test.cpp"
-    "core/event-test.cpp"
     "core/bar-test.cpp"
-    "core/season-test.cpp"
+    "core/day-test.cpp"
+    "core/engine-test.cpp"
+    "core/event-test.cpp"
     "core/explore-test.cpp"
+    "core/game-test.cpp"
+    "core/level-test.cpp"
+    "core/plant-test.cpp"
+    "core/season-test.cpp"
 )
 
 add_test(
