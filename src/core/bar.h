@@ -4,33 +4,64 @@
 #define BAR_MIN 0
 
 /**
- * @brief 	This class describes the bar instance
+ * @brief 	This class describes a users bar.
  * 
  */
 class Bar
 {
 public:
-	// Constructor with an integer parameter
+	/**
+	 * @brief      Constructs a new bar with an initial value.
+	 *
+	 * @param[in]  initialVal  The initial value
+	 */
 	Bar(int initialVal);
 
-	// Default Constructor
+	/**
+	 * @brief      Constructs a new bar with the default max value..
+	 */
 	Bar();
 
-	// Destructor 
+	/**
+	 * @brief      Destroys the object.
+	 */
 	~Bar();
 
-	// Method for addition
+	/**
+	 * @brief      Additive update to the bars value.
+	 *
+	 * @param[in]  val   The value
+	 *
+	 * @return     The updated value.
+	 */
 	int plus(int val);
 
-	// Method for subtract
+	/**
+	 * @brief      Reductive update to the bars value.
+	 *
+	 * @param[in]  val   The value
+	 *
+	 * @return     The updated value.
+	 */
 	int minus(int val);
 
-	// Method to get current value
+	/**
+	 * @brief      Gets the value.
+	 *
+	 * @return     The value.
+	 */
 	int getValue() const;
 
-	// Method to return true/false if there's no more ints
+	/**
+	 * @brief      Determines if bar is empty.
+	 *
+	 * @return     True if empty, False otherwise.
+	 */
 	bool isEmpty() const;
 
 private:
-	int dataval; // Variable to store the int value
+	/**
+	 * Value of the bar.
+	 */
+	int dataval;
 };

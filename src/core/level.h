@@ -22,7 +22,7 @@ struct LevelInfo
  * @brief   This struct contains all probabilty of everything in level
  * 
  */
-// TODO(Callum): Should be from a json in levels/
+// TODO(Callum): Should be from a json in levels
 struct LevelConfig
 {
     // Action probabilities
@@ -75,31 +75,114 @@ struct LevelConfig
 class Level
 {
     public:
+        /**
+         * @brief      Constructs a new level instance.
+         *
+         * @param[in]  id    The level identifier
+         */
         Level(const QString& id);
+
+        /**
+         * @brief      Destroys the object.
+         */
         ~Level();
 
+        /**
+         * @brief      Gets a file path from inside the level folder.
+         *
+         * @param[in]  name  The name of the file
+         *
+         * @return     The file path.
+         */
         QString file(const QString& name) const;
         
+        /**
+         * @brief      Gets the level info.
+         *
+         * @return     The level info.
+         */
         const LevelInfo& getInfo() const;
+
+        /**
+         * @brief      Gets the level configuration.
+         *
+         * @return     The level configuration.
+         */
         const LevelConfig& getConfig() const;
 
+        /**
+         * @brief      Gets the animal data.
+         *
+         * @return     The animals.
+         */
         const Animal& getAnimals() const;
+
+        /**
+         * @brief      Gets the events data.
+         *
+         * @return     The events.
+         */
         const Event& getEvents() const;
+
+        /**
+         * @brief      Gets the explore events data.
+         *
+         * @return     The explore events.
+         */
         const Explore& getExplorer() const;
+
+        /**
+         * @brief      Gets the plants data.
+         *
+         * @return     The plants.
+         */
         const Plant& getPlants() const;
+
+        /**
+         * @brief      Gets the seasons data.
+         *
+         * @return     The seasons.
+         */
         const Season& getSeasons() const;
 
     private:
+        /**
+         * @brief      Loads a level.
+         */
         void loadLevel();
 
-        // Game info
+        /**
+         * The level information.
+         */
         LevelInfo info;
+
+        /**
+         * Gets the level config.
+         */
         LevelConfig config;
         
-        // Game elements
+        /**
+         * The animals.
+         */
         Animal animals;
+
+        /**
+         * The events.
+         */
         Event events;
+
+        /**
+         * The explore events.
+         */
         Explore explorer;
+
+        /**
+         * The plants.
+         */
         Plant plants;
+
+        /**
+         * The seasons.
+         */
         Season seasons;
 };

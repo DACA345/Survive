@@ -21,93 +21,237 @@
 class Game 
 {
 public:
+    /**
+     * @brief      Constructs a new game instance.
+     *
+     * @param[in]  levelFolder  The level folder
+     */
     Game(const std::string& levelFolder);
 
+    /**
+     * @brief      Runs the game.
+     */
     void run();
 
 private:
-    // Setter for where the location should be
-    std::string levelFolder;
-    QString convertQlevelFolder = QString::fromStdString(levelFolder);
-    
-    // Day counter
-    int dayCounter;
-
-    // Total Days survived counter
-    int totalDays;
-
-    // Month index to keep track of month
-    int currentMonthIndex;
-
-    // Array of month names
+    /**
+     * Array of month IDs.
+     */
     static const std::string months[12];
 
-    // Turn counter
+    /**
+     * Folder where level data is stored.
+     */
+    std::string levelFolder;
+
+    /**
+     * QString levelFolder
+     * @see levelFolder
+     */
+    QString convertQlevelFolder = QString::fromStdString(levelFolder);
+    
+    /**
+     * Current day.
+     */
+    int dayCounter;
+
+    /**
+     * Days survived.
+     */
+    int totalDays;
+
+    /**
+     * Current month.
+     */
+    int currentMonthIndex;
+
+    /**
+     * Current turns left.
+     */
     int turns;
 
-    // Bool value to track if health is 0 or not
+    /**
+     * Whether the user is alive
+     */
     bool alive;
 
-    // Bool value to track if player can use that turn or not
+    /**
+     * Whether the player can do an action.
+     */
     bool move;
 
-    // float for tracking temps
+    /**
+     * Max temperature for a season.
+     */
     float maxTemperature;
+
+    /**
+     * Average temperature for a season.
+     */
     float avgTemperature;
+
+    /**
+     * Min temperature for a season.
+     */
     float minTemperature;
 
-    // Var game bars
+    /**
+     * The user's energy bar.
+     */
     Bar energyBar;
+
+    /**
+     * The user's hunger bar.
+     */
     Bar hungerBar;
+
+    /**
+     * The user's thirst bar.
+     */
     Bar thirstBar;
+
+    /**
+     * The user's health bar.
+     */
     Bar healthBar;
     Bar moraleBar;
 
-    // Var for climate data
+    /**
+     * The day containing climate data.
+     */
     Day climate;
 
-    // Var for animal data
+    /**
+     * Animal info.
+     */
     Animal animal;  
 
-    // Var for plant data
+    /**
+     * Plant info.
+     */
     Plant plant;
 
-    // Var for events
+    /**
+     * Event info.
+     */
     Event events;
 
-    // Var for seasons
+    /**
+     * Season info.
+     */
     Season season; 
 
-    // Var for explores
+    /**
+     * Explore events info.
+     */
     Explore explore;
 
-    // Var for action rest
+    /**
+     * Action info.
+     */
     Action action;
 
+    /**
+     * @brief      Determines if the user is alive.
+     *
+     * @return     True if alive, False otherwise.
+     */
     bool isAlive() const;
+
+    /**
+     * @brief      Determines the ability to do an action.
+     *
+     * @return     True if able to, False otherwise.
+     */
     bool canMove() const;
+
+    /**
+     * @brief      Checks if a season is the current season.
+     *
+     * @param[in]  season  The season to check against
+     *
+     * @return     True if it is that season, false otherwise.
+     */
     bool correctSeason(const QString& season) const;
 
+    /**
+     * @brief      Gets the user's menu choice.
+     *
+     * @return     The menu choice.
+     */
     int getMenuChoice() const;
     
+    /**
+     * @brief      Handles the user's menu choice.
+     *
+     * @param[in]  choice  The choice
+     */
     void handleMenuChoice(int choice);
+
+    /**
+     * @brief      Displays the main menu options.
+     */
     void displayMainMenu() const;
+
+    /**
+     * @brief      Displays the day summary.
+     */
     void displayDaySummary() const;
+
+    /**
+     * @brief      Display the game over screen.
+     */
     void displayGameOver() const;
+
+    /**
+     * @brief      Displays the level intro.
+     */
     void displayLevelIntro() const;
 
-    // Player options
+    /**
+     * @brief      Action for finding food.
+     */
     void findFood();
+
+    /**
+     * @brief      Action for finding water.
+     */
     void findWater();
+
+    /**
+     * @brief      Action for exploring.
+     */
     void exploreOption();
+
+    /**
+     * @brief      Action for resting.
+     */
     void relax();
     
-    void updateMonth(); // Method to update the current month
-    void updateTemperature(); // Method to update the temps
-    void displayTemperature(); // Method to display temps
-    void startNewDay(); // Starts a new day and update all necessary 
+    /**
+     * @brief      Updates the month.
+     */
+    void updateMonth();
 
-    void triggerEvent(); // Method to randomly trigger an event during beginning of the day
+    /**
+     * @brief      Updates the temperature.
+     */
+    void updateTemperature();
+
+    /**
+     * @brief      Displays the current temperature.
+     */
+    void displayTemperature();
+
+    /**
+     * @brief      Starts a new day.
+     */
+    void startNewDay();
+
+    /**
+     * @brief      Triggers an event.
+     */
+    void triggerEvent();
 };
 
 
