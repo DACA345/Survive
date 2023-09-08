@@ -78,7 +78,6 @@ target_link_libraries(${PROJECT_NAME}-core-test
         Qt6::Core
 )
 
-# Copy DLLs
 add_custom_command(
     TARGET ${PROJECT_NAME}-core-test POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
@@ -93,11 +92,51 @@ set_target_properties(${PROJECT_NAME}-core-test
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/test"
 )
 
+# Util tests
+add_executable(${PROJECT_NAME}-util-test
+    "util/resolution-test.cpp"
+)
+
+add_test(
+    NAME ${PROJECT_NAME}-util-test
+    COMMAND ${PROJECT_NAME}-util-test
+)
+
+target_include_directories(${PROJECT_NAME}-util-test
+    PRIVATE
+        "${CMAKE_SOURCE_DIR}/src"
+)
+
+target_link_libraries(${PROJECT_NAME}-util-test
+    PRIVATE
+        ${PROJECT_NAME}-Gui
+        GTest::gtest_main
+        Qt6::Core
+)
+
+add_custom_command(
+    TARGET ${PROJECT_NAME}-util-test POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        $<TARGET_FILE:Qt6::Core>
+        $<TARGET_FILE:Qt6::Gui>
+        $<TARGET_FILE:Qt6::Widgets>
+        $<TARGET_FILE:Qt6::SvgWidgets>
+        $<TARGET_FILE_DIR:${PROJECT_NAME}-util-test>
+)
+
+set_target_properties(${PROJECT_NAME}-util-test
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/test"
+)
+
 # One target to build all tests
 add_custom_target(${PROJECT_NAME}-Tests)
 add_dependencies(${PROJECT_NAME}-Tests
     ${PROJECT_NAME}-config-test
     ${PROJECT_NAME}-core-test
+    ${PROJECT_NAME}-util-test
 )
 
 set_target_properties(${PROJECT_NAME}-Tests
@@ -127,6 +166,7 @@ include(GoogleTest)
 gtest_discover_tests(
     ${PROJECT_NAME}-core-test
     ${PROJECT_NAME}-config-test
+    ${PROJECT_NAME}-util-test
 )
 
 # Configure coverage
