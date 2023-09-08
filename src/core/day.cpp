@@ -217,7 +217,7 @@ int Day::month() const
 
 QString Day::monthId() const
 {
-    return monthFromInt(month());
+    return monthFromInt(month() - 1);
 }
 
 void Day::nextDay()

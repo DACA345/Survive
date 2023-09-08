@@ -38,3 +38,26 @@ TEST(DayTest, GetRandomTemperatureValueTest)
         EXPECT_LE(randomMinTemp, data.minTemperature.max); // Check if random min temp is <= max
     }
 }
+
+TEST(DayTest, DayProgressionTests)
+{
+    Day testDay("data/levels/mtaspiring/climate.json");
+
+    EXPECT_EQ(testDay.currentDay(), 1);
+
+    testDay.nextDay();
+
+    EXPECT_EQ(testDay.currentDay(), 2);
+
+    EXPECT_EQ(testDay.month(), 1);
+    EXPECT_EQ(testDay.monthId(), QString("JAN"));
+
+    for (short i = 0; i < 30; i++)
+    {
+        testDay.nextDay();
+    }
+
+    EXPECT_EQ(testDay.currentDay(), 32);
+    EXPECT_EQ(testDay.month(), 2);
+    EXPECT_EQ(testDay.monthId(), QString("FEB"));
+}
