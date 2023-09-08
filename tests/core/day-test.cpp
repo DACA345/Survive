@@ -26,15 +26,15 @@ TEST(DayTest, GetRandomTemperatureValueTest)
     for (const ClimateData& data : janData) 
     {
         float randomMaxTemp = testDay.getRandomTemperatureValue(data.max_temperature);
-        EXPECT_GE(randomMaxTemp, data.max_temperature.min); // Check if random max temp is >= min
-        EXPECT_LE(randomMaxTemp, data.max_temperature.max); // Check if random max temp is <= max
+        EXPECT_GE(randomMaxTemp, data.maxTemperature.min); // Check if random max temp is >= min
+        EXPECT_LE(randomMaxTemp, data.maxTemperature.max); // Check if random max temp is <= max
 
         float randomAvgTemp = testDay.getRandomTemperatureValue(data.avg_temperature);
-        EXPECT_GE(randomAvgTemp, data.avg_temperature.min); // Check if random avg temp is >= min
-        EXPECT_LE(randomAvgTemp, data.avg_temperature.max); // Check if random avg temp is <= max
+        EXPECT_GE(randomAvgTemp, data.avgTemperature.min); // Check if random avg temp is >= min
+        EXPECT_LE(randomAvgTemp, data.avgTemperature.max); // Check if random avg temp is <= max
 
         float randomMinTemp = testDay.getRandomTemperatureValue(data.min_temperature);
-        EXPECT_GE(randomMinTemp, data.min_temperature.min); // Check if random min temp is >= min
-        EXPECT_LE(randomMinTemp, data.min_temperature.max); // Check if random min temp is <= max
+        EXPECT_GE(randomMinTemp, data.minTemperature.min); // Check if random min temp is >= min
+        EXPECT_LE(randomMinTemp, data.minTemperature.max); // Check if random min temp is <= max
     }
 }
