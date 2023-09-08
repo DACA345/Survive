@@ -45,37 +45,37 @@ void Day::loadClimateData(const std::string& filename)
             ClimateData cd;
 
             // Initialize each field to default values
-            cd.max_temperature.max = 0.0;
-            cd.max_temperature.average = 0.0;
-            cd.max_temperature.min = 0.0;
+            cd.maxTemperature.max = 0.0;
+            cd.maxTemperature.average = 0.0;
+            cd.maxTemperature.min = 0.0;
 
-            cd.avg_temperature.max = 0.0;
-            cd.avg_temperature.average = 0.0;
-            cd.avg_temperature.min = 0.0;
+            cd.avgTemperature.max = 0.0;
+            cd.avgTemperature.average = 0.0;
+            cd.avgTemperature.min = 0.0;
 
-            cd.min_temperature.max = 0.0;
-            cd.min_temperature.average = 0.0;
-            cd.min_temperature.min = 0.0;
+            cd.minTemperature.max = 0.0;
+            cd.minTemperature.average = 0.0;
+            cd.minTemperature.min = 0.0;
 
             cd.precipitation.max = 0.0;
             cd.precipitation.average = 0.0;
             cd.precipitation.min = 0.0;
             cd.precipitation.sum = 0.0;
 
-            cd.snow_depth.max = 0.0;
-            cd.snow_depth.average = 0.0;
-            cd.snow_depth.min = 0.0;
-            cd.snow_depth.sum = 0.0;
-            cd.snow_depth.sum = 0.0;
+            cd.snowDepth.max = 0.0;
+            cd.snowDepth.average = 0.0;
+            cd.snowDepth.min = 0.0;
+            cd.snowDepth.sum = 0.0;
+            cd.snowDepth.sum = 0.0;
 
             // Afternoon temp
             QJsonValue maxTemperatureValue = monthElement.value("max_temperature");
             if (maxTemperatureValue.isObject()) 
             {
                 QJsonObject maxTemperatureObject = maxTemperatureValue.toObject();
-                cd.max_temperature.max = maxTemperatureObject.value("max").toDouble();
-                cd.max_temperature.average = maxTemperatureObject.value("average").toDouble();
-                cd.max_temperature.min = maxTemperatureObject.value("min").toDouble();
+                cd.maxTemperature.max = maxTemperatureObject.value("max").toDouble();
+                cd.maxTemperature.average = maxTemperatureObject.value("average").toDouble();
+                cd.maxTemperature.min = maxTemperatureObject.value("min").toDouble();
             }
 
             // Morning/Evening temp
@@ -83,9 +83,9 @@ void Day::loadClimateData(const std::string& filename)
             if (avgTemperatureValue.isObject()) 
             {
                 QJsonObject avgTemperatureObject = avgTemperatureValue.toObject();
-                cd.avg_temperature.max = avgTemperatureObject.value("max").toDouble();
-                cd.avg_temperature.average = avgTemperatureObject.value("average").toDouble();
-                cd.avg_temperature.min = avgTemperatureObject.value("min").toDouble();
+                cd.avgTemperature.max = avgTemperatureObject.value("max").toDouble();
+                cd.avgTemperature.average = avgTemperatureObject.value("average").toDouble();
+                cd.avgTemperature.min = avgTemperatureObject.value("min").toDouble();
             }
 
             // Night temp
@@ -93,9 +93,9 @@ void Day::loadClimateData(const std::string& filename)
             if (minTemperatureValue.isObject()) 
             {
                 QJsonObject minTemperatureObject = minTemperatureValue.toObject();
-                cd.min_temperature.max = minTemperatureObject.value("max").toDouble();
-                cd.min_temperature.average = minTemperatureObject.value("average").toDouble();
-                cd.min_temperature.min = minTemperatureObject.value("min").toDouble();
+                cd.minTemperature.max = minTemperatureObject.value("max").toDouble();
+                cd.minTemperature.average = minTemperatureObject.value("average").toDouble();
+                cd.minTemperature.min = minTemperatureObject.value("min").toDouble();
             }
 
             // Rain
@@ -114,10 +114,10 @@ void Day::loadClimateData(const std::string& filename)
             if (snowdepthValue.isObject())
             {
                 QJsonObject snowdepthObject = snowdepthValue.toObject();
-                cd.snow_depth.max = snowdepthObject.value("max").toDouble();
-                cd.snow_depth.average = snowdepthObject.value("average").toDouble();
-                cd.snow_depth.min = snowdepthObject.value("min").toDouble();
-                cd.snow_depth.sum = snowdepthObject.value("sum").toDouble();
+                cd.snowDepth.max = snowdepthObject.value("max").toDouble();
+                cd.snowDepth.average = snowdepthObject.value("average").toDouble();
+                cd.snowDepth.min = snowdepthObject.value("min").toDouble();
+                cd.snowDepth.sum = snowdepthObject.value("sum").toDouble();
             }
 
             monthData.push_back(cd);
@@ -134,27 +134,27 @@ void Day::printClimateData() const
         std::cout << "Month: " << pair.first << std::endl;
         for (const auto& cd : pair.second) 
         {
-            std::cout << "Max Temperature Max: " << cd.max_temperature.max << std::endl;
-            std::cout << "Max Temperature Average: " << cd.max_temperature.average << std::endl;
-            std::cout << "Max Temperature Min: " << cd.max_temperature.min << std::endl;
+            std::cout << "Max Temperature Max: " << cd.maxTemperature.max << std::endl;
+            std::cout << "Max Temperature Average: " << cd.maxTemperature.average << std::endl;
+            std::cout << "Max Temperature Min: " << cd.maxTemperature.min << std::endl;
             
-            std::cout << "Average Temperature Max: " << cd.avg_temperature.max << std::endl;
-            std::cout << "Average Temperature Average: " << cd.avg_temperature.average << std::endl;
-            std::cout << "Average Temperature Min: " << cd.avg_temperature.min << std::endl;
+            std::cout << "Average Temperature Max: " << cd.avgTemperature.max << std::endl;
+            std::cout << "Average Temperature Average: " << cd.avgTemperature.average << std::endl;
+            std::cout << "Average Temperature Min: " << cd.avgTemperature.min << std::endl;
 
-            std::cout << "Min Temperature Max: " << cd.min_temperature.max << std::endl;
-            std::cout << "Min Temperature Average: " << cd.min_temperature.average << std::endl;
-            std::cout << "Min Temperature Min: " << cd.min_temperature.min << std::endl;
+            std::cout << "Min Temperature Max: " << cd.minTemperature.max << std::endl;
+            std::cout << "Min Temperature Average: " << cd.minTemperature.average << std::endl;
+            std::cout << "Min Temperature Min: " << cd.minTemperature.min << std::endl;
 
             std::cout << "Precipitation Max: " << cd.precipitation.max << std::endl;
             std::cout << "Precipitation Average: " << cd.precipitation.average << std::endl;
             std::cout << "Precipitation Min: " << cd.precipitation.min << std::endl;
             std::cout << "Precipitation Sum: " << cd.precipitation.sum << std::endl;
 
-            std::cout << "Snowdepth Max: " << cd.snow_depth.max << std::endl;
-            std::cout << "Snowdepth Average: " << cd.snow_depth.average << std::endl;
-            std::cout << "Snowdepth Min: " << cd.snow_depth.min << std::endl;
-            std::cout << "Snowdepth Sum: " << cd.snow_depth.sum << std::endl;
+            std::cout << "Snowdepth Max: " << cd.snowDepth.max << std::endl;
+            std::cout << "Snowdepth Average: " << cd.snowDepth.average << std::endl;
+            std::cout << "Snowdepth Min: " << cd.snowDepth.min << std::endl;
+            std::cout << "Snowdepth Sum: " << cd.snowDepth.sum << std::endl;
         }
     }
 }
@@ -240,9 +240,9 @@ void Day::printMonthClimate(const std::string& month) const
         // Print the climate data for the month
         for (const ClimateData& data : monthData) {
             // Get random values for temperature fields
-            float maxTemp = getRandomTemperatureValue(data.max_temperature);
-            float avgTemp = getRandomTemperatureValue(data.avg_temperature);
-            float minTemp = getRandomTemperatureValue(data.min_temperature);
+            float maxTemp = getRandomTemperatureValue(data.maxTemperature);
+            float avgTemp = getRandomTemperatureValue(data.avgTemperature);
+            float minTemp = getRandomTemperatureValue(data.minTemperature);
 
             // Get random values for precipitation fields
             float maxPrecipitation = getRandomPrecipitationValue(data.precipitation);
