@@ -84,10 +84,14 @@ ActionResult Engine::findFood()
             result.message = QString("You have found %1: %2 and ate it.").arg(
                 plant.category
             ).arg(plant.name);
-            if (!plant.edible)
-            {
-                healthBar.minus(config.plantPoison);
-            }
+            //if (!plant.edible)
+            //{
+                healthBar.plus(plant.effect.healthBar);
+                thirstBar.plus(plant.effect.thirstBar);
+                hungerBar.plus(plant.effect.hungerBar);
+                moraleBar.plus(plant.effect.moraleBar);
+                energyBar.plus(plant.effect.energyBar);
+            //}
             goto done;
         }
     }

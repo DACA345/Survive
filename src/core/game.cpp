@@ -13,10 +13,10 @@ season(convertQlevelFolder + "/season.json"), // Initialize season
 explore(convertQlevelFolder + "/explore.json"), // Initialize explore
 action(convertQlevelFolder + "/action.json"), // Initialize explore
 energyBar(100),
-hungerBar(10),
-thirstBar(10),
-healthBar(10),
-moraleBar(10)
+hungerBar(100),
+thirstBar(100),
+healthBar(100),
+moraleBar(100)
 {
 
     dayCounter = 0; // Start with Day 0
@@ -184,12 +184,15 @@ void Game::findFood()
         }
         else
         {
-            hungerBar.plus(1);
             const PlantInfo& randomPlant = plant.getRandomPlant();
             std::cout << "You have found " << randomPlant.category.toStdString() << ": " << randomPlant.name.toStdString() << std::endl;
             if (!randomPlant.edible)
             {
-                healthBar.minus(3);
+                healthBar.plus(randomPlant.effect.healthBar);
+                thirstBar.plus(randomPlant.effect.thirstBar);
+                hungerBar.plus(randomPlant.effect.hungerBar);
+                moraleBar.plus(randomPlant.effect.moraleBar);
+                energyBar.plus(randomPlant.effect.energyBar);
                 std::cout << "That was not edible ew " << std::endl;
                 std::cout << "Energy -1" << std::endl;
                 std::cout << "Health -3" << std::endl;
@@ -197,6 +200,11 @@ void Game::findFood()
             }
             else
             {
+                healthBar.plus(randomPlant.effect.healthBar);
+                thirstBar.plus(randomPlant.effect.thirstBar);
+                hungerBar.plus(randomPlant.effect.hungerBar);
+                moraleBar.plus(randomPlant.effect.moraleBar);
+                energyBar.plus(randomPlant.effect.energyBar);
                 std::cout << "Nice that was edible! " << std::endl;
                 std::cout << "Energy -1" << std::endl;
                 std::cout << "Hunger +1" << std::endl;

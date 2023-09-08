@@ -37,13 +37,25 @@ void Plant::loadPlantsFromJson(const QString& filePath)
 
     // Process Fungi
     QJsonArray fungiArray = jsonObj["fungi"].toArray();
-    for (const QJsonValue& fungiValue : fungiArray) 
-    {
+    for (const QJsonValue& fungiValue : fungiArray) {
         QJsonObject fungi = fungiValue.toObject();
         QString name = fungi["name"].toString();
         bool edible = fungi["edible"].toBool();
-        plants["fungi"].append(PlantInfo{ name, "fungi", edible });
+        QJsonObject fungiEffect = fungi["effect"].toObject();
+
+        PlantInfo plantData;
+        plantData.name = name;
+        plantData.category = "fungi";
+        plantData.edible = edible;
+        plantData.effect.healthBar = fungiEffect["healthBar"].toInt();
+        plantData.effect.thirstBar = fungiEffect["thirstBar"].toInt();
+        plantData.effect.hungerBar = fungiEffect["hungerBar"].toInt();
+        plantData.effect.moraleBar = fungiEffect["moraleBar"].toInt();
+        plantData.effect.energyBar = fungiEffect["energyBar"].toInt();
+
+        plants["fungi"].append(plantData);
     }
+
 
     // Process Plant
     QJsonArray plantArray = jsonObj["plant"].toArray();
@@ -52,7 +64,19 @@ void Plant::loadPlantsFromJson(const QString& filePath)
         QJsonObject plant = plantValue.toObject();
         QString name = plant["name"].toString();
         bool edible = plant["edible"].toBool();
-        plants["plant"].append(PlantInfo{ name, "plant", edible });
+        QJsonObject plantEffect = plant["effect"].toObject(); 
+
+        PlantInfo plantData;
+        plantData.name = name;
+        plantData.category = "plant";
+        plantData.edible = edible;
+        plantData.effect.healthBar = plantEffect["healthBar"].toInt();
+        plantData.effect.thirstBar = plantEffect["thirstBar"].toInt();
+        plantData.effect.hungerBar = plantEffect["hungerBar"].toInt();
+        plantData.effect.moraleBar = plantEffect["moraleBar"].toInt();
+        plantData.effect.energyBar = plantEffect["energyBar"].toInt();
+
+        plants["fungi"].append(plantData);
     }
 }
 

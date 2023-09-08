@@ -1,161 +1,378 @@
 {
     "fungi": [
-        {
-            "plant_id": "PLT001",
-            "name": "Beech Orange",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT002",
-            "name": "Orange Peel Fungus",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT003",
-            "name": "Forest Prettymouth",
-            "edible": false
-        },
-        {
-            "plant_id": "PLT004",
-            "name": "Pixie's Parasol",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT005",
-            "name": "Ochre Jelly Club",
-            "edible": false
-        },
-        {
-            "plant_id": "PLT006",
-            "name": "Ruby Bonnet",
-            "edible": false
-        },
-        {
-            "plant_id": "PLT007",
-            "name": "Dark Velvet Bolete",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT008",
-            "name": "Grifola Colensoi",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT009",
-            "name": "Anemone Stinkhorn Fungus",
-            "edible": false
-        },
-        {
-            "plant_id": "PLT010",
-            "name": "Fly Agaric",
-            "edible": false
-        },
-        {
-            "plant_id": "PLT011",
-            "name": "Robust Bracket",
-            "edible": false
-        },
-        {
-            "plant_id": "PLT012",
-            "name": "Woolly Bird's Nest Fungus",
-            "edible": false
-        },
-        {
-            "plant_id": "PLT013",
-            "name": "Stinky Squid",
-            "edible": false
-        },
-        {
-            "plant_id": "PLT014",
-            "name": "Shaggy Mane",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT015",
-            "name": "Death Cap",
-            "edible": false
+      {
+        "plant_id": "PLT001",
+        "name": "Beech Orange",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 3,
+          "hungerBar": 5,
+          "moraleBar": 2,
+          "energyBar": 2
         }
+      },
+      {
+        "plant_id": "PLT002",
+        "name": "Orange Peel Fungus",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 1,
+          "moraleBar": -3,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT003",
+        "name": "Forest Prettymouth",
+        "edible": false,
+        "effect": {
+          "healthBar": -10,
+          "thirstBar": 1,
+          "hungerBar": 2,
+          "moraleBar": -20,
+          "energyBar": 10
+        }
+      },
+      {
+        "plant_id": "PLT004",
+        "name": "Pixie's Parasol",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 4,
+          "moraleBar": 0,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT005",
+        "name": "Ochre Jelly Club",
+        "edible": false,
+        "effect": {
+          "healthBar": -10,
+          "thirstBar": 2,
+          "hungerBar": 2,
+          "moraleBar": -20,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT006",
+        "name": "Ruby Bonnet",
+        "edible": false,
+        "effect": {
+          "healthBar": -10,
+          "thirstBar": 2,
+          "hungerBar": 2,
+          "moraleBar": -12,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT007",
+        "name": "Dark Velvet Bolete",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 2,
+          "moraleBar": 0,
+          "energyBar": 1
+        }
+      },
+      {
+        "plant_id": "PLT008",
+        "name": "Grifola Colensoi",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 2,
+          "moraleBar": 0, 
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT009",
+        "name": "Anemone Stinkhorn Fungus",
+        "edible": false,
+        "effect": {
+          "healthBar": -20,
+          "thirstBar": 1,
+          "hungerBar": 1,
+          "moraleBar": -25,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT010",
+        "name": "Fly Agaric",
+        "edible": false,
+        "effect": {
+          "healthBar": -20,
+          "thirstBar": -2,
+          "hungerBar": 2,
+          "moraleBar": -20,
+          "energyBar": 1
+        }
+      },
+      {
+        "plant_id": "PLT011",
+        "name": "Robust Bracket",
+        "edible": false,
+        "effect": {
+          "healthBar": -20,
+          "thirstBar": -2,
+          "hungerBar": 2,
+          "moraleBar": -20,
+          "energyBar": 1
+        }
+      },
+      {
+        "plant_id": "PLT012",
+        "name": "Woolly Bird's Nest Fungus",
+        "edible": false,
+        "effect": {
+          "healthBar": -30,
+          "thirstBar": 0,
+          "hungerBar": 3,
+          "moraleBar": -20,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT013",
+        "name": "Stinky Squid",
+        "edible": false,
+        "effect": {
+          "healthBar": -20,
+          "thirstBar": 2,
+          "hungerBar": 2,
+          "moraleBar": -32,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT014",
+        "name": "Shaggy Mane",
+        "edible": true,
+        "effect": {
+          "healthBar": 10,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 5,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT015",
+        "name": "Death Cap",
+        "edible": false,
+        "effect": {
+          "healthBar": -85,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": -69,
+          "energyBar": 0
+        }
+      }
     ],
     "plant": [
-        {
-            "plant_id": "PLT016",
-            "name": "Wineberry",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT017",
-            "name": "Twiggy Coprosma",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT018",
-            "name": "Bush Snowberry",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT019",
-            "name": "Matai",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT020",
-            "name": "Coprosma Colensoi",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT021",
-            "name": "Meadow Buttercup",
-            "edible": false
-        },
-        {
-            "plant_id": "PLT022",
-            "name": "Green Cushion Mountain Daisy",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT023",
-            "name": "Wand Mullein Flower",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT024",
-            "name": "Wand Mullein Seeds",
-            "edible": false
-        },
-        {
-            "plant_id": "PLT025",
-            "name": "Pohuehue",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT026",
-            "name": "European Mountain Ash",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT027",
-            "name": "Creeping Thistle",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT028",
-            "name": "Red Raspberry",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT029",
-            "name": "Tutsan",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT030",
-            "name": "Apple",
-            "edible": true
-        },
-        {
-            "plant_id": "PLT031",
-            "name": "Mountain Wineberry",
-            "edible": true
+      {
+        "plant_id": "PLT016",
+        "name": "Wineberry",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 5,
+          "hungerBar": 5,
+          "moraleBar": 8,
+          "energyBar": 0
         }
+      },
+      {
+        "plant_id": "PLT017",
+        "name": "Twiggy Coprosma",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 0,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT018",
+        "name": "Bush Snowberry",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 5,
+          "hungerBar": 8,
+          "moraleBar": 2,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT019",
+        "name": "Matai Berries",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 2,
+          "moraleBar": 0,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT020",
+        "name": "Coprosma Berries",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 5,
+          "hungerBar": 5,
+          "moraleBar": 3,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT021",
+        "name": "Meadow Buttercup",
+        "edible": false,
+        "effect": {
+          "healthBar": -15,
+          "thirstBar": 1,
+          "hungerBar": 5, 
+          "moraleBar": 0,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT022",
+        "name": "Green Cushion Mountain Daisy",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 3,
+          "moraleBar": 0,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT023",
+        "name": "Wand Mullein Flowers",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 2,
+          "hungerBar": 4,
+          "moraleBar": 0,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT024",
+        "name": "Wand Mullein Seeds",
+        "edible": false,
+        "effect": {
+          "healthBar": -10,
+          "thirstBar": 1,
+          "hungerBar": 3,
+          "moraleBar": -5,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT025",
+        "name": "Pohuehue",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 1,
+          "moraleBar": -5,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT026",
+        "name": "Rowan",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 2,
+          "hungerBar": 5,
+          "moraleBar": -8,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT027",
+        "name": "Creeping Thistle",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 2,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT028",
+        "name": "Red Raspberry",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 4,
+          "hungerBar": 8,
+          "moraleBar": 4,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT029",
+        "name": "Tutsan",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 4,
+          "moraleBar": -8,
+          "energyBar": 0
+        }
+      },
+      {
+        "plant_id": "PLT030",
+        "name": "Apple",
+        "edible": true,
+        "effect": {
+          "healthBar": 2,
+          "thirstBar": 5,
+          "hungerBar": 10,
+          "moraleBar": 5,
+          "energyBar": 5
+        }
+      },
+      {
+        "plant_id": "PLT031",
+        "name": "Mountain Wineberry",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 6,
+          "moraleBar": 8,
+          "energyBar": 0
+        }
+      }
     ]
 }

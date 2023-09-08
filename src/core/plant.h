@@ -6,6 +6,19 @@
 #include <QPair>
 
 /**
+* @brief    This struct contain the effect 
+* 
+*/
+struct PlantEffect
+{
+    int healthBar;
+    int thirstBar;
+    int hungerBar;
+    int moraleBar;
+    int energyBar;
+};
+
+/**
  * @brief   This struct contain the info of Plant
  * 
  */
@@ -14,6 +27,7 @@ struct PlantInfo
     QString name;
     QString category;
     bool edible;
+    PlantEffect effect;
 };
 
 /**
