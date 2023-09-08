@@ -6,6 +6,19 @@
 #include <QPair>
 
 /**
+*  @brief This struct contains the effects
+* 
+*/
+struct AnimalEffect
+{
+    int healthBar;
+    int thirstBar;
+    int hungerBar;
+    int moraleBar;
+    int energyBar;
+};
+
+/**
  * @brief Struct representation of the JSON animal info.
  * 
  */
@@ -14,6 +27,9 @@ struct AnimalInfo
     QString speciesID;
     QString category;
     QString name;
+    bool edible;
+    AnimalEffect effect;
+
 };
 
 /**

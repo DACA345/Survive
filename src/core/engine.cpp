@@ -71,10 +71,15 @@ ActionResult Engine::findFood()
         if (chance(config.findFoodAnimal))
         {
             const AnimalInfo& animal = level.getAnimals().getRandomAnimal();
-            hungerBar.plus(config.animalHunger);
             result.message = QString("You have found %1 and ate it.").arg(
                 animal.category
             ).arg(animal.name);
+
+            healthBar.plus(animal.effect.healthBar);
+            thirstBar.plus(animal.effect.thirstBar);
+            hungerBar.plus(animal.effect.hungerBar);
+            moraleBar.plus(animal.effect.moraleBar);
+            energyBar.plus(animal.effect.energyBar);
             goto done;
         }
         else

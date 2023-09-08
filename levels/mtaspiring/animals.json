@@ -1,188 +1,540 @@
 {
     "birds": [
-        {
-            "species_id": "SPA0001",
-            "name": "South Island Robin"
-        },
-        {
-            "species_id": "SPA0002",
-            "name": "Rifleman"
-        },
-        {
-            "species_id": "SPA0003",
-            "name": "New Zealand Tomtit"
-        },
-        {
-            "species_id": "SPA0004",
-            "name": "Kea"
-        },
-        {
-            "species_id": "SPA0005",
-            "name": "South Island Wren"
-        },
-        {
-            "species_id": "SPA0006",
-            "name": "New Zealand Fantail"
-        },
-        {
-            "species_id": "SPA0007",
-            "name": "Yellowhead"
-        },
-        {
-            "species_id": "SPA0008",
-            "name": "Common Chaffinch"
-        },
-        {
-            "species_id": "SPA0009",
-            "name": "New Zealand Bellbird"
-        },
-        {
-            "species_id": "SPA0010",
-            "name": "Yellow-crowned Parakeet"
-        },
-        {
-            "species_id": "SPA0011",
-            "name": "Song Thrush"
-        },
-        {
-            "species_id": "SPA0012",
-            "name": "Tui"
-        },
-        {
-            "species_id": "SPA0013",
-            "name": "Blue Duck"
-        },
-        {
-            "species_id": "SPA0014",
-            "name": "New Zealand Pigeon"
-        },
-        {
-            "species_id": "SPA0015",
-            "name": "Paradise Shelduck"
-        },
-        {
-            "species_id": "SPA0016",
-            "name": "Gray Gerygone"
-        },
-        {
-            "species_id": "SPA0017",
-            "name": "Morepork"
-        },
-        {
-            "species_id": "SPA0018",
-            "name": "Canada Goose"
-        },
-        {
-            "species_id": "SPA0019",
-            "name": "New Zealand Falcon"
-        },
-        {
-            "species_id": "SPA0020",
-            "name": "Pipipi"
-        },
-        {
-            "species_id": "SPA0021",
-            "name": "Eurasian Blackbird"
-        },
-        {
-            "species_id": "SPA0022",
-            "name": "Silvereye"
-        },
-        {
-            "species_id": "SPA0023",
-            "name": "New Zealand Kaka"
-        },
-        {
-            "species_id": "SPA0024",
-            "name": "Lesser Redpoll"
-        },
-        {
-            "species_id": "SPA0025",
-            "name": "European Greenfinch"
-        },
-        {
-            "species_id": "SPA0026",
-            "name": "Yellowhammer"
-        },
-        {
-            "species_id": "SPA0027",
-            "name": "Dunnock"
-        },
-        {
-            "species_id": "SPA0028",
-            "name": "Little Pied Cormorant"
-        },
-        {
-            "species_id": "SPA0029",
-            "name": "New Zealand Pipit"
-        },
-        {
-            "species_id": "SPA0030",
-            "name": "Great Cormorant"
-        },
-        {
-            "species_id": "SPA0031",
-            "name": "Great Crested Grebe"
-        },
-        {
-            "species_id": "SPA0032",
-            "name": "New Zealand Scaup"
-        },
-        {
-            "species_id": "SPA0033",
-            "name": "New Zealand Fernbird"
+      {
+        "species_id": "SPA0001",
+        "name": "South Island Robin",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 9,
+          "moraleBar": 2,
+          "energyBar": 0
         }
+      },
+      {
+        "species_id": "SPA0002",
+        "name": "Rifleman",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0003",
+        "name": "New Zealand Tomtit",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 9,
+          "moraleBar": 2,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0004",
+        "name": "Kea",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 2
+        }
+      },
+      {
+        "species_id": "SPA0005",
+        "name": "South Island Wren",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0006",
+        "name": "New Zealand Fantail",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 3,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0007",
+        "name": "Yellowhead",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 0,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0008",
+        "name": "Common Chaffinch",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0009",
+        "name": "New Zealand Bellbird",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 9,
+          "moraleBar": 6,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0010",
+        "name": "Yellow-crowned Parakeet",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 7,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0011",
+        "name": "Song Thrush",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 4,
+          "moraleBar": 0,
+          "energyBar": 1
+        }
+      },
+      {
+        "species_id": "SPA0012",
+        "name": "Tui",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 10,
+          "moraleBar": 0,
+          "energyBar": 5
+        }
+      },
+      {
+        "species_id": "SPA0013",
+        "name": "Blue Duck",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 10,
+          "moraleBar": 5,
+          "energyBar": 5
+        }
+      },
+      {
+        "species_id": "SPA0014",
+        "name": "New Zealand Pigeon",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 8,
+          "moraleBar": 3,
+          "energyBar": 5
+        }
+      },
+      {
+        "species_id": "SPA0015",
+        "name": "Paradise Shelduck",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 10,
+          "moraleBar": 4,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0016",
+        "name": "Gray Gerygone",
+        "edible": true,
+        "effect": {
+          "healthBar": 2,
+          "thirstBar": 1,
+          "hungerBar": 3,
+          "moraleBar": 1,
+          "energyBar": 2
+        }
+      },
+      {
+        "species_id": "SPA0017",
+        "name": "Morepork",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 10,
+          "moraleBar": 0,
+          "energyBar": 2
+        }
+      },
+      {
+        "species_id": "SPA0018",
+        "name": "Canada Goose",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 10,
+          "moraleBar": 5,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0019",
+        "name": "New Zealand Falcon",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 12,
+          "moraleBar": 4,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0020",
+        "name": "Pipipi",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0021",
+        "name": "Eurasian Blackbird",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0022",
+        "name": "Silvereye",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0023",
+        "name": "New Zealand Kaka",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0024",
+        "name": "Lesser Redpoll",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0025",
+        "name": "European Greenfinch",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0026",
+        "name": "Yellowhammer",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0027",
+        "name": "Dunnock",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0028",
+        "name": "Little Pied Cormorant",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0029",
+        "name": "New Zealand Pipit",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0030",
+        "name": "Great Cormorant",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0031",
+        "name": "Great Crested Grebe",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0032",
+        "name": "New Zealand Scaup",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0033",
+        "name": "New Zealand Fernbird",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      }
     ],
     "mammals": [
-        {
-            "species_id": "SPA0034",
-            "name": "Chamois"
-        },
-        {
-            "species_id": "SPA0035",
-            "name": "Red Deer"
-        },
-        {
-            "species_id": "SPA0036",
-            "name": "Brown Hare"
-        },
-        {
-            "species_id": "SPA0037",
-            "name": "House Mouse"
-        },
-        {
-            "species_id": "SPA0038",
-            "name": "Common Brushtail Possum"
-        },
-        {
-            "species_id": "SPA0039",
-            "name": "European Rabbit"
-        },
-        {
-            "species_id": "SPA0040",
-            "name": "White-Tailed Deer"
+      {
+        "species_id": "SPA0034",
+        "name": "Chamois",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
         }
+      },
+      {
+        "species_id": "SPA0035",
+        "name": "Red Deer",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 35,
+          "moraleBar": 15,
+          "energyBar": 20
+        }
+      },
+      {
+        "species_id": "SPA0036",
+        "name": "Brown Hare",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 12,
+          "moraleBar": 6,
+          "energyBar": 6
+        }
+      },
+      {
+        "species_id": "SPA0037",
+        "name": "House Mouse",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0038",
+        "name": "Common Brushtail Possum",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0039",
+        "name": "European Rabbit",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 10,
+          "moraleBar": 1,
+          "energyBar": 0
+        }
+      },
+      {
+        "species_id": "SPA0040",
+        "name": "White-Tailed Deer",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 30,
+          "moraleBar": 15,
+          "energyBar": 20
+        }
+      }
     ],
     "fish": [
-        {
-            "species_id": "SPA0041",
-            "name": "Climbing Galaxias"
-        },
-        {
-            "species_id": "SPA0044",
-            "name": "Rainbow Trout"
+      {
+        "species_id": "SPA0041",
+        "name": "Climbing Galaxias",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 15,
+          "moraleBar": 10,
+          "energyBar": 5
         }
+      },
+      {
+        "species_id": "SPA0044",
+        "name": "Rainbow Trout",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 15,
+          "moraleBar": 10,
+          "energyBar": 5
+        }
+      }
     ],
     "reptiles": [
-        {
-            "species_id": "SPA0042",
-            "name": "Eyres Skink"
+      {
+        "species_id": "SPA0042",
+        "name": "Eyres Skink",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": -10,
+          "energyBar": 2
         }
+      }
     ],
     "amphibians": [
-        {
-            "species_id": "SPA0043",
-            "name": "Southern Brown Tree Frog"
+      {
+        "species_id": "SPA0043",
+        "name": "Southern Brown Tree Frog",
+        "edible": true,
+        "effect": {
+          "healthBar": 0,
+          "thirstBar": 0,
+          "hungerBar": 5,
+          "moraleBar": -10,
+          "energyBar": 2
         }
+      }
     ]
 }

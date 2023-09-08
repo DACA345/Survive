@@ -40,8 +40,22 @@ void Animal::loadAnimalsFromJson(const QString& filePath)
     {
         QJsonObject bird = birdValue.toObject();
         QString speciesID = bird["species_id"].toString();
-        QString name = bird["name"].toString();
-        animals["birds"].append(AnimalInfo{ speciesID, "birds", name});
+        QString name = bird["name"].toString();        
+        bool edible = bird["edible"].toBool();
+
+        QJsonObject mammalEffect = bird["effect"].toObject();
+
+        AnimalInfo animalData;
+        animalData.name = name;
+        animalData.category = "birds";
+        animalData.edible = edible;
+        animalData.effect.healthBar = mammalEffect["healthBar"].toInt();
+        animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt();
+        animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt();
+        animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt();
+        animalData.effect.energyBar = mammalEffect["energyBar"].toInt();
+
+        animals["birds"].append(animalData);
     }
 
     // Process mammals
@@ -51,7 +65,21 @@ void Animal::loadAnimalsFromJson(const QString& filePath)
         QJsonObject mammal = mammalValue.toObject();
         QString speciesID = mammal["species_id"].toString();
         QString name = mammal["name"].toString();
-        animals["mammals"].append(AnimalInfo{ speciesID, "mammals", name });
+        bool edible = mammal["edible"].toBool();
+
+        QJsonObject mammalEffect = mammal["effect"].toObject();
+
+        AnimalInfo animalData;
+        animalData.name = name;
+        animalData.category = "mammals";
+        animalData.edible = edible;
+        animalData.effect.healthBar = mammalEffect["healthBar"].toInt();
+        animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt();
+        animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt();
+        animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt();
+        animalData.effect.energyBar = mammalEffect["energyBar"].toInt();
+
+        animals["mammals"].append(animalData);
     }
 
     // Process fish
@@ -60,8 +88,22 @@ void Animal::loadAnimalsFromJson(const QString& filePath)
     {
         QJsonObject fish = fishValue.toObject();
         QString speciesID = fish["species_id"].toString();
-        QString name = fish["name"].toString();
-        animals["fish"].append(AnimalInfo{ speciesID, "fish", name });
+        QString name = fish["name"].toString();        
+        bool edible = fish["edible"].toBool();
+
+        QJsonObject mammalEffect = fish["effect"].toObject();
+
+        AnimalInfo animalData;
+        animalData.name = name;
+        animalData.category = "fish";
+        animalData.edible = edible;
+        animalData.effect.healthBar = mammalEffect["healthBar"].toInt();
+        animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt();
+        animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt();
+        animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt();
+        animalData.effect.energyBar = mammalEffect["energyBar"].toInt();
+
+        animals["fish"].append(animalData);
     }
 
     // Process reptiles
@@ -70,8 +112,22 @@ void Animal::loadAnimalsFromJson(const QString& filePath)
     {
         QJsonObject reptile = reptileValue.toObject();
         QString speciesID = reptile["species_id"].toString();
-        QString name = reptile["name"].toString();
-        animals["reptiles"].append(AnimalInfo{ speciesID, "reptiles", name });
+        QString name = reptile["name"].toString();        
+        bool edible = reptile["edible"].toBool();
+
+        QJsonObject mammalEffect = reptile["effect"].toObject();
+
+        AnimalInfo animalData;
+        animalData.name = name;
+        animalData.category = "reptiles";
+        animalData.edible = edible;
+        animalData.effect.healthBar = mammalEffect["healthBar"].toInt();
+        animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt();
+        animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt();
+        animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt();
+        animalData.effect.energyBar = mammalEffect["energyBar"].toInt();
+
+        animals["reptiles"].append(animalData);
     }
 
     // Process amphibians
@@ -80,8 +136,22 @@ void Animal::loadAnimalsFromJson(const QString& filePath)
     {
         QJsonObject amphibian = amphibianValue.toObject();
         QString speciesID = amphibian["species_id"].toString();
-        QString name = amphibian["name"].toString();
-        animals["amphibians"].append(AnimalInfo{ speciesID, "amphibians", name });
+        QString name = amphibian["name"].toString();        
+        bool edible = amphibian["edible"].toBool();
+
+        QJsonObject mammalEffect = amphibian["effect"].toObject();
+
+        AnimalInfo animalData;
+        animalData.name = name;
+        animalData.category = "amphibians";
+        animalData.edible = edible;
+        animalData.effect.healthBar = mammalEffect["healthBar"].toInt();
+        animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt();
+        animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt();
+        animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt();
+        animalData.effect.energyBar = mammalEffect["energyBar"].toInt();
+
+        animals["amphibians"].append(animalData);
     }
 }
 

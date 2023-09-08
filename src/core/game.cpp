@@ -176,11 +176,16 @@ void Game::findFood()
 
         if (isAnimal)
         {
-            hungerBar.plus(3);
             const AnimalInfo& randomAnimal = animal.getRandomAnimal();
             std::cout << "You have found " << randomAnimal.category.toStdString() << ": " << randomAnimal.name.toStdString() << std::endl;
             std::cout << "Hunger +3" << std::endl;
             std::cout << "Energy -1" << std::endl;
+
+            healthBar.plus(randomAnimal.effect.healthBar);
+            thirstBar.plus(randomAnimal.effect.thirstBar);
+            hungerBar.plus(randomAnimal.effect.hungerBar);
+            moraleBar.plus(randomAnimal.effect.moraleBar);
+            energyBar.plus(randomAnimal.effect.energyBar);
         }
         else
         {
