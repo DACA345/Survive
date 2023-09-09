@@ -2,7 +2,9 @@ add_subdirectory(core)
 
 # Configure Survive GUI as library
 add_library(${PROJECT_NAME}-Gui STATIC
+    "ui/widgets/game/notebook/history/journalday.cpp"
     "ui/widgets/game/notebook/actionmenu.cpp"
+    "ui/widgets/game/notebook/historywidget.cpp"
     "ui/widgets/game/notebook/notebookwidget.cpp"
     "ui/widgets/game/notebook/resultwidget.cpp"
     "ui/widgets/mainmenu/loadgamemenu.cpp"

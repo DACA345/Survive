@@ -12,7 +12,7 @@ void Journal::addDay(int day, const QString& dayEvent)
         return;
     }
 
-    entries[day] = DayEntry{ dayEvent };
+    entries[day] = DayEntry{ dayEvent, DayEntries() };
 }
 
 void Journal::addEntry(int day, ActionEntry entry)
@@ -31,7 +31,7 @@ int Journal::getDayCount() const
     return entries.size();
 }
 
-const DayEntry& Journal::getEntry(int day) const
+DayEntry Journal::getEntry(int day) const
 {
     if (!entries.contains(day))
     {

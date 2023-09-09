@@ -67,6 +67,11 @@ const Day& Engine::getDay() const
     return *day;
 }
 
+const Journal& Engine::getJournal() const
+{
+    return journal;
+}
+
 ActionResult Engine::findFood()
 {
     HANDLE_ACTION_INITIAL

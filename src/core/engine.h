@@ -91,6 +91,8 @@ class Engine
          */
         const Level& getLevel() const;
 
+        const Journal& getJournal() const;
+
         /**
          * @brief      Action for finding food.
          *

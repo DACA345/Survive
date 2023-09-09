@@ -20,7 +20,8 @@ void ResultWidget::setupUi()
     actionLabel = new ScalableLabel(QString(), this);
     actionLabel->setAlignment(Qt::AlignCenter);
 
-    resultLabel = new ScalableLabel(QString(), this);
+    resultLabel = new QLabel(QString(), this);
+    resultLabel->setFont(QFont("Comic Sans MS", 36));
     resultLabel->setAlignment(Qt::AlignCenter);
     resultLabel->setWordWrap(true);
 
@@ -29,7 +30,7 @@ void ResultWidget::setupUi()
     connect(closeButton, &QPushButton::clicked, this, &ResultWidget::close);
 
     addWidget(actionLabel, 0, 0.2, 1, 0.1);
-    addWidget(resultLabel, 0.1, 0.425, 0.8, 0.25);
+    addWidget(resultLabel, 0.1, 0.125, 0.8, 0.75);
 
     addWidget(closeButton, 0.8, 0.875, 0.15, 0.045);
 }

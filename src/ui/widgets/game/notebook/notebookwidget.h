@@ -3,6 +3,7 @@
 #include <QLabel>
 
 #include "actionmenu.h"
+#include "historywidget.h"
 #include "resultwidget.h"
 #include "../../scalablelabel.h"
 #include "../../scalablewidget.h"
@@ -13,13 +14,14 @@ class NotebookWidget : public ScalableWidget
     Q_OBJECT
 
     public:
-        explicit NotebookWidget(int day, QWidget* parent = nullptr);
+        explicit NotebookWidget(const Engine& engine, QWidget* parent = nullptr);
         ~NotebookWidget();
 
         void displayActionMenu();
+        void displayHistoryWidget();
         void displayResultsWidget(QString action, QString result);
 
-        void updateDay(int day);
+        void updateDay();
 
     signals:
         void findFood();
@@ -39,16 +41,19 @@ class NotebookWidget : public ScalableWidget
         void setupUi();
 
         void closeActionMenu();
+        void closeHistoryWidget();
         void closeResultsWidget();
 
-        int day;
+        const Engine& engine;
 
         // Ui elements
         ActionMenu* actionMenu;
+        HistoryWidget* historyWidget;
         ResultWidget* resultWidget;
 
         ScalableLabel *titleLabel;
 
+        SVGPushButton* historyButton;
         SVGPushButton* closeButton;
 
         QPixmap background;

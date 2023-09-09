@@ -62,7 +62,7 @@ void Game::setupUi()
 {
     notebookButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/icon.svg"), this);
     notebookButton->hide();
-    notebookWidget = new NotebookWidget(engine.getDay().currentDay(), this);
+    notebookWidget = new NotebookWidget(engine, this);
 
     bars = new QSvgWidget(TEXTURE_FILE("ui/bars/bars.svg"), this);
     healthBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/health.svg"), this);
@@ -121,7 +121,7 @@ void Game::updateUi()
         sleepButton->hide();
     }
 
-    notebookWidget->updateDay(engine.getDay().currentDay());
+    notebookWidget->updateDay();
 }
 
 QString Game::textureFile(const QString& name)

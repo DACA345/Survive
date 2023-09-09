@@ -16,7 +16,6 @@ struct DayEntry
     DayEntries entries;
 };
 
-
 class Journal
 {
     public:
@@ -27,7 +26,7 @@ class Journal
         void addEntry(int day, ActionEntry entry);
 
         int getDayCount() const;
-        const DayEntry& getEntry(int day) const;
+        DayEntry getEntry(int day) const;
 
     private:
         QMap<int, DayEntry> entries;

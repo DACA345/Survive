@@ -26,7 +26,7 @@ class ResultWidget : public ScalableWidget
 
         // Ui elements
         ScalableLabel* actionLabel;
-        ScalableLabel* resultLabel;
+        QLabel* resultLabel;
 
         SVGPushButton* closeButton;
 
