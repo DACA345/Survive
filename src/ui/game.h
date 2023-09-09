@@ -6,8 +6,7 @@
 
 #include "widgets/scalablewidget.h"
 #include "widgets/svgpushbutton.h"
-#include "widgets/game/notebookwidget.h"
-#include "widgets/game/resultwidget.h"
+#include "widgets/game/notebook/notebookwidget.h"
 #include "../core/engine.h"
 
 /**
@@ -26,6 +25,8 @@ class Game : public ScalableWidget
         void onFindWater();
         void onExplore();
         void onRest();
+
+        void onResultAcknowledged();
 
         void nextDay();
 
@@ -47,7 +48,6 @@ class Game : public ScalableWidget
         // Ui elements
         SVGPushButton* notebookButton;
         NotebookWidget* notebookWidget;
-        ResultWidget* resultWidget;
 
         QPushButton* sleepButton;
 

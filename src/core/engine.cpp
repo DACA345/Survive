@@ -14,7 +14,7 @@
     } \
     turns--;
 
-#define HANDLE_ACTION_FINAL(action) \
+#define HANDLE_ACTION_FINAL(actionName) \
     done: \
         if (energyBar.isEmpty() || hungerBar.isEmpty() || thirstBar.isEmpty() || healthBar.isEmpty())\
         { \
@@ -22,6 +22,8 @@
             return result; \
         } \
         result.result = ActionBaseResult::SUCCESS; \
+        result.action = actionName; \
+        journal.addEntry(day->currentDay(), { actionName, result.message }); \
         return result;
 
 #define FOUND_FOOD(type) \
@@ -42,6 +44,7 @@ Engine::Engine(const QString& levelId)
         moraleBar(BAR_MAX)
 {
     day = new Day(level.file("climate.json").toStdString());
+    journal.addDay(day->currentDay());
 }
 
 double Engine::probability()
@@ -216,9 +219,11 @@ EventResult Engine::triggerDayEvent()
     {
         affectBars(event.effect);
 
+        journal.addDay(day->currentDay(), event.event);
     }
     else
     {
+        journal.addDay(day->currentDay());
     }
 
     return { event, didTrigger };

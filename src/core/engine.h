@@ -5,6 +5,7 @@
 #include "bar.h"
 #include "day.h"
 #include "level.h"
+#include "journal.h"
 
 #define ENGINE_INITIAL_TURNS 5
 
@@ -27,6 +28,7 @@ enum class ActionBaseResult
 struct ActionResult
 {
     ActionBaseResult result;
+    QString action;
     QString message;
 };
 
@@ -210,4 +212,6 @@ class Engine
          * The level.
          */
         Level level;
+
+        Journal journal;
 };

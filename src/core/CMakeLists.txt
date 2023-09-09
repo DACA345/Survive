@@ -6,6 +6,7 @@ add_library(${PROJECT_NAME}-Core
     "engine.cpp"
     "event.cpp"
     "game.cpp"
+    "journal.cpp"
     "level.cpp"
     "plant.cpp"
     "season.cpp"

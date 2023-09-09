@@ -2,12 +2,13 @@
 
 #include <QLabel>
 
-#include "../draggablewidget.h"
-#include "../scalablewidget.h"
-#include "../svgpushbutton.h"
-#include "../../../core/engine.h"
+#include "actionmenu.h"
+#include "resultwidget.h"
+#include "../../scalablelabel.h"
+#include "../../scalablewidget.h"
+#include "../../svgpushbutton.h"
 
-class NotebookWidget : public DraggableWidget
+class NotebookWidget : public ScalableWidget
 {
     Q_OBJECT
 
@@ -15,11 +16,19 @@ class NotebookWidget : public DraggableWidget
         explicit NotebookWidget(int day, QWidget* parent = nullptr);
         ~NotebookWidget();
 
+        void displayActionMenu();
+        void displayResultsWidget(QString action, QString result);
+
+        void updateDay(int day);
+
     signals:
         void findFood();
         void findWater();
         void explore();
         void rest();
+
+        void resultAcknowledged();
+
         void close();
 
     private:
@@ -29,15 +38,17 @@ class NotebookWidget : public DraggableWidget
         void loadGraphics();
         void setupUi();
 
+        void closeActionMenu();
+        void closeResultsWidget();
+
         int day;
 
         // Ui elements
-        QLabel* titleLabel;
+        ActionMenu* actionMenu;
+        ResultWidget* resultWidget;
 
-        SVGPushButton* findFoodButton;
-        SVGPushButton* findWaterButton;
-        SVGPushButton* exploreButton;
-        SVGPushButton* restButton;
+        ScalableLabel *titleLabel;
+
         SVGPushButton* closeButton;
 
         QPixmap background;

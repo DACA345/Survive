@@ -1,4 +1,3 @@
-#include "game.h"
 #include <QPainter>
 
 #include "game.h"
@@ -32,13 +31,23 @@ ON_ACTION(FindWater, findWater)
 ON_ACTION(Explore, explore)
 ON_ACTION(Rest, rest)
 
+void Game::onResultAcknowledged()
+{
+    // Disable actions when turns used up
+    if (engine.getTurns() <= 0)
+    {
+        notebookWidget->hide();
+        sleepButton->show();
+    }
+}
+
 void Game::nextDay()
 {
     EventResult event = engine.nextDay();
     // NOTE(Callum): Temporary fix to display the event
     if (event.triggered)
     {
-        resultWidget->showResult({ ActionBaseResult::SUCCESS, event.event.event });
+        notebookWidget->displayResultsWidget("Day Event", event.event.event);
     }
 
     updateUi();
@@ -54,9 +63,6 @@ void Game::setupUi()
     notebookButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/icon.svg"), this);
     notebookButton->hide();
     notebookWidget = new NotebookWidget(engine.getDay().currentDay(), this);
-
-    resultWidget = new ResultWidget(this);
-    resultWidget->hide();
 
     bars = new QSvgWidget(TEXTURE_FILE("ui/bars/bars.svg"), this);
     healthBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/health.svg"), this);
@@ -74,13 +80,15 @@ void Game::setupUi()
     connect(notebookWidget, &NotebookWidget::findWater, this, &Game::onFindWater);
     connect(notebookWidget, &NotebookWidget::explore, this, &Game::onExplore);
     connect(notebookWidget, &NotebookWidget::rest, this, &Game::onRest);
+
+    connect(notebookWidget, &NotebookWidget::resultAcknowledged, this, &Game::onResultAcknowledged);
+
     connect(notebookWidget, &NotebookWidget::close, notebookButton, &SVGPushButton::show);
 
     connect(sleepButton, &QPushButton::clicked, this, &Game::nextDay);
 
     addWidget(notebookButton, 0.01, 0.85, 0.06, 0.14);
     addWidget(notebookWidget, 0.35, 0.125, 0.3, 0.75);
-    addWidget(resultWidget, 0.3, 0.3, 0.4, 0.4);
 
     addWidget(bars, 1 - 0.295, 0.01, 0.285, 0.2);
 
@@ -107,17 +115,13 @@ void Game::updateUi()
 {
     updateBars();
 
-    // Disable actions when turns used up
-    if (engine.getTurns() <= 0)
+    if (engine.getTurns() > 0)
     {
-        notebookWidget->hide();
-        sleepButton->show();
-    }
-    else
-    {
-        sleepButton->hide();
         notebookWidget->show();
+        sleepButton->hide();
     }
+
+    notebookWidget->updateDay(engine.getDay().currentDay());
 }
 
 QString Game::textureFile(const QString& name)
@@ -140,7 +144,7 @@ void Game::handleActionResult(ActionResult result)
     }
     else
     {
-        resultWidget->showResult(result);
+        notebookWidget->displayResultsWidget(result.action, result.message);
         updateUi();
     }
 }
@@ -154,7 +158,6 @@ Game::~Game()
 {
     delete notebookButton;
     delete notebookWidget;
-    delete resultWidget;
 
     delete bars;
     delete healthBarFill;
