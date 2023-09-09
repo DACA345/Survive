@@ -28,7 +28,7 @@ jobs:
               run: |
                     mkdir build
                     cd build
-                    cmake .. -DBUILD_TESTS=ON -DBUILD_DOCUMENTATION=OFF -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/msvc2019_64" -DCMAKE_BUILD_TYPE=Debug
+                    cmake .. -DBUILD_TESTS=ON -DBUILD_CLI=OFF -DBUILD_DOCUMENTATION=OFF -DQt6_INSTALL_PREFIX="${{ github.workspace }}/qt/6.3.2/msvc2019_64" -DCMAKE_BUILD_TYPE=Debug
                     cmake --build . --config Debug --target Survive-Coverage
 
             - name: "Upload lcov HTML artifact"
