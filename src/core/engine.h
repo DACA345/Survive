@@ -172,6 +172,8 @@ class Engine
          */
         EventResult triggerDayEvent();
 
+        void affectBars(Effect effect);
+
         /**
          * The current turns.
          */

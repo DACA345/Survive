@@ -14,7 +14,7 @@
     } \
     turns--;
 
-#define HANDLE_ACTION_FINAL \
+#define HANDLE_ACTION_FINAL(action) \
     done: \
         if (energyBar.isEmpty() || hungerBar.isEmpty() || thirstBar.isEmpty() || healthBar.isEmpty())\
         { \
@@ -23,6 +23,13 @@
         } \
         result.result = ActionBaseResult::SUCCESS; \
         return result;
+
+#define FOUND_FOOD(type) \
+    const type##Info& food = level.get##type##s().getRandom##type(); \
+    result.message = QString("You have found %1: %2 and ate it.").arg( \
+        food.category \
+    ).arg(food.name); \
+    affectBars(food.effect);
 
 QRandomGenerator Engine::random = QRandomGenerator::securelySeeded();
 
@@ -70,34 +77,15 @@ ActionResult Engine::findFood()
     {
         if (chance(config.findFoodAnimal))
         {
-            const AnimalInfo& animal = level.getAnimals().getRandomAnimal();
-            result.message = QString("You have found %1 and ate it.").arg(
-                animal.category
-            ).arg(animal.name);
-
-            healthBar.plus(animal.effect.healthBar);
-            thirstBar.plus(animal.effect.thirstBar);
-            hungerBar.plus(animal.effect.hungerBar);
-            moraleBar.plus(animal.effect.moraleBar);
-            energyBar.plus(animal.effect.energyBar);
-            goto done;
+            FOUND_FOOD(Animal)
         }
         else
         {
-            const PlantInfo& plant = level.getPlants().getRandomPlant();
-            result.message = QString("You have found %1: %2 and ate it.").arg(
-                plant.category
-            ).arg(plant.name);
-            healthBar.plus(plant.effect.healthBar);
-            thirstBar.plus(plant.effect.thirstBar);
-            hungerBar.plus(plant.effect.hungerBar);
-            moraleBar.plus(plant.effect.moraleBar);
-            energyBar.plus(plant.effect.energyBar);
-            goto done;
+            FOUND_FOOD(Plant)
         }
     }
 
-    HANDLE_ACTION_FINAL
+    HANDLE_ACTION_FINAL("Find Food")
 }
 
 ActionResult Engine::findWater()
@@ -123,7 +111,7 @@ ActionResult Engine::findWater()
         }
     }
 
-    HANDLE_ACTION_FINAL
+    HANDLE_ACTION_FINAL("Find Water")
 }
 
 ActionResult Engine::explore()
@@ -141,35 +129,13 @@ ActionResult Engine::explore()
     }
     else
     {
-        // NOTE(Callum): Code copied from findFood
-        // Difficult to turn into a function, but should be done at some point
         if (chance(config.exploreAnimal))
         {
-            const AnimalInfo& animal = level.getAnimals().getRandomAnimal();
-
-            hungerBar.plus(config.animalHunger);
-
-            result.message = QString("You have found %1 and ate it.").arg(
-                animal.category
-            ).arg(animal.name);
-
-            goto done;
+            FOUND_FOOD(Animal)
         }
         else if (chance(config.explorePlant))
         {
-            const PlantInfo& plant = level.getPlants().getRandomPlant();
-
-            hungerBar.plus(config.plantHunger);
-            result.message = QString("You have found %1: %2 and ate it.").arg(
-                plant.category
-            ).arg(plant.name);
-
-            if (!plant.edible)
-            {
-                healthBar.minus(config.plantPoison);
-            }
-
-            goto done;
+            FOUND_FOOD(Plant)
         }
         else
         {
@@ -180,7 +146,7 @@ ActionResult Engine::explore()
         }
     }
 
-    HANDLE_ACTION_FINAL
+    HANDLE_ACTION_FINAL("Explore")
 }
 
 ActionResult Engine::rest()
@@ -198,7 +164,7 @@ ActionResult Engine::rest()
         result.message = "You rested.";
     }
 
-    HANDLE_ACTION_FINAL
+    HANDLE_ACTION_FINAL("Rest")
 }
 
 EventResult Engine::nextDay()
@@ -248,14 +214,23 @@ EventResult Engine::triggerDayEvent()
 
     if (didTrigger)
     {
-        healthBar.plus(event.effect.healthBar);
-        thirstBar.plus(event.effect.thirstBar);
-        hungerBar.plus(event.effect.hungerBar);
-        energyBar.plus(event.effect.energyBar);
-        moraleBar.plus(event.effect.moraleBar);
+        affectBars(event.effect);
+
+    }
+    else
+    {
     }
 
     return { event, didTrigger };
+}
+
+void Engine::affectBars(Effect effect)
+{
+    healthBar.plus(effect.healthBar);
+    thirstBar.plus(effect.thirstBar);
+    hungerBar.plus(effect.hungerBar);
+    moraleBar.plus(effect.moraleBar);
+    energyBar.plus(effect.energyBar);
 }
 
 Engine::~Engine()
