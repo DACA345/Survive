@@ -139,7 +139,6 @@ void Game::handleActionResult(ActionResult result)
     }
     else if (result.result == ActionBaseResult::GAME_OVER)
     {
-        // TODO(Callum): Display over and return to main menu
         endGame();
     }
     else
@@ -151,11 +150,21 @@ void Game::handleActionResult(ActionResult result)
 
 void Game::endGame()
 {
+    gameOver = new GameOver(this);
+    gameOver->show();
 
+    connect(gameOver, &GameOver::close, this, &Game::returnToMenu);
+
+    addWidget(gameOver, 0, 0, 1, 1);
 }
 
 Game::~Game()
 {
+    if (gameOver)
+    {
+        delete gameOver;
+    }
+
     delete notebookButton;
     delete notebookWidget;
 

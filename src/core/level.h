@@ -46,7 +46,10 @@ struct LevelConfig
     int restThirstHeal = 60;
 
     int restEnergy = 20;
-    int restHealth = 30;
+    int restWellHeal = 30;
+
+    int restHunger = 30;
+    int restThirst = 30;
 
     // Explore
     double exploreNothing = 0.1;

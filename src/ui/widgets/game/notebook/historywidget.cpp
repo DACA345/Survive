@@ -26,8 +26,6 @@ void HistoryWidget::showDay(int day)
 
 void HistoryWidget::setupUi()
 {
-    journalDay = new JournalDay(journal.getEntry(currentDay), this);
-
     titleLabel = new ScalableLabel("Journal", this);
     titleLabel->setAlignment(Qt::AlignCenter);
 
@@ -55,8 +53,6 @@ void HistoryWidget::setupUi()
 
     connect(closeButton, &QPushButton::clicked, this, &HistoryWidget::close);
 
-    addWidget(journalDay, 0, 0.25, 1, 0.75);
-
     addWidget(titleLabel, 0, 0.1, 1, 0.1);
 
     addWidget(dayLabel, 0.375, 0.175, 0.25, 0.1);
@@ -69,7 +65,11 @@ void HistoryWidget::setupUi()
 
 HistoryWidget::~HistoryWidget()
 {
-    delete journalDay;
+    if (journalDay)
+    {
+        delete journalDay;
+    }
+
     delete titleLabel;
     delete dayLabel;
     delete prevButton;

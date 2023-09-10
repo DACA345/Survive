@@ -6,6 +6,7 @@
 
 #include "widgets/scalablewidget.h"
 #include "widgets/svgpushbutton.h"
+#include "widgets/game/gameover.h"
 #include "widgets/game/notebook/notebookwidget.h"
 #include "../core/engine.h"
 
@@ -19,6 +20,9 @@ class Game : public ScalableWidget
     public:
         explicit Game(const QString& levelId, QWidget *parent = nullptr);
         ~Game();
+
+    signals:
+        void returnToMenu();
 
     private slots:
         void onFindFood();
@@ -46,8 +50,10 @@ class Game : public ScalableWidget
         Engine engine;
 
         // Ui elements
-        SVGPushButton* notebookButton;
         NotebookWidget* notebookWidget;
+        GameOver* gameOver = nullptr;
+
+        SVGPushButton* notebookButton;
 
         QPushButton* sleepButton;
 

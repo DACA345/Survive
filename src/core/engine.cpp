@@ -162,15 +162,19 @@ ActionResult Engine::rest()
     HANDLE_ACTION_INITIAL
 
     energyBar.plus(config.restEnergy);
+
     if (hungerBar.getValue() > config.restHungerHeal && thirstBar.getValue() > config.restThirstHeal)
     {
         result.message = "You awake feeling healthier.";
-        healthBar.plus(config.restHealth);
+        healthBar.plus(config.restWellHeal);
     }
     else
     {
         result.message = "You rested.";
     }
+
+    hungerBar.minus(config.restHunger);
+    thirstBar.minus(config.restThirst);
 
     HANDLE_ACTION_FINAL("Rest")
 }

@@ -28,7 +28,7 @@ class HistoryWidget : public ScalableWidget
 
         // Ui elements
 
-        JournalDay* journalDay;
+        JournalDay* journalDay = nullptr;
 
         ScalableLabel* titleLabel;
         ScalableLabel* dayLabel;

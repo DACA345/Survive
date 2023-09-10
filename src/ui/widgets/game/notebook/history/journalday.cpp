@@ -22,7 +22,7 @@ void JournalDay::setupUi(const DayEntry& day)
 
     for (const ActionEntry& action : day.entries)
     {
-        ScalableLabel* actionLabel = new ScalableLabel(action.action, this);
+        ScalableLabel* actionLabel = new ScalableLabel(QString("<b>%1</b>").arg(action.action), this);
         actionLabel->setAlignment(Qt::AlignCenter);
         dayActions.append(actionLabel);
 

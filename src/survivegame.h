@@ -32,6 +32,8 @@ class SurviveGame : public QMainWindow
          */
         void onNewGame(const QString& id);
 
+        void onReturnToMenu();
+
     private:
         /**
          * @brief      Resize event handler.
