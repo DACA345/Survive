@@ -3,24 +3,26 @@
 #include "resultwidget.h"
 #include "../../../../config/files.h"
 
-ResultWidget::ResultWidget(QWidget *parent)
-    : ScalableWidget(parent)
+ResultWidget::ResultWidget(const QString& action, const QString& result, QWidget *parent)
+    : ScalableWidget(parent), action(action), result(result)
 {
     setupUi();
 }
 
 void ResultWidget::setResult(const QString& action, const QString& result)
 {
+    this->action = action;
+    this->result = result;
     actionLabel->setText(action);
     resultLabel->setText(result);
 }
 
 void ResultWidget::setupUi()
 {
-    actionLabel = new ScalableLabel(QString(), this);
+    actionLabel = new ScalableLabel(action, this);
     actionLabel->setAlignment(Qt::AlignCenter);
 
-    resultLabel = new QLabel(QString(), this);
+    resultLabel = new QLabel(result, this);
     resultLabel->setFont(QFont("Comic Sans MS", 36));
     resultLabel->setAlignment(Qt::AlignCenter);
     resultLabel->setWordWrap(true);

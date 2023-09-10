@@ -13,7 +13,7 @@ class ResultWidget : public ScalableWidget
     Q_OBJECT
 
     public:
-        explicit ResultWidget(QWidget *parent = nullptr);
+        explicit ResultWidget(const QString& action, const QString& result, QWidget *parent = nullptr);
         ~ResultWidget();
 
         void setResult(const QString& action, const QString& result);
@@ -23,6 +23,9 @@ class ResultWidget : public ScalableWidget
 
     private:
         void setupUi();
+
+        QString action;
+        QString result;
 
         // Ui elements
         ScalableLabel* actionLabel;

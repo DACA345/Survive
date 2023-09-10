@@ -9,18 +9,28 @@ NotebookWidget::NotebookWidget(const Engine& engine, QWidget* parent)
     loadStylesheet();
     loadGraphics();
     setupUi();
-
-    displayActionMenu();
 }
 
 void NotebookWidget::displayActionMenu()
 {
+    actionMenu = new ActionMenu(this);
+
+    connect(actionMenu, &ActionMenu::findFood, this, &NotebookWidget::findFood);
+    connect(actionMenu, &ActionMenu::findWater, this, &NotebookWidget::findWater);
+    connect(actionMenu, &ActionMenu::explore, this, &NotebookWidget::explore);
+    connect(actionMenu, &ActionMenu::rest, this, &NotebookWidget::rest);
+
+    addWidget(actionMenu, 0, 0, 1, 1);
+
     actionMenu->show();
+
+    raiseButtons();
 }
 
 void NotebookWidget::closeActionMenu()
 {
-    actionMenu->hide();
+    removeWidget(actionMenu);
+    actionMenu->deleteLater();
 }
 
 void NotebookWidget::displayHistoryWidget()
@@ -30,13 +40,22 @@ void NotebookWidget::displayHistoryWidget()
 
     closeActionMenu();
 
-    historyWidget->showDay(engine.getDay().currentDay());
+    historyWidget = new HistoryWidget(engine.getJournal(), engine.getDay().currentDay(), this);
+
+    connect(historyWidget, &HistoryWidget::close, this, &NotebookWidget::closeHistoryWidget);
+
+    addWidget(historyWidget, 0, 0, 1, 1);
+
     historyWidget->show();
+
+    raiseButtons();
 }
 
 void NotebookWidget::closeHistoryWidget()
 {
-    historyWidget->hide();
+
+    removeWidget(historyWidget);
+    historyWidget->deleteLater();
 
     titleLabel->show();
     historyButton->show();
@@ -50,13 +69,22 @@ void NotebookWidget::displayResultsWidget(QString action, QString result)
 
     closeActionMenu();
 
-    resultWidget->setResult(action, result);
+    resultWidget = new ResultWidget(action, result, this);
+
+    connect(resultWidget, &ResultWidget::close, this, &NotebookWidget::closeResultsWidget);
+
+    addWidget(resultWidget, 0, 0, 1, 1);
+
     resultWidget->show();
+
+    raiseButtons();
 }
 
 void NotebookWidget::closeResultsWidget()
 {
-    resultWidget->hide();
+    removeWidget(resultWidget);
+    resultWidget->deleteLater();
+
     emit resultAcknowledged();
 
     displayActionMenu();
@@ -95,25 +123,8 @@ void NotebookWidget::setupUi()
     titleLabel = new ScalableLabel(QString("Day %1").arg(engine.getDay().currentDay()), this);
     titleLabel->setAlignment(Qt::AlignCenter);
 
-    actionMenu = new ActionMenu(this);
-
-    historyWidget = new HistoryWidget(engine.getJournal(), engine.getDay().currentDay(), this);
-    historyWidget->hide();
-
-    resultWidget = new ResultWidget(this);
-    resultWidget->hide();
-
     historyButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/text/history.svg"), this);
     closeButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/text/return.svg"), this);
-
-    connect(actionMenu, &ActionMenu::findFood, this, &NotebookWidget::findFood);
-    connect(actionMenu, &ActionMenu::findWater, this, &NotebookWidget::findWater);
-    connect(actionMenu, &ActionMenu::explore, this, &NotebookWidget::explore);
-    connect(actionMenu, &ActionMenu::rest, this, &NotebookWidget::rest);
-
-    connect(historyWidget, &HistoryWidget::close, this, &NotebookWidget::closeHistoryWidget);
-
-    connect(resultWidget, &ResultWidget::close, this, &NotebookWidget::closeResultsWidget);
 
     connect(historyButton, &QPushButton::clicked, this, &NotebookWidget::displayHistoryWidget);
 
@@ -122,19 +133,19 @@ void NotebookWidget::setupUi()
 
     addWidget(titleLabel, 0, 0.1, 1, 0.075);
 
-    addWidget(actionMenu, 0, 0, 1, 1);
-    addWidget(historyWidget, 0, 0, 1, 1);
-    addWidget(resultWidget, 0, 0, 1, 1);
-
     addWidget(historyButton, 0.875, 0.1, 0.1, 0.065);
     addWidget(closeButton, 0.05, 0.1, 0.1, 0.065);
+
+    displayActionMenu();
+}
+
+void NotebookWidget::raiseButtons()
+{
+    historyButton->raise();
+    closeButton->raise();
 }
 
 NotebookWidget::~NotebookWidget()
 {
-    delete actionMenu;
-    delete resultWidget;
 
-    delete titleLabel;
-    delete closeButton;
 }

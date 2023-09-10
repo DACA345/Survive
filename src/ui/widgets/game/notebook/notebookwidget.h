@@ -39,6 +39,7 @@ class NotebookWidget : public ScalableWidget
         void loadStylesheet();
         void loadGraphics();
         void setupUi();
+        void raiseButtons();
 
         void closeActionMenu();
         void closeHistoryWidget();
@@ -47,7 +48,7 @@ class NotebookWidget : public ScalableWidget
         const Engine& engine;
 
         // Ui elements
-        ActionMenu* actionMenu;
+        ActionMenu* actionMenu = nullptr;
         HistoryWidget* historyWidget;
         ResultWidget* resultWidget;
 

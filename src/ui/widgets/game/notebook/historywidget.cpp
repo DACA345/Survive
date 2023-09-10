@@ -9,8 +9,11 @@ HistoryWidget::HistoryWidget(const Journal& journal, int currentDay, QWidget *pa
 
 void HistoryWidget::showDay(int day)
 {
-    removeWidget(journalDay);
-    delete journalDay;
+    if (journalDay != nullptr)
+    {
+        removeWidget(journalDay);
+        delete journalDay;
+    }
 
     dayLabel->setText(QString("Day %1").arg(day));
 
@@ -61,18 +64,11 @@ void HistoryWidget::setupUi()
     addWidget(nextButton, 0.625, 0.2, 0.1, 0.05);
 
     addWidget(closeButton, 0.8, 0.875, 0.15, 0.045);
+
+    showDay(currentDay);
 }
 
 HistoryWidget::~HistoryWidget()
 {
-    if (journalDay)
-    {
-        delete journalDay;
-    }
 
-    delete titleLabel;
-    delete dayLabel;
-    delete prevButton;
-    delete nextButton;
-    delete closeButton;
 }
