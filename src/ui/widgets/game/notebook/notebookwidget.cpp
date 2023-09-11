@@ -25,16 +25,16 @@ void NotebookWidget::displayPrevious()
     switch (info.type)
     {
         case WidgetType::ACTION_MENU:
-            displayActionMenu();
+            displayActionMenu(false);
             break;
         case WidgetType::HISTORY_WIDGET:
-            displayHistoryWidget(info.day);
+            displayHistoryWidget(info.day, false);
             break;
         case WidgetType::RESULTS_WIDGET:
-            displayResultsWidget(info.action, info.result);
+            displayResultsWidget(info.action, info.result, false);
             break;
         case WidgetType::SLEEP_WIDGET:
-            displaySleepWidget();
+            displaySleepWidget(false);
             break;
     }
 }
@@ -66,9 +66,9 @@ void NotebookWidget::closeCurrent(bool hide)
     }
 }
 
-void NotebookWidget::displayActionMenu()
+void NotebookWidget::displayActionMenu(bool hide)
 {
-    closeCurrent();
+    closeCurrent(hide);
 
     actionMenu = new ActionMenu(this);
 
@@ -103,21 +103,16 @@ void NotebookWidget::closeActionMenu(bool hide)
     HIDE_STACK_WIDGET;
 }
 
-void NotebookWidget::displayHistoryWidget(int day)
+void NotebookWidget::displayHistoryWidget(int day, bool hide)
 {
-    if (IS_TOP_STACK(HISTORY_WIDGET))
-    {
-        return;
-    }
+    titleLabel->hide();
+
+    closeCurrent(hide);
 
     if (day <= 0)
     {
         day = engine.getDay().currentDay();
     }
-
-    titleLabel->hide();
-
-    closeCurrent(true);
 
     historyWidget = new HistoryWidget(engine.getJournal(), day, this);
 
@@ -129,7 +124,14 @@ void NotebookWidget::displayHistoryWidget(int day)
 
     raiseButtons();
 
-    widgetStack.append({ WidgetType::HISTORY_WIDGET, day });
+    if (IS_TOP_STACK(HISTORY_WIDGET))
+    {
+        return;
+    }
+    else
+    {
+        widgetStack.append({ WidgetType::HISTORY_WIDGET, day });
+    }
 }
 
 void NotebookWidget::closeHistoryWidget(bool hide)
@@ -147,17 +149,9 @@ void NotebookWidget::closeHistoryWidget(bool hide)
     HIDE_STACK_WIDGET;
 }
 
-void NotebookWidget::displayResultsWidget(QString action, QString result)
+void NotebookWidget::displayResultsWidget(QString action, QString result, bool hide)
 {
-    const WidgetInfo& info = widgetStack.last();
-    if (IS_TOP_STACK(RESULTS_WIDGET) && info.action == action && info.result == result)
-    {
-        return;
-    }
-
-    historyButton->hide();
-
-    closeCurrent(true);
+    closeCurrent(hide);
 
     resultWidget = new ResultWidget(action, result, this);
 
@@ -170,7 +164,16 @@ void NotebookWidget::displayResultsWidget(QString action, QString result)
 
     raiseButtons();
 
-    widgetStack.append({ WidgetType::RESULTS_WIDGET, -1, action, result });
+    const WidgetInfo& info = widgetStack.last();
+    if (IS_TOP_STACK(RESULTS_WIDGET) && info.action == action && info.result == result)
+    {
+        return;
+    }
+    else
+    {
+        widgetStack.append({ WidgetType::RESULTS_WIDGET, -1, action, result });
+    }
+
 }
 
 void NotebookWidget::closeResultsWidget(bool hide)
@@ -183,24 +186,15 @@ void NotebookWidget::closeResultsWidget(bool hide)
     removeWidget(resultWidget);
     resultWidget->deleteLater();
 
-    historyButton->show();
-
     HIDE_STACK_WIDGET;
 }
 
-void NotebookWidget::displaySleepWidget()
+void NotebookWidget::displaySleepWidget(bool hide)
 {
-    if (IS_TOP_STACK(SLEEP_WIDGET))
-    {
-        return;
-    }
-
-    historyButton->hide();
-
-    closeCurrent(true);
+    closeCurrent(hide);
 
     sleepWidget = new SleepWidget(this);
-
+    
     connect(sleepWidget, &SleepWidget::close, this, &NotebookWidget::displayPrevious);
     connect(sleepWidget, &SleepWidget::close, this, &NotebookWidget::sleep);
 
@@ -210,7 +204,15 @@ void NotebookWidget::displaySleepWidget()
 
     raiseButtons();
 
-    widgetStack.append({ WidgetType::SLEEP_WIDGET });
+    if (IS_TOP_STACK(SLEEP_WIDGET))
+    {
+        return;
+    }
+    else
+    {
+        widgetStack.append({ WidgetType::SLEEP_WIDGET });
+    }
+
 }
 
 void NotebookWidget::closeSleepWidget(bool hide)
@@ -222,8 +224,6 @@ void NotebookWidget::closeSleepWidget(bool hide)
 
     removeWidget(sleepWidget);
     sleepWidget->deleteLater();
-
-    historyButton->show();
 
     HIDE_STACK_WIDGET(hide);
 }
@@ -262,7 +262,11 @@ void NotebookWidget::setupUi()
     historyButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/text/history.svg"), this);
     closeButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/text/return.svg"), this);
 
-    connect(historyButton, &QPushButton::clicked, this, &NotebookWidget::displayHistoryWidget);
+    connect(historyButton, &QPushButton::clicked, this, [this]()
+        {
+            displayHistoryWidget();
+        }
+    );
 
     connect(closeButton, &QPushButton::clicked, this, &NotebookWidget::hide);
     connect(closeButton, &QPushButton::clicked, this, &NotebookWidget::close);

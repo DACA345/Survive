@@ -18,10 +18,10 @@ class NotebookWidget : public ScalableWidget
         explicit NotebookWidget(const Engine& engine, QWidget* parent = nullptr);
         ~NotebookWidget();
 
-        void displayActionMenu();
-        void displayHistoryWidget(int day = -1);
-        void displayResultsWidget(QString action, QString result);
-        void displaySleepWidget();
+        void displayActionMenu(bool hide = false);
+        void displayHistoryWidget(int day = -1, bool hide = true);
+        void displayResultsWidget(QString action, QString result, bool hide = true);
+        void displaySleepWidget(bool hide = true);
 
         void updateDay();
 
