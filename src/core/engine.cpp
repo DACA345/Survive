@@ -76,6 +76,7 @@ ActionResult Engine::findFood()
 {
     HANDLE_ACTION_INITIAL
 
+    energyBar.minus(config.findFoodEnergy);
     if (chance(config.findFoodNothing))
     {
         result.message = "You found nothing.";
@@ -100,6 +101,7 @@ ActionResult Engine::findWater()
 {
     HANDLE_ACTION_INITIAL
 
+    energyBar.minus(config.findWaterEnergy);
     if (chance(config.findWaterNothing))
     {
         result.message = "You found nothing.";

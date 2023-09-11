@@ -30,6 +30,8 @@ struct LevelConfig
     double findFoodNothing = 0.2;
     double findFoodAnimal = 0.2;
 
+    int findFoodEnergy = 30;
+
     int animalHunger = 30;
     int plantHunger = 10;
     int plantPoison = 30;
@@ -40,6 +42,8 @@ struct LevelConfig
     
     int waterThirst = 20;
     int waterPoison = 20;
+
+    int findWaterEnergy = 30;
 
     // Rest
     int restHungerHeal = 60;
@@ -60,7 +64,7 @@ struct LevelConfig
     int exploreThirst = 10;
 
     int exploreNothingEnergy = 10;
-    int exploreEnergy = 30;
+    int exploreEnergy = 20;
 
     // Events
     double seasonEvent = 0.5;
