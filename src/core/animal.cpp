@@ -7,6 +7,18 @@
 
 #include "animal.h"
 
+#define STORE_ANIMAL_DATA(categoryName) \
+    AnimalInfo animalData; \
+    animalData.name = name; \
+    animalData.category = #categoryName; \
+    animalData.edible = edible; \
+    animalData.effect.healthBar = mammalEffect["healthBar"].toInt(); \
+    animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt(); \
+    animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt(); \
+    animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt(); \
+    animalData.effect.energyBar = mammalEffect["energyBar"].toInt(); \
+    animals[#categoryName].append(animalData);
+
 // Constructor to initialize animals from JSON file
 Animal::Animal(const QString& filePath) 
 {
@@ -44,18 +56,7 @@ void Animal::loadAnimalsFromJson(const QString& filePath)
         bool edible = bird["edible"].toBool();
 
         QJsonObject mammalEffect = bird["effect"].toObject();
-
-        AnimalInfo animalData;
-        animalData.name = name;
-        animalData.category = "birds";
-        animalData.edible = edible;
-        animalData.effect.healthBar = mammalEffect["healthBar"].toInt();
-        animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt();
-        animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt();
-        animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt();
-        animalData.effect.energyBar = mammalEffect["energyBar"].toInt();
-
-        animals["birds"].append(animalData);
+        STORE_ANIMAL_DATA(birds);
     }
 
     // Process mammals
@@ -68,18 +69,8 @@ void Animal::loadAnimalsFromJson(const QString& filePath)
         bool edible = mammal["edible"].toBool();
 
         QJsonObject mammalEffect = mammal["effect"].toObject();
-
-        AnimalInfo animalData;
-        animalData.name = name;
-        animalData.category = "mammals";
-        animalData.edible = edible;
-        animalData.effect.healthBar = mammalEffect["healthBar"].toInt();
-        animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt();
-        animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt();
-        animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt();
-        animalData.effect.energyBar = mammalEffect["energyBar"].toInt();
-
-        animals["mammals"].append(animalData);
+        
+        STORE_ANIMAL_DATA("mammals");
     }
 
     // Process fish
@@ -93,17 +84,7 @@ void Animal::loadAnimalsFromJson(const QString& filePath)
 
         QJsonObject mammalEffect = fish["effect"].toObject();
 
-        AnimalInfo animalData;
-        animalData.name = name;
-        animalData.category = "fish";
-        animalData.edible = edible;
-        animalData.effect.healthBar = mammalEffect["healthBar"].toInt();
-        animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt();
-        animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt();
-        animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt();
-        animalData.effect.energyBar = mammalEffect["energyBar"].toInt();
-
-        animals["fish"].append(animalData);
+        STORE_ANIMAL_DATA("fish");
     }
 
     // Process reptiles
@@ -117,17 +98,7 @@ void Animal::loadAnimalsFromJson(const QString& filePath)
 
         QJsonObject mammalEffect = reptile["effect"].toObject();
 
-        AnimalInfo animalData;
-        animalData.name = name;
-        animalData.category = "reptiles";
-        animalData.edible = edible;
-        animalData.effect.healthBar = mammalEffect["healthBar"].toInt();
-        animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt();
-        animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt();
-        animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt();
-        animalData.effect.energyBar = mammalEffect["energyBar"].toInt();
-
-        animals["reptiles"].append(animalData);
+        STORE_ANIMAL_DATA("reptiles");
     }
 
     // Process amphibians
@@ -141,17 +112,7 @@ void Animal::loadAnimalsFromJson(const QString& filePath)
 
         QJsonObject mammalEffect = amphibian["effect"].toObject();
 
-        AnimalInfo animalData;
-        animalData.name = name;
-        animalData.category = "amphibians";
-        animalData.edible = edible;
-        animalData.effect.healthBar = mammalEffect["healthBar"].toInt();
-        animalData.effect.thirstBar = mammalEffect["thirstBar"].toInt();
-        animalData.effect.hungerBar = mammalEffect["hungerBar"].toInt();
-        animalData.effect.moraleBar = mammalEffect["moraleBar"].toInt();
-        animalData.effect.energyBar = mammalEffect["energyBar"].toInt();
-
-        animals["amphibians"].append(animalData);
+        STORE_ANIMAL_DATA("amphibians");
     }
 }
 

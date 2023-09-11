@@ -8,6 +8,18 @@
 
 #include "plant.h"
 
+#define STORE_PLANT_DATA(categoryName) \
+    PlantInfo plantData; \
+    plantData.name = name; \
+    plantData.category = #categoryName; \
+    plantData.edible = edible; \
+    plantData.effect.healthBar = plantEffect["healthBar"].toInt(); \
+    plantData.effect.thirstBar = plantEffect["thirstBar"].toInt(); \
+    plantData.effect.hungerBar = plantEffect["hungerBar"].toInt(); \
+    plantData.effect.moraleBar = plantEffect["moraleBar"].toInt(); \
+    plantData.effect.energyBar = plantEffect["energyBar"].toInt(); \
+    plants[#categoryName].append(plantData);
+
 // Constructor to initialize animals from JSON file
 Plant::Plant(const QString& filePath)
 {
@@ -41,19 +53,9 @@ void Plant::loadPlantsFromJson(const QString& filePath)
         QJsonObject fungi = fungiValue.toObject();
         QString name = fungi["name"].toString();
         bool edible = fungi["edible"].toBool();
-        QJsonObject fungiEffect = fungi["effect"].toObject();
+        QJsonObject plantEffect = fungi["effect"].toObject();
 
-        PlantInfo plantData;
-        plantData.name = name;
-        plantData.category = "fungi";
-        plantData.edible = edible;
-        plantData.effect.healthBar = fungiEffect["healthBar"].toInt();
-        plantData.effect.thirstBar = fungiEffect["thirstBar"].toInt();
-        plantData.effect.hungerBar = fungiEffect["hungerBar"].toInt();
-        plantData.effect.moraleBar = fungiEffect["moraleBar"].toInt();
-        plantData.effect.energyBar = fungiEffect["energyBar"].toInt();
-
-        plants["fungi"].append(plantData);
+        STORE_PLANT_DATA(fungi);
     }
 
 
@@ -66,17 +68,7 @@ void Plant::loadPlantsFromJson(const QString& filePath)
         bool edible = plant["edible"].toBool();
         QJsonObject plantEffect = plant["effect"].toObject(); 
 
-        PlantInfo plantData;
-        plantData.name = name;
-        plantData.category = "plant";
-        plantData.edible = edible;
-        plantData.effect.healthBar = plantEffect["healthBar"].toInt();
-        plantData.effect.thirstBar = plantEffect["thirstBar"].toInt();
-        plantData.effect.hungerBar = plantEffect["hungerBar"].toInt();
-        plantData.effect.moraleBar = plantEffect["moraleBar"].toInt();
-        plantData.effect.energyBar = plantEffect["energyBar"].toInt();
-
-        plants["plant"].append(plantData);
+        STORE_PLANT_DATA(plant);
     }
 }
 
