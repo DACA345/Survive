@@ -5,6 +5,9 @@ TEST(DayTest, GetRandomTemperatureValueTest)
 {
     Day testDay("data/levels/mtaspiring/climate.json");
 
+    // Print data for all months
+    testDay.printClimateData();
+
     // Print climate data for each month
     std::cout << "Climate Data for JAN:\n";
     testDay.printMonthClimate("jan");
