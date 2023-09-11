@@ -52,7 +52,6 @@ Engine::Engine(const QString& levelId)
 Engine::Engine(const Engine& engine)
     : level(level.getInfo().id)
 {
-    level = engine.level;
     day = new Day(*engine.day);
     journal = engine.journal;
     energyBar = engine.energyBar;

@@ -11,14 +11,14 @@
 #define STORE_PLANT_DATA(categoryName) \
     PlantInfo plantData; \
     plantData.name = name; \
-    plantData.category = #categoryName; \
+    plantData.category = categoryName; \
     plantData.edible = edible; \
     plantData.effect.healthBar = plantEffect["healthBar"].toInt(); \
     plantData.effect.thirstBar = plantEffect["thirstBar"].toInt(); \
     plantData.effect.hungerBar = plantEffect["hungerBar"].toInt(); \
     plantData.effect.moraleBar = plantEffect["moraleBar"].toInt(); \
     plantData.effect.energyBar = plantEffect["energyBar"].toInt(); \
-    plants[#categoryName].append(plantData);
+    plants[categoryName].append(plantData);
 
 // Constructor to initialize animals from JSON file
 Plant::Plant(const QString& filePath)
@@ -55,7 +55,7 @@ void Plant::loadPlantsFromJson(const QString& filePath)
         bool edible = fungi["edible"].toBool();
         QJsonObject plantEffect = fungi["effect"].toObject();
 
-        STORE_PLANT_DATA(fungi);
+        STORE_PLANT_DATA("fungi");
     }
 
 
@@ -68,7 +68,7 @@ void Plant::loadPlantsFromJson(const QString& filePath)
         bool edible = plant["edible"].toBool();
         QJsonObject plantEffect = plant["effect"].toObject(); 
 
-        STORE_PLANT_DATA(plant);
+        STORE_PLANT_DATA("plant");
     }
 }
 
