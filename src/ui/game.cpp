@@ -36,8 +36,7 @@ void Game::onResultAcknowledged()
     // Disable actions when turns used up
     if (engine.getTurns() <= 0)
     {
-        notebookWidget->hide();
-        sleepButton->show();
+        notebookWidget->displaySleepWidget();
     }
 }
 
@@ -70,9 +69,6 @@ void Game::setupUi()
     hungerBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/hunger.svg"), this);
     energyBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/energy.svg"), this);
 
-    sleepButton = new QPushButton("Sleep", this);
-    sleepButton->hide();
-
     connect(notebookButton, &QPushButton::clicked, notebookWidget, &NotebookWidget::show);
     connect(notebookButton, &QPushButton::clicked, notebookButton, &SVGPushButton::hide);
 
@@ -80,19 +76,16 @@ void Game::setupUi()
     connect(notebookWidget, &NotebookWidget::findWater, this, &Game::onFindWater);
     connect(notebookWidget, &NotebookWidget::explore, this, &Game::onExplore);
     connect(notebookWidget, &NotebookWidget::rest, this, &Game::onRest);
+    connect(notebookWidget, &NotebookWidget::sleep, this, &Game::nextDay);
 
     connect(notebookWidget, &NotebookWidget::resultAcknowledged, this, &Game::onResultAcknowledged);
 
     connect(notebookWidget, &NotebookWidget::close, notebookButton, &SVGPushButton::show);
 
-    connect(sleepButton, &QPushButton::clicked, this, &Game::nextDay);
-
     addWidget(notebookButton, 0.01, 0.85, 0.06, 0.14);
     addWidget(notebookWidget, 0.35, 0.125, 0.3, 0.75);
 
     addWidget(bars, 1 - 0.295, 0.01, 0.285, 0.2);
-
-    addWidget(sleepButton, 0.45, 0.85, 0.1, 0.1);
 }
 
 void Game::updateBars()
@@ -114,12 +107,6 @@ void Game::updateBars()
 void Game::updateUi()
 {
     updateBars();
-
-    if (engine.getTurns() > 0)
-    {
-        notebookWidget->show();
-        sleepButton->hide();
-    }
 
     notebookWidget->updateDay();
 }

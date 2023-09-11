@@ -55,8 +55,6 @@ class Game : public ScalableWidget
 
         SVGPushButton* notebookButton;
 
-        QPushButton* sleepButton;
-
         QSvgWidget* bars;
         QSvgWidget* healthBarFill;
         QSvgWidget* thirstBarFill;
