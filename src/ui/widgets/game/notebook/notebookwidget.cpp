@@ -41,9 +41,6 @@ void NotebookWidget::displayPrevious()
 
 void NotebookWidget::closeCurrent(bool hide)
 {
-    // TODO(Callum): Close current
-    // Then fix all destructors
-
     if (widgetStack.isEmpty())
     {
         return;

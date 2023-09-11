@@ -40,15 +40,5 @@ void JournalDay::setupUi(const DayEntry& day)
 
 JournalDay::~JournalDay()
 {
-    delete dayEventLabel;
 
-    for (auto& action : dayActions)
-    {
-        delete action;
-    }
-
-    for (auto& result : dayResults)
-    {
-        delete result;
-    }
 }

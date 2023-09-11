@@ -39,7 +39,5 @@ void ResultWidget::setupUi()
 
 ResultWidget::~ResultWidget()
 {
-    delete actionLabel;
-    delete resultLabel;
-    delete closeButton;
+
 }

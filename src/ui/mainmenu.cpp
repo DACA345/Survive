@@ -100,5 +100,5 @@ void MainMenu::closeSettingsMenu()
 
 MainMenu::~MainMenu()
 {
-    delete menu;
+
 }

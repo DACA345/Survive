@@ -32,8 +32,5 @@ void ActionMenu::setupUi()
 
 ActionMenu::~ActionMenu()
 {
-    delete findFoodButton;
-    delete findWaterButton;
-    delete exploreButton;
-    delete restButton;
+
 }

@@ -147,18 +147,6 @@ void Game::endGame()
 
 Game::~Game()
 {
-    if (gameOver)
-    {
-        delete gameOver;
-    }
 
-    delete notebookButton;
-    delete notebookWidget;
-
-    delete bars;
-    delete healthBarFill;
-    delete thirstBarFill;
-    delete hungerBarFill;
-    delete energyBarFill;
 }
 

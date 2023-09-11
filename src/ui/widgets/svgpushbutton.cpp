@@ -62,9 +62,5 @@ void SVGPushButton::leaveEvent(QEvent* event)
 
 SVGPushButton::~SVGPushButton()
 {
-    opacityAnimation->deleteLater();
 
-    delete renderer;
-
-    delete animationGroup;
 }

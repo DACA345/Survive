@@ -51,7 +51,7 @@ class Game : public ScalableWidget
 
         // Ui elements
         NotebookWidget* notebookWidget;
-        GameOver* gameOver = nullptr;
+        GameOver* gameOver;
 
         SVGPushButton* notebookButton;
 
