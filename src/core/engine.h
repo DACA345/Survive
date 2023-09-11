@@ -16,7 +16,6 @@
 enum class ActionBaseResult
 {
     NO_TURNS,
-    USED_TURNS,
     GAME_OVER,
     SUCCESS
 };
@@ -55,6 +54,13 @@ class Engine
          * @param[in]  levelId  The level identifier
          */
         Engine(const QString& levelId);
+
+        /**
+        * @brief      Construct a new engine instance from an existing engine.
+        *         
+        * @param[in]  engine  The engine         
+        */
+        Engine(const Engine& engine);
 
         /**
          * @brief      Destroys the object.

@@ -1,4 +1,5 @@
 #include "engine.h"
+#include "engine.h"
 #include "../config/files.h"
 
 #define HANDLE_ACTION_INITIAL \
@@ -9,9 +10,6 @@
         result.result = ActionBaseResult::NO_TURNS; \
         return result; \
     } \
-    else if (turns == 1) {\
-        result.result = ActionBaseResult::USED_TURNS; \
-    } \
     turns--;
 
 #define HANDLE_ACTION_FINAL(actionName) \
@@ -21,7 +19,10 @@
             result.result = ActionBaseResult::GAME_OVER; \
             return result; \
         } \
-        result.result = ActionBaseResult::SUCCESS; \
+        else \
+        { \
+            result.result = ActionBaseResult::SUCCESS; \
+        } \
         result.action = actionName; \
         journal.addEntry(day->currentDay(), { actionName, result.message }); \
         return result;
@@ -45,6 +46,21 @@ Engine::Engine(const QString& levelId)
 {
     day = new Day(level.file("climate.json").toStdString());
     journal.addDay(day->currentDay());
+}
+
+
+Engine::Engine(const Engine& engine)
+    : level(level.getInfo().id)
+{
+    level = engine.level;
+    day = new Day(*engine.day);
+    journal = engine.journal;
+    energyBar = engine.energyBar;
+    hungerBar = engine.hungerBar;
+    thirstBar = engine.thirstBar;
+    healthBar = engine.healthBar;
+    moraleBar = engine.moraleBar;
+    turns = engine.turns;
 }
 
 double Engine::probability()
@@ -164,19 +180,20 @@ ActionResult Engine::rest()
     HANDLE_ACTION_INITIAL
 
     energyBar.plus(config.restEnergy);
+    hungerBar.minus(config.restHunger);
+    thirstBar.minus(config.restThirst);
 
     if (hungerBar.getValue() > config.restHungerHeal && thirstBar.getValue() > config.restThirstHeal)
     {
         result.message = "You awake feeling healthier.";
         healthBar.plus(config.restWellHeal);
+        goto done;
     }
     else
     {
         result.message = "You rested.";
+        goto done;
     }
-
-    hungerBar.minus(config.restHunger);
-    thirstBar.minus(config.restThirst);
 
     HANDLE_ACTION_FINAL("Rest")
 }
