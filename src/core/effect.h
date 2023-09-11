@@ -1,5 +1,10 @@
 #pragma once
 
+/**
+ * @brief This struct describes the effect on the user's bars.
+ * 
+ * .
+ */
 struct Effect
 {
     int healthBar;

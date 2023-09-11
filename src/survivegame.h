@@ -32,6 +32,9 @@ class SurviveGame : public QMainWindow
          */
         void onNewGame(const QString& id);
 
+        /**
+         * @brief      Called when the user wants to return to the main menu.
+         */
         void onReturnToMenu();
 
     private:

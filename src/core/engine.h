@@ -91,6 +91,11 @@ class Engine
          */
         const Level& getLevel() const;
 
+        /**
+         * @brief      Gets the journal.
+         *
+         * @return     The journal.
+         */
         const Journal& getJournal() const;
 
         /**
@@ -176,6 +181,11 @@ class Engine
          */
         EventResult triggerDayEvent();
 
+        /**
+         * @brief      Apply effects on the user's bars.
+         *
+         * @param[in]  effect  The effects to apply.
+         */
         void affectBars(Effect effect);
 
         /**
@@ -203,6 +213,10 @@ class Engine
          * The health bar.
          */
         Bar healthBar;
+
+        /**
+         * The morale bar.
+         */
         Bar moraleBar;
 
         /**
@@ -215,5 +229,8 @@ class Engine
          */
         Level level;
 
+        /**
+         * The journal.
+         */
         Journal journal;
 };

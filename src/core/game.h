@@ -114,6 +114,10 @@ private:
      * The user's health bar.
      */
     Bar healthBar;
+
+    /**
+     * The user's morale bar.
+     */
     Bar moraleBar;
 
     /**

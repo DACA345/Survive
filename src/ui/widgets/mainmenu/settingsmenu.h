@@ -42,6 +42,9 @@ class SettingsMenu : public ScalableWidget
          */
         void frameOptionChanged(int frame);
 
+        /**
+         * @brief      Emitted when the settings menu is closed.
+         */
         void settingsMenuClosed();
 
     private slots:

@@ -30,6 +30,10 @@ class ScalableWidget : public QWidget
          */
         void resizeEvent(QResizeEvent* event) override;
 
+        /**
+         * @brief      Redraw's the elements.
+         * 
+         */
         void redraw();
 
         /**
@@ -69,5 +73,8 @@ class ScalableWidget : public QWidget
          */
         void setScaledGeometry(QWidget* widget);
 
+        /**
+         * Maps the widgets to the info.
+         */
         QMap<QWidget*, ChildInfo> widgets;
 };
