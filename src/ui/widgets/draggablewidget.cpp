@@ -12,7 +12,7 @@ void DraggableWidget::mousePressEvent(QMouseEvent* event)
 {
     setCursor(Qt::ClosedHandCursor);
 
-    dragPosition = event->globalPos() - frameGeometry().topLeft();
+    dragPosition = event->globalPosition() - frameGeometry().topLeft();
 }
 
 void DraggableWidget::mouseReleaseEvent(QMouseEvent* event)

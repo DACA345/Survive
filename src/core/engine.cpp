@@ -34,9 +34,7 @@
     ).arg(food.name); \
     affectBars(food.effect);
 
-QRandomGenerator Engine::random = QRandomGenerator::securelySeeded();
-
-Engine::Engine(const QString& levelId)
+Engine::Engine(const QString& levelId, const int& seed)
     : level(levelId),
         energyBar(BAR_MAX),
         hungerBar(BAR_MAX),
@@ -44,6 +42,15 @@ Engine::Engine(const QString& levelId)
         healthBar(BAR_MAX),
         moraleBar(BAR_MAX)
 {
+    if (seed == -1)
+    {
+        random = QRandomGenerator::securelySeeded();
+    }
+    else
+    {
+        random = QRandomGenerator(seed);
+    }
+
     day = new Day(level.file("climate.json").toStdString());
     journal.addDay(day->currentDay());
 }
@@ -52,6 +59,7 @@ Engine::Engine(const QString& levelId)
 Engine::Engine(const Engine& engine)
     : level(level.getInfo().id)
 {
+    random = engine.random;
     day = new Day(*engine.day);
     journal = engine.journal;
     energyBar = engine.energyBar;
