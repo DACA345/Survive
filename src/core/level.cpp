@@ -1,7 +1,3 @@
-#include "level.h"
-#include "level.h"
-#include "level.h"
-#include "level.h"
 #include <QJsonDocument>
 #include <QJsonObject>
 

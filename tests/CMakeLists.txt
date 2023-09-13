@@ -88,6 +88,13 @@ add_custom_command(
         $<TARGET_FILE_DIR:${PROJECT_NAME}-core-test>
 )
 
+add_custom_command(
+    TARGET ${PROJECT_NAME}-core-test POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/levels"
+        ${CMAKE_BINARY_DIR}/bin/levels
+)
+
 set_target_properties(${PROJECT_NAME}-core-test
     PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
