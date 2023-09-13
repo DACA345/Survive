@@ -84,6 +84,13 @@ class Engine
         static bool chance(double probability);
 
         /**
+        * @brief      Check if the player is still alive.
+        * 
+        * @return     True if alive else false.
+        */
+        bool isGameOver() const;
+
+        /**
          * @brief      Gets the day.
          *
          * @return     The day.

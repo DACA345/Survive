@@ -34,10 +34,15 @@ ON_ACTION(Rest, rest)
 void Game::onResultAcknowledged()
 {
     // Disable actions when turns used up
-    if (engine.getTurns() <= 0)
+    if (engine.isGameOver())
+    {
+        endGame();
+        return;
+    }
+    else if (engine.getTurns() <= 0)
     {
         notebookWidget->displaySleepWidget();
-    }
+    } 
 }
 
 void Game::nextDay()
@@ -123,10 +128,6 @@ void Game::handleActionResult(ActionResult result)
         // Should never occur
         qFatal("No turns left");
         return;
-    }
-    else if (result.result == ActionBaseResult::GAME_OVER)
-    {
-        endGame();
     }
     else
     {

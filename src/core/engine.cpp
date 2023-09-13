@@ -72,6 +72,11 @@ bool Engine::chance(double probability)
     return Engine::probability() <= probability;
 }
 
+bool Engine::isGameOver() const
+{
+    return energyBar.isEmpty() || hungerBar.isEmpty() || thirstBar.isEmpty() || healthBar.isEmpty();
+}
+
 const Level& Engine::getLevel() const
 {
     return level;
@@ -200,6 +205,12 @@ ActionResult Engine::rest()
 EventResult Engine::nextDay()
 {
     turns = ENGINE_INITIAL_TURNS;
+
+    // TODO(Callum): Actual sleep config
+    // For now just rest to regain energy
+    turns++;
+    rest();
+
     day->nextDay();
     return triggerDayEvent();
 }
