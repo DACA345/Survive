@@ -30,3 +30,35 @@ TEST(JournalTest, addEntryTest)
     EXPECT_EQ(dayEntry.entries[0].action, "Test Action");
     EXPECT_EQ(dayEntry.entries[0].result, "Test Result");  // Check the result field.
 }
+
+TEST(JournalTest, getEntryExistingDayTest)
+{
+    Journal testJournal;
+    testJournal.addDay(1);  // Adding a day before testing.
+
+    // Create an ActionEntry for testing.
+    ActionEntry testEntry;
+    testEntry.action = "Test Action";
+    testEntry.result = "Test Result";
+
+    testJournal.addEntry(1, testEntry);
+
+    // Retrieve the day entry and check if it exists.
+    DayEntry dayEntry = testJournal.getEntry(1);
+
+    // Check if the retrieved entry matches the expected values.
+    EXPECT_EQ(dayEntry.entries.size(), 1);
+    EXPECT_EQ(dayEntry.entries[0].action, "Test Action");
+    EXPECT_EQ(dayEntry.entries[0].result, "Test Result");
+}
+
+TEST(JournalTest, getEntryNonExistingDayTest)
+{
+    Journal testJournal;
+
+    // Try to retrieve an entry for a non-existing day.
+    DayEntry dayEntry = testJournal.getEntry(1);
+
+    // Check if the returned dayEntry is empty.
+    EXPECT_EQ(dayEntry.entries.size(), 0);
+}
