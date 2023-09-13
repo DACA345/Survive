@@ -48,5 +48,5 @@ class DraggableWidget : public ScalableWidget
         void mouseMoveEvent(QMouseEvent* event) override;
 
     private:
-        QPoint dragPosition;
+        QPointF dragPosition;
 };
