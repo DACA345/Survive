@@ -53,7 +53,7 @@ class Engine
          *
          * @param[in]  levelId  The level identifier
          */
-        Engine(const QString& levelId);
+        Engine(const QString& levelId, const int& seed = -1);
 
         /**
         * @brief      Construct a new engine instance from an existing engine.
@@ -72,7 +72,7 @@ class Engine
          *
          * @return     Random double between 0, 1/
          */
-        static double probability();
+        double probability();
 
         /**
          * @brief      Determine if a probability will hit.
@@ -81,7 +81,7 @@ class Engine
          *
          * @return     True if probability was reached, false otherwise.
          */
-        static bool chance(double probability);
+        bool chance(double probability);
 
         /**
         * @brief      Check if the player is still alive.
@@ -185,7 +185,7 @@ class Engine
         /**
          * The random generator.
          */
-        static QRandomGenerator random;
+        QRandomGenerator random;
 
         /**
          * @brief      Trigger the day's event.
