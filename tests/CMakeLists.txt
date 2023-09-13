@@ -57,6 +57,7 @@ add_executable(${PROJECT_NAME}-core-test
     "core/level-test.cpp"
     "core/plant-test.cpp"
     "core/season-test.cpp"
+    "core/journal-test.cpp"
 )
 
 add_test(
