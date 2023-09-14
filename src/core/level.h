@@ -90,6 +90,13 @@ class Level
         Level(const QString& id);
 
         /**
+        * @brief      Copy constructor to copy a level.
+        * 
+        * @param[in]  level  The level
+        */
+        Level(const Level& level);
+
+        /**
          * @brief      Destroys the object.
          */
         ~Level();

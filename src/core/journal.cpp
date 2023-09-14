@@ -36,7 +36,6 @@ DayEntry Journal::getEntry(int day) const
     if (!entries.contains(day))
     {
         qWarning("Journal::getEntries: Day %d does not exist", day);
-        return DayEntry();
     }
 
     return entries[day];

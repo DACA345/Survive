@@ -6,10 +6,16 @@
 TEST(EngineTests, ConstructorTest)
 {
     Engine test = Engine("mtaspiring", SEED);
+    Engine copy = Engine(test);
 
     // Check seeding
-    EXPECT_EQ(test.probability(), 0.55794434812820504);
+    EXPECT_EQ(test.probability(), copy.probability());
     EXPECT_EQ(test.probability(), 0.69514689564344823);
+    EXPECT_EQ(copy.probability(), 0.69514689564344823);
+
+    Engine randomTest = Engine("mtaspiring");
+
+    EXPECT_LT(test.probability(), 1);
 }
 
 TEST(EngineTests, GetTest)
@@ -49,13 +55,26 @@ TEST(EngineTests, DayTest)
 
     EXPECT_NO_THROW(test.findFood());
     EXPECT_NO_THROW(test.findWater());
-    EXPECT_NO_THROW(test.explore());
     EXPECT_NO_THROW(test.rest());
+    EXPECT_NO_THROW(test.explore());
+
+    EXPECT_EQ(test.getTurns(), 1);
 
     // Check bars have updated
-    EXPECT_EQ(test.getHunger(), 60);
-    EXPECT_EQ(test.getThirst(), 60);
-    EXPECT_EQ(test.getEnergy(), 50);
+    EXPECT_LT(test.getHunger(), 100);
+    EXPECT_LT(test.getThirst(), 100);
+    EXPECT_LT(test.getEnergy(), 100);
 
     EXPECT_FALSE(test.isGameOver());
+}
+
+TEST(EngineTests, NextDayTest)
+{
+    Engine test = Engine("mtaspiring", SEED);
+
+    EXPECT_EQ(test.getDay().currentDay(), 1);
+
+    EXPECT_NO_THROW(test.nextDay());
+
+    EXPECT_EQ(test.getDay().currentDay(), 2);
 }

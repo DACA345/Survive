@@ -15,6 +15,17 @@ Level::Level(const QString& id)
     loadLevel();
 }
 
+Level::Level(const Level& level)
+    : info(level.info),
+        config(level.config),
+        animals(level.animals),
+        events(level.events),
+        explorer(level.explorer),
+        plants(level.plants),
+        seasons(level.seasons)
+{
+}
+
 QString Level::file(const QString& name) const
 {
     return LEVEL_FILE(QString("%1/%2").arg(info.id).arg(name));

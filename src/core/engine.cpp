@@ -57,7 +57,7 @@ Engine::Engine(const QString& levelId, const int& seed)
 
 
 Engine::Engine(const Engine& engine)
-    : level(level.getInfo().id), random(engine.random)
+    : level(engine.level), random(engine.random)
 {
     day = new Day(*engine.day);
     journal = engine.journal;

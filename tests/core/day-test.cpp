@@ -5,16 +5,6 @@ TEST(DayTest, GetRandomTemperatureValueTest)
 {
     Day testDay("data/levels/mtaspiring/climate.json");
 
-    // Print data for all months
-    testDay.printClimateData();
-
-    // Print climate data for each month
-    std::cout << "Climate Data for JAN:\n";
-    testDay.printMonthClimate("jan");
-
-    std::cout << "\nClimate Data for FEB:\n";
-    testDay.printMonthClimate("FEB");
-
     // Test for a month that exists in the data (e.g., JAN)
     std::vector<ClimateData> janData = testDay.getMonthData("jan");
     // Check if the returned vector is not empty
