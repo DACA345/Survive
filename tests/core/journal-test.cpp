@@ -14,6 +14,7 @@ TEST(JournalTest, addEntryTest)
 {
     Journal testJournal;
     testJournal.addDay(1);  // Adding a day before adding an entry.
+    testJournal.addDay(1); // Should warn
 
     // Create an ActionEntry for testing.
     ActionEntry testEntry;
@@ -42,6 +43,7 @@ TEST(JournalTest, getEntryExistingDayTest)
     testEntry.result = "Test Result";
 
     testJournal.addEntry(1, testEntry);
+    testJournal.addEntry(2, testEntry); // Should warn
 
     // Retrieve the day entry and check if it exists.
     DayEntry dayEntry = testJournal.getEntry(1);

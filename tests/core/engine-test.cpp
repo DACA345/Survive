@@ -36,6 +36,11 @@ TEST(EngineTests, GetTest)
     EXPECT_NO_THROW(level.getPlants().getRandomPlant());
     EXPECT_NE(level.getPlants().getRandomPlant().name, "");
 
+    EXPECT_NO_THROW(level.getExplorer().getRandomExplore());
+    EXPECT_NE(level.getExplorer().getRandomExplore().eventName, "");
+
+    EXPECT_EQ(level.getInfo().name, "mtaspiring");
+
     // Check day
     EXPECT_EQ(day.currentDay(), 1);
 
@@ -61,11 +66,19 @@ TEST(EngineTests, DayTest)
     EXPECT_EQ(test.getTurns(), 1);
 
     // Check bars have updated
-    EXPECT_LT(test.getHunger(), 100);
-    EXPECT_LT(test.getThirst(), 100);
-    EXPECT_LT(test.getEnergy(), 100);
+    EXPECT_LT(test.getHunger(), BAR_MAX);
+    EXPECT_LT(test.getThirst(), BAR_MAX);
+    EXPECT_LT(test.getEnergy(), BAR_MAX);
 
     EXPECT_FALSE(test.isGameOver());
+
+    test.nextDay();
+
+    EXPECT_NO_THROW(test.explore());
+    EXPECT_NO_THROW(test.explore());
+    EXPECT_NO_THROW(test.explore());
+    EXPECT_NO_THROW(test.explore());
+    EXPECT_NO_THROW(test.explore());
 }
 
 TEST(EngineTests, NextDayTest)

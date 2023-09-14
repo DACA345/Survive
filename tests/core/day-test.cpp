@@ -30,6 +30,13 @@ TEST(DayTest, GetRandomTemperatureValueTest)
         EXPECT_GE(randomMinTemp, data.minTemperature.min); // Check if random min temp is >= min
         EXPECT_LE(randomMinTemp, data.minTemperature.max); // Check if random min temp is <= max
     }
+
+    ClimateData jan = testDay.getMonthData("jan").at(0);
+
+    EXPECT_EQ(jan.maxTemperature.max, 21.6f);
+
+    EXPECT_LT(testDay.getRandomPrecipitationValue(jan.precipitation), jan.precipitation.max);
+    EXPECT_GT(testDay.getRandomPrecipitationValue(jan.precipitation), jan.precipitation.min);
 }
 
 TEST(DayTest, DayProgressionTests)
