@@ -86,18 +86,6 @@ class Day
         const std::vector<ClimateData>& getMonthData(int month);
 
         /**
-         * @brief      Prints a months climate.
-         *
-         * @param[in]  month  The month
-         */
-        void printMonthClimate(const std::string& month) const;
-
-        /**
-         * @brief      Prints the climate data.
-         */
-        void printClimateData() const;
-
-        /**
          * @brief      Gets a random temperature value.
          *
          * @param[in]  temperature  The temperature range

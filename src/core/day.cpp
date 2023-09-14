@@ -127,38 +127,6 @@ void Day::loadClimateData(const std::string& filename)
     }
 }
 
-void Day::printClimateData() const 
-{
-    for (const auto& pair : climateData) 
-    {
-        std::cout << "Month: " << pair.first << std::endl;
-        for (const auto& cd : pair.second) 
-        {
-            std::cout << "Max Temperature Max: " << cd.maxTemperature.max << std::endl;
-            std::cout << "Max Temperature Average: " << cd.maxTemperature.average << std::endl;
-            std::cout << "Max Temperature Min: " << cd.maxTemperature.min << std::endl;
-            
-            std::cout << "Average Temperature Max: " << cd.avgTemperature.max << std::endl;
-            std::cout << "Average Temperature Average: " << cd.avgTemperature.average << std::endl;
-            std::cout << "Average Temperature Min: " << cd.avgTemperature.min << std::endl;
-
-            std::cout << "Min Temperature Max: " << cd.minTemperature.max << std::endl;
-            std::cout << "Min Temperature Average: " << cd.minTemperature.average << std::endl;
-            std::cout << "Min Temperature Min: " << cd.minTemperature.min << std::endl;
-
-            std::cout << "Precipitation Max: " << cd.precipitation.max << std::endl;
-            std::cout << "Precipitation Average: " << cd.precipitation.average << std::endl;
-            std::cout << "Precipitation Min: " << cd.precipitation.min << std::endl;
-            std::cout << "Precipitation Sum: " << cd.precipitation.sum << std::endl;
-
-            std::cout << "Snowdepth Max: " << cd.snowDepth.max << std::endl;
-            std::cout << "Snowdepth Average: " << cd.snowDepth.average << std::endl;
-            std::cout << "Snowdepth Min: " << cd.snowDepth.min << std::endl;
-            std::cout << "Snowdepth Sum: " << cd.snowDepth.sum << std::endl;
-        }
-    }
-}
-
 const std::vector<ClimateData>& Day::getMonthData(const std::string& month) const {
     // Convert the month name to uppercase (e.g., jan -> JAN)
     std::string uppercaseMonth = month;
@@ -223,42 +191,4 @@ QString Day::monthId() const
 void Day::nextDay()
 {
     day++;
-}
-
-void Day::printMonthClimate(const std::string& month) const
-{
-    // Convert the month name to uppercase (e.g., jan -> JAN)
-    std::string uppercaseMonth = month;
-    std::transform(uppercaseMonth.begin(), uppercaseMonth.end(), uppercaseMonth.begin(), ::toupper);
-
-    // Search for the month in the climateData map
-    auto it = climateData.find(uppercaseMonth);
-    if (it != climateData.end()) {
-        // Get the vector of ClimateData for the given month
-        const std::vector<ClimateData>& monthData = it->second;
-
-        // Print the climate data for the month
-        for (const ClimateData& data : monthData) {
-            // Get random values for temperature fields
-            float maxTemp = getRandomTemperatureValue(data.maxTemperature);
-            float avgTemp = getRandomTemperatureValue(data.avgTemperature);
-            float minTemp = getRandomTemperatureValue(data.minTemperature);
-
-            // Get random values for precipitation fields
-            float maxPrecipitation = getRandomPrecipitationValue(data.precipitation);
-            float avgPrecipitation = getRandomPrecipitationValue(data.precipitation);
-            float minPrecipitation = getRandomPrecipitationValue(data.precipitation);
-            
-            std::cout << "Afternoon = " << maxTemp << std::endl;
-            std::cout << "Day/Evening = " << avgTemp << std::endl;
-            std::cout << "Night = " << minTemp << std::endl;
-            std::cout << "precipitation (max) = " << maxPrecipitation << std::endl;
-            std::cout << "precipitation (average) = " << avgPrecipitation << std::endl;
-            std::cout << "precipitation (min) = " << minPrecipitation << std::endl;
-            
-        }
-    }
-    else {
-        std::cout << "Climate data for month " << month << " not found." << std::endl;
-    }
 }
