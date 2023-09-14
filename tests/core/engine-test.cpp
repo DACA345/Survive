@@ -39,7 +39,7 @@ TEST(EngineTests, GetTest)
     EXPECT_NO_THROW(level.getExplorer().getRandomExplore());
     EXPECT_NE(level.getExplorer().getRandomExplore().eventName, "");
 
-    EXPECT_EQ(level.getInfo().name, "mtaspiring");
+    EXPECT_EQ(level.getInfo().id, "mtaspiring");
 
     // Check day
     EXPECT_EQ(day.currentDay(), 1);
