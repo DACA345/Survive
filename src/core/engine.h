@@ -52,6 +52,7 @@ class Engine
          * @brief      Construct a new engine instance from a level id.
          *
          * @param[in]  levelId  The level identifier
+         * @param[in]  seed   The seed for randomness
          */
         Engine(const QString& levelId, const int& seed = -1);
 
