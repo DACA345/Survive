@@ -49,19 +49,19 @@ struct LevelConfig
     int restEnergy = 30;
     int restWellHeal = 30;
 
-    int restHunger = 15;
+    int restHunger = 10;
     int restThirst = 5;
 
     // Explore
     double exploreNothing = 0.1;
-    double exploreAnimal = 0.1;
-    double explorePlant = 0.2;
+    double exploreAnimal = 0.2;
+    double explorePlant = 0.3;
 
     int exploreHunger = 10;
     int exploreThirst = 10;
 
     int exploreNothingEnergy = 10;
-    int exploreEnergy = 20;
+    int exploreEnergy = 15;
 
     // Events
     double seasonEvent = 0.5;
