@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 # Project information
 project(
     "Survive"
-    VERSION 0.0.3
+    VERSION 0.0.4
     LANGUAGES CXX
     DESCRIPTION "C++ survival game based on real world data."
     HOMEPAGE_URL https://github.com/DACA345/Survive
