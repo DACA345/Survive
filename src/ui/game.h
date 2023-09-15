@@ -26,6 +26,8 @@ class Game : public ScalableWidget
          */
         explicit Game(const QString& levelId, QWidget *parent = nullptr);
 
+        explicit Game(const Engine& engine, QWidget* parent = nullptr);
+
         /**
          * @brief      Destroys the object.
          */

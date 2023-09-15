@@ -68,6 +68,10 @@ class Engine
          */
         ~Engine();
 
+        static Engine loadFromFile(const QString& filePath);
+
+        void dump(const QString& filePath);
+
         /**
          * @brief      Generates a random double between 0, 1.
          *

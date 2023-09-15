@@ -51,7 +51,7 @@ class Day
          *
          * @param[in]  filename  The filename
          */
-        Day(const std::string& filename);
+        Day(const std::string& filename, const int& day = 1);
 
         /**
          * @brief      Convert an int value of a month to a string.
