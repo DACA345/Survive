@@ -10,9 +10,9 @@
  * 
  */
 struct Temperature {
-    float max;
-    float average;
-    float min;
+    double max;
+    double average;
+    double min;
 };
 
 /**
@@ -20,10 +20,10 @@ struct Temperature {
  * 
  */
 struct Precipitation {
-    float max;
-    float average;
-    float min;
-    float sum;
+    double max;
+    double average;
+    double min;
+    double sum;
 };
 
 /**
@@ -92,7 +92,7 @@ class Day
          *
          * @return     The random temperature value.
          */
-        float getRandomTemperatureValue(const Temperature& temperature) const;
+        double getRandomTemperatureValue(const Temperature& temperature) const;
 
         /**
          * @brief      Gets a random precipitation value.
@@ -101,7 +101,7 @@ class Day
          *
          * @return     The random precipitation value.
          */
-        float getRandomPrecipitationValue(const Precipitation& precipitation) const;
+        double getRandomPrecipitationValue(const Precipitation& precipitation) const;
 
         /**
          * @brief      Gets the current in-game day.

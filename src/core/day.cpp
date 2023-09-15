@@ -151,7 +151,7 @@ const std::vector<ClimateData>& Day::getMonthData(int month)
 }
 
 // Method to get a random value between min and max temperature values
-float Day::getRandomTemperatureValue(const Temperature& temperature) const
+double Day::getRandomTemperatureValue(const Temperature& temperature) const
 {
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -160,7 +160,7 @@ float Day::getRandomTemperatureValue(const Temperature& temperature) const
 }
 
 // Method to get a random value between min and max precipitation values
-float Day::getRandomPrecipitationValue(const Precipitation& precipitation) const
+double Day::getRandomPrecipitationValue(const Precipitation& precipitation) const
 {
     std::random_device rd;
     std::mt19937 gen(rd());
