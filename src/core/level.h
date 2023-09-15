@@ -27,14 +27,14 @@ struct LevelConfig
 {
     // Action probabilities
     // Food
-    double findFoodNothing = 0.2;
-    double findFoodAnimal = 0.3;
+    double findFoodNothing = 0.1;
+    double findFoodAnimal = 0.35;
 
     int findFoodEnergy = 20;
     int plantPoison = 30;
 
     // Water
-    double findWaterNothing = 0.2;
+    double findWaterNothing = 0.1;
     double findCleanWater = 0.3;
     
     int waterThirst = 20;
