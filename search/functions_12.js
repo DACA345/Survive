@@ -1,19 +1,7 @@
 var searchData=
 [
-  ['_7ebar_659',['~Bar',['../d7/d9a/classBar.html#a9c7ebea0c189423591741ac438985316',1,'Bar']]],
-  ['_7edraggablewidget_660',['~DraggableWidget',['../d6/d1f/classDraggableWidget.html#ab51c3792e597d551b780ed9f17b2fe8c',1,'DraggableWidget']]],
-  ['_7eengine_661',['~Engine',['../d1/db6/classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a',1,'Engine']]],
-  ['_7egame_662',['~Game',['../d9/d68/classGame.html#ae3d112ca6e0e55150d2fdbc704474530',1,'Game']]],
-  ['_7elevel_663',['~Level',['../d2/d9d/classLevel.html#a249eac1e8f19ff44134efa5e986feaca',1,'Level']]],
-  ['_7elevelinfowidget_664',['~LevelInfoWidget',['../da/d89/classLevelInfoWidget.html#a45f85209e47323deb28592fbc07d84fd',1,'LevelInfoWidget']]],
-  ['_7eloadgamemenu_665',['~LoadGameMenu',['../da/d1e/classLoadGameMenu.html#aa03751f6c89b28d906d44e8926f0a6f5',1,'LoadGameMenu']]],
-  ['_7emainmenu_666',['~MainMenu',['../d9/d0a/classMainMenu.html#a0a19ddba3ac52bf39c09b579171c98f2',1,'MainMenu']]],
-  ['_7emenu_667',['~Menu',['../d8/ddb/classMenu.html#a831387f51358cfb88cd018e1777bc980',1,'Menu']]],
-  ['_7enewgamemenu_668',['~NewGameMenu',['../d7/d63/classNewGameMenu.html#a169d9bf9e187bf3bf910f064d9e7dab4',1,'NewGameMenu']]],
-  ['_7enotebookwidget_669',['~NotebookWidget',['../db/d4c/classNotebookWidget.html#a79928ef9fe287c1d46607b48051dfeb9',1,'NotebookWidget']]],
-  ['_7eresultwidget_670',['~ResultWidget',['../d2/dad/classResultWidget.html#aa43d0cad7846319774387efcf79122f0',1,'ResultWidget']]],
-  ['_7escalablewidget_671',['~ScalableWidget',['../de/d1f/classScalableWidget.html#a170dc385cad7aea4385a706579f50078',1,'ScalableWidget']]],
-  ['_7esettingsmenu_672',['~SettingsMenu',['../db/dbe/classSettingsMenu.html#ac2abb1dcd62821fdd7cdcdfa28d634c3',1,'SettingsMenu']]],
-  ['_7esurvivegame_673',['~SurviveGame',['../dd/d67/classSurviveGame.html#abbbb42a92aba1059ee0affd5df20c024',1,'SurviveGame']]],
-  ['_7esvgpushbutton_674',['~SVGPushButton',['../d7/d1f/classSVGPushButton.html#a933b28fbfa0fd652567b084fb7ec7589',1,'SVGPushButton']]]
+  ['uioptionchanged_754',['uiOptionChanged',['../d9/d0a/classMainMenu.html#ad2520fd6d6684ab9153088fe88a71259',1,'MainMenu']]],
+  ['updatebars_755',['updateBars',['../d9/d68/classGame.html#a53461ac199ac4f735cbfed19a2aa0a92',1,'Game']]],
+  ['updateday_756',['updateDay',['../db/d4c/classNotebookWidget.html#a876711229d7881277458d558bfae1144',1,'NotebookWidget']]],
+  ['updateui_757',['updateUi',['../d9/d68/classGame.html#a722118388a46d18685b0ff2d55a09c4a',1,'Game']]]
 ];

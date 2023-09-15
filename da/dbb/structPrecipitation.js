@@ -1,7 +1,7 @@
 var structPrecipitation =
 [
-    [ "average", "da/dbb/structPrecipitation.html#ac9477c731ad7d46aa3c78b348fd34a22", null ],
-    [ "max", "da/dbb/structPrecipitation.html#a386fae9017872abd9b2af99a0450a85f", null ],
-    [ "min", "da/dbb/structPrecipitation.html#ac3c89ad5f57466dd2d08eda5810d8650", null ],
-    [ "sum", "da/dbb/structPrecipitation.html#ac781e58c65947163cde7b14e0d1610ec", null ]
+    [ "average", "da/dbb/structPrecipitation.html#a94331a131c7029525caa7e5b21124bb8", null ],
+    [ "max", "da/dbb/structPrecipitation.html#a4319703b0b9a78ee8b15f48fb49c3236", null ],
+    [ "min", "da/dbb/structPrecipitation.html#a57714de44a4c104923147c0f3d92a915", null ],
+    [ "sum", "da/dbb/structPrecipitation.html#abd24f6c3c0972d3e4ce4f805af134c05", null ]
 ];

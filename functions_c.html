@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -87,9 +87,6 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a id="index_c"></a>- c -</h3><ul>
-<li>canMove()
-: <a class="el" href="d9/d68/classGame.html#ac6dccee05c1de13095bf8cae8fb3f4fe">Game</a>
-</li>
 <li>category
 : <a class="el" href="de/dc4/structActionInfo.html#aa0519de9d5ca6ee2dd89c97942b11c64">ActionInfo</a>
 , <a class="el" href="d3/d93/structAnimalInfo.html#ac3b6ebf3d51608552fad1729c7332a05">AnimalInfo</a>
@@ -99,18 +96,30 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>chance()
 : <a class="el" href="d1/db6/classEngine.html#aa49530dad40a534f917c1c1de8d2754e">Engine</a>
 </li>
-<li>climate
-: <a class="el" href="d9/d68/classGame.html#a1a0878caace6c0f498b9e6496bf48594">Game</a>
-</li>
 <li>climateData
 : <a class="el" href="d8/d0d/classDay.html#a2869d04fa2dcd2fe6612039e669aca34">Day</a>
 </li>
 <li>close()
-: <a class="el" href="db/d4c/classNotebookWidget.html#ac50484c33621bc848b5e69b30c1840fe">NotebookWidget</a>
+: <a class="el" href="dc/d53/classGameOver.html#a5016e8045a2e7a7fe929841315f54d7e">GameOver</a>
+, <a class="el" href="d7/de5/classHistoryWidget.html#a0f8ceb9ceca67498a0a99d8bb566978a">HistoryWidget</a>
+, <a class="el" href="db/d4c/classNotebookWidget.html#ac50484c33621bc848b5e69b30c1840fe">NotebookWidget</a>
+, <a class="el" href="d2/dad/classResultWidget.html#a7aa630ac1983ee21682f4c596cab3f12">ResultWidget</a>
+, <a class="el" href="d3/da5/classSleepWidget.html#a84c4d30c533cec7af4383e2882d80480">SleepWidget</a>
+</li>
+<li>closeActionMenu()
+: <a class="el" href="db/d4c/classNotebookWidget.html#af23cdeddf4d5fa955aad67c94dc82996">NotebookWidget</a>
 </li>
 <li>closeButton
-: <a class="el" href="db/d4c/classNotebookWidget.html#ab6309857d7447e858b8ba07fba3001a8">NotebookWidget</a>
-, <a class="el" href="d2/dad/classResultWidget.html#aec591ae458424b1448d3a4b5f61fd3f3">ResultWidget</a>
+: <a class="el" href="dc/d53/classGameOver.html#a3b017f9758d5ce1b21a2b15845f50b31">GameOver</a>
+, <a class="el" href="d7/de5/classHistoryWidget.html#a94a1541c873825f2d087691cf822516a">HistoryWidget</a>
+, <a class="el" href="db/d4c/classNotebookWidget.html#ab6309857d7447e858b8ba07fba3001a8">NotebookWidget</a>
+, <a class="el" href="d2/dad/classResultWidget.html#a7bec3c017919a3256a2c899f67446b26">ResultWidget</a>
+</li>
+<li>closeCurrent()
+: <a class="el" href="db/d4c/classNotebookWidget.html#a8cc4afc0bb9a48dffa28d9c3d788ce82">NotebookWidget</a>
+</li>
+<li>closeHistoryWidget()
+: <a class="el" href="db/d4c/classNotebookWidget.html#a3c2348b2677f3c85823b462d2fde610e">NotebookWidget</a>
 </li>
 <li>closeLoadGameMenu()
 : <a class="el" href="d9/d0a/classMainMenu.html#ac57a2f39b3b28530cd2167d93e3ed05c">MainMenu</a>
@@ -118,8 +127,14 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>closeNewGameMenu()
 : <a class="el" href="d9/d0a/classMainMenu.html#adde51da4c54753a02c5c6235d17cc7b8">MainMenu</a>
 </li>
+<li>closeResultsWidget()
+: <a class="el" href="db/d4c/classNotebookWidget.html#a19f375a8734e31f48f01c7856afbef70">NotebookWidget</a>
+</li>
 <li>closeSettingsMenu()
 : <a class="el" href="d9/d0a/classMainMenu.html#ad8543adfae87ea970bee4b1a45142d4b">MainMenu</a>
+</li>
+<li>closeSleepWidget()
+: <a class="el" href="db/d4c/classNotebookWidget.html#a95cf8f3134b7598d5bd8e66fd16e4683">NotebookWidget</a>
 </li>
 <li>columns
 : <a class="el" href="da/d1e/classLoadGameMenu.html#aa8b54876576550a95fd93745bc0886c7">LoadGameMenu</a>
@@ -128,17 +143,9 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>config
 : <a class="el" href="d2/d9d/classLevel.html#abdc7318f0de6d8ac39b8d0247a6ab6ee">Level</a>
 </li>
-<li>convertQlevelFolder
-: <a class="el" href="d9/d68/classGame.html#a0918d5e8b876f2a8354114bab50e9c9c">Game</a>
-</li>
-<li>correctSeason()
-: <a class="el" href="d9/d68/classGame.html#a7133e3a8ce27144b4927ded0c7fbc24c">Game</a>
-</li>
 <li>currentDay()
 : <a class="el" href="d8/d0d/classDay.html#a33cd88c03561ce627030a4a9460ae95f">Day</a>
-</li>
-<li>currentMonthIndex
-: <a class="el" href="d9/d68/classGame.html#a956e04e1ccfa6893eaba978b2c4870d3">Game</a>
+, <a class="el" href="d7/de5/classHistoryWidget.html#a4a6041e7eadf0c0c3a94167cded3be6e">HistoryWidget</a>
 </li>
 </ul>
 </div><!-- contents -->

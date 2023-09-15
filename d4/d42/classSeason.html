@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -101,10 +101,13 @@ $(document).ready(function(){initNavTree('d4/d42/classSeason.html','../../'); in
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8869952e36e91f62d3ef8a3cd4f677c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d42/classSeason.html#ad8869952e36e91f62d3ef8a3cd4f677c">Season</a> (const QString &amp;filename)</td></tr>
+<tr class="memdesc:ad8869952e36e91f62d3ef8a3cd4f677c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new instance of season data from a JSON.  <a href="../../d4/d42/classSeason.html#ad8869952e36e91f62d3ef8a3cd4f677c">More...</a><br /></td></tr>
 <tr class="separator:ad8869952e36e91f62d3ef8a3cd4f677c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e34739484167d8ca0d262f5fd4a64af"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d42/classSeason.html#a3e34739484167d8ca0d262f5fd4a64af">getSeason</a> (const QString &amp;month) const</td></tr>
+<tr class="memdesc:a3e34739484167d8ca0d262f5fd4a64af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the season of a month.  <a href="../../d4/d42/classSeason.html#a3e34739484167d8ca0d262f5fd4a64af">More...</a><br /></td></tr>
 <tr class="separator:a3e34739484167d8ca0d262f5fd4a64af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5792ddd39ba746e3a973cf7987537d79"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d42/classSeason.html#a5792ddd39ba746e3a973cf7987537d79">getMonth</a> (const QString &amp;season) const</td></tr>
+<tr class="memdesc:a5792ddd39ba746e3a973cf7987537d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the months of a season.  <a href="../../d4/d42/classSeason.html#a5792ddd39ba746e3a973cf7987537d79">More...</a><br /></td></tr>
 <tr class="separator:a5792ddd39ba746e3a973cf7987537d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -131,6 +134,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructs a new instance of season data from a JSON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The filename </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -150,6 +161,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the months of a season. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">season</td><td>The season</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The month. </dd></dl>
+
 </div>
 </div>
 <a id="a3e34739484167d8ca0d262f5fd4a64af"></a>
@@ -168,7 +188,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a7133e3a8ce27144b4927ded0c7fbc24c">Game::correctSeason()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>, and <a class="el" href="../../d9/d68/classGame.html#a1bf39271e4a99223300d7567b12b58de">Game::triggerEvent()</a>.</p>
+<p>Gets the season of a month. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">month</td><td>The month</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The season. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>.</p>
 
 </div>
 </div>
@@ -192,6 +221,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Maps the months to a season. </p>
 
 <p class="reference">Referenced by <a class="el" href="../../d4/d42/classSeason.html#a5792ddd39ba746e3a973cf7987537d79">getMonth()</a>, <a class="el" href="../../d4/d42/classSeason.html#a3e34739484167d8ca0d262f5fd4a64af">getSeason()</a>, and <a class="el" href="../../d4/d42/classSeason.html#ad8869952e36e91f62d3ef8a3cd4f677c">Season()</a>.</p>
 

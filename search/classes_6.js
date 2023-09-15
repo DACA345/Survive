@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['level_436',['Level',['../d2/d9d/classLevel.html',1,'']]],
-  ['levelconfig_437',['LevelConfig',['../d5/d26/structLevelConfig.html',1,'']]],
-  ['levelinfo_438',['LevelInfo',['../de/d3c/structLevelInfo.html',1,'']]],
-  ['levelinfowidget_439',['LevelInfoWidget',['../da/d89/classLevelInfoWidget.html',1,'']]],
-  ['loadgamemenu_440',['LoadGameMenu',['../da/d1e/classLoadGameMenu.html',1,'']]]
+  ['historywidget_503',['HistoryWidget',['../d7/de5/classHistoryWidget.html',1,'']]]
 ];

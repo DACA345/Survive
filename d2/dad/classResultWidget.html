@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('d2/dad/classResultWidget.html','../../
 
 <div class="header">
   <div class="summary">
+<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -93,6 +94,9 @@ $(document).ready(function(){initNavTree('d2/dad/classResultWidget.html','../../
 <div class="title">ResultWidget Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class describes the notebook's result widget.  
+ <a href="../../d2/dad/classResultWidget.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d6/db1/resultwidget_8h_source.html">resultwidget.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -105,14 +109,23 @@ Inheritance diagram for ResultWidget:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:a7aa630ac1983ee21682f4c596cab3f12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#a7aa630ac1983ee21682f4c596cab3f12">close</a> ()</td></tr>
+<tr class="memdesc:a7aa630ac1983ee21682f4c596cab3f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user has acknowledged the result.  <a href="../../d2/dad/classResultWidget.html#a7aa630ac1983ee21682f4c596cab3f12">More...</a><br /></td></tr>
+<tr class="separator:a7aa630ac1983ee21682f4c596cab3f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0d2d24e77564bf4f16d822b3ad20fb52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#a0d2d24e77564bf4f16d822b3ad20fb52">ResultWidget</a> (QWidget *parent=nullptr)</td></tr>
-<tr class="separator:a0d2d24e77564bf4f16d822b3ad20fb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc62c5e3def1024ef1798a61e48e02dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#adc62c5e3def1024ef1798a61e48e02dc">ResultWidget</a> (const QString &amp;<a class="el" href="../../d2/dad/classResultWidget.html#a36d1d35e662321608773e8c3346522d6">action</a>, const QString &amp;<a class="el" href="../../d2/dad/classResultWidget.html#ae5f0abbf07d638be82629b69d3e4b377">result</a>, QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:adc62c5e3def1024ef1798a61e48e02dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new instance.  <a href="../../d2/dad/classResultWidget.html#adc62c5e3def1024ef1798a61e48e02dc">More...</a><br /></td></tr>
+<tr class="separator:adc62c5e3def1024ef1798a61e48e02dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa43d0cad7846319774387efcf79122f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#aa43d0cad7846319774387efcf79122f0">~ResultWidget</a> ()</td></tr>
+<tr class="memdesc:aa43d0cad7846319774387efcf79122f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the object.  <a href="../../d2/dad/classResultWidget.html#aa43d0cad7846319774387efcf79122f0">More...</a><br /></td></tr>
 <tr class="separator:aa43d0cad7846319774387efcf79122f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72df18151f1c63a0788a735132250b37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#a72df18151f1c63a0788a735132250b37">showResult</a> (<a class="el" href="../../d9/ddf/structActionResult.html">ActionResult</a> result)</td></tr>
-<tr class="separator:a72df18151f1c63a0788a735132250b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5598cbd5d1c662965567a70d327605e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#aa5598cbd5d1c662965567a70d327605e">setResult</a> (const QString &amp;<a class="el" href="../../d2/dad/classResultWidget.html#a36d1d35e662321608773e8c3346522d6">action</a>, const QString &amp;<a class="el" href="../../d2/dad/classResultWidget.html#ae5f0abbf07d638be82629b69d3e4b377">result</a>)</td></tr>
+<tr class="memdesc:aa5598cbd5d1c662965567a70d327605e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the result to be displayed on the widget.  <a href="../../d2/dad/classResultWidget.html#aa5598cbd5d1c662965567a70d327605e">More...</a><br /></td></tr>
+<tr class="separator:aa5598cbd5d1c662965567a70d327605e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classScalableWidget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classScalableWidget')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/d1f/classScalableWidget.html">ScalableWidget</a></td></tr>
 <tr class="memitem:af4293911853b5a3d4930ac1f8cc187a4 inherit pub_methods_classScalableWidget"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#af4293911853b5a3d4930ac1f8cc187a4">ScalableWidget</a> (QWidget *parent=nullptr)</td></tr>
 <tr class="memdesc:af4293911853b5a3d4930ac1f8cc187a4 inherit pub_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new scalable widget instance.  <a href="../../de/d1f/classScalableWidget.html#af4293911853b5a3d4930ac1f8cc187a4">More...</a><br /></td></tr>
@@ -123,19 +136,22 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a0935de9b3c6d2343b031e00595cefef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#a0935de9b3c6d2343b031e00595cefef8">paintEvent</a> (QPaintEvent *event) override</td></tr>
-<tr class="separator:a0935de9b3c6d2343b031e00595cefef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eab9a791fa59c5a71bdc6e4dc0dd48d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#a7eab9a791fa59c5a71bdc6e4dc0dd48d">loadGraphics</a> ()</td></tr>
-<tr class="separator:a7eab9a791fa59c5a71bdc6e4dc0dd48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b483d99ea3536199ba4691a046c7eda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">setupUi</a> ()</td></tr>
+<tr class="memdesc:a4b483d99ea3536199ba4691a046c7eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the UI.  <a href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">More...</a><br /></td></tr>
 <tr class="separator:a4b483d99ea3536199ba4691a046c7eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a36d1d35e662321608773e8c3346522d6"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#a36d1d35e662321608773e8c3346522d6">action</a></td></tr>
+<tr class="separator:a36d1d35e662321608773e8c3346522d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f0abbf07d638be82629b69d3e4b377"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#ae5f0abbf07d638be82629b69d3e4b377">result</a></td></tr>
+<tr class="separator:ae5f0abbf07d638be82629b69d3e4b377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402190f0f833186ac16448819ff40c39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d06/classScalableLabel.html">ScalableLabel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#a402190f0f833186ac16448819ff40c39">actionLabel</a></td></tr>
+<tr class="separator:a402190f0f833186ac16448819ff40c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5d802ba1292db4cd538aab6be82cb50"><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#aa5d802ba1292db4cd538aab6be82cb50">resultLabel</a></td></tr>
 <tr class="separator:aa5d802ba1292db4cd538aab6be82cb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec591ae458424b1448d3a4b5f61fd3f3"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#aec591ae458424b1448d3a4b5f61fd3f3">closeButton</a></td></tr>
-<tr class="separator:aec591ae458424b1448d3a4b5f61fd3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bec3c017919a3256a2c899f67446b26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#a7bec3c017919a3256a2c899f67446b26">closeButton</a></td></tr>
+<tr class="separator:a7bec3c017919a3256a2c899f67446b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a621621531a827db60b2ef4fadec70699"><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/classResultWidget.html#a621621531a827db60b2ef4fadec70699">background</a></td></tr>
 <tr class="separator:a621621531a827db60b2ef4fadec70699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -146,6 +162,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a00632e6e9659c540792c769709c6d9ef inherit pro_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize event handler.  <a href="../../de/d1f/classScalableWidget.html#a00632e6e9659c540792c769709c6d9ef">More...</a><br /></td></tr>
 <tr class="separator:a00632e6e9659c540792c769709c6d9ef inherit pro_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af769d275d2664e813043ed4eaa6a2589 inherit pro_methods_classScalableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#af769d275d2664e813043ed4eaa6a2589">redraw</a> ()</td></tr>
+<tr class="memdesc:af769d275d2664e813043ed4eaa6a2589 inherit pro_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redraw's the elements.  <a href="../../de/d1f/classScalableWidget.html#af769d275d2664e813043ed4eaa6a2589">More...</a><br /></td></tr>
 <tr class="separator:af769d275d2664e813043ed4eaa6a2589 inherit pro_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74163033b7dc31eedbcbbfa6ac58df6e inherit pro_methods_classScalableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e">addWidget</a> (QWidget *widget, double percentX, double percentY, double percentSizeX, double percentSizeY)</td></tr>
 <tr class="memdesc:a74163033b7dc31eedbcbbfa6ac58df6e inherit pro_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a widget which will be scaled.  <a href="../../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e">More...</a><br /></td></tr>
@@ -154,9 +171,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a7083edda78605d50481c395624534504 inherit pro_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a widget.  <a href="../../de/d1f/classScalableWidget.html#a7083edda78605d50481c395624534504">More...</a><br /></td></tr>
 <tr class="separator:a7083edda78605d50481c395624534504 inherit pro_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0d2d24e77564bf4f16d822b3ad20fb52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d2d24e77564bf4f16d822b3ad20fb52">&#9670;&nbsp;</a></span>ResultWidget()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class describes the notebook's result widget. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adc62c5e3def1024ef1798a61e48e02dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc62c5e3def1024ef1798a61e48e02dc">&#9670;&nbsp;</a></span>ResultWidget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,9 +186,25 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">ResultWidget::ResultWidget </td>
           <td>(</td>
-          <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>action</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -178,6 +213,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a new instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">action</td><td>The action </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>The result </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">parent</td><td>The parent </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -196,11 +241,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Destroys the object. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7eab9a791fa59c5a71bdc6e4dc0dd48d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7eab9a791fa59c5a71bdc6e4dc0dd48d">&#9670;&nbsp;</a></span>loadGraphics()</h2>
+<a id="a7aa630ac1983ee21682f4c596cab3f12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aa630ac1983ee21682f4c596cab3f12">&#9670;&nbsp;</a></span>close</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +256,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ResultWidget::loadGraphics </td>
+          <td class="memname">void ResultWidget::close </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -217,38 +264,51 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#a0d2d24e77564bf4f16d822b3ad20fb52">ResultWidget()</a>.</p>
+<p>Called when the user has acknowledged the result. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a046562d43eb53639d218c893531f3a49">NotebookWidget::displayResultsWidget()</a>, and <a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">setupUi()</a>.</p>
 
 </div>
 </div>
-<a id="a0935de9b3c6d2343b031e00595cefef8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0935de9b3c6d2343b031e00595cefef8">&#9670;&nbsp;</a></span>paintEvent()</h2>
+<a id="aa5598cbd5d1c662965567a70d327605e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5598cbd5d1c662965567a70d327605e">&#9670;&nbsp;</a></span>setResult()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ResultWidget::paintEvent </td>
+          <td class="memname">void ResultWidget::setResult </td>
           <td>(</td>
-          <td class="paramtype">QPaintEvent *&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>action</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Sets the result to be displayed on the widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">action</td><td>The action </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>The result </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -275,31 +335,61 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#a0d2d24e77564bf4f16d822b3ad20fb52">ResultWidget()</a>.</p>
+<p>Sets up the UI. </p>
 
-</div>
-</div>
-<a id="a72df18151f1c63a0788a735132250b37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72df18151f1c63a0788a735132250b37">&#9670;&nbsp;</a></span>showResult()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ResultWidget::showResult </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d9/ddf/structActionResult.html">ActionResult</a>&#160;</td>
-          <td class="paramname"><em>result</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a09095fea18a75cc31ae2ddc893913a43">Game::handleActionResult()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#adc62c5e3def1024ef1798a61e48e02dc">ResultWidget()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a36d1d35e662321608773e8c3346522d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d1d35e662321608773e8c3346522d6">&#9670;&nbsp;</a></span>action</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ResultWidget::action</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#aa5598cbd5d1c662965567a70d327605e">setResult()</a>, and <a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">setupUi()</a>.</p>
+
+</div>
+</div>
+<a id="a402190f0f833186ac16448819ff40c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402190f0f833186ac16448819ff40c39">&#9670;&nbsp;</a></span>actionLabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d06/classScalableLabel.html">ScalableLabel</a>* ResultWidget::actionLabel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#aa5598cbd5d1c662965567a70d327605e">setResult()</a>, and <a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">setupUi()</a>.</p>
+
+</div>
+</div>
 <a id="a621621531a827db60b2ef4fadec70699"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a621621531a827db60b2ef4fadec70699">&#9670;&nbsp;</a></span>background</h2>
 
@@ -320,12 +410,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#a7eab9a791fa59c5a71bdc6e4dc0dd48d">loadGraphics()</a>, and <a class="el" href="../../d2/dad/classResultWidget.html#a0935de9b3c6d2343b031e00595cefef8">paintEvent()</a>.</p>
-
 </div>
 </div>
-<a id="aec591ae458424b1448d3a4b5f61fd3f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec591ae458424b1448d3a4b5f61fd3f3">&#9670;&nbsp;</a></span>closeButton</h2>
+<a id="a7bec3c017919a3256a2c899f67446b26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bec3c017919a3256a2c899f67446b26">&#9670;&nbsp;</a></span>closeButton</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +422,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QPushButton* ResultWidget::closeButton</td>
+          <td class="memname"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a>* ResultWidget::closeButton</td>
         </tr>
       </table>
   </td>
@@ -344,7 +432,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">setupUi()</a>, and <a class="el" href="../../d2/dad/classResultWidget.html#aa43d0cad7846319774387efcf79122f0">~ResultWidget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">setupUi()</a>.</p>
+
+</div>
+</div>
+<a id="ae5f0abbf07d638be82629b69d3e4b377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f0abbf07d638be82629b69d3e4b377">&#9670;&nbsp;</a></span>result</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ResultWidget::result</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#aa5598cbd5d1c662965567a70d327605e">setResult()</a>, and <a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">setupUi()</a>.</p>
 
 </div>
 </div>
@@ -368,7 +480,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">setupUi()</a>, <a class="el" href="../../d2/dad/classResultWidget.html#a72df18151f1c63a0788a735132250b37">showResult()</a>, and <a class="el" href="../../d2/dad/classResultWidget.html#aa43d0cad7846319774387efcf79122f0">~ResultWidget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d2/dad/classResultWidget.html#aa5598cbd5d1c662965567a70d327605e">setResult()</a>, and <a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">setupUi()</a>.</p>
 
 </div>
 </div>

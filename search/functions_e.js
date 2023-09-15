@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['redraw_631',['redraw',['../de/d1f/classScalableWidget.html#af769d275d2664e813043ed4eaa6a2589',1,'ScalableWidget']]],
-  ['relax_632',['relax',['../d9/d68/classGame.html#a8dce26b00c331b2c98fa9ba54a5d5aeb',1,'Game']]],
-  ['removewidget_633',['removeWidget',['../de/d1f/classScalableWidget.html#a7083edda78605d50481c395624534504',1,'ScalableWidget']]],
-  ['resizeevent_634',['resizeEvent',['../dd/d67/classSurviveGame.html#a548e88ab18f95e262106a2b220c4212c',1,'SurviveGame::resizeEvent()'],['../de/d1f/classScalableWidget.html#a00632e6e9659c540792c769709c6d9ef',1,'ScalableWidget::resizeEvent()']]],
-  ['resolutionoptionchanged_635',['resolutionOptionChanged',['../db/dbe/classSettingsMenu.html#a5a0e505222332b9add757185229584eb',1,'SettingsMenu']]],
-  ['rest_636',['rest',['../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865',1,'Engine::rest()'],['../db/d4c/classNotebookWidget.html#a2e514d7b0b403dbd91efa24d7b24fc36',1,'NotebookWidget::rest()']]],
-  ['resultwidget_637',['ResultWidget',['../d2/dad/classResultWidget.html#a0d2d24e77564bf4f16d822b3ad20fb52',1,'ResultWidget']]],
-  ['run_638',['run',['../d9/d68/classGame.html#a1ab78f5ed0d5ea879157357cf2fb2afa',1,'Game']]]
+  ['paintevent_724',['paintEvent',['../d9/d68/classGame.html#ae3d960780bb03ab5d6713e5d3343f6fc',1,'Game::paintEvent()'],['../dc/d53/classGameOver.html#a8d409ac6d62236935854697e8355fa26',1,'GameOver::paintEvent()'],['../db/d4c/classNotebookWidget.html#a571b7d8b80d52a2463d18ec1984d80c4',1,'NotebookWidget::paintEvent()'],['../da/d1e/classLoadGameMenu.html#ac86159716ee015924603b5fa6e89730a',1,'LoadGameMenu::paintEvent()'],['../d8/ddb/classMenu.html#a44627c24f8e279727a2f2f2af0ee1fb4',1,'Menu::paintEvent()'],['../da/d89/classLevelInfoWidget.html#aa09a7192a9839073cdb6e8149207d529',1,'LevelInfoWidget::paintEvent()'],['../d7/d63/classNewGameMenu.html#a9d48113977b1cade7728ed5ae790e84e',1,'NewGameMenu::paintEvent()'],['../db/dbe/classSettingsMenu.html#a2f64948c8309e04d2e49aa52e3282a59',1,'SettingsMenu::paintEvent()'],['../d9/d06/classScalableLabel.html#a9d84c41648b0d2622cd45b6bd524db1c',1,'ScalableLabel::paintEvent()'],['../d7/d1f/classSVGPushButton.html#a749b74ecb51aa548be3973e12ce45b95',1,'SVGPushButton::paintEvent()']]],
+  ['plant_725',['Plant',['../d9/d6e/classPlant.html#a4f9a125301270a4a9c4d0f90f80bcb8c',1,'Plant']]],
+  ['plus_726',['plus',['../d7/d9a/classBar.html#acd14046ca968a049c20dbcbb4ff41229',1,'Bar']]],
+  ['probability_727',['probability',['../d1/db6/classEngine.html#a48c5027bb02dc46b85c9dc32f1a8e6f9',1,'Engine']]]
 ];

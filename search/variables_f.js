@@ -1,19 +1,17 @@
 var searchData=
 [
-  ['savebuttons_796',['saveButtons',['../da/d1e/classLoadGameMenu.html#ac9c98fab67e675e8d26c7186c8bb8608',1,'LoadGameMenu']]],
-  ['saves_797',['saves',['../da/d1e/classLoadGameMenu.html#a72127577373294ca41f00fdf806035c3',1,'LoadGameMenu']]],
-  ['saveslayout_798',['savesLayout',['../da/d1e/classLoadGameMenu.html#a6f95e29c0440a2947e2a1d292507014e',1,'LoadGameMenu']]],
-  ['saveswidget_799',['savesWidget',['../da/d1e/classLoadGameMenu.html#a00aa754af61cfe3bb69a105eb16441f1',1,'LoadGameMenu']]],
-  ['season_800',['season',['../d2/d31/structEventInfo.html#a182a552552992a831d95b7f0b0e65a6e',1,'EventInfo::season()'],['../d9/d68/classGame.html#a8f4e05866e6777407869a9abe0582ea0',1,'Game::season()']]],
-  ['seasonevent_801',['seasonEvent',['../d5/d26/structLevelConfig.html#a0224bb11212666c7271bb3d185dc37ee',1,'LevelConfig']]],
-  ['seasoneventtrigger_802',['seasonEventTrigger',['../d5/d26/structLevelConfig.html#a9d0426d885a7558a235d75216504d765',1,'LevelConfig']]],
-  ['seasons_803',['seasons',['../d2/d9d/classLevel.html#a1613c189f5b67d0aca518e9a48ed49a1',1,'Level']]],
-  ['settings_804',['settings',['../db/dbe/classSettingsMenu.html#ab4e9eb29a9cd79381c68bdd9605acba7',1,'SettingsMenu']]],
-  ['settingsbutton_805',['settingsButton',['../d8/ddb/classMenu.html#a8a5e1cf09427907f0524fd52e523e6e6',1,'Menu']]],
-  ['settingsmenu_806',['settingsMenu',['../d9/d0a/classMainMenu.html#a0dbbf0de319f20f3a52273646e39f726',1,'MainMenu']]],
-  ['sleepbutton_807',['sleepButton',['../d9/d68/classGame.html#affdc1ccf08a412188344a7579f76948c',1,'Game']]],
-  ['snow_5fdepth_808',['snow_depth',['../dd/d8f/structClimateData.html#a8b75b179d66a10e6a9e68a19120dd667',1,'ClimateData']]],
-  ['speciesid_809',['speciesID',['../d3/d93/structAnimalInfo.html#aa58e221d86f0df11a22bf6b7eb42519e',1,'AnimalInfo']]],
-  ['startopacity_810',['startOpacity',['../d7/d1f/classSVGPushButton.html#a3f8d16bd5be7766168dcb3090312dcec',1,'SVGPushButton']]],
-  ['sum_811',['sum',['../da/dbb/structPrecipitation.html#ac781e58c65947163cde7b14e0d1610ec',1,'Precipitation']]]
+  ['random_898',['random',['../d1/db6/classEngine.html#abbfaab481c4a8f7fd4aa896665bd7852',1,'Engine']]],
+  ['renderer_899',['renderer',['../d7/d1f/classSVGPushButton.html#ae6920864b02f8978b52f55716a7bd460',1,'SVGPushButton']]],
+  ['resolutionlabel_900',['resolutionLabel',['../db/dbe/classSettingsMenu.html#acbe02653980d0b91f7ea76fe37a76b1e',1,'SettingsMenu']]],
+  ['resolutionoption_901',['resolutionOption',['../db/dbe/classSettingsMenu.html#adffc32f5ce9bfbea3e982846040deced',1,'SettingsMenu']]],
+  ['restbutton_902',['restButton',['../db/d92/classActionMenu.html#a668b304ad4975ba3a2020a8edfc9669d',1,'ActionMenu']]],
+  ['restenergy_903',['restEnergy',['../d5/d26/structLevelConfig.html#a3a97b91b92c0d8304102ea73e3291dc1',1,'LevelConfig']]],
+  ['resthunger_904',['restHunger',['../d5/d26/structLevelConfig.html#a4489a45bd88707e0faaab0d517a4c771',1,'LevelConfig']]],
+  ['resthungerheal_905',['restHungerHeal',['../d5/d26/structLevelConfig.html#aeae7e75e9ac8f14548c9450d9bd4948e',1,'LevelConfig']]],
+  ['restthirst_906',['restThirst',['../d5/d26/structLevelConfig.html#ad38099e88aa298811d5289f8ad0f8a3d',1,'LevelConfig']]],
+  ['restthirstheal_907',['restThirstHeal',['../d5/d26/structLevelConfig.html#a6d96c4791a629fee0a518f688c1e4a0a',1,'LevelConfig']]],
+  ['restwellheal_908',['restWellHeal',['../d5/d26/structLevelConfig.html#a4e8437c586986523b9731c4c1bf26b89',1,'LevelConfig']]],
+  ['result_909',['result',['../d9/ddf/structActionResult.html#a104596c018eb8dd0711742f834c24aee',1,'ActionResult::result()'],['../d1/d7c/structActionEntry.html#a29864e2c4f9b6a59afc959ccd17b9b6d',1,'ActionEntry::result()'],['../d6/df1/structNotebookWidget_1_1WidgetInfo.html#ae27d96c832f035ceeb533c29673b3621',1,'NotebookWidget::WidgetInfo::result()'],['../d2/dad/classResultWidget.html#ae5f0abbf07d638be82629b69d3e4b377',1,'ResultWidget::result()']]],
+  ['resultlabel_910',['resultLabel',['../d2/dad/classResultWidget.html#aa5d802ba1292db4cd538aab6be82cb50',1,'ResultWidget']]],
+  ['resultwidget_911',['resultWidget',['../db/d4c/classNotebookWidget.html#a4d83cccbfedee6c1a3f96a57f6080873',1,'NotebookWidget']]]
 ];

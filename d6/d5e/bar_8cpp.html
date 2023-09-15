@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -84,12 +84,41 @@ $(document).ready(function(){initNavTree('d6/d5e/bar_8cpp.html','../../'); initR
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">bar.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d7/d34/bar_8h_source.html">bar.h</a>&quot;</code><br />
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af92cfbe9ef90d18bba23552fac99b2b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5e/bar_8cpp.html#af92cfbe9ef90d18bba23552fac99b2b6">CHECK_BOUNDARIES</a></td></tr>
+<tr class="separator:af92cfbe9ef90d18bba23552fac99b2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="af92cfbe9ef90d18bba23552fac99b2b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92cfbe9ef90d18bba23552fac99b2b6">&#9670;&nbsp;</a></span>CHECK_BOUNDARIES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHECK_BOUNDARIES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span> (dataval &gt; <a class="code" href="../../d7/d34/bar_8h.html#acc6b4a9b539d9e19f70701109dad8ea5">BAR_MAX</a>) \</div>
+<div class="line">        dataval = <a class="code" href="../../d7/d34/bar_8h.html#acc6b4a9b539d9e19f70701109dad8ea5">BAR_MAX</a>; \</div>
+<div class="line">    else <span class="keywordflow">if</span> (dataval &lt; <a class="code" href="../../d7/d34/bar_8h.html#a8e0a9d3a5a3f446b21e8ab638e86b004">BAR_MIN</a>) \</div>
+<div class="line">        dataval = <a class="code" href="../../d7/d34/bar_8h.html#a8e0a9d3a5a3f446b21e8ab638e86b004">BAR_MIN</a>;</div>
+<div class="ttc" id="abar_8h_html_a8e0a9d3a5a3f446b21e8ab638e86b004"><div class="ttname"><a href="../../d7/d34/bar_8h.html#a8e0a9d3a5a3f446b21e8ab638e86b004">BAR_MIN</a></div><div class="ttdeci">#define BAR_MIN</div><div class="ttdef"><b>Definition:</b> bar.h:4</div></div>
+<div class="ttc" id="abar_8h_html_acc6b4a9b539d9e19f70701109dad8ea5"><div class="ttname"><a href="../../d7/d34/bar_8h.html#acc6b4a9b539d9e19f70701109dad8ea5">BAR_MAX</a></div><div class="ttdeci">#define BAR_MAX</div><div class="ttdef"><b>Definition:</b> bar.h:3</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['onexplore_617',['onExplore',['../d9/d68/classGame.html#a5e5b88292ada9cf644dc34784f899fcf',1,'Game']]],
-  ['onfindfood_618',['onFindFood',['../d9/d68/classGame.html#a80d0f46b6c42088d0f0757dcd3a300f9',1,'Game']]],
-  ['onfindwater_619',['onFindWater',['../d9/d68/classGame.html#ac4805d3ae1d17de4812b181d9984f553',1,'Game']]],
-  ['onframeoptionchanged_620',['onFrameOptionChanged',['../db/dbe/classSettingsMenu.html#a1789cb98e00b3450762f9723011b23a4',1,'SettingsMenu']]],
-  ['onnewgame_621',['onNewGame',['../dd/d67/classSurviveGame.html#a77096b5eee899d3d9d963aca34fc0b82',1,'SurviveGame']]],
-  ['onnewgamebuttonclicked_622',['onNewGameButtonClicked',['../d9/d0a/classMainMenu.html#a5629f0b48386f51c7a17b05d163bd560',1,'MainMenu']]],
-  ['onresolutionoptionchanged_623',['onResolutionOptionChanged',['../db/dbe/classSettingsMenu.html#a6ab63a774b7a1aa3c742b563bfd30b96',1,'SettingsMenu']]],
-  ['onrest_624',['onRest',['../d9/d68/classGame.html#a47bcb2c8331b772b4a953f8a83a5e7d0',1,'Game']]]
+  ['newgamebuttonclicked_708',['newGameButtonClicked',['../d9/d0a/classMainMenu.html#a2837c6424731715203df0013a48ee9f1',1,'MainMenu']]],
+  ['newgamemenu_709',['NewGameMenu',['../d7/d63/classNewGameMenu.html#a3802b59e716e5f1c5091427efc0f3827',1,'NewGameMenu']]],
+  ['newgamemenuclosed_710',['newGameMenuClosed',['../d7/d63/classNewGameMenu.html#a46329ea3e246d326143c86287d89c419',1,'NewGameMenu']]],
+  ['newgamemenuopened_711',['newGameMenuOpened',['../d8/ddb/classMenu.html#ad1788e640478e437dd628c4db90fdc3d',1,'Menu']]],
+  ['nextday_712',['nextDay',['../d8/d0d/classDay.html#acdc88e7be965b37df5f9285d1653034b',1,'Day::nextDay()'],['../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2',1,'Engine::nextDay()'],['../d9/d68/classGame.html#a2ecfb6810e73d4445f3905da4cd89681',1,'Game::nextDay()']]],
+  ['notebookwidget_713',['NotebookWidget',['../db/d4c/classNotebookWidget.html#abcaca60ebd8aee42c4638f2008c81f71',1,'NotebookWidget']]]
 ];

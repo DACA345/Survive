@@ -1,10 +1,21 @@
 var searchData=
 [
-  ['thirstbar_812',['thirstBar',['../d1/db6/classEngine.html#a00051a716e42f444eb4563be402a29c4',1,'Engine::thirstBar()'],['../d9/d68/classGame.html#af9ffa189593338b2873a9a5b40c30072',1,'Game::thirstBar()']]],
-  ['thirstbarfill_813',['thirstBarFill',['../d9/d68/classGame.html#a391782f2a842948d950a2397da301c64',1,'Game']]],
-  ['title_814',['title',['../d7/d63/classNewGameMenu.html#a841967d6bc2cad6239d4986f81240053',1,'NewGameMenu::title()'],['../db/dbe/classSettingsMenu.html#a71cec2f42a087ba130700db4891dabae',1,'SettingsMenu::title()']]],
-  ['titlelabel_815',['titleLabel',['../db/d4c/classNotebookWidget.html#a9998890836528750af5905a296b03ffc',1,'NotebookWidget']]],
-  ['totaldays_816',['totalDays',['../d9/d68/classGame.html#a0544e130c0ba4091d8d5dd07a330e0b6',1,'Game']]],
-  ['triggered_817',['triggered',['../d0/d28/structEventResult.html#a46d6a5ba1ac19092de8b888b191181e3',1,'EventResult']]],
-  ['turns_818',['turns',['../d1/db6/classEngine.html#a83a30f3e5d175f9296a79e5a91e4f971',1,'Engine::turns()'],['../d9/d68/classGame.html#ac64f3e32d1c1d3ee3d6100719db73cbc',1,'Game::turns()']]]
+  ['savebuttons_912',['saveButtons',['../da/d1e/classLoadGameMenu.html#ac9c98fab67e675e8d26c7186c8bb8608',1,'LoadGameMenu']]],
+  ['saves_913',['saves',['../da/d1e/classLoadGameMenu.html#a72127577373294ca41f00fdf806035c3',1,'LoadGameMenu']]],
+  ['saveslayout_914',['savesLayout',['../da/d1e/classLoadGameMenu.html#a6f95e29c0440a2947e2a1d292507014e',1,'LoadGameMenu']]],
+  ['saveswidget_915',['savesWidget',['../da/d1e/classLoadGameMenu.html#a00aa754af61cfe3bb69a105eb16441f1',1,'LoadGameMenu']]],
+  ['season_916',['season',['../d2/d31/structEventInfo.html#a182a552552992a831d95b7f0b0e65a6e',1,'EventInfo']]],
+  ['seasonevent_917',['seasonEvent',['../d5/d26/structLevelConfig.html#a0224bb11212666c7271bb3d185dc37ee',1,'LevelConfig']]],
+  ['seasoneventtrigger_918',['seasonEventTrigger',['../d5/d26/structLevelConfig.html#a9d0426d885a7558a235d75216504d765',1,'LevelConfig']]],
+  ['seasons_919',['seasons',['../d2/d9d/classLevel.html#a1613c189f5b67d0aca518e9a48ed49a1',1,'Level']]],
+  ['settings_920',['settings',['../db/dbe/classSettingsMenu.html#ab4e9eb29a9cd79381c68bdd9605acba7',1,'SettingsMenu']]],
+  ['settingsbutton_921',['settingsButton',['../d8/ddb/classMenu.html#a8a5e1cf09427907f0524fd52e523e6e6',1,'Menu']]],
+  ['settingsmenu_922',['settingsMenu',['../d9/d0a/classMainMenu.html#a0dbbf0de319f20f3a52273646e39f726',1,'MainMenu']]],
+  ['sleepbutton_923',['sleepButton',['../d3/da5/classSleepWidget.html#a438a0645495d50c2b02a7cedaa99ebb7',1,'SleepWidget']]],
+  ['sleeplabel_924',['sleepLabel',['../d3/da5/classSleepWidget.html#a26ea955163a1def80639164dac026f1c',1,'SleepWidget']]],
+  ['sleepwidget_925',['sleepWidget',['../db/d4c/classNotebookWidget.html#a6d6e9616e7f644d07cfa8069d65f9878',1,'NotebookWidget']]],
+  ['snowdepth_926',['snowDepth',['../dd/d8f/structClimateData.html#a89e58eefd8d183abb3ebb62187585774',1,'ClimateData']]],
+  ['speciesid_927',['speciesID',['../d3/d93/structAnimalInfo.html#aa58e221d86f0df11a22bf6b7eb42519e',1,'AnimalInfo']]],
+  ['startopacity_928',['startOpacity',['../d7/d1f/classSVGPushButton.html#a3f8d16bd5be7766168dcb3090312dcec',1,'SVGPushButton']]],
+  ['sum_929',['sum',['../da/dbb/structPrecipitation.html#abd24f6c3c0972d3e4ce4f805af134c05',1,'Precipitation']]]
 ];

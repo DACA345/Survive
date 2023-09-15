@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -84,6 +84,8 @@ $(document).ready(function(){initNavTree('d2/db1/animal_8cpp.html','../../'); in
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">animal.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -95,7 +97,44 @@ $(document).ready(function(){initNavTree('d2/db1/animal_8cpp.html','../../'); in
 <code>#include &lt;QJsonValue&gt;</code><br />
 <code>#include &lt;QRandomGenerator&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d1/dc4/animal_8h_source.html">animal.h</a>&quot;</code><br />
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2263f9a31128d203f32d8f780f8a1469"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db1/animal_8cpp.html#a2263f9a31128d203f32d8f780f8a1469">STORE_ANIMAL_DATA</a>(categoryName)</td></tr>
+<tr class="separator:a2263f9a31128d203f32d8f780f8a1469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a2263f9a31128d203f32d8f780f8a1469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2263f9a31128d203f32d8f780f8a1469">&#9670;&nbsp;</a></span>STORE_ANIMAL_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STORE_ANIMAL_DATA</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">categoryName</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="../../d3/d93/structAnimalInfo.html">AnimalInfo</a> animalData; \</div>
+<div class="line">    animalData.<a class="code" href="../../d3/d93/structAnimalInfo.html#a00bf3c4b84ccaa210ea4e8dad2af869c">name</a> = name; \</div>
+<div class="line">    animalData.category = categoryName; \</div>
+<div class="line">    animalData.edible = edible; \</div>
+<div class="line">    animalData.effect.healthBar = animalEffect[<span class="stringliteral">&quot;healthBar&quot;</span>].toInt(); \</div>
+<div class="line">    animalData.effect.thirstBar = animalEffect[<span class="stringliteral">&quot;thirstBar&quot;</span>].toInt(); \</div>
+<div class="line">    animalData.effect.hungerBar = animalEffect[<span class="stringliteral">&quot;hungerBar&quot;</span>].toInt(); \</div>
+<div class="line">    animalData.effect.moraleBar = animalEffect[<span class="stringliteral">&quot;moraleBar&quot;</span>].toInt(); \</div>
+<div class="line">    animalData.effect.energyBar = animalEffect[<span class="stringliteral">&quot;energyBar&quot;</span>].toInt(); \</div>
+<div class="line">    animals[categoryName].append(animalData);</div>
+<div class="ttc" id="astructAnimalInfo_html"><div class="ttname"><a href="../../d3/d93/structAnimalInfo.html">AnimalInfo</a></div><div class="ttdoc">Struct representation of the JSON animal info.</div><div class="ttdef"><b>Definition:</b> animal.h:15</div></div>
+<div class="ttc" id="astructAnimalInfo_html_a00bf3c4b84ccaa210ea4e8dad2af869c"><div class="ttname"><a href="../../d3/d93/structAnimalInfo.html#a00bf3c4b84ccaa210ea4e8dad2af869c">AnimalInfo::name</a></div><div class="ttdeci">QString name</div><div class="ttdef"><b>Definition:</b> animal.h:18</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

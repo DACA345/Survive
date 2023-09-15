@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -106,15 +106,21 @@ Inheritance diagram for ScalableWidget:</div>
  <div class="center">
   <img src="../../de/d1f/classScalableWidget.png" usemap="#ScalableWidget_map" alt=""/>
   <map id="ScalableWidget_map" name="ScalableWidget_map">
-<area href="../../d6/d1f/classDraggableWidget.html" title="This class describes a widget which can be dragged around." alt="DraggableWidget" shape="rect" coords="119,112,228,136"/>
-<area href="../../d9/d68/classGame.html" title="This class describes the game instance." alt="Game" shape="rect" coords="119,168,228,192"/>
-<area href="../../da/d89/classLevelInfoWidget.html" title="This class describes a level information widget." alt="LevelInfoWidget" shape="rect" coords="119,224,228,248"/>
-<area href="../../da/d1e/classLoadGameMenu.html" title="This class describes the load game menu." alt="LoadGameMenu" shape="rect" coords="119,280,228,304"/>
-<area href="../../d9/d0a/classMainMenu.html" title="This class describes the game&#39;s main menu." alt="MainMenu" shape="rect" coords="119,336,228,360"/>
-<area href="../../d8/ddb/classMenu.html" title="This class describes the mainmenu menu." alt="Menu" shape="rect" coords="119,392,228,416"/>
-<area href="../../d7/d63/classNewGameMenu.html" title="This class describes a new game menu." alt="NewGameMenu" shape="rect" coords="119,448,228,472"/>
-<area href="../../d2/dad/classResultWidget.html" alt="ResultWidget" shape="rect" coords="119,504,228,528"/>
-<area href="../../db/dbe/classSettingsMenu.html" title="This class describes a settings menu." alt="SettingsMenu" shape="rect" coords="119,560,228,584"/>
+<area href="../../db/d92/classActionMenu.html" title="This class describes the action menu within the notebook." alt="ActionMenu" shape="rect" coords="119,112,228,136"/>
+<area href="../../d6/d1f/classDraggableWidget.html" title="This class describes a widget which can be dragged around." alt="DraggableWidget" shape="rect" coords="119,168,228,192"/>
+<area href="../../d9/d68/classGame.html" title="This class describes the game instance." alt="Game" shape="rect" coords="119,224,228,248"/>
+<area href="../../dc/d53/classGameOver.html" title="This class describes the game over screen." alt="GameOver" shape="rect" coords="119,280,228,304"/>
+<area href="../../d7/de5/classHistoryWidget.html" title="This class describes the history widget representing the journal in the notebook." alt="HistoryWidget" shape="rect" coords="119,336,228,360"/>
+<area href="../../d4/dec/classJournalDay.html" title="This class describes a journal day within the history widget." alt="JournalDay" shape="rect" coords="119,392,228,416"/>
+<area href="../../da/d89/classLevelInfoWidget.html" title="This class describes a level information widget." alt="LevelInfoWidget" shape="rect" coords="119,448,228,472"/>
+<area href="../../da/d1e/classLoadGameMenu.html" title="This class describes the load game menu." alt="LoadGameMenu" shape="rect" coords="119,504,228,528"/>
+<area href="../../d9/d0a/classMainMenu.html" title="This class describes the game&#39;s main menu." alt="MainMenu" shape="rect" coords="119,560,228,584"/>
+<area href="../../d8/ddb/classMenu.html" title="This class describes the mainmenu menu." alt="Menu" shape="rect" coords="119,616,228,640"/>
+<area href="../../d7/d63/classNewGameMenu.html" title="This class describes a new game menu." alt="NewGameMenu" shape="rect" coords="119,672,228,696"/>
+<area href="../../db/d4c/classNotebookWidget.html" title="This class describes a notebook widget in the game." alt="NotebookWidget" shape="rect" coords="119,728,228,752"/>
+<area href="../../d2/dad/classResultWidget.html" title="This class describes the notebook&#39;s result widget." alt="ResultWidget" shape="rect" coords="119,784,228,808"/>
+<area href="../../db/dbe/classSettingsMenu.html" title="This class describes a settings menu." alt="SettingsMenu" shape="rect" coords="119,840,228,864"/>
+<area href="../../d3/da5/classSleepWidget.html" title="This class describes the notebook&#39;s sleep widget." alt="SleepWidget" shape="rect" coords="119,896,228,920"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -139,6 +145,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a00632e6e9659c540792c769709c6d9ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize event handler.  <a href="../../de/d1f/classScalableWidget.html#a00632e6e9659c540792c769709c6d9ef">More...</a><br /></td></tr>
 <tr class="separator:a00632e6e9659c540792c769709c6d9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af769d275d2664e813043ed4eaa6a2589"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#af769d275d2664e813043ed4eaa6a2589">redraw</a> ()</td></tr>
+<tr class="memdesc:af769d275d2664e813043ed4eaa6a2589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redraw's the elements.  <a href="../../de/d1f/classScalableWidget.html#af769d275d2664e813043ed4eaa6a2589">More...</a><br /></td></tr>
 <tr class="separator:af769d275d2664e813043ed4eaa6a2589"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74163033b7dc31eedbcbbfa6ac58df6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e">addWidget</a> (QWidget *widget, double percentX, double percentY, double percentSizeX, double percentSizeY)</td></tr>
 <tr class="memdesc:a74163033b7dc31eedbcbbfa6ac58df6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a widget which will be scaled.  <a href="../../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e">More...</a><br /></td></tr>
@@ -279,7 +286,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="../../d7/d63/classNewGameMenu.html#a4bf6044dd4d01f4a23b52e69267ccb92">NewGameMenu::displayLevels()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#aca0ca25d89308070758ac7304c24c0ed">MainMenu::displayLoadGameMenu()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#a2ca36bb7cd15e97067ca6263063e6524">MainMenu::displayNewGameMenu()</a>, <a class="el" href="../../da/d1e/classLoadGameMenu.html#a7b8906b0df7fbd3dc47ba1f72f5f8742">LoadGameMenu::displaySaves()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#af91cb54b3d8085bf2c6a7152dd1b1730">MainMenu::displaySettingsMenu()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#a891bed1e0edb5492671c332cb89b7a9a">MainMenu::MainMenu()</a>, <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">NotebookWidget::setupUi()</a>, <a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">ResultWidget::setupUi()</a>, <a class="el" href="../../da/d1e/classLoadGameMenu.html#a1ac4cdb1297b3dd7dad0c5bb043333f6">LoadGameMenu::setupUi()</a>, <a class="el" href="../../d8/ddb/classMenu.html#a34d27642cb7fb04b439605eda5546188">Menu::setupUi()</a>, <a class="el" href="../../d7/d63/classNewGameMenu.html#a8f10c5c8a61230a2c646fa150181465c">NewGameMenu::setupUi()</a>, <a class="el" href="../../db/dbe/classSettingsMenu.html#a4e16f13789d433484151ef36b49824a8">SettingsMenu::setupUi()</a>, and <a class="el" href="../../d9/d68/classGame.html#a53461ac199ac4f735cbfed19a2aa0a92">Game::updateBars()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">NotebookWidget::displayActionMenu()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">NotebookWidget::displayHistoryWidget()</a>, <a class="el" href="../../d7/d63/classNewGameMenu.html#a4bf6044dd4d01f4a23b52e69267ccb92">NewGameMenu::displayLevels()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#aca0ca25d89308070758ac7304c24c0ed">MainMenu::displayLoadGameMenu()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#a2ca36bb7cd15e97067ca6263063e6524">MainMenu::displayNewGameMenu()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a046562d43eb53639d218c893531f3a49">NotebookWidget::displayResultsWidget()</a>, <a class="el" href="../../da/d1e/classLoadGameMenu.html#a7b8906b0df7fbd3dc47ba1f72f5f8742">LoadGameMenu::displaySaves()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#af91cb54b3d8085bf2c6a7152dd1b1730">MainMenu::displaySettingsMenu()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#aeec4db38baec10678c6528a32724777a">NotebookWidget::displaySleepWidget()</a>, <a class="el" href="../../d9/d68/classGame.html#a7d88788cf4b0da39a0245d418aa6f37a">Game::endGame()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#a891bed1e0edb5492671c332cb89b7a9a">MainMenu::MainMenu()</a>, <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>, <a class="el" href="../../dc/d53/classGameOver.html#a28bd6110f4d8d1616a5290d329d0e827">GameOver::setupUi()</a>, <a class="el" href="../../db/d92/classActionMenu.html#aa54d9162bf0836d8fee90734c274a2aa">ActionMenu::setupUi()</a>, <a class="el" href="../../d7/de5/classHistoryWidget.html#a23c16961b63eee79c3fe6b7c8273e6fe">HistoryWidget::setupUi()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">NotebookWidget::setupUi()</a>, <a class="el" href="../../d2/dad/classResultWidget.html#a4b483d99ea3536199ba4691a046c7eda">ResultWidget::setupUi()</a>, <a class="el" href="../../d3/da5/classSleepWidget.html#add99c86c65118537863c1bf4fab76407">SleepWidget::setupUi()</a>, <a class="el" href="../../da/d1e/classLoadGameMenu.html#a1ac4cdb1297b3dd7dad0c5bb043333f6">LoadGameMenu::setupUi()</a>, <a class="el" href="../../d8/ddb/classMenu.html#a34d27642cb7fb04b439605eda5546188">Menu::setupUi()</a>, <a class="el" href="../../d7/d63/classNewGameMenu.html#a8f10c5c8a61230a2c646fa150181465c">NewGameMenu::setupUi()</a>, <a class="el" href="../../db/dbe/classSettingsMenu.html#a4e16f13789d433484151ef36b49824a8">SettingsMenu::setupUi()</a>, <a class="el" href="../../d4/dec/classJournalDay.html#ac3a19dc8aec4eae2fee8d564c0c2ddf7">JournalDay::setupUi()</a>, <a class="el" href="../../d7/de5/classHistoryWidget.html#a788dfc91e9e70862e28061c8bc1f1f12">HistoryWidget::showDay()</a>, and <a class="el" href="../../d9/d68/classGame.html#a53461ac199ac4f735cbfed19a2aa0a92">Game::updateBars()</a>.</p>
 
 </div>
 </div>
@@ -305,6 +312,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Redraw's the elements. </p>
 
 <p class="reference">Referenced by <a class="el" href="../../d6/d1f/classDraggableWidget.html#a7e823b4d58d362fbdcee03920d6c97f3">DraggableWidget::mouseMoveEvent()</a>, and <a class="el" href="../../de/d1f/classScalableWidget.html#a00632e6e9659c540792c769709c6d9ef">resizeEvent()</a>.</p>
 
@@ -342,7 +351,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d0a/classMainMenu.html#ac57a2f39b3b28530cd2167d93e3ed05c">MainMenu::closeLoadGameMenu()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#adde51da4c54753a02c5c6235d17cc7b8">MainMenu::closeNewGameMenu()</a>, and <a class="el" href="../../d9/d0a/classMainMenu.html#ad8543adfae87ea970bee4b1a45142d4b">MainMenu::closeSettingsMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#af23cdeddf4d5fa955aad67c94dc82996">NotebookWidget::closeActionMenu()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a3c2348b2677f3c85823b462d2fde610e">NotebookWidget::closeHistoryWidget()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#ac57a2f39b3b28530cd2167d93e3ed05c">MainMenu::closeLoadGameMenu()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#adde51da4c54753a02c5c6235d17cc7b8">MainMenu::closeNewGameMenu()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a19f375a8734e31f48f01c7856afbef70">NotebookWidget::closeResultsWidget()</a>, <a class="el" href="../../d9/d0a/classMainMenu.html#ad8543adfae87ea970bee4b1a45142d4b">MainMenu::closeSettingsMenu()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a95cf8f3134b7598d5bd8e66fd16e4683">NotebookWidget::closeSleepWidget()</a>, and <a class="el" href="../../d7/de5/classHistoryWidget.html#a788dfc91e9e70862e28061c8bc1f1f12">HistoryWidget::showDay()</a>.</p>
 
 </div>
 </div>
@@ -436,6 +445,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Maps the widgets to the info. </p>
 
 <p class="reference">Referenced by <a class="el" href="../../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e">addWidget()</a>, <a class="el" href="../../de/d1f/classScalableWidget.html#af769d275d2664e813043ed4eaa6a2589">redraw()</a>, <a class="el" href="../../de/d1f/classScalableWidget.html#a7083edda78605d50481c395624534504">removeWidget()</a>, and <a class="el" href="../../de/d1f/classScalableWidget.html#a5a2e22c6a00d95245a688efc57a035f2">setScaledGeometry()</a>.</p>
 

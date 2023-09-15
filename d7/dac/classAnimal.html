@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('d7/dac/classAnimal.html','../../'); in
 </div><!--header-->
 <div class="contents">
 
-<p>This class describes the animal instance.  
+<p>This class contains the animals from a JSON.  
  <a href="../../d7/dac/classAnimal.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/dc4/animal_8h_source.html">animal.h</a>&gt;</code></p>
@@ -101,14 +101,19 @@ $(document).ready(function(){initNavTree('d7/dac/classAnimal.html','../../'); in
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ee1be2c28263069f1d6983ace57d72c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a1ee1be2c28263069f1d6983ace57d72c">Animal</a> (const QString &amp;filePath)</td></tr>
+<tr class="memdesc:a1ee1be2c28263069f1d6983ace57d72c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new instance from a JSON of animals.  <a href="../../d7/dac/classAnimal.html#a1ee1be2c28263069f1d6983ace57d72c">More...</a><br /></td></tr>
 <tr class="separator:a1ee1be2c28263069f1d6983ace57d72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45beefd0605103c7565483a649988330"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a45beefd0605103c7565483a649988330">loadAnimalsFromJson</a> (const QString &amp;filePath)</td></tr>
+<tr class="memdesc:a45beefd0605103c7565483a649988330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the animals from json.  <a href="../../d7/dac/classAnimal.html#a45beefd0605103c7565483a649988330">More...</a><br /></td></tr>
 <tr class="separator:a45beefd0605103c7565483a649988330"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33ba8a88ad9e151109c4f7656fcc552d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d3/d93/structAnimalInfo.html">AnimalInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a33ba8a88ad9e151109c4f7656fcc552d">getRandomAnimal</a> () const</td></tr>
+<tr class="memdesc:a33ba8a88ad9e151109c4f7656fcc552d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random animal.  <a href="../../d7/dac/classAnimal.html#a33ba8a88ad9e151109c4f7656fcc552d">More...</a><br /></td></tr>
 <tr class="separator:a33ba8a88ad9e151109c4f7656fcc552d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31c47ec1ca0edfefb5e6ffaa46531bf6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d3/d93/structAnimalInfo.html">AnimalInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a31c47ec1ca0edfefb5e6ffaa46531bf6">getRandomAnimalInCategory</a> (const QString &amp;category) const</td></tr>
+<tr class="memdesc:a31c47ec1ca0edfefb5e6ffaa46531bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random animal in category.  <a href="../../d7/dac/classAnimal.html#a31c47ec1ca0edfefb5e6ffaa46531bf6">More...</a><br /></td></tr>
 <tr class="separator:a31c47ec1ca0edfefb5e6ffaa46531bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dde8a074184f0c3b43c2c0515445cad"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a1dde8a074184f0c3b43c2c0515445cad">getRandomAnimalCategory</a> () const</td></tr>
+<tr class="memdesc:a1dde8a074184f0c3b43c2c0515445cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random animal category.  <a href="../../d7/dac/classAnimal.html#a1dde8a074184f0c3b43c2c0515445cad">More...</a><br /></td></tr>
 <tr class="separator:a1dde8a074184f0c3b43c2c0515445cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -117,7 +122,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a832692ac3eb8f34e45a765bd6a2ee502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class describes the animal instance. </p>
+<div class="textblock"><p>This class contains the animals from a JSON. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1ee1be2c28263069f1d6983ace57d72c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ee1be2c28263069f1d6983ace57d72c">&#9670;&nbsp;</a></span>Animal()</h2>
@@ -134,6 +139,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs a new instance from a JSON of animals. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d7/dac/classAnimal.html#a45beefd0605103c7565483a649988330" title="Loads the animals from json.">loadAnimalsFromJson</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -153,7 +167,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a6a0b461fa85802236b37011524a4c6f4">Game::exploreOption()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7">Engine::findFood()</a>, and <a class="el" href="../../d9/d68/classGame.html#a6e6a47403c8f02ed3ba8d6e62637ac35">Game::findFood()</a>.</p>
+<p>Gets a random animal. </p>
+<dl class="section return"><dt>Returns</dt><dd>The random animal. </dd></dl>
 
 </div>
 </div>
@@ -171,6 +186,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets a random animal category. </p>
+<dl class="section return"><dt>Returns</dt><dd>The random animal category. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/dac/classAnimal.html#a33ba8a88ad9e151109c4f7656fcc552d">getRandomAnimal()</a>.</p>
 
@@ -192,6 +210,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets a random animal in category. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>The category</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The random animal in the category. </dd></dl>
+
 <p class="reference">Referenced by <a class="el" href="../../d7/dac/classAnimal.html#a33ba8a88ad9e151109c4f7656fcc552d">getRandomAnimal()</a>.</p>
 
 </div>
@@ -211,6 +238,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Loads the animals from json. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/dac/classAnimal.html#a1ee1be2c28263069f1d6983ace57d72c">Animal()</a>.</p>
 
@@ -236,8 +271,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stores the animals based on category. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d7/dac/classAnimal.html#a1dde8a074184f0c3b43c2c0515445cad">getRandomAnimalCategory()</a>, <a class="el" href="../../d7/dac/classAnimal.html#a31c47ec1ca0edfefb5e6ffaa46531bf6">getRandomAnimalInCategory()</a>, and <a class="el" href="../../d7/dac/classAnimal.html#a45beefd0605103c7565483a649988330">loadAnimalsFromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d7/dac/classAnimal.html#a1dde8a074184f0c3b43c2c0515445cad">getRandomAnimalCategory()</a>, and <a class="el" href="../../d7/dac/classAnimal.html#a31c47ec1ca0edfefb5e6ffaa46531bf6">getRandomAnimalInCategory()</a>.</p>
 
 </div>
 </div>

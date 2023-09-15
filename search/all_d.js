@@ -1,16 +1,20 @@
 var searchData=
 [
-  ['on_5faction_265',['ON_ACTION',['../dc/d14/ui_2game_8cpp.html#aaaaf70957cfe360713ec94004c8caa1d',1,'game.cpp']]],
-  ['onexplore_266',['onExplore',['../d9/d68/classGame.html#a5e5b88292ada9cf644dc34784f899fcf',1,'Game']]],
-  ['onfindfood_267',['onFindFood',['../d9/d68/classGame.html#a80d0f46b6c42088d0f0757dcd3a300f9',1,'Game']]],
-  ['onfindwater_268',['onFindWater',['../d9/d68/classGame.html#ac4805d3ae1d17de4812b181d9984f553',1,'Game']]],
-  ['onframeoptionchanged_269',['onFrameOptionChanged',['../db/dbe/classSettingsMenu.html#a1789cb98e00b3450762f9723011b23a4',1,'SettingsMenu']]],
-  ['onnewgame_270',['onNewGame',['../dd/d67/classSurviveGame.html#a77096b5eee899d3d9d963aca34fc0b82',1,'SurviveGame']]],
-  ['onnewgamebuttonclicked_271',['onNewGameButtonClicked',['../d9/d0a/classMainMenu.html#a5629f0b48386f51c7a17b05d163bd560',1,'MainMenu']]],
-  ['onresolutionoptionchanged_272',['onResolutionOptionChanged',['../db/dbe/classSettingsMenu.html#a6ab63a774b7a1aa3c742b563bfd30b96',1,'SettingsMenu']]],
-  ['onrest_273',['onRest',['../d9/d68/classGame.html#a47bcb2c8331b772b4a953f8a83a5e7d0',1,'Game']]],
-  ['opacityanimation_274',['opacityAnimation',['../d7/d1f/classSVGPushButton.html#a7984be35461037ea334dd0ce10cb4def',1,'SVGPushButton']]],
-  ['opacityeffect_275',['opacityEffect',['../d7/d1f/classSVGPushButton.html#ac7a1843864851fed1a9e9b413a4d3118',1,'SVGPushButton']]],
-  ['overlay1_276',['overlay1',['../d8/ddb/classMenu.html#aa3cb9f70b638bde8855ef06793026bac',1,'Menu::overlay1()'],['../d7/d63/classNewGameMenu.html#a3f7ffd37b0f1751a98d0ea34e196a06a',1,'NewGameMenu::overlay1()'],['../db/dbe/classSettingsMenu.html#aef5b445892731173d0a3b985472a7cb0',1,'SettingsMenu::overlay1()']]],
-  ['overlay2_277',['overlay2',['../d8/ddb/classMenu.html#a341a5332ea5dff42007811eb500e8f52',1,'Menu']]]
+  ['name_285',['name',['../da/d89/classLevelInfoWidget.html#a4112c8b9d1794caba1797d8f13b8cc5f',1,'LevelInfoWidget::name()'],['../d3/d93/structAnimalInfo.html#a00bf3c4b84ccaa210ea4e8dad2af869c',1,'AnimalInfo::name()'],['../de/d3c/structLevelInfo.html#a06cb05dd3dc34b4b722ace49458c57bc',1,'LevelInfo::name()'],['../d0/d4a/structPlantInfo.html#aa7f387277c6f3b5728e1acea7ad18ed0',1,'PlantInfo::name()']]],
+  ['newgamebutton_286',['newGameButton',['../d8/ddb/classMenu.html#a8ca778e58194cd23a87d7c67c6e2849e',1,'Menu']]],
+  ['newgamebuttonclicked_287',['newGameButtonClicked',['../d9/d0a/classMainMenu.html#a2837c6424731715203df0013a48ee9f1',1,'MainMenu']]],
+  ['newgamemenu_288',['NewGameMenu',['../d7/d63/classNewGameMenu.html',1,'NewGameMenu'],['../d7/d63/classNewGameMenu.html#a3802b59e716e5f1c5091427efc0f3827',1,'NewGameMenu::NewGameMenu()']]],
+  ['newgamemenu_289',['newGameMenu',['../d9/d0a/classMainMenu.html#a8dcca16ffb871824ff66b49b8824ead4',1,'MainMenu']]],
+  ['newgamemenu_2ecpp_290',['newgamemenu.cpp',['../d1/d3d/newgamemenu_8cpp.html',1,'']]],
+  ['newgamemenu_2eh_291',['newgamemenu.h',['../dc/db7/newgamemenu_8h.html',1,'']]],
+  ['newgamemenuclosed_292',['newGameMenuClosed',['../d7/d63/classNewGameMenu.html#a46329ea3e246d326143c86287d89c419',1,'NewGameMenu']]],
+  ['newgamemenuopened_293',['newGameMenuOpened',['../d8/ddb/classMenu.html#ad1788e640478e437dd628c4db90fdc3d',1,'Menu']]],
+  ['nextbutton_294',['nextButton',['../d7/de5/classHistoryWidget.html#ab700f2964dccf0b0df513016856b6590',1,'HistoryWidget']]],
+  ['nextday_295',['nextDay',['../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2',1,'Engine::nextDay()'],['../d9/d68/classGame.html#a2ecfb6810e73d4445f3905da4cd89681',1,'Game::nextDay()'],['../d8/d0d/classDay.html#acdc88e7be965b37df5f9285d1653034b',1,'Day::nextDay()']]],
+  ['no_5fturns_296',['NO_TURNS',['../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f',1,'engine.h']]],
+  ['notebookbutton_297',['notebookButton',['../d9/d68/classGame.html#ad2162e254d53bfb3cada34a2d8d20877',1,'Game']]],
+  ['notebookwidget_298',['notebookWidget',['../d9/d68/classGame.html#a2b07f9ac482d9d13505903f6319ec264',1,'Game']]],
+  ['notebookwidget_299',['NotebookWidget',['../db/d4c/classNotebookWidget.html#abcaca60ebd8aee42c4638f2008c81f71',1,'NotebookWidget::NotebookWidget()'],['../db/d4c/classNotebookWidget.html',1,'NotebookWidget']]],
+  ['notebookwidget_2ecpp_300',['notebookwidget.cpp',['../de/d08/notebookwidget_8cpp.html',1,'']]],
+  ['notebookwidget_2eh_301',['notebookwidget.h',['../da/daf/notebookwidget_8h.html',1,'']]]
 ];

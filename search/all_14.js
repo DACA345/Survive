@@ -1,19 +1,10 @@
 var searchData=
 [
-  ['_7ebar_403',['~Bar',['../d7/d9a/classBar.html#a9c7ebea0c189423591741ac438985316',1,'Bar']]],
-  ['_7edraggablewidget_404',['~DraggableWidget',['../d6/d1f/classDraggableWidget.html#ab51c3792e597d551b780ed9f17b2fe8c',1,'DraggableWidget']]],
-  ['_7eengine_405',['~Engine',['../d1/db6/classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a',1,'Engine']]],
-  ['_7egame_406',['~Game',['../d9/d68/classGame.html#ae3d112ca6e0e55150d2fdbc704474530',1,'Game']]],
-  ['_7elevel_407',['~Level',['../d2/d9d/classLevel.html#a249eac1e8f19ff44134efa5e986feaca',1,'Level']]],
-  ['_7elevelinfowidget_408',['~LevelInfoWidget',['../da/d89/classLevelInfoWidget.html#a45f85209e47323deb28592fbc07d84fd',1,'LevelInfoWidget']]],
-  ['_7eloadgamemenu_409',['~LoadGameMenu',['../da/d1e/classLoadGameMenu.html#aa03751f6c89b28d906d44e8926f0a6f5',1,'LoadGameMenu']]],
-  ['_7emainmenu_410',['~MainMenu',['../d9/d0a/classMainMenu.html#a0a19ddba3ac52bf39c09b579171c98f2',1,'MainMenu']]],
-  ['_7emenu_411',['~Menu',['../d8/ddb/classMenu.html#a831387f51358cfb88cd018e1777bc980',1,'Menu']]],
-  ['_7enewgamemenu_412',['~NewGameMenu',['../d7/d63/classNewGameMenu.html#a169d9bf9e187bf3bf910f064d9e7dab4',1,'NewGameMenu']]],
-  ['_7enotebookwidget_413',['~NotebookWidget',['../db/d4c/classNotebookWidget.html#a79928ef9fe287c1d46607b48051dfeb9',1,'NotebookWidget']]],
-  ['_7eresultwidget_414',['~ResultWidget',['../d2/dad/classResultWidget.html#aa43d0cad7846319774387efcf79122f0',1,'ResultWidget']]],
-  ['_7escalablewidget_415',['~ScalableWidget',['../de/d1f/classScalableWidget.html#a170dc385cad7aea4385a706579f50078',1,'ScalableWidget']]],
-  ['_7esettingsmenu_416',['~SettingsMenu',['../db/dbe/classSettingsMenu.html#ac2abb1dcd62821fdd7cdcdfa28d634c3',1,'SettingsMenu']]],
-  ['_7esurvivegame_417',['~SurviveGame',['../dd/d67/classSurviveGame.html#abbbb42a92aba1059ee0affd5df20c024',1,'SurviveGame']]],
-  ['_7esvgpushbutton_418',['~SVGPushButton',['../d7/d1f/classSVGPushButton.html#a933b28fbfa0fd652567b084fb7ec7589',1,'SVGPushButton']]]
+  ['waterpoison_451',['waterPoison',['../d5/d26/structLevelConfig.html#a3919a5dee3977a5e89bd717ef08df8c9',1,'LevelConfig']]],
+  ['waterthirst_452',['waterThirst',['../d5/d26/structLevelConfig.html#a5bbfa486c82cbe9303eb7e119def748c',1,'LevelConfig']]],
+  ['widgetinfo_453',['WidgetInfo',['../d6/df1/structNotebookWidget_1_1WidgetInfo.html',1,'NotebookWidget']]],
+  ['widgets_454',['widgets',['../de/d1f/classScalableWidget.html#a5fe8aa19838efc829fd0fd56797768f6',1,'ScalableWidget']]],
+  ['widgetstack_455',['widgetStack',['../db/d4c/classNotebookWidget.html#aab663bc7da9b37114d49a9533ba99ea0',1,'NotebookWidget']]],
+  ['widgettype_456',['WidgetType',['../db/d4c/classNotebookWidget.html#ae794fcd6525b4497f34e9809eddaec39',1,'NotebookWidget']]],
+  ['windowsizeinitialized_457',['windowSizeInitialized',['../dd/d67/classSurviveGame.html#aca6eb62f5e5925a3710fd1ac1e32f1e2',1,'SurviveGame']]]
 ];

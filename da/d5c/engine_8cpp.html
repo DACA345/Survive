@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -99,18 +99,47 @@ Macros</h2></td></tr>
 <tr class="separator:a6caf910294519e4041f425a50facd503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f378057cbae2c26c5aef028fcd4404d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/engine_8cpp.html#a6f378057cbae2c26c5aef028fcd4404d">HANDLE_ACTION_INITIAL</a></td></tr>
 <tr class="separator:a6f378057cbae2c26c5aef028fcd4404d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33ce76f919b860da7f8f53b8c6409e69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/engine_8cpp.html#a33ce76f919b860da7f8f53b8c6409e69">HANDLE_ACTION_FINAL</a></td></tr>
-<tr class="separator:a33ce76f919b860da7f8f53b8c6409e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38669ad168ce0151930dfd660d455981"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/engine_8cpp.html#a38669ad168ce0151930dfd660d455981">HANDLE_ACTION_FINAL</a>(actionName)</td></tr>
+<tr class="separator:a38669ad168ce0151930dfd660d455981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9cd4a71539eeac71fae833f57b5b02e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/engine_8cpp.html#af9cd4a71539eeac71fae833f57b5b02e">FOUND_FOOD</a>(type)</td></tr>
+<tr class="separator:af9cd4a71539eeac71fae833f57b5b02e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a33ce76f919b860da7f8f53b8c6409e69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33ce76f919b860da7f8f53b8c6409e69">&#9670;&nbsp;</a></span>HANDLE_ACTION_FINAL</h2>
+<a id="af9cd4a71539eeac71fae833f57b5b02e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9cd4a71539eeac71fae833f57b5b02e">&#9670;&nbsp;</a></span>FOUND_FOOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FOUND_FOOD</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">const</span> type##Info&amp; food = level.get##type##s().getRandom##type(); \</div>
+<div class="line">    result.message = QString(<span class="stringliteral">&quot;You have found %1: %2 and ate it.&quot;</span>).arg( \</div>
+<div class="line">        food.category \</div>
+<div class="line">    ).arg(food.name); \</div>
+<div class="line">    affectBars(food.effect);</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a38669ad168ce0151930dfd660d455981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38669ad168ce0151930dfd660d455981">&#9670;&nbsp;</a></span>HANDLE_ACTION_FINAL</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">#define HANDLE_ACTION_FINAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">actionName</td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -120,7 +149,12 @@ Macros</h2></td></tr>
 <div class="line">            result.result = <a class="code" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaf8454a27e1df41397bf42444fe5aa45b">ActionBaseResult::GAME_OVER</a>; \</div>
 <div class="line">            return result; \</div>
 <div class="line">        } \</div>
-<div class="line">        result.result = <a class="code" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbad0749aaba8b833466dfcbb0428e4f89c">ActionBaseResult::SUCCESS</a>; \</div>
+<div class="line">        else \</div>
+<div class="line">        { \</div>
+<div class="line">            result.result = <a class="code" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbad0749aaba8b833466dfcbb0428e4f89c">ActionBaseResult::SUCCESS</a>; \</div>
+<div class="line">        } \</div>
+<div class="line">        result.action = actionName; \</div>
+<div class="line">        journal.addEntry(day-&gt;currentDay(), { actionName, result.message }); \</div>
 <div class="line">        return result;</div>
 <div class="ttc" id="aengine_8h_html_a8b275bd8aa3e3edd79e656886c0870dbad0749aaba8b833466dfcbb0428e4f89c"><div class="ttname"><a href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbad0749aaba8b833466dfcbb0428e4f89c">ActionBaseResult::SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div></div>
 <div class="ttc" id="aengine_8h_html_a8b275bd8aa3e3edd79e656886c0870dbaf8454a27e1df41397bf42444fe5aa45b"><div class="ttname"><a href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaf8454a27e1df41397bf42444fe5aa45b">ActionBaseResult::GAME_OVER</a></div><div class="ttdeci">@ GAME_OVER</div></div>
@@ -145,12 +179,7 @@ Macros</h2></td></tr>
 <div class="line">        result.result = <a class="code" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f">ActionBaseResult::NO_TURNS</a>; \</div>
 <div class="line">        return result; \</div>
 <div class="line">    } \</div>
-<div class="line">    else <span class="keywordflow">if</span> (turns == 1 &amp;&amp; turns--) {\</div>
-<div class="line">        result.result = <a class="code" href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbacd653f9d1c9a93ff3858630b0d63e9c9">ActionBaseResult::USED_TURNS</a>; \</div>
-<div class="line">        return result; \</div>
-<div class="line">    } \</div>
 <div class="line">    turns--;</div>
-<div class="ttc" id="aengine_8h_html_a8b275bd8aa3e3edd79e656886c0870dbacd653f9d1c9a93ff3858630b0d63e9c9"><div class="ttname"><a href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbacd653f9d1c9a93ff3858630b0d63e9c9">ActionBaseResult::USED_TURNS</a></div><div class="ttdeci">@ USED_TURNS</div></div>
 <div class="ttc" id="aengine_8h_html_a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f"><div class="ttname"><a href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f">ActionBaseResult::NO_TURNS</a></div><div class="ttdeci">@ NO_TURNS</div></div>
 <div class="ttc" id="astructLevelConfig_html"><div class="ttname"><a href="../../d5/d26/structLevelConfig.html">LevelConfig</a></div><div class="ttdoc">This struct contains all probabilty of everything in level.</div><div class="ttdef"><b>Definition:</b> level.h:27</div></div>
 </div><!-- fragment -->

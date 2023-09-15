@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -101,14 +101,19 @@ $(document).ready(function(){initNavTree('d9/d6e/classPlant.html','../../'); ini
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4f9a125301270a4a9c4d0f90f80bcb8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6e/classPlant.html#a4f9a125301270a4a9c4d0f90f80bcb8c">Plant</a> (const QString &amp;filePath)</td></tr>
+<tr class="memdesc:a4f9a125301270a4a9c4d0f90f80bcb8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new instance from a JSON of plants.  <a href="../../d9/d6e/classPlant.html#a4f9a125301270a4a9c4d0f90f80bcb8c">More...</a><br /></td></tr>
 <tr class="separator:a4f9a125301270a4a9c4d0f90f80bcb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45de0756bb4387f075904acc48befa85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6e/classPlant.html#a45de0756bb4387f075904acc48befa85">loadPlantsFromJson</a> (const QString &amp;filePath)</td></tr>
+<tr class="memdesc:a45de0756bb4387f075904acc48befa85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the plants from a JSON.  <a href="../../d9/d6e/classPlant.html#a45de0756bb4387f075904acc48befa85">More...</a><br /></td></tr>
 <tr class="separator:a45de0756bb4387f075904acc48befa85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdab8a948ffc47f7ec250988b3a41c6b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d0/d4a/structPlantInfo.html">PlantInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6e/classPlant.html#acdab8a948ffc47f7ec250988b3a41c6b">getRandomPlant</a> () const</td></tr>
+<tr class="memdesc:acdab8a948ffc47f7ec250988b3a41c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random plant.  <a href="../../d9/d6e/classPlant.html#acdab8a948ffc47f7ec250988b3a41c6b">More...</a><br /></td></tr>
 <tr class="separator:acdab8a948ffc47f7ec250988b3a41c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c7798f5ae302a3a038acf3b8e2557fc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d0/d4a/structPlantInfo.html">PlantInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6e/classPlant.html#a6c7798f5ae302a3a038acf3b8e2557fc">getRandomPlantInCategory</a> (const QString &amp;category) const</td></tr>
+<tr class="memdesc:a6c7798f5ae302a3a038acf3b8e2557fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random plant in the category.  <a href="../../d9/d6e/classPlant.html#a6c7798f5ae302a3a038acf3b8e2557fc">More...</a><br /></td></tr>
 <tr class="separator:a6c7798f5ae302a3a038acf3b8e2557fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a615e6c69cc8e8f34972373a1416cc064"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6e/classPlant.html#a615e6c69cc8e8f34972373a1416cc064">getRandomPlantCategory</a> () const</td></tr>
+<tr class="memdesc:a615e6c69cc8e8f34972373a1416cc064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random plant category.  <a href="../../d9/d6e/classPlant.html#a615e6c69cc8e8f34972373a1416cc064">More...</a><br /></td></tr>
 <tr class="separator:a615e6c69cc8e8f34972373a1416cc064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -135,6 +140,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructs a new instance from a JSON of plants. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d9/d6e/classPlant.html#a45de0756bb4387f075904acc48befa85" title="Loads the plants from a JSON.">loadPlantsFromJson</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -153,7 +167,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a6a0b461fa85802236b37011524a4c6f4">Game::exploreOption()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7">Engine::findFood()</a>, and <a class="el" href="../../d9/d68/classGame.html#a6e6a47403c8f02ed3ba8d6e62637ac35">Game::findFood()</a>.</p>
+<p>Gets a random plant. </p>
+<dl class="section return"><dt>Returns</dt><dd>The random plant. </dd></dl>
 
 </div>
 </div>
@@ -171,6 +186,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets a random plant category. </p>
+<dl class="section return"><dt>Returns</dt><dd>The random plant category. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d9/d6e/classPlant.html#acdab8a948ffc47f7ec250988b3a41c6b">getRandomPlant()</a>.</p>
 
@@ -192,6 +210,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets a random plant in the category. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>The category</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The random plant in the category. </dd></dl>
+
 <p class="reference">Referenced by <a class="el" href="../../d9/d6e/classPlant.html#acdab8a948ffc47f7ec250988b3a41c6b">getRandomPlant()</a>.</p>
 
 </div>
@@ -211,6 +238,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Loads the plants from a JSON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d9/d6e/classPlant.html#a4f9a125301270a4a9c4d0f90f80bcb8c">Plant()</a>.</p>
 
@@ -236,8 +271,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stores the plants per category. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d6e/classPlant.html#a615e6c69cc8e8f34972373a1416cc064">getRandomPlantCategory()</a>, <a class="el" href="../../d9/d6e/classPlant.html#a6c7798f5ae302a3a038acf3b8e2557fc">getRandomPlantInCategory()</a>, and <a class="el" href="../../d9/d6e/classPlant.html#a45de0756bb4387f075904acc48befa85">loadPlantsFromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d9/d6e/classPlant.html#a615e6c69cc8e8f34972373a1416cc064">getRandomPlantCategory()</a>, and <a class="el" href="../../d9/d6e/classPlant.html#a6c7798f5ae302a3a038acf3b8e2557fc">getRandomPlantInCategory()</a>.</p>
 
 </div>
 </div>

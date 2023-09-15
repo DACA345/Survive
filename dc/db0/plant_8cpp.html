@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -84,6 +84,8 @@ $(document).ready(function(){initNavTree('dc/db0/plant_8cpp.html','../../'); ini
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">plant.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -96,7 +98,44 @@ $(document).ready(function(){initNavTree('dc/db0/plant_8cpp.html','../../'); ini
 <code>#include &lt;QPair&gt;</code><br />
 <code>#include &lt;QRandomGenerator&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d4/d22/plant_8h_source.html">plant.h</a>&quot;</code><br />
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a5926bab9478dd152d8d3837cf013453d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db0/plant_8cpp.html#a5926bab9478dd152d8d3837cf013453d">STORE_PLANT_DATA</a>(categoryName)</td></tr>
+<tr class="separator:a5926bab9478dd152d8d3837cf013453d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a5926bab9478dd152d8d3837cf013453d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5926bab9478dd152d8d3837cf013453d">&#9670;&nbsp;</a></span>STORE_PLANT_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STORE_PLANT_DATA</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">categoryName</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="../../d0/d4a/structPlantInfo.html">PlantInfo</a> plantData; \</div>
+<div class="line">    plantData.<a class="code" href="../../d0/d4a/structPlantInfo.html#aa7f387277c6f3b5728e1acea7ad18ed0">name</a> = name; \</div>
+<div class="line">    plantData.category = categoryName; \</div>
+<div class="line">    plantData.edible = edible; \</div>
+<div class="line">    plantData.effect.healthBar = plantEffect[<span class="stringliteral">&quot;healthBar&quot;</span>].toInt(); \</div>
+<div class="line">    plantData.effect.thirstBar = plantEffect[<span class="stringliteral">&quot;thirstBar&quot;</span>].toInt(); \</div>
+<div class="line">    plantData.effect.hungerBar = plantEffect[<span class="stringliteral">&quot;hungerBar&quot;</span>].toInt(); \</div>
+<div class="line">    plantData.effect.moraleBar = plantEffect[<span class="stringliteral">&quot;moraleBar&quot;</span>].toInt(); \</div>
+<div class="line">    plantData.effect.energyBar = plantEffect[<span class="stringliteral">&quot;energyBar&quot;</span>].toInt(); \</div>
+<div class="line">    plants[categoryName].append(plantData);</div>
+<div class="ttc" id="astructPlantInfo_html"><div class="ttname"><a href="../../d0/d4a/structPlantInfo.html">PlantInfo</a></div><div class="ttdoc">This struct contain the info of Plant.</div><div class="ttdef"><b>Definition:</b> plant.h:15</div></div>
+<div class="ttc" id="astructPlantInfo_html_aa7f387277c6f3b5728e1acea7ad18ed0"><div class="ttname"><a href="../../d0/d4a/structPlantInfo.html#aa7f387277c6f3b5728e1acea7ad18ed0">PlantInfo::name</a></div><div class="ttdeci">QString name</div><div class="ttdef"><b>Definition:</b> plant.h:16</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

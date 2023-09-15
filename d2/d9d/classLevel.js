@@ -1,6 +1,7 @@
 var classLevel =
 [
     [ "Level", "d2/d9d/classLevel.html#a6e99eec32ef09f4daf1c89a3873846df", null ],
+    [ "Level", "d2/d9d/classLevel.html#a098e3e980b18013bf7f0683acbe5e2f6", null ],
     [ "~Level", "d2/d9d/classLevel.html#a249eac1e8f19ff44134efa5e986feaca", null ],
     [ "file", "d2/d9d/classLevel.html#afa82c20dafe214736bacfd09c0153435", null ],
     [ "getAnimals", "d2/d9d/classLevel.html#ab1caf08afabbfc3a55f0e2d83ded6907", null ],

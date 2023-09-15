@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['max_5fturns_837',['MAX_TURNS',['../d7/d4f/core_2game_8h.html#aff2f9f643149b87035310798f31a5b15',1,'game.h']]],
-  ['min_5fturns_838',['MIN_TURNS',['../d7/d4f/core_2game_8h.html#ad8470a9f1c040870ab0fbd510ec06d32',1,'game.h']]]
+  ['handle_5faction_5ffinal_959',['HANDLE_ACTION_FINAL',['../da/d5c/engine_8cpp.html#a38669ad168ce0151930dfd660d455981',1,'engine.cpp']]],
+  ['handle_5faction_5finitial_960',['HANDLE_ACTION_INITIAL',['../da/d5c/engine_8cpp.html#a6f378057cbae2c26c5aef028fcd4404d',1,'engine.cpp']]],
+  ['hide_5fstack_5fwidget_961',['HIDE_STACK_WIDGET',['../de/d08/notebookwidget_8cpp.html#afa85ad39e81f589d56f6d20c3d5efed8',1,'notebookwidget.cpp']]]
 ];

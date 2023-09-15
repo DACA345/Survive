@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('d5/da5/classEvent.html','../../'); ini
 </div><!--header-->
 <div class="contents">
 
-<p>This class describes the event instance.  
+<p>This class contains the events.  
  <a href="../../d5/da5/classEvent.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dd/d20/event_8h_source.html">event.h</a>&gt;</code></p>
@@ -101,14 +101,19 @@ $(document).ready(function(){initNavTree('d5/da5/classEvent.html','../../'); ini
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aeeb2021b05048df0a438c173a50818bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da5/classEvent.html#aeeb2021b05048df0a438c173a50818bb">Event</a> (const QString &amp;filePath)</td></tr>
+<tr class="memdesc:aeeb2021b05048df0a438c173a50818bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new instance from a JSON of events.  <a href="../../d5/da5/classEvent.html#aeeb2021b05048df0a438c173a50818bb">More...</a><br /></td></tr>
 <tr class="separator:aeeb2021b05048df0a438c173a50818bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3414285fbb8a1e687875f02ade1dba12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da5/classEvent.html#a3414285fbb8a1e687875f02ade1dba12">loadEventsFromJson</a> (const QString &amp;filePath)</td></tr>
+<tr class="memdesc:a3414285fbb8a1e687875f02ade1dba12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the events from json.  <a href="../../d5/da5/classEvent.html#a3414285fbb8a1e687875f02ade1dba12">More...</a><br /></td></tr>
 <tr class="separator:a3414285fbb8a1e687875f02ade1dba12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8833b19b412c831274f4fc1c8428622e"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da5/classEvent.html#a8833b19b412c831274f4fc1c8428622e">getRandomSeason</a> () const</td></tr>
+<tr class="memdesc:a8833b19b412c831274f4fc1c8428622e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random season.  <a href="../../d5/da5/classEvent.html#a8833b19b412c831274f4fc1c8428622e">More...</a><br /></td></tr>
 <tr class="separator:a8833b19b412c831274f4fc1c8428622e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4866da21f1907697eb0ddac0c0c971a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/d31/structEventInfo.html">EventInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da5/classEvent.html#ae4866da21f1907697eb0ddac0c0c971a">getRandomEvent</a> () const</td></tr>
+<tr class="memdesc:ae4866da21f1907697eb0ddac0c0c971a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random event.  <a href="../../d5/da5/classEvent.html#ae4866da21f1907697eb0ddac0c0c971a">More...</a><br /></td></tr>
 <tr class="separator:ae4866da21f1907697eb0ddac0c0c971a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa54f763da47f3cd989325cf4adc165cc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/d31/structEventInfo.html">EventInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da5/classEvent.html#aa54f763da47f3cd989325cf4adc165cc">getRandomEventForSeason</a> (const QString &amp;season) const</td></tr>
+<tr class="memdesc:aa54f763da47f3cd989325cf4adc165cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random event for a season.  <a href="../../d5/da5/classEvent.html#aa54f763da47f3cd989325cf4adc165cc">More...</a><br /></td></tr>
 <tr class="separator:aa54f763da47f3cd989325cf4adc165cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -117,7 +122,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a35d74d05ef84ea31adb8ccdcbae81a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class describes the event instance. </p>
+<div class="textblock"><p>This class contains the events. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aeeb2021b05048df0a438c173a50818bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeeb2021b05048df0a438c173a50818bb">&#9670;&nbsp;</a></span>Event()</h2>
@@ -134,6 +139,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs a new instance from a JSON of events. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d5/da5/classEvent.html#a3414285fbb8a1e687875f02ade1dba12" title="Loads the events from json.">loadEventsFromJson</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -153,7 +167,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>, and <a class="el" href="../../d9/d68/classGame.html#a1bf39271e4a99223300d7567b12b58de">Game::triggerEvent()</a>.</p>
+<p>Gets a random event. </p>
+<dl class="section return"><dt>Returns</dt><dd>The random event. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>.</p>
 
 </div>
 </div>
@@ -173,7 +190,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d5/da5/classEvent.html#ae4866da21f1907697eb0ddac0c0c971a">getRandomEvent()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>, and <a class="el" href="../../d9/d68/classGame.html#a1bf39271e4a99223300d7567b12b58de">Game::triggerEvent()</a>.</p>
+<p>Gets a random event for a season. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">season</td><td>The season</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The random event. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/da5/classEvent.html#ae4866da21f1907697eb0ddac0c0c971a">getRandomEvent()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>.</p>
 
 </div>
 </div>
@@ -191,6 +217,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets a random season. </p>
+<dl class="section return"><dt>Returns</dt><dd>The random season. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d5/da5/classEvent.html#ae4866da21f1907697eb0ddac0c0c971a">getRandomEvent()</a>.</p>
 
@@ -211,6 +240,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Loads the events from json. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d5/da5/classEvent.html#aeeb2021b05048df0a438c173a50818bb">Event()</a>.</p>
 
@@ -236,6 +273,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stores the events per season. </p>
 
 <p class="reference">Referenced by <a class="el" href="../../d5/da5/classEvent.html#aa54f763da47f3cd989325cf4adc165cc">getRandomEventForSeason()</a>, <a class="el" href="../../d5/da5/classEvent.html#a8833b19b412c831274f4fc1c8428622e">getRandomSeason()</a>, and <a class="el" href="../../d5/da5/classEvent.html#a3414285fbb8a1e687875f02ade1dba12">loadEventsFromJson()</a>.</p>
 

@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -92,74 +92,42 @@ $(document).ready(function(){initNavTree('de/d08/notebookwidget_8cpp.html','../.
 <div class="contents">
 <div class="textblock"><code>#include &lt;QPainter&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../da/daf/notebookwidget_8h_source.html">notebookwidget.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../dd/d20/files_8h_source.html">../../../config/files.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d20/files_8h_source.html">../../../../config/files.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a6a42d8982f0f4e9ff3811b4493fec83c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d08/notebookwidget_8cpp.html#a6a42d8982f0f4e9ff3811b4493fec83c">UI_NOTEBOOK_ACTION_X</a>(width)&#160;&#160;&#160;((1 - width) / 2)</td></tr>
-<tr class="separator:a6a42d8982f0f4e9ff3811b4493fec83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2b28b748b65d57895ab7dd16a282e74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d08/notebookwidget_8cpp.html#ab2b28b748b65d57895ab7dd16a282e74">UI_NOTEBOOK_ACTION_Y</a>&#160;&#160;&#160;0.25</td></tr>
-<tr class="separator:ab2b28b748b65d57895ab7dd16a282e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9738f35af601cbb2a64d3021ebda28f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d08/notebookwidget_8cpp.html#a9738f35af601cbb2a64d3021ebda28f6">UI_NOTEBOOK_ACTION_Y_GAP</a>&#160;&#160;&#160;0.15</td></tr>
-<tr class="separator:a9738f35af601cbb2a64d3021ebda28f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec6cba456dca8912fc6ea6adbf152efa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d08/notebookwidget_8cpp.html#aec6cba456dca8912fc6ea6adbf152efa">UI_NOTEBOOK_ACTION_HEIGHT</a>&#160;&#160;&#160;0.06</td></tr>
-<tr class="separator:aec6cba456dca8912fc6ea6adbf152efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b77b89cbee97236ed2e2e26eef40ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d08/notebookwidget_8cpp.html#ac5b77b89cbee97236ed2e2e26eef40ef">IS_TOP_STACK</a>(widget)&#160;&#160;&#160;(!widgetStack.isEmpty() &amp;&amp; widgetStack.last().type == WidgetType::widget)</td></tr>
+<tr class="separator:ac5b77b89cbee97236ed2e2e26eef40ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa85ad39e81f589d56f6d20c3d5efed8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d08/notebookwidget_8cpp.html#afa85ad39e81f589d56f6d20c3d5efed8">HIDE_STACK_WIDGET</a>&#160;&#160;&#160;if (!hide) { widgetStack.removeLast(); }</td></tr>
+<tr class="separator:afa85ad39e81f589d56f6d20c3d5efed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aec6cba456dca8912fc6ea6adbf152efa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec6cba456dca8912fc6ea6adbf152efa">&#9670;&nbsp;</a></span>UI_NOTEBOOK_ACTION_HEIGHT</h2>
+<a id="afa85ad39e81f589d56f6d20c3d5efed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa85ad39e81f589d56f6d20c3d5efed8">&#9670;&nbsp;</a></span>HIDE_STACK_WIDGET</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define UI_NOTEBOOK_ACTION_HEIGHT&#160;&#160;&#160;0.06</td>
+          <td class="memname">#define HIDE_STACK_WIDGET&#160;&#160;&#160;if (!hide) { widgetStack.removeLast(); }</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a6a42d8982f0f4e9ff3811b4493fec83c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a42d8982f0f4e9ff3811b4493fec83c">&#9670;&nbsp;</a></span>UI_NOTEBOOK_ACTION_X</h2>
+<a id="ac5b77b89cbee97236ed2e2e26eef40ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b77b89cbee97236ed2e2e26eef40ef">&#9670;&nbsp;</a></span>IS_TOP_STACK</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define UI_NOTEBOOK_ACTION_X</td>
+          <td class="memname">#define IS_TOP_STACK</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">width</td><td>)</td>
-          <td>&#160;&#160;&#160;((1 - width) / 2)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab2b28b748b65d57895ab7dd16a282e74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2b28b748b65d57895ab7dd16a282e74">&#9670;&nbsp;</a></span>UI_NOTEBOOK_ACTION_Y</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define UI_NOTEBOOK_ACTION_Y&#160;&#160;&#160;0.25</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9738f35af601cbb2a64d3021ebda28f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9738f35af601cbb2a64d3021ebda28f6">&#9670;&nbsp;</a></span>UI_NOTEBOOK_ACTION_Y_GAP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define UI_NOTEBOOK_ACTION_Y_GAP&#160;&#160;&#160;0.15</td>
+          <td class="paramname">widget</td><td>)</td>
+          <td>&#160;&#160;&#160;(!widgetStack.isEmpty() &amp;&amp; widgetStack.last().type == WidgetType::widget)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -171,7 +139,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="../../dir_f3911b9629b0e27ea480d06d47573cbf.html">widgets</a></li><li class="navelem"><a class="el" href="../../dir_49e0422abf35750ef1405d5bea33cefc.html">game</a></li><li class="navelem"><a class="el" href="../../de/d08/notebookwidget_8cpp.html">notebookwidget.cpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a class="el" href="../../dir_f3911b9629b0e27ea480d06d47573cbf.html">widgets</a></li><li class="navelem"><a class="el" href="../../dir_49e0422abf35750ef1405d5bea33cefc.html">game</a></li><li class="navelem"><a class="el" href="../../dir_9488ebe6b902419cd274425a25fd0a95.html">notebook</a></li><li class="navelem"><a class="el" href="../../de/d08/notebookwidget_8cpp.html">notebookwidget.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

@@ -5,5 +5,5 @@ var classDraggableWidget =
     [ "mouseMoveEvent", "d6/d1f/classDraggableWidget.html#a7e823b4d58d362fbdcee03920d6c97f3", null ],
     [ "mousePressEvent", "d6/d1f/classDraggableWidget.html#a79dff46ad6e05a2729310c2c31b642bd", null ],
     [ "mouseReleaseEvent", "d6/d1f/classDraggableWidget.html#a27343f87a4886c29c535811a2f57728d", null ],
-    [ "dragPosition", "d6/d1f/classDraggableWidget.html#af6428bc1b672db9088446bf9ffa05e62", null ]
+    [ "dragPosition", "d6/d1f/classDraggableWidget.html#a307a5a825cf034805ab5c96a3adb27e3", null ]
 ];

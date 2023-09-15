@@ -1,7 +1,9 @@
 var classEngine =
 [
-    [ "Engine", "d1/db6/classEngine.html#aedb11fac8192eb316e4f14263c68a131", null ],
+    [ "Engine", "d1/db6/classEngine.html#acccde2b14c703bf2b19e85c921215ae9", null ],
+    [ "Engine", "d1/db6/classEngine.html#aa775e809a47ccf32fd2559ddf6402244", null ],
     [ "~Engine", "d1/db6/classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a", null ],
+    [ "affectBars", "d1/db6/classEngine.html#a46ca82f06c086d1356129c5050c2db5c", null ],
     [ "chance", "d1/db6/classEngine.html#aa49530dad40a534f917c1c1de8d2754e", null ],
     [ "explore", "d1/db6/classEngine.html#a368e557419631257151d5122d3b04170", null ],
     [ "findFood", "d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7", null ],
@@ -10,9 +12,11 @@ var classEngine =
     [ "getEnergy", "d1/db6/classEngine.html#a6c20c20a974e249fa792354d957be052", null ],
     [ "getHealth", "d1/db6/classEngine.html#ad996bf8fc66d92d492e0a6f947c89800", null ],
     [ "getHunger", "d1/db6/classEngine.html#a9e087290c5d697dae036cc8e87bf9ac5", null ],
+    [ "getJournal", "d1/db6/classEngine.html#a8b4c5b8d364034acb68c8a4b04dae7b5", null ],
     [ "getLevel", "d1/db6/classEngine.html#a17dd9ff16d910b9737868480c3f5f1fd", null ],
     [ "getThirst", "d1/db6/classEngine.html#af73658922dc978cef5ff8b227d55c8f9", null ],
     [ "getTurns", "d1/db6/classEngine.html#aaa934d330c26fe3e338a551799c037fa", null ],
+    [ "isGameOver", "d1/db6/classEngine.html#a79f6400253683ed3d246f98f5c5c945b", null ],
     [ "nextDay", "d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2", null ],
     [ "probability", "d1/db6/classEngine.html#a48c5027bb02dc46b85c9dc32f1a8e6f9", null ],
     [ "rest", "d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865", null ],
@@ -21,7 +25,9 @@ var classEngine =
     [ "energyBar", "d1/db6/classEngine.html#a946fcf5fecd76fb1f0041858e2584d43", null ],
     [ "healthBar", "d1/db6/classEngine.html#ad1a229f00aaeb544513f1da805053d7d", null ],
     [ "hungerBar", "d1/db6/classEngine.html#a210f69f92e6019c3e9ca7e41d3336ba6", null ],
+    [ "journal", "d1/db6/classEngine.html#a29b2862bbfa7d2679b764a1607b18a13", null ],
     [ "level", "d1/db6/classEngine.html#ab756a4319c3526733c07c874009cb221", null ],
+    [ "moraleBar", "d1/db6/classEngine.html#a63324f1ff2f846b0a9afc3fa74ebfa27", null ],
     [ "random", "d1/db6/classEngine.html#abbfaab481c4a8f7fd4aa896665bd7852", null ],
     [ "thirstBar", "d1/db6/classEngine.html#a00051a716e42f444eb4563be402a29c4", null ],
     [ "turns", "d1/db6/classEngine.html#a83a30f3e5d175f9296a79e5a91e4f971", null ]

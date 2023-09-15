@@ -5,12 +5,16 @@ var files_dup =
       [ "ActionInfo", "de/dc4/structActionInfo.html", "de/dc4/structActionInfo" ],
       [ "Action", "db/d09/classAction.html", "db/d09/classAction" ]
     ] ],
-    [ "animal.cpp", "d2/db1/animal_8cpp.html", null ],
+    [ "actionmenu.cpp", "d8/d74/actionmenu_8cpp.html", "d8/d74/actionmenu_8cpp" ],
+    [ "actionmenu.h", "de/d0d/actionmenu_8h.html", [
+      [ "ActionMenu", "db/d92/classActionMenu.html", "db/d92/classActionMenu" ]
+    ] ],
+    [ "animal.cpp", "d2/db1/animal_8cpp.html", "d2/db1/animal_8cpp" ],
     [ "animal.h", "d1/dc4/animal_8h.html", [
       [ "AnimalInfo", "d3/d93/structAnimalInfo.html", "d3/d93/structAnimalInfo" ],
       [ "Animal", "d7/dac/classAnimal.html", "d7/dac/classAnimal" ]
     ] ],
-    [ "bar.cpp", "d6/d5e/bar_8cpp.html", null ],
+    [ "bar.cpp", "d6/d5e/bar_8cpp.html", "d6/d5e/bar_8cpp" ],
     [ "bar.h", "d7/d34/bar_8h.html", "d7/d34/bar_8h" ],
     [ "day.cpp", "d7/d54/day_8cpp.html", null ],
     [ "day.h", "d0/dd5/day_8h.html", [
@@ -22,6 +26,9 @@ var files_dup =
     [ "draggablewidget.cpp", "de/daf/draggablewidget_8cpp.html", null ],
     [ "draggablewidget.h", "d2/da3/draggablewidget_8h.html", [
       [ "DraggableWidget", "d6/d1f/classDraggableWidget.html", "d6/d1f/classDraggableWidget" ]
+    ] ],
+    [ "effect.h", "d2/d76/effect_8h.html", [
+      [ "Effect", "de/dd9/structEffect.html", "de/dd9/structEffect" ]
     ] ],
     [ "engine.cpp", "da/d5c/engine_8cpp.html", "da/d5c/engine_8cpp" ],
     [ "engine.h", "d1/d55/engine_8h.html", "d1/d55/engine_8h" ],
@@ -36,11 +43,23 @@ var files_dup =
       [ "Explore", "de/d27/classExplore.html", "de/d27/classExplore" ]
     ] ],
     [ "files.h", "dd/d20/files_8h.html", "dd/d20/files_8h" ],
-    [ "core/game.cpp", "d1/da0/core_2game_8cpp.html", null ],
-    [ "ui/game.cpp", "dc/d14/ui_2game_8cpp.html", "dc/d14/ui_2game_8cpp" ],
-    [ "core/game.h", "d7/d4f/core_2game_8h.html", "d7/d4f/core_2game_8h" ],
-    [ "ui/game.h", "d8/d50/ui_2game_8h.html", [
+    [ "game.cpp", "df/dd9/game_8cpp.html", "df/dd9/game_8cpp" ],
+    [ "game.h", "d2/dd5/game_8h.html", [
       [ "Game", "d9/d68/classGame.html", "d9/d68/classGame" ]
+    ] ],
+    [ "gameover.cpp", "da/de1/gameover_8cpp.html", null ],
+    [ "gameover.h", "d0/da1/gameover_8h.html", [
+      [ "GameOver", "dc/d53/classGameOver.html", "dc/d53/classGameOver" ]
+    ] ],
+    [ "historywidget.cpp", "dd/d66/historywidget_8cpp.html", null ],
+    [ "historywidget.h", "de/dc1/historywidget_8h.html", [
+      [ "HistoryWidget", "d7/de5/classHistoryWidget.html", "d7/de5/classHistoryWidget" ]
+    ] ],
+    [ "journal.cpp", "d9/d74/journal_8cpp.html", null ],
+    [ "journal.h", "d6/dfe/journal_8h.html", "d6/dfe/journal_8h" ],
+    [ "journalday.cpp", "d9/db3/journalday_8cpp.html", null ],
+    [ "journalday.h", "da/dc1/journalday_8h.html", [
+      [ "JournalDay", "d4/dec/classJournalDay.html", "d4/dec/classJournalDay" ]
     ] ],
     [ "level.cpp", "d2/d57/level_8cpp.html", null ],
     [ "level.h", "de/d09/level_8h.html", [
@@ -68,9 +87,10 @@ var files_dup =
     ] ],
     [ "notebookwidget.cpp", "de/d08/notebookwidget_8cpp.html", "de/d08/notebookwidget_8cpp" ],
     [ "notebookwidget.h", "da/daf/notebookwidget_8h.html", [
-      [ "NotebookWidget", "db/d4c/classNotebookWidget.html", "db/d4c/classNotebookWidget" ]
+      [ "NotebookWidget", "db/d4c/classNotebookWidget.html", "db/d4c/classNotebookWidget" ],
+      [ "WidgetInfo", "d6/df1/structNotebookWidget_1_1WidgetInfo.html", "d6/df1/structNotebookWidget_1_1WidgetInfo" ]
     ] ],
-    [ "plant.cpp", "dc/db0/plant_8cpp.html", null ],
+    [ "plant.cpp", "dc/db0/plant_8cpp.html", "dc/db0/plant_8cpp" ],
     [ "plant.h", "d4/d22/plant_8h.html", [
       [ "PlantInfo", "d0/d4a/structPlantInfo.html", "d0/d4a/structPlantInfo" ],
       [ "Plant", "d9/d6e/classPlant.html", "d9/d6e/classPlant" ]
@@ -80,6 +100,10 @@ var files_dup =
     [ "resultwidget.cpp", "d9/d2a/resultwidget_8cpp.html", null ],
     [ "resultwidget.h", "d6/db1/resultwidget_8h.html", [
       [ "ResultWidget", "d2/dad/classResultWidget.html", "d2/dad/classResultWidget" ]
+    ] ],
+    [ "scalablelabel.cpp", "df/d12/scalablelabel_8cpp.html", "df/d12/scalablelabel_8cpp" ],
+    [ "scalablelabel.h", "d7/d20/scalablelabel_8h.html", [
+      [ "ScalableLabel", "d9/d06/classScalableLabel.html", "d9/d06/classScalableLabel" ]
     ] ],
     [ "scalablewidget.cpp", "d4/dbb/scalablewidget_8cpp.html", null ],
     [ "scalablewidget.h", "d3/d97/scalablewidget_8h.html", [
@@ -94,6 +118,10 @@ var files_dup =
     [ "settingsmenu.cpp", "db/d54/settingsmenu_8cpp.html", null ],
     [ "settingsmenu.h", "da/d2a/settingsmenu_8h.html", [
       [ "SettingsMenu", "db/dbe/classSettingsMenu.html", "db/dbe/classSettingsMenu" ]
+    ] ],
+    [ "sleepwidget.cpp", "dc/d10/sleepwidget_8cpp.html", "dc/d10/sleepwidget_8cpp" ],
+    [ "sleepwidget.h", "d0/d88/sleepwidget_8h.html", [
+      [ "SleepWidget", "d3/da5/classSleepWidget.html", "d3/da5/classSleepWidget" ]
     ] ],
     [ "survivegame.cpp", "de/d2c/survivegame_8cpp.html", "de/d2c/survivegame_8cpp" ],
     [ "survivegame.h", "d2/dce/survivegame_8h.html", [

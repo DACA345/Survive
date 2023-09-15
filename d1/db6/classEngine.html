@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -86,10 +86,8 @@ $(document).ready(function(){initNavTree('d1/db6/classEngine.html','../../'); in
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="../../d2/d1e/classEngine-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Engine Class Reference</div>  </div>
@@ -103,49 +101,77 @@ $(document).ready(function(){initNavTree('d1/db6/classEngine.html','../../'); in
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aedb11fac8192eb316e4f14263c68a131"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#aedb11fac8192eb316e4f14263c68a131">Engine</a> (const QString &amp;levelId)</td></tr>
-<tr class="separator:aedb11fac8192eb316e4f14263c68a131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acccde2b14c703bf2b19e85c921215ae9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#acccde2b14c703bf2b19e85c921215ae9">Engine</a> (const QString &amp;levelId, const int &amp;seed=-1)</td></tr>
+<tr class="memdesc:acccde2b14c703bf2b19e85c921215ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new engine instance from a level id.  <a href="../../d1/db6/classEngine.html#acccde2b14c703bf2b19e85c921215ae9">More...</a><br /></td></tr>
+<tr class="separator:acccde2b14c703bf2b19e85c921215ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa775e809a47ccf32fd2559ddf6402244"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#aa775e809a47ccf32fd2559ddf6402244">Engine</a> (const <a class="el" href="../../d1/db6/classEngine.html">Engine</a> &amp;engine)</td></tr>
+<tr class="memdesc:aa775e809a47ccf32fd2559ddf6402244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new engine instance from an existing engine.  <a href="../../d1/db6/classEngine.html#aa775e809a47ccf32fd2559ddf6402244">More...</a><br /></td></tr>
+<tr class="separator:aa775e809a47ccf32fd2559ddf6402244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ef7030a089ecb30bbfcb9e43094717a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a">~Engine</a> ()</td></tr>
+<tr class="memdesc:a8ef7030a089ecb30bbfcb9e43094717a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the object.  <a href="../../d1/db6/classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a">More...</a><br /></td></tr>
 <tr class="separator:a8ef7030a089ecb30bbfcb9e43094717a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c5027bb02dc46b85c9dc32f1a8e6f9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a48c5027bb02dc46b85c9dc32f1a8e6f9">probability</a> ()</td></tr>
+<tr class="memdesc:a48c5027bb02dc46b85c9dc32f1a8e6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random double between 0, 1.  <a href="../../d1/db6/classEngine.html#a48c5027bb02dc46b85c9dc32f1a8e6f9">More...</a><br /></td></tr>
+<tr class="separator:a48c5027bb02dc46b85c9dc32f1a8e6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49530dad40a534f917c1c1de8d2754e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#aa49530dad40a534f917c1c1de8d2754e">chance</a> (double <a class="el" href="../../d1/db6/classEngine.html#a48c5027bb02dc46b85c9dc32f1a8e6f9">probability</a>)</td></tr>
+<tr class="memdesc:aa49530dad40a534f917c1c1de8d2754e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if a probability will hit.  <a href="../../d1/db6/classEngine.html#aa49530dad40a534f917c1c1de8d2754e">More...</a><br /></td></tr>
+<tr class="separator:aa49530dad40a534f917c1c1de8d2754e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f6400253683ed3d246f98f5c5c945b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a79f6400253683ed3d246f98f5c5c945b">isGameOver</a> () const</td></tr>
+<tr class="memdesc:a79f6400253683ed3d246f98f5c5c945b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the player is still alive.  <a href="../../d1/db6/classEngine.html#a79f6400253683ed3d246f98f5c5c945b">More...</a><br /></td></tr>
+<tr class="separator:a79f6400253683ed3d246f98f5c5c945b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab77d0c24d9532e46a4a27611243e8ea9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d8/d0d/classDay.html">Day</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#ab77d0c24d9532e46a4a27611243e8ea9">getDay</a> () const</td></tr>
+<tr class="memdesc:ab77d0c24d9532e46a4a27611243e8ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the day.  <a href="../../d1/db6/classEngine.html#ab77d0c24d9532e46a4a27611243e8ea9">More...</a><br /></td></tr>
 <tr class="separator:ab77d0c24d9532e46a4a27611243e8ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17dd9ff16d910b9737868480c3f5f1fd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d2/d9d/classLevel.html">Level</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a17dd9ff16d910b9737868480c3f5f1fd">getLevel</a> () const</td></tr>
+<tr class="memdesc:a17dd9ff16d910b9737868480c3f5f1fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the level.  <a href="../../d1/db6/classEngine.html#a17dd9ff16d910b9737868480c3f5f1fd">More...</a><br /></td></tr>
 <tr class="separator:a17dd9ff16d910b9737868480c3f5f1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4c5b8d364034acb68c8a4b04dae7b5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../de/de0/classJournal.html">Journal</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a8b4c5b8d364034acb68c8a4b04dae7b5">getJournal</a> () const</td></tr>
+<tr class="memdesc:a8b4c5b8d364034acb68c8a4b04dae7b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the journal.  <a href="../../d1/db6/classEngine.html#a8b4c5b8d364034acb68c8a4b04dae7b5">More...</a><br /></td></tr>
+<tr class="separator:a8b4c5b8d364034acb68c8a4b04dae7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e05567a67bc91f38c3ecfe85d3f85f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/ddf/structActionResult.html">ActionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7">findFood</a> ()</td></tr>
+<tr class="memdesc:a0e05567a67bc91f38c3ecfe85d3f85f7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d09/classAction.html" title="This class contains the actions from a JSON.">Action</a> for finding food.  <a href="../../d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7">More...</a><br /></td></tr>
 <tr class="separator:a0e05567a67bc91f38c3ecfe85d3f85f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eacb1f22a2c741ad6f6bf931fd99b3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/ddf/structActionResult.html">ActionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a1eacb1f22a2c741ad6f6bf931fd99b3e">findWater</a> ()</td></tr>
+<tr class="memdesc:a1eacb1f22a2c741ad6f6bf931fd99b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d09/classAction.html" title="This class contains the actions from a JSON.">Action</a> for finding water.  <a href="../../d1/db6/classEngine.html#a1eacb1f22a2c741ad6f6bf931fd99b3e">More...</a><br /></td></tr>
 <tr class="separator:a1eacb1f22a2c741ad6f6bf931fd99b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a368e557419631257151d5122d3b04170"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/ddf/structActionResult.html">ActionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">explore</a> ()</td></tr>
+<tr class="memdesc:a368e557419631257151d5122d3b04170"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d09/classAction.html" title="This class contains the actions from a JSON.">Action</a> for exploring.  <a href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">More...</a><br /></td></tr>
 <tr class="separator:a368e557419631257151d5122d3b04170"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1261c65f5cbe87fa6ec3f6d95bc63865"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/ddf/structActionResult.html">ActionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865">rest</a> ()</td></tr>
+<tr class="memdesc:a1261c65f5cbe87fa6ec3f6d95bc63865"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d09/classAction.html" title="This class contains the actions from a JSON.">Action</a> for resting.  <a href="../../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865">More...</a><br /></td></tr>
 <tr class="separator:a1261c65f5cbe87fa6ec3f6d95bc63865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9e66a6f888703e8762d553d1b991bc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d28/structEventResult.html">EventResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2">nextDay</a> ()</td></tr>
+<tr class="memdesc:ac9e66a6f888703e8762d553d1b991bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Progress to the next day.  <a href="../../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2">More...</a><br /></td></tr>
 <tr class="separator:ac9e66a6f888703e8762d553d1b991bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa934d330c26fe3e338a551799c037fa"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#aaa934d330c26fe3e338a551799c037fa">getTurns</a> () const</td></tr>
+<tr class="memdesc:aaa934d330c26fe3e338a551799c037fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the turns.  <a href="../../d1/db6/classEngine.html#aaa934d330c26fe3e338a551799c037fa">More...</a><br /></td></tr>
 <tr class="separator:aaa934d330c26fe3e338a551799c037fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c20c20a974e249fa792354d957be052"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a6c20c20a974e249fa792354d957be052">getEnergy</a> () const</td></tr>
+<tr class="memdesc:a6c20c20a974e249fa792354d957be052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the user's energy.  <a href="../../d1/db6/classEngine.html#a6c20c20a974e249fa792354d957be052">More...</a><br /></td></tr>
 <tr class="separator:a6c20c20a974e249fa792354d957be052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e087290c5d697dae036cc8e87bf9ac5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a9e087290c5d697dae036cc8e87bf9ac5">getHunger</a> () const</td></tr>
+<tr class="memdesc:a9e087290c5d697dae036cc8e87bf9ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the user's hunger.  <a href="../../d1/db6/classEngine.html#a9e087290c5d697dae036cc8e87bf9ac5">More...</a><br /></td></tr>
 <tr class="separator:a9e087290c5d697dae036cc8e87bf9ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af73658922dc978cef5ff8b227d55c8f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#af73658922dc978cef5ff8b227d55c8f9">getThirst</a> () const</td></tr>
+<tr class="memdesc:af73658922dc978cef5ff8b227d55c8f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the user's thirst.  <a href="../../d1/db6/classEngine.html#af73658922dc978cef5ff8b227d55c8f9">More...</a><br /></td></tr>
 <tr class="separator:af73658922dc978cef5ff8b227d55c8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad996bf8fc66d92d492e0a6f947c89800"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#ad996bf8fc66d92d492e0a6f947c89800">getHealth</a> () const</td></tr>
+<tr class="memdesc:ad996bf8fc66d92d492e0a6f947c89800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the user's health.  <a href="../../d1/db6/classEngine.html#ad996bf8fc66d92d492e0a6f947c89800">More...</a><br /></td></tr>
 <tr class="separator:ad996bf8fc66d92d492e0a6f947c89800"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a48c5027bb02dc46b85c9dc32f1a8e6f9"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a48c5027bb02dc46b85c9dc32f1a8e6f9">probability</a> ()</td></tr>
-<tr class="separator:a48c5027bb02dc46b85c9dc32f1a8e6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa49530dad40a534f917c1c1de8d2754e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#aa49530dad40a534f917c1c1de8d2754e">chance</a> (double <a class="el" href="../../d1/db6/classEngine.html#a48c5027bb02dc46b85c9dc32f1a8e6f9">probability</a>)</td></tr>
-<tr class="separator:aa49530dad40a534f917c1c1de8d2754e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a0fe9cc1457081b79549934024274427c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d28/structEventResult.html">EventResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">triggerDayEvent</a> ()</td></tr>
+<tr class="memdesc:a0fe9cc1457081b79549934024274427c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger the day's event.  <a href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">More...</a><br /></td></tr>
 <tr class="separator:a0fe9cc1457081b79549934024274427c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46ca82f06c086d1356129c5050c2db5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a46ca82f06c086d1356129c5050c2db5c">affectBars</a> (<a class="el" href="../../de/dd9/structEffect.html">Effect</a> effect)</td></tr>
+<tr class="memdesc:a46ca82f06c086d1356129c5050c2db5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply effects on the user's bars.  <a href="../../d1/db6/classEngine.html#a46ca82f06c086d1356129c5050c2db5c">More...</a><br /></td></tr>
+<tr class="separator:a46ca82f06c086d1356129c5050c2db5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:abbfaab481c4a8f7fd4aa896665bd7852"><td class="memItemLeft" align="right" valign="top">QRandomGenerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#abbfaab481c4a8f7fd4aa896665bd7852">random</a></td></tr>
+<tr class="separator:abbfaab481c4a8f7fd4aa896665bd7852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83a30f3e5d175f9296a79e5a91e4f971"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a83a30f3e5d175f9296a79e5a91e4f971">turns</a> = <a class="el" href="../../d1/d55/engine_8h.html#a882ece3eb0418b963eaf405d8c143aa5">ENGINE_INITIAL_TURNS</a></td></tr>
 <tr class="separator:a83a30f3e5d175f9296a79e5a91e4f971"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a946fcf5fecd76fb1f0041858e2584d43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d9a/classBar.html">Bar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a946fcf5fecd76fb1f0041858e2584d43">energyBar</a></td></tr>
@@ -156,21 +182,20 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a00051a716e42f444eb4563be402a29c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1a229f00aaeb544513f1da805053d7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d9a/classBar.html">Bar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#ad1a229f00aaeb544513f1da805053d7d">healthBar</a></td></tr>
 <tr class="separator:ad1a229f00aaeb544513f1da805053d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63324f1ff2f846b0a9afc3fa74ebfa27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d9a/classBar.html">Bar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a63324f1ff2f846b0a9afc3fa74ebfa27">moraleBar</a></td></tr>
+<tr class="separator:a63324f1ff2f846b0a9afc3fa74ebfa27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3ff7a34641f80ab5fadff6d13c19f8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d0d/classDay.html">Day</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#ae3ff7a34641f80ab5fadff6d13c19f8d">day</a></td></tr>
 <tr class="separator:ae3ff7a34641f80ab5fadff6d13c19f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab756a4319c3526733c07c874009cb221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d9d/classLevel.html">Level</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#ab756a4319c3526733c07c874009cb221">level</a></td></tr>
 <tr class="separator:ab756a4319c3526733c07c874009cb221"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:abbfaab481c4a8f7fd4aa896665bd7852"><td class="memItemLeft" align="right" valign="top">static QRandomGenerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#abbfaab481c4a8f7fd4aa896665bd7852">random</a> = QRandomGenerator::securelySeeded()</td></tr>
-<tr class="separator:abbfaab481c4a8f7fd4aa896665bd7852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b2862bbfa7d2679b764a1607b18a13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/de0/classJournal.html">Journal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/classEngine.html#a29b2862bbfa7d2679b764a1607b18a13">journal</a></td></tr>
+<tr class="separator:a29b2862bbfa7d2679b764a1607b18a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class describes the engine instance. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aedb11fac8192eb316e4f14263c68a131"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedb11fac8192eb316e4f14263c68a131">&#9670;&nbsp;</a></span>Engine()</h2>
+<a id="acccde2b14c703bf2b19e85c921215ae9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acccde2b14c703bf2b19e85c921215ae9">&#9670;&nbsp;</a></span>Engine() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,11 +204,57 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">Engine::Engine </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>levelId</em></td><td>)</td>
+          <td class="paramname"><em>levelId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>seed</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new engine instance from a level id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">levelId</td><td>The level identifier </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">seed</td><td>The seed for randomness </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa775e809a47ccf32fd2559ddf6402244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa775e809a47ccf32fd2559ddf6402244">&#9670;&nbsp;</a></span>Engine() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::Engine </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/db6/classEngine.html">Engine</a> &amp;&#160;</td>
+          <td class="paramname"><em>engine</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construct a new engine instance from an existing engine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">engine</td><td>The engine <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -202,17 +273,52 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Destroys the object. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa49530dad40a534f917c1c1de8d2754e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa49530dad40a534f917c1c1de8d2754e">&#9670;&nbsp;</a></span>chance()</h2>
+<a id="a46ca82f06c086d1356129c5050c2db5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46ca82f06c086d1356129c5050c2db5c">&#9670;&nbsp;</a></span>affectBars()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::affectBars </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/dd9/structEffect.html">Effect</a>&#160;</td>
+          <td class="paramname"><em>effect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply effects on the user's bars. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">effect</td><td>The effects to apply. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">triggerDayEvent()</a>.</p>
+
+</div>
+</div>
+<a id="aa49530dad40a534f917c1c1de8d2754e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49530dad40a534f917c1c1de8d2754e">&#9670;&nbsp;</a></span>chance()</h2>
+
+<div class="memitem">
+<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool Engine::chance </td>
@@ -222,12 +328,16 @@ Static Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Determine if a probability will hit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">probability</td><td>The probability</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if probability was reached, false otherwise. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">explore()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7">findFood()</a>, <a class="el" href="../../d1/db6/classEngine.html#a1eacb1f22a2c741ad6f6bf931fd99b3e">findWater()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">triggerDayEvent()</a>.</p>
 
@@ -248,6 +358,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="../../db/d09/classAction.html" title="This class contains the actions from a JSON.">Action</a> for exploring. </p>
+<dl class="section return"><dt>Returns</dt><dd>The action result. </dd></dl>
+
 </div>
 </div>
 <a id="a0e05567a67bc91f38c3ecfe85d3f85f7"></a>
@@ -264,6 +377,9 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="../../db/d09/classAction.html" title="This class contains the actions from a JSON.">Action</a> for finding food. </p>
+<dl class="section return"><dt>Returns</dt><dd>The action result. </dd></dl>
 
 </div>
 </div>
@@ -282,6 +398,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="../../db/d09/classAction.html" title="This class contains the actions from a JSON.">Action</a> for finding water. </p>
+<dl class="section return"><dt>Returns</dt><dd>The action result. </dd></dl>
+
 </div>
 </div>
 <a id="ab77d0c24d9532e46a4a27611243e8ea9"></a>
@@ -299,7 +418,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>.</p>
+<p>Gets the day. </p>
+<dl class="section return"><dt>Returns</dt><dd>The day. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">NotebookWidget::displayHistoryWidget()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">NotebookWidget::setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a876711229d7881277458d558bfae1144">NotebookWidget::updateDay()</a>.</p>
 
 </div>
 </div>
@@ -317,6 +439,9 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the user's energy. </p>
+<dl class="section return"><dt>Returns</dt><dd>The energy. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a53461ac199ac4f735cbfed19a2aa0a92">Game::updateBars()</a>.</p>
 
@@ -337,6 +462,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the user's health. </p>
+<dl class="section return"><dt>Returns</dt><dd>The health. </dd></dl>
+
 <p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a53461ac199ac4f735cbfed19a2aa0a92">Game::updateBars()</a>.</p>
 
 </div>
@@ -356,7 +484,32 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the user's hunger. </p>
+<dl class="section return"><dt>Returns</dt><dd>The hunger. </dd></dl>
+
 <p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a53461ac199ac4f735cbfed19a2aa0a92">Game::updateBars()</a>.</p>
+
+</div>
+</div>
+<a id="a8b4c5b8d364034acb68c8a4b04dae7b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b4c5b8d364034acb68c8a4b04dae7b5">&#9670;&nbsp;</a></span>getJournal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../de/de0/classJournal.html">Journal</a> &amp; Engine::getJournal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the journal. </p>
+<dl class="section return"><dt>Returns</dt><dd>The journal. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">NotebookWidget::displayHistoryWidget()</a>.</p>
 
 </div>
 </div>
@@ -374,6 +527,9 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the level. </p>
+<dl class="section return"><dt>Returns</dt><dd>The level. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#af59e34a0ad79fb068ad336b8bf54fc52">Game::textureFile()</a>.</p>
 
@@ -394,6 +550,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the user's thirst. </p>
+<dl class="section return"><dt>Returns</dt><dd>The thirst. </dd></dl>
+
 <p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a53461ac199ac4f735cbfed19a2aa0a92">Game::updateBars()</a>.</p>
 
 </div>
@@ -413,7 +572,28 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a722118388a46d18685b0ff2d55a09c4a">Game::updateUi()</a>.</p>
+<p>Gets the turns. </p>
+<dl class="section return"><dt>Returns</dt><dd>The turns. </dd></dl>
+
+</div>
+</div>
+<a id="a79f6400253683ed3d246f98f5c5c945b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f6400253683ed3d246f98f5c5c945b">&#9670;&nbsp;</a></span>isGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine::isGameOver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the player is still alive. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if alive else false. </dd></dl>
 
 </div>
 </div>
@@ -432,6 +612,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Progress to the next day. </p>
+<dl class="section return"><dt>Returns</dt><dd>The event of the new day. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a2ecfb6810e73d4445f3905da4cd89681">Game::nextDay()</a>.</p>
+
 </div>
 </div>
 <a id="a48c5027bb02dc46b85c9dc32f1a8e6f9"></a>
@@ -439,9 +624,6 @@ Static Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double Engine::probability </td>
@@ -450,12 +632,10 @@ Static Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Generates a random double between 0, 1. </p>
+<dl class="section return"><dt>Returns</dt><dd>Random double between 0, 1/ </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#aa49530dad40a534f917c1c1de8d2754e">chance()</a>.</p>
 
@@ -475,6 +655,11 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="../../db/d09/classAction.html" title="This class contains the actions from a JSON.">Action</a> for resting. </p>
+<dl class="section return"><dt>Returns</dt><dd>The action result. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2">nextDay()</a>.</p>
 
 </div>
 </div>
@@ -501,6 +686,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Trigger the day's event. </p>
+<dl class="section return"><dt>Returns</dt><dd>The event result. </dd></dl>
+
 <p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2">nextDay()</a>.</p>
 
 </div>
@@ -525,8 +713,9 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The current day. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#aedb11fac8192eb316e4f14263c68a131">Engine()</a>, <a class="el" href="../../d1/db6/classEngine.html#ab77d0c24d9532e46a4a27611243e8ea9">getDay()</a>, <a class="el" href="../../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2">nextDay()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">triggerDayEvent()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a">~Engine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#acccde2b14c703bf2b19e85c921215ae9">Engine()</a>, <a class="el" href="../../d1/db6/classEngine.html#ab77d0c24d9532e46a4a27611243e8ea9">getDay()</a>, <a class="el" href="../../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2">nextDay()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">triggerDayEvent()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a">~Engine()</a>.</p>
 
 </div>
 </div>
@@ -549,8 +738,9 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The energy bar. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">explore()</a>, <a class="el" href="../../d1/db6/classEngine.html#a6c20c20a974e249fa792354d957be052">getEnergy()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865">rest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a46ca82f06c086d1356129c5050c2db5c">affectBars()</a>, <a class="el" href="../../d1/db6/classEngine.html#aa775e809a47ccf32fd2559ddf6402244">Engine()</a>, <a class="el" href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">explore()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7">findFood()</a>, <a class="el" href="../../d1/db6/classEngine.html#a1eacb1f22a2c741ad6f6bf931fd99b3e">findWater()</a>, <a class="el" href="../../d1/db6/classEngine.html#a6c20c20a974e249fa792354d957be052">getEnergy()</a>, <a class="el" href="../../d1/db6/classEngine.html#a79f6400253683ed3d246f98f5c5c945b">isGameOver()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865">rest()</a>.</p>
 
 </div>
 </div>
@@ -573,8 +763,9 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The health bar. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7">findFood()</a>, <a class="el" href="../../d1/db6/classEngine.html#a1eacb1f22a2c741ad6f6bf931fd99b3e">findWater()</a>, <a class="el" href="../../d1/db6/classEngine.html#ad996bf8fc66d92d492e0a6f947c89800">getHealth()</a>, <a class="el" href="../../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865">rest()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">triggerDayEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a46ca82f06c086d1356129c5050c2db5c">affectBars()</a>, <a class="el" href="../../d1/db6/classEngine.html#aa775e809a47ccf32fd2559ddf6402244">Engine()</a>, <a class="el" href="../../d1/db6/classEngine.html#a1eacb1f22a2c741ad6f6bf931fd99b3e">findWater()</a>, <a class="el" href="../../d1/db6/classEngine.html#ad996bf8fc66d92d492e0a6f947c89800">getHealth()</a>, <a class="el" href="../../d1/db6/classEngine.html#a79f6400253683ed3d246f98f5c5c945b">isGameOver()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865">rest()</a>.</p>
 
 </div>
 </div>
@@ -597,8 +788,34 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The hunger bar. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">explore()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7">findFood()</a>, <a class="el" href="../../d1/db6/classEngine.html#a9e087290c5d697dae036cc8e87bf9ac5">getHunger()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865">rest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a46ca82f06c086d1356129c5050c2db5c">affectBars()</a>, <a class="el" href="../../d1/db6/classEngine.html#aa775e809a47ccf32fd2559ddf6402244">Engine()</a>, <a class="el" href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">explore()</a>, <a class="el" href="../../d1/db6/classEngine.html#a9e087290c5d697dae036cc8e87bf9ac5">getHunger()</a>, <a class="el" href="../../d1/db6/classEngine.html#a79f6400253683ed3d246f98f5c5c945b">isGameOver()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865">rest()</a>.</p>
+
+</div>
+</div>
+<a id="a29b2862bbfa7d2679b764a1607b18a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b2862bbfa7d2679b764a1607b18a13">&#9670;&nbsp;</a></span>journal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/de0/classJournal.html">Journal</a> Engine::journal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The journal. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#acccde2b14c703bf2b19e85c921215ae9">Engine()</a>, <a class="el" href="../../d1/db6/classEngine.html#a8b4c5b8d364034acb68c8a4b04dae7b5">getJournal()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">triggerDayEvent()</a>.</p>
 
 </div>
 </div>
@@ -621,8 +838,34 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The level. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#aedb11fac8192eb316e4f14263c68a131">Engine()</a>, <a class="el" href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">explore()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0e05567a67bc91f38c3ecfe85d3f85f7">findFood()</a>, <a class="el" href="../../d1/db6/classEngine.html#a17dd9ff16d910b9737868480c3f5f1fd">getLevel()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">triggerDayEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#acccde2b14c703bf2b19e85c921215ae9">Engine()</a>, <a class="el" href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">explore()</a>, <a class="el" href="../../d1/db6/classEngine.html#a17dd9ff16d910b9737868480c3f5f1fd">getLevel()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">triggerDayEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a63324f1ff2f846b0a9afc3fa74ebfa27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63324f1ff2f846b0a9afc3fa74ebfa27">&#9670;&nbsp;</a></span>moraleBar</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d9a/classBar.html">Bar</a> Engine::moraleBar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The morale bar. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a46ca82f06c086d1356129c5050c2db5c">affectBars()</a>, and <a class="el" href="../../d1/db6/classEngine.html#aa775e809a47ccf32fd2559ddf6402244">Engine()</a>.</p>
 
 </div>
 </div>
@@ -636,17 +879,18 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QRandomGenerator Engine::random = QRandomGenerator::securelySeeded()</td>
+          <td class="memname">QRandomGenerator Engine::random</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The random generator. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a48c5027bb02dc46b85c9dc32f1a8e6f9">probability()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#acccde2b14c703bf2b19e85c921215ae9">Engine()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a48c5027bb02dc46b85c9dc32f1a8e6f9">probability()</a>.</p>
 
 </div>
 </div>
@@ -669,8 +913,9 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The thirst bar. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">explore()</a>, <a class="el" href="../../d1/db6/classEngine.html#a1eacb1f22a2c741ad6f6bf931fd99b3e">findWater()</a>, <a class="el" href="../../d1/db6/classEngine.html#af73658922dc978cef5ff8b227d55c8f9">getThirst()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865">rest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a46ca82f06c086d1356129c5050c2db5c">affectBars()</a>, <a class="el" href="../../d1/db6/classEngine.html#aa775e809a47ccf32fd2559ddf6402244">Engine()</a>, <a class="el" href="../../d1/db6/classEngine.html#a368e557419631257151d5122d3b04170">explore()</a>, <a class="el" href="../../d1/db6/classEngine.html#a1eacb1f22a2c741ad6f6bf931fd99b3e">findWater()</a>, <a class="el" href="../../d1/db6/classEngine.html#af73658922dc978cef5ff8b227d55c8f9">getThirst()</a>, <a class="el" href="../../d1/db6/classEngine.html#a79f6400253683ed3d246f98f5c5c945b">isGameOver()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a1261c65f5cbe87fa6ec3f6d95bc63865">rest()</a>.</p>
 
 </div>
 </div>
@@ -693,8 +938,9 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The current turns. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#aaa934d330c26fe3e338a551799c037fa">getTurns()</a>, and <a class="el" href="../../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2">nextDay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#aa775e809a47ccf32fd2559ddf6402244">Engine()</a>, <a class="el" href="../../d1/db6/classEngine.html#aaa934d330c26fe3e338a551799c037fa">getTurns()</a>, and <a class="el" href="../../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2">nextDay()</a>.</p>
 
 </div>
 </div>

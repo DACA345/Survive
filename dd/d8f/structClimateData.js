@@ -1,8 +1,8 @@
 var structClimateData =
 [
-    [ "avg_temperature", "dd/d8f/structClimateData.html#ace1070c1309b5414c39c3882cefd3acb", null ],
-    [ "max_temperature", "dd/d8f/structClimateData.html#a9c8f307745a839b540a92d33fb4e4204", null ],
-    [ "min_temperature", "dd/d8f/structClimateData.html#a12307293b8b63eb979e028dd595d07ed", null ],
+    [ "avgTemperature", "dd/d8f/structClimateData.html#ab53f7c50542bdd5f668649077777c08f", null ],
+    [ "maxTemperature", "dd/d8f/structClimateData.html#ad7ebeb4144720bdb03f462b0a4931bff", null ],
+    [ "minTemperature", "dd/d8f/structClimateData.html#aecc26cd8c6d6da2940a2538e5daf8b41", null ],
     [ "precipitation", "dd/d8f/structClimateData.html#a4e34a018bdfed4e8f703645fba2995de", null ],
-    [ "snow_depth", "dd/d8f/structClimateData.html#a8b75b179d66a10e6a9e68a19120dd667", null ]
+    [ "snowDepth", "dd/d8f/structClimateData.html#a89e58eefd8d183abb3ebb62187585774", null ]
 ];

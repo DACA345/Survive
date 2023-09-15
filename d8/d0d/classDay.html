@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('d8/d0d/classDay.html','../../'); initR
 </div><!--header-->
 <div class="contents">
 
-<p>This class describes the <a class="el" href="../../d8/d0d/classDay.html" title="This class describes the Day instance.">Day</a> instance.  
+<p>This class describes an in-game day with climate info.  
  <a href="../../d8/d0d/classDay.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d0/dd5/day_8h_source.html">day.h</a>&gt;</code></p>
@@ -104,31 +104,37 @@ $(document).ready(function(){initNavTree('d8/d0d/classDay.html','../../'); initR
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c36eee068ef58b00f64a3b732800840"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a4c36eee068ef58b00f64a3b732800840">Day</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a4c36eee068ef58b00f64a3b732800840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a new day with climate data from a JSON file.  <a href="../../d8/d0d/classDay.html#a4c36eee068ef58b00f64a3b732800840">More...</a><br /></td></tr>
 <tr class="separator:a4c36eee068ef58b00f64a3b732800840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138c335bb7a1b48fb8bdd4cf940c2c84"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../dd/d8f/structClimateData.html">ClimateData</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84">getMonthData</a> (const std::string &amp;<a class="el" href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">month</a>) const</td></tr>
+<tr class="memdesc:a138c335bb7a1b48fb8bdd4cf940c2c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the month data.  <a href="../../d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84">More...</a><br /></td></tr>
 <tr class="separator:a138c335bb7a1b48fb8bdd4cf940c2c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe346d646e4dd641800701cb328bd644"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../dd/d8f/structClimateData.html">ClimateData</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#afe346d646e4dd641800701cb328bd644">getMonthData</a> (int <a class="el" href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">month</a>)</td></tr>
+<tr class="memdesc:afe346d646e4dd641800701cb328bd644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the month data.  <a href="../../d8/d0d/classDay.html#afe346d646e4dd641800701cb328bd644">More...</a><br /></td></tr>
 <tr class="separator:afe346d646e4dd641800701cb328bd644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accd0e4374d09958182c274890b707514"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#accd0e4374d09958182c274890b707514">printMonthClimate</a> (const std::string &amp;<a class="el" href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">month</a>) const</td></tr>
-<tr class="separator:accd0e4374d09958182c274890b707514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5209e4970279c0e633d0a90edfe94e1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a5209e4970279c0e633d0a90edfe94e1e">printClimateData</a> () const</td></tr>
-<tr class="separator:a5209e4970279c0e633d0a90edfe94e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2974dfbd56a87438ebfded833c187b95"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a2974dfbd56a87438ebfded833c187b95">getRandomTemperatureValue</a> (const <a class="el" href="../../da/dfe/structTemperature.html">Temperature</a> &amp;temperature) const</td></tr>
-<tr class="separator:a2974dfbd56a87438ebfded833c187b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32e875c46b9c74f7c0506b90175f9941"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a32e875c46b9c74f7c0506b90175f9941">getRandomPrecipitationValue</a> (const <a class="el" href="../../da/dbb/structPrecipitation.html">Precipitation</a> &amp;precipitation) const</td></tr>
-<tr class="separator:a32e875c46b9c74f7c0506b90175f9941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6cf7fc6bc6208f1ce833f74d35dda34"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#ad6cf7fc6bc6208f1ce833f74d35dda34">getRandomTemperatureValue</a> (const <a class="el" href="../../da/dfe/structTemperature.html">Temperature</a> &amp;temperature) const</td></tr>
+<tr class="memdesc:ad6cf7fc6bc6208f1ce833f74d35dda34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random temperature value.  <a href="../../d8/d0d/classDay.html#ad6cf7fc6bc6208f1ce833f74d35dda34">More...</a><br /></td></tr>
+<tr class="separator:ad6cf7fc6bc6208f1ce833f74d35dda34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16fcc32057df1944d4d6afc746409887"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a16fcc32057df1944d4d6afc746409887">getRandomPrecipitationValue</a> (const <a class="el" href="../../da/dbb/structPrecipitation.html">Precipitation</a> &amp;precipitation) const</td></tr>
+<tr class="memdesc:a16fcc32057df1944d4d6afc746409887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random precipitation value.  <a href="../../d8/d0d/classDay.html#a16fcc32057df1944d4d6afc746409887">More...</a><br /></td></tr>
+<tr class="separator:a16fcc32057df1944d4d6afc746409887"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33cd88c03561ce627030a4a9460ae95f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a33cd88c03561ce627030a4a9460ae95f">currentDay</a> () const</td></tr>
+<tr class="memdesc:a33cd88c03561ce627030a4a9460ae95f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current in-game day.  <a href="../../d8/d0d/classDay.html#a33cd88c03561ce627030a4a9460ae95f">More...</a><br /></td></tr>
 <tr class="separator:a33cd88c03561ce627030a4a9460ae95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a838600c8c4651ee38394b6ac9e0de847"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">month</a> () const</td></tr>
+<tr class="memdesc:a838600c8c4651ee38394b6ac9e0de847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current in-game month.  <a href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">More...</a><br /></td></tr>
 <tr class="separator:a838600c8c4651ee38394b6ac9e0de847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc57ce278f370790f4f9299c1eb72459"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#adc57ce278f370790f4f9299c1eb72459">monthId</a> () const</td></tr>
+<tr class="memdesc:adc57ce278f370790f4f9299c1eb72459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current in-game month id.  <a href="../../d8/d0d/classDay.html#adc57ce278f370790f4f9299c1eb72459">More...</a><br /></td></tr>
 <tr class="separator:adc57ce278f370790f4f9299c1eb72459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdc88e7be965b37df5f9285d1653034b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#acdc88e7be965b37df5f9285d1653034b">nextDay</a> ()</td></tr>
+<tr class="memdesc:acdc88e7be965b37df5f9285d1653034b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the day.  <a href="../../d8/d0d/classDay.html#acdc88e7be965b37df5f9285d1653034b">More...</a><br /></td></tr>
 <tr class="separator:acdc88e7be965b37df5f9285d1653034b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a12ddb0cb08c19cb6c5959a306e30b90f"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a12ddb0cb08c19cb6c5959a306e30b90f">monthFromInt</a> (int <a class="el" href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">month</a>)</td></tr>
+<tr class="memdesc:a12ddb0cb08c19cb6c5959a306e30b90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an int value of a month to a string.  <a href="../../d8/d0d/classDay.html#a12ddb0cb08c19cb6c5959a306e30b90f">More...</a><br /></td></tr>
 <tr class="separator:a12ddb0cb08c19cb6c5959a306e30b90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -139,6 +145,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:abf7d5597cf8d799f5f79831f37b62f3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#abf7d5597cf8d799f5f79831f37b62f3a">loadClimateData</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:abf7d5597cf8d799f5f79831f37b62f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the climate data from a JSON.  <a href="../../d8/d0d/classDay.html#abf7d5597cf8d799f5f79831f37b62f3a">More...</a><br /></td></tr>
 <tr class="separator:abf7d5597cf8d799f5f79831f37b62f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -149,7 +156,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ae0dde42284eeb4d7753f1362c67530c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class describes the <a class="el" href="../../d8/d0d/classDay.html" title="This class describes the Day instance.">Day</a> instance. </p>
+<div class="textblock"><p>This class describes an in-game day with climate info. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4c36eee068ef58b00f64a3b732800840"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c36eee068ef58b00f64a3b732800840">&#9670;&nbsp;</a></span>Day()</h2>
@@ -166,6 +173,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Makes a new day with climate data from a JSON file. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d0d/classDay.html#abf7d5597cf8d799f5f79831f37b62f3a" title="Loads the climate data from a JSON.">loadClimateData</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The filename </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -185,7 +201,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>.</p>
+<p>Gets the current in-game day. </p>
+<dl class="section return"><dt>Returns</dt><dd>The day. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">NotebookWidget::displayHistoryWidget()</a>, <a class="el" href="../../d1/db6/classEngine.html#acccde2b14c703bf2b19e85c921215ae9">Engine::Engine()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">NotebookWidget::setupUi()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a876711229d7881277458d558bfae1144">NotebookWidget::updateDay()</a>.</p>
 
 </div>
 </div>
@@ -205,7 +224,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#afe346d646e4dd641800701cb328bd644">getMonthData()</a>, and <a class="el" href="../../d9/d68/classGame.html#a0df39466bc898c84d6e72f3b04fff7d4">Game::updateTemperature()</a>.</p>
+<p>Gets the month data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">month</td><td>The month</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The month data. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#afe346d646e4dd641800701cb328bd644">getMonthData()</a>.</p>
 
 </div>
 </div>
@@ -225,16 +253,25 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the month data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">month</td><td>The month</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The month data. </dd></dl>
+
 </div>
 </div>
-<a id="a32e875c46b9c74f7c0506b90175f9941"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32e875c46b9c74f7c0506b90175f9941">&#9670;&nbsp;</a></span>getRandomPrecipitationValue()</h2>
+<a id="a16fcc32057df1944d4d6afc746409887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16fcc32057df1944d4d6afc746409887">&#9670;&nbsp;</a></span>getRandomPrecipitationValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float Day::getRandomPrecipitationValue </td>
+          <td class="memname">double Day::getRandomPrecipitationValue </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../da/dbb/structPrecipitation.html">Precipitation</a> &amp;&#160;</td>
           <td class="paramname"><em>precipitation</em></td><td>)</td>
@@ -243,18 +280,25 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#accd0e4374d09958182c274890b707514">printMonthClimate()</a>.</p>
+<p>Gets a random precipitation value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">precipitation</td><td>The precipitation range</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The random precipitation value. </dd></dl>
 
 </div>
 </div>
-<a id="a2974dfbd56a87438ebfded833c187b95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2974dfbd56a87438ebfded833c187b95">&#9670;&nbsp;</a></span>getRandomTemperatureValue()</h2>
+<a id="ad6cf7fc6bc6208f1ce833f74d35dda34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6cf7fc6bc6208f1ce833f74d35dda34">&#9670;&nbsp;</a></span>getRandomTemperatureValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float Day::getRandomTemperatureValue </td>
+          <td class="memname">double Day::getRandomTemperatureValue </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../da/dfe/structTemperature.html">Temperature</a> &amp;&#160;</td>
           <td class="paramname"><em>temperature</em></td><td>)</td>
@@ -263,7 +307,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#accd0e4374d09958182c274890b707514">printMonthClimate()</a>, and <a class="el" href="../../d9/d68/classGame.html#a0df39466bc898c84d6e72f3b04fff7d4">Game::updateTemperature()</a>.</p>
+<p>Gets a random temperature value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">temperature</td><td>The temperature range</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The random temperature value. </dd></dl>
 
 </div>
 </div>
@@ -291,6 +342,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Loads the climate data from a JSON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The filename </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a4c36eee068ef58b00f64a3b732800840">Day()</a>.</p>
 
 </div>
@@ -310,7 +369,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84">getMonthData()</a>, <a class="el" href="../../d8/d0d/classDay.html#a12ddb0cb08c19cb6c5959a306e30b90f">monthFromInt()</a>, <a class="el" href="../../d8/d0d/classDay.html#adc57ce278f370790f4f9299c1eb72459">monthId()</a>, and <a class="el" href="../../d8/d0d/classDay.html#accd0e4374d09958182c274890b707514">printMonthClimate()</a>.</p>
+<p>Gets the current in-game month. </p>
+<dl class="section return"><dt>Returns</dt><dd>The month. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84">getMonthData()</a>, <a class="el" href="../../d8/d0d/classDay.html#a12ddb0cb08c19cb6c5959a306e30b90f">monthFromInt()</a>, and <a class="el" href="../../d8/d0d/classDay.html#adc57ce278f370790f4f9299c1eb72459">monthId()</a>.</p>
 
 </div>
 </div>
@@ -338,7 +400,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#adc57ce278f370790f4f9299c1eb72459">monthId()</a>, and <a class="el" href="../../d9/d68/classGame.html#a1bf39271e4a99223300d7567b12b58de">Game::triggerEvent()</a>.</p>
+<p>Convert an int value of a month to a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">month</td><td>The month</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The month id. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#adc57ce278f370790f4f9299c1eb72459">monthId()</a>.</p>
 
 </div>
 </div>
@@ -356,6 +427,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the current in-game month id. </p>
+<dl class="section return"><dt>Returns</dt><dd>The month ID. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>.</p>
 
@@ -376,42 +450,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Advances the day. </p>
+
 <p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#ac9e66a6f888703e8762d553d1b991bc2">Engine::nextDay()</a>.</p>
-
-</div>
-</div>
-<a id="a5209e4970279c0e633d0a90edfe94e1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5209e4970279c0e633d0a90edfe94e1e">&#9670;&nbsp;</a></span>printClimateData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Day::printClimateData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="accd0e4374d09958182c274890b707514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accd0e4374d09958182c274890b707514">&#9670;&nbsp;</a></span>printMonthClimate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Day::printMonthClimate </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>month</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -435,8 +476,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stores the climate data per month. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84">getMonthData()</a>, <a class="el" href="../../d8/d0d/classDay.html#abf7d5597cf8d799f5f79831f37b62f3a">loadClimateData()</a>, <a class="el" href="../../d8/d0d/classDay.html#a5209e4970279c0e633d0a90edfe94e1e">printClimateData()</a>, and <a class="el" href="../../d8/d0d/classDay.html#accd0e4374d09958182c274890b707514">printMonthClimate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84">getMonthData()</a>, and <a class="el" href="../../d8/d0d/classDay.html#abf7d5597cf8d799f5f79831f37b62f3a">loadClimateData()</a>.</p>
 
 </div>
 </div>
@@ -459,6 +501,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The current day. </p>
 
 <p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a33cd88c03561ce627030a4a9460ae95f">currentDay()</a>, <a class="el" href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">month()</a>, and <a class="el" href="../../d8/d0d/classDay.html#acdc88e7be965b37df5f9285d1653034b">nextDay()</a>.</p>
 
@@ -487,7 +530,8 @@ Private Attributes</h2></td></tr>
 <div class="line">    <span class="stringliteral">&quot;JAN&quot;</span>, <span class="stringliteral">&quot;FEB&quot;</span>, <span class="stringliteral">&quot;MAR&quot;</span>, <span class="stringliteral">&quot;APR&quot;</span>, <span class="stringliteral">&quot;MAY&quot;</span>, <span class="stringliteral">&quot;JUN&quot;</span>, <span class="stringliteral">&quot;JUL&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;AUG&quot;</span>, <span class="stringliteral">&quot;SEP&quot;</span>, <span class="stringliteral">&quot;OCT&quot;</span>, <span class="stringliteral">&quot;NOV&quot;</span>, <span class="stringliteral">&quot;DEC&quot;</span></div>
 <div class="line">}</div>
-</div><!-- fragment -->
+</div><!-- fragment --><p>List of month IDs </p>
+
 <p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#afe346d646e4dd641800701cb328bd644">getMonthData()</a>, and <a class="el" href="../../d8/d0d/classDay.html#a12ddb0cb08c19cb6c5959a306e30b90f">monthFromInt()</a>.</p>
 
 </div>

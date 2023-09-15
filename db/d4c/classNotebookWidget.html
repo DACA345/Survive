@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -85,8 +85,10 @@ $(document).ready(function(){initNavTree('db/d4c/classNotebookWidget.html','../.
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d0/da4/classNotebookWidget-members.html">List of all members</a>  </div>
@@ -95,6 +97,9 @@ $(document).ready(function(){initNavTree('db/d4c/classNotebookWidget.html','../.
 </div><!--header-->
 <div class="contents">
 
+<p>This class describes a notebook widget in the game.  
+ <a href="../../db/d4c/classNotebookWidget.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../da/daf/notebookwidget_8h_source.html">notebookwidget.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for NotebookWidget:</div>
@@ -102,37 +107,63 @@ Inheritance diagram for NotebookWidget:</div>
  <div class="center">
   <img src="../../db/d4c/classNotebookWidget.png" usemap="#NotebookWidget_map" alt=""/>
   <map id="NotebookWidget_map" name="NotebookWidget_map">
-<area href="../../d6/d1f/classDraggableWidget.html" title="This class describes a widget which can be dragged around." alt="DraggableWidget" shape="rect" coords="0,112,109,136"/>
-<area href="../../de/d1f/classScalableWidget.html" title="This class describes a widget which scales it&#39;s children with the widget size." alt="ScalableWidget" shape="rect" coords="0,56,109,80"/>
+<area href="../../de/d1f/classScalableWidget.html" title="This class describes a widget which scales it&#39;s children with the widget size." alt="ScalableWidget" shape="rect" coords="0,56,103,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/df1/structNotebookWidget_1_1WidgetInfo.html">WidgetInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information of the notebook widgets.  <a href="../../d6/df1/structNotebookWidget_1_1WidgetInfo.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:aa712720730ecb76db059f515ffc28942"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#aa712720730ecb76db059f515ffc28942">findFood</a> ()</td></tr>
+<tr class="memdesc:aa712720730ecb76db059f515ffc28942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user has opted to find food.  <a href="../../db/d4c/classNotebookWidget.html#aa712720730ecb76db059f515ffc28942">More...</a><br /></td></tr>
 <tr class="separator:aa712720730ecb76db059f515ffc28942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a7dd5dc28ac4ab4542f8dff7af3f538"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a3a7dd5dc28ac4ab4542f8dff7af3f538">findWater</a> ()</td></tr>
+<tr class="memdesc:a3a7dd5dc28ac4ab4542f8dff7af3f538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user has opted to find water.  <a href="../../db/d4c/classNotebookWidget.html#a3a7dd5dc28ac4ab4542f8dff7af3f538">More...</a><br /></td></tr>
 <tr class="separator:a3a7dd5dc28ac4ab4542f8dff7af3f538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30b9ece707c0618894386c56e7527d94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a30b9ece707c0618894386c56e7527d94">explore</a> ()</td></tr>
+<tr class="memdesc:a30b9ece707c0618894386c56e7527d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user has opted to explore.  <a href="../../db/d4c/classNotebookWidget.html#a30b9ece707c0618894386c56e7527d94">More...</a><br /></td></tr>
 <tr class="separator:a30b9ece707c0618894386c56e7527d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e514d7b0b403dbd91efa24d7b24fc36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a2e514d7b0b403dbd91efa24d7b24fc36">rest</a> ()</td></tr>
+<tr class="memdesc:a2e514d7b0b403dbd91efa24d7b24fc36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user has opted to rest.  <a href="../../db/d4c/classNotebookWidget.html#a2e514d7b0b403dbd91efa24d7b24fc36">More...</a><br /></td></tr>
 <tr class="separator:a2e514d7b0b403dbd91efa24d7b24fc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d34534ceeb9f65ab33a465da06f2613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a4d34534ceeb9f65ab33a465da06f2613">sleep</a> ()</td></tr>
+<tr class="memdesc:a4d34534ceeb9f65ab33a465da06f2613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user has opted to sleep.  <a href="../../db/d4c/classNotebookWidget.html#a4d34534ceeb9f65ab33a465da06f2613">More...</a><br /></td></tr>
+<tr class="separator:a4d34534ceeb9f65ab33a465da06f2613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66f2a9ebe8f08c750a15d5a43fdfecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#aa66f2a9ebe8f08c750a15d5a43fdfecc">resultAcknowledged</a> ()</td></tr>
+<tr class="memdesc:aa66f2a9ebe8f08c750a15d5a43fdfecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user has acknowledged the result widget.  <a href="../../db/d4c/classNotebookWidget.html#aa66f2a9ebe8f08c750a15d5a43fdfecc">More...</a><br /></td></tr>
+<tr class="separator:aa66f2a9ebe8f08c750a15d5a43fdfecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac50484c33621bc848b5e69b30c1840fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#ac50484c33621bc848b5e69b30c1840fe">close</a> ()</td></tr>
+<tr class="memdesc:ac50484c33621bc848b5e69b30c1840fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user closes the notebook.  <a href="../../db/d4c/classNotebookWidget.html#ac50484c33621bc848b5e69b30c1840fe">More...</a><br /></td></tr>
 <tr class="separator:ac50484c33621bc848b5e69b30c1840fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adccd54f327e6ac7173c67e7fed29fac2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#adccd54f327e6ac7173c67e7fed29fac2">NotebookWidget</a> (int <a class="el" href="../../db/d4c/classNotebookWidget.html#a1797b8ecfd8bb0bbeb0459033fa23526">day</a>, QWidget *parent=nullptr)</td></tr>
-<tr class="separator:adccd54f327e6ac7173c67e7fed29fac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcaca60ebd8aee42c4638f2008c81f71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#abcaca60ebd8aee42c4638f2008c81f71">NotebookWidget</a> (const <a class="el" href="../../d1/db6/classEngine.html">Engine</a> &amp;<a class="el" href="../../db/d4c/classNotebookWidget.html#a07b709799f7051ca2bdb9eb7377945da">engine</a>, QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:abcaca60ebd8aee42c4638f2008c81f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new instance.  <a href="../../db/d4c/classNotebookWidget.html#abcaca60ebd8aee42c4638f2008c81f71">More...</a><br /></td></tr>
+<tr class="separator:abcaca60ebd8aee42c4638f2008c81f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79928ef9fe287c1d46607b48051dfeb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a79928ef9fe287c1d46607b48051dfeb9">~NotebookWidget</a> ()</td></tr>
+<tr class="memdesc:a79928ef9fe287c1d46607b48051dfeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the object.  <a href="../../db/d4c/classNotebookWidget.html#a79928ef9fe287c1d46607b48051dfeb9">More...</a><br /></td></tr>
 <tr class="separator:a79928ef9fe287c1d46607b48051dfeb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classDraggableWidget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classDraggableWidget')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d6/d1f/classDraggableWidget.html">DraggableWidget</a></td></tr>
-<tr class="memitem:a0e887c8e18b38bbc9a4f2b2f66541add inherit pub_methods_classDraggableWidget"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1f/classDraggableWidget.html#a0e887c8e18b38bbc9a4f2b2f66541add">DraggableWidget</a> (QWidget *parent=nullptr)</td></tr>
-<tr class="memdesc:a0e887c8e18b38bbc9a4f2b2f66541add inherit pub_methods_classDraggableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new draggable widget instance.  <a href="../../d6/d1f/classDraggableWidget.html#a0e887c8e18b38bbc9a4f2b2f66541add">More...</a><br /></td></tr>
-<tr class="separator:a0e887c8e18b38bbc9a4f2b2f66541add inherit pub_methods_classDraggableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab51c3792e597d551b780ed9f17b2fe8c inherit pub_methods_classDraggableWidget"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1f/classDraggableWidget.html#ab51c3792e597d551b780ed9f17b2fe8c">~DraggableWidget</a> ()</td></tr>
-<tr class="memdesc:ab51c3792e597d551b780ed9f17b2fe8c inherit pub_methods_classDraggableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the object.  <a href="../../d6/d1f/classDraggableWidget.html#ab51c3792e597d551b780ed9f17b2fe8c">More...</a><br /></td></tr>
-<tr class="separator:ab51c3792e597d551b780ed9f17b2fe8c inherit pub_methods_classDraggableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace781db296e3548cddc928daeb0dd5a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">displayActionMenu</a> (bool hide=false)</td></tr>
+<tr class="memdesc:ace781db296e3548cddc928daeb0dd5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the menu for selecting an action.  <a href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">More...</a><br /></td></tr>
+<tr class="separator:ace781db296e3548cddc928daeb0dd5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac359342bc603d531dd8ba27ed09b689b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">displayHistoryWidget</a> (int day=-1, bool hide=true)</td></tr>
+<tr class="memdesc:ac359342bc603d531dd8ba27ed09b689b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the history widget for journal entries.  <a href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">More...</a><br /></td></tr>
+<tr class="separator:ac359342bc603d531dd8ba27ed09b689b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046562d43eb53639d218c893531f3a49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a046562d43eb53639d218c893531f3a49">displayResultsWidget</a> (QString action, QString result, bool hide=true)</td></tr>
+<tr class="memdesc:a046562d43eb53639d218c893531f3a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the results to a user.  <a href="../../db/d4c/classNotebookWidget.html#a046562d43eb53639d218c893531f3a49">More...</a><br /></td></tr>
+<tr class="separator:a046562d43eb53639d218c893531f3a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec4db38baec10678c6528a32724777a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#aeec4db38baec10678c6528a32724777a">displaySleepWidget</a> (bool hide=true)</td></tr>
+<tr class="memdesc:aeec4db38baec10678c6528a32724777a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the option for the user to sleep.  <a href="../../db/d4c/classNotebookWidget.html#aeec4db38baec10678c6528a32724777a">More...</a><br /></td></tr>
+<tr class="separator:aeec4db38baec10678c6528a32724777a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876711229d7881277458d558bfae1144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a876711229d7881277458d558bfae1144">updateDay</a> ()</td></tr>
+<tr class="memdesc:a876711229d7881277458d558bfae1144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the day text.  <a href="../../db/d4c/classNotebookWidget.html#a876711229d7881277458d558bfae1144">More...</a><br /></td></tr>
+<tr class="separator:a876711229d7881277458d558bfae1144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classScalableWidget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classScalableWidget')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/d1f/classScalableWidget.html">ScalableWidget</a></td></tr>
 <tr class="memitem:af4293911853b5a3d4930ac1f8cc187a4 inherit pub_methods_classScalableWidget"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#af4293911853b5a3d4930ac1f8cc187a4">ScalableWidget</a> (QWidget *parent=nullptr)</td></tr>
 <tr class="memdesc:af4293911853b5a3d4930ac1f8cc187a4 inherit pub_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new scalable widget instance.  <a href="../../de/d1f/classScalableWidget.html#af4293911853b5a3d4930ac1f8cc187a4">More...</a><br /></td></tr>
@@ -141,31 +172,70 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a170dc385cad7aea4385a706579f50078 inherit pub_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the object.  <a href="../../de/d1f/classScalableWidget.html#a170dc385cad7aea4385a706579f50078">More...</a><br /></td></tr>
 <tr class="separator:a170dc385cad7aea4385a706579f50078 inherit pub_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:ae794fcd6525b4497f34e9809eddaec39"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#ae794fcd6525b4497f34e9809eddaec39">WidgetType</a> { <a class="el" href="../../db/d4c/classNotebookWidget.html#ae794fcd6525b4497f34e9809eddaec39a7d37876ff984644bdf4fafae79accadf">ACTION_MENU</a>
+, <a class="el" href="../../db/d4c/classNotebookWidget.html#ae794fcd6525b4497f34e9809eddaec39aceada5c212a751f626543123cc518533">HISTORY_WIDGET</a>
+, <a class="el" href="../../db/d4c/classNotebookWidget.html#ae794fcd6525b4497f34e9809eddaec39a312895f21cc69bd6652a8408a89d6a27">RESULTS_WIDGET</a>
+, <a class="el" href="../../db/d4c/classNotebookWidget.html#ae794fcd6525b4497f34e9809eddaec39a584a10f73445cd77e809cf81e8012be4">SLEEP_WIDGET</a>
+ }</td></tr>
+<tr class="memdesc:ae794fcd6525b4497f34e9809eddaec39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum representing the type of widget being displayed.  <a href="../../db/d4c/classNotebookWidget.html#ae794fcd6525b4497f34e9809eddaec39">More...</a><br /></td></tr>
+<tr class="separator:ae794fcd6525b4497f34e9809eddaec39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a571b7d8b80d52a2463d18ec1984d80c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a571b7d8b80d52a2463d18ec1984d80c4">paintEvent</a> (QPaintEvent *event) override</td></tr>
+<tr class="memdesc:a571b7d8b80d52a2463d18ec1984d80c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paint event handler. See QWidget paint.  <a href="../../db/d4c/classNotebookWidget.html#a571b7d8b80d52a2463d18ec1984d80c4">More...</a><br /></td></tr>
 <tr class="separator:a571b7d8b80d52a2463d18ec1984d80c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58f40f599f49d7efa3b14d722eb648de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a58f40f599f49d7efa3b14d722eb648de">loadStylesheet</a> ()</td></tr>
+<tr class="memdesc:a58f40f599f49d7efa3b14d722eb648de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a stylesheet.  <a href="../../db/d4c/classNotebookWidget.html#a58f40f599f49d7efa3b14d722eb648de">More...</a><br /></td></tr>
 <tr class="separator:a58f40f599f49d7efa3b14d722eb648de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc3a4a4a0bdbc57bba67f5cd892f31ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#afc3a4a4a0bdbc57bba67f5cd892f31ee">loadGraphics</a> ()</td></tr>
+<tr class="memdesc:afc3a4a4a0bdbc57bba67f5cd892f31ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the widget's graphics.  <a href="../../db/d4c/classNotebookWidget.html#afc3a4a4a0bdbc57bba67f5cd892f31ee">More...</a><br /></td></tr>
 <tr class="separator:afc3a4a4a0bdbc57bba67f5cd892f31ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7be74f5537379ca6df7434d0615e79de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi</a> ()</td></tr>
+<tr class="memdesc:a7be74f5537379ca6df7434d0615e79de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the UI.  <a href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">More...</a><br /></td></tr>
 <tr class="separator:a7be74f5537379ca6df7434d0615e79de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78a562380599ffdb63df4f6c4945600"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#aa78a562380599ffdb63df4f6c4945600">raiseButtons</a> ()</td></tr>
+<tr class="memdesc:aa78a562380599ffdb63df4f6c4945600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raises the buttons to be on top.  <a href="../../db/d4c/classNotebookWidget.html#aa78a562380599ffdb63df4f6c4945600">More...</a><br /></td></tr>
+<tr class="separator:aa78a562380599ffdb63df4f6c4945600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af13a2e5ae2fa216fb759faeb3994c38f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#af13a2e5ae2fa216fb759faeb3994c38f">displayPrevious</a> ()</td></tr>
+<tr class="memdesc:af13a2e5ae2fa216fb759faeb3994c38f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the previous widget on the stack.  <a href="../../db/d4c/classNotebookWidget.html#af13a2e5ae2fa216fb759faeb3994c38f">More...</a><br /></td></tr>
+<tr class="separator:af13a2e5ae2fa216fb759faeb3994c38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc4afc0bb9a48dffa28d9c3d788ce82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a8cc4afc0bb9a48dffa28d9c3d788ce82">closeCurrent</a> (bool hide=false)</td></tr>
+<tr class="memdesc:a8cc4afc0bb9a48dffa28d9c3d788ce82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the current widget on the stack.  <a href="../../db/d4c/classNotebookWidget.html#a8cc4afc0bb9a48dffa28d9c3d788ce82">More...</a><br /></td></tr>
+<tr class="separator:a8cc4afc0bb9a48dffa28d9c3d788ce82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23cdeddf4d5fa955aad67c94dc82996"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#af23cdeddf4d5fa955aad67c94dc82996">closeActionMenu</a> (bool hide=false)</td></tr>
+<tr class="memdesc:af23cdeddf4d5fa955aad67c94dc82996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the action menu.  <a href="../../db/d4c/classNotebookWidget.html#af23cdeddf4d5fa955aad67c94dc82996">More...</a><br /></td></tr>
+<tr class="separator:af23cdeddf4d5fa955aad67c94dc82996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c2348b2677f3c85823b462d2fde610e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a3c2348b2677f3c85823b462d2fde610e">closeHistoryWidget</a> (bool hide=false)</td></tr>
+<tr class="memdesc:a3c2348b2677f3c85823b462d2fde610e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the history widget.  <a href="../../db/d4c/classNotebookWidget.html#a3c2348b2677f3c85823b462d2fde610e">More...</a><br /></td></tr>
+<tr class="separator:a3c2348b2677f3c85823b462d2fde610e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f375a8734e31f48f01c7856afbef70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a19f375a8734e31f48f01c7856afbef70">closeResultsWidget</a> (bool hide=false)</td></tr>
+<tr class="memdesc:a19f375a8734e31f48f01c7856afbef70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the results widget.  <a href="../../db/d4c/classNotebookWidget.html#a19f375a8734e31f48f01c7856afbef70">More...</a><br /></td></tr>
+<tr class="separator:a19f375a8734e31f48f01c7856afbef70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95cf8f3134b7598d5bd8e66fd16e4683"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a95cf8f3134b7598d5bd8e66fd16e4683">closeSleepWidget</a> (bool hide=false)</td></tr>
+<tr class="memdesc:a95cf8f3134b7598d5bd8e66fd16e4683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the sleep widget.  <a href="../../db/d4c/classNotebookWidget.html#a95cf8f3134b7598d5bd8e66fd16e4683">More...</a><br /></td></tr>
+<tr class="separator:a95cf8f3134b7598d5bd8e66fd16e4683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1797b8ecfd8bb0bbeb0459033fa23526"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a1797b8ecfd8bb0bbeb0459033fa23526">day</a></td></tr>
-<tr class="separator:a1797b8ecfd8bb0bbeb0459033fa23526"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9998890836528750af5905a296b03ffc"><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a9998890836528750af5905a296b03ffc">titleLabel</a></td></tr>
-<tr class="separator:a9998890836528750af5905a296b03ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a689cb8a877892c78eecb7db07aba0de2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a689cb8a877892c78eecb7db07aba0de2">findFoodButton</a></td></tr>
-<tr class="separator:a689cb8a877892c78eecb7db07aba0de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa534bdda31a3de0d9d74bdff4bc3e1f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#aa534bdda31a3de0d9d74bdff4bc3e1f8">findWaterButton</a></td></tr>
-<tr class="separator:aa534bdda31a3de0d9d74bdff4bc3e1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a280a4f6a4b8e9a37c7b79ac3d1d15f06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a280a4f6a4b8e9a37c7b79ac3d1d15f06">exploreButton</a></td></tr>
-<tr class="separator:a280a4f6a4b8e9a37c7b79ac3d1d15f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4194c64123db4c68f573a1c7f384afd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a4194c64123db4c68f573a1c7f384afd8">restButton</a></td></tr>
-<tr class="separator:a4194c64123db4c68f573a1c7f384afd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b709799f7051ca2bdb9eb7377945da"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/db6/classEngine.html">Engine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a07b709799f7051ca2bdb9eb7377945da">engine</a></td></tr>
+<tr class="separator:a07b709799f7051ca2bdb9eb7377945da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab663bc7da9b37114d49a9533ba99ea0"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="../../d6/df1/structNotebookWidget_1_1WidgetInfo.html">WidgetInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#aab663bc7da9b37114d49a9533ba99ea0">widgetStack</a></td></tr>
+<tr class="separator:aab663bc7da9b37114d49a9533ba99ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0627812426a60ac4f50ac6b8e20ca8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d92/classActionMenu.html">ActionMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#af0627812426a60ac4f50ac6b8e20ca8f">actionMenu</a> = nullptr</td></tr>
+<tr class="separator:af0627812426a60ac4f50ac6b8e20ca8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c461a55d7ee2100900bf306385c3d46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/de5/classHistoryWidget.html">HistoryWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a0c461a55d7ee2100900bf306385c3d46">historyWidget</a></td></tr>
+<tr class="separator:a0c461a55d7ee2100900bf306385c3d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d83cccbfedee6c1a3f96a57f6080873"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dad/classResultWidget.html">ResultWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a4d83cccbfedee6c1a3f96a57f6080873">resultWidget</a></td></tr>
+<tr class="separator:a4d83cccbfedee6c1a3f96a57f6080873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6e9616e7f644d07cfa8069d65f9878"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/da5/classSleepWidget.html">SleepWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a6d6e9616e7f644d07cfa8069d65f9878">sleepWidget</a></td></tr>
+<tr class="separator:a6d6e9616e7f644d07cfa8069d65f9878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ebe49d34abb58e16704dcc21eca71a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d06/classScalableLabel.html">ScalableLabel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a74ebe49d34abb58e16704dcc21eca71a">titleLabel</a></td></tr>
+<tr class="separator:a74ebe49d34abb58e16704dcc21eca71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf072f0d65aa6eccd64bf65e3c2e82e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#abf072f0d65aa6eccd64bf65e3c2e82e0">historyButton</a></td></tr>
+<tr class="separator:abf072f0d65aa6eccd64bf65e3c2e82e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6309857d7447e858b8ba07fba3001a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#ab6309857d7447e858b8ba07fba3001a8">closeButton</a></td></tr>
 <tr class="separator:ab6309857d7447e858b8ba07fba3001a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81bba7f17c367f76ba3ad1ffb96e3fa7"><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4c/classNotebookWidget.html#a81bba7f17c367f76ba3ad1ffb96e3fa7">background</a></td></tr>
@@ -173,21 +243,12 @@ Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classDraggableWidget"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classDraggableWidget')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d6/d1f/classDraggableWidget.html">DraggableWidget</a></td></tr>
-<tr class="memitem:a79dff46ad6e05a2729310c2c31b642bd inherit pro_methods_classDraggableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1f/classDraggableWidget.html#a79dff46ad6e05a2729310c2c31b642bd">mousePressEvent</a> (QMouseEvent *event) override</td></tr>
-<tr class="memdesc:a79dff46ad6e05a2729310c2c31b642bd inherit pro_methods_classDraggableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse press event handler.  <a href="../../d6/d1f/classDraggableWidget.html#a79dff46ad6e05a2729310c2c31b642bd">More...</a><br /></td></tr>
-<tr class="separator:a79dff46ad6e05a2729310c2c31b642bd inherit pro_methods_classDraggableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27343f87a4886c29c535811a2f57728d inherit pro_methods_classDraggableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1f/classDraggableWidget.html#a27343f87a4886c29c535811a2f57728d">mouseReleaseEvent</a> (QMouseEvent *event) override</td></tr>
-<tr class="memdesc:a27343f87a4886c29c535811a2f57728d inherit pro_methods_classDraggableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse release event handler.  <a href="../../d6/d1f/classDraggableWidget.html#a27343f87a4886c29c535811a2f57728d">More...</a><br /></td></tr>
-<tr class="separator:a27343f87a4886c29c535811a2f57728d inherit pro_methods_classDraggableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e823b4d58d362fbdcee03920d6c97f3 inherit pro_methods_classDraggableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1f/classDraggableWidget.html#a7e823b4d58d362fbdcee03920d6c97f3">mouseMoveEvent</a> (QMouseEvent *event) override</td></tr>
-<tr class="memdesc:a7e823b4d58d362fbdcee03920d6c97f3 inherit pro_methods_classDraggableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse move event handler.  <a href="../../d6/d1f/classDraggableWidget.html#a7e823b4d58d362fbdcee03920d6c97f3">More...</a><br /></td></tr>
-<tr class="separator:a7e823b4d58d362fbdcee03920d6c97f3 inherit pro_methods_classDraggableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classScalableWidget"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classScalableWidget')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../de/d1f/classScalableWidget.html">ScalableWidget</a></td></tr>
 <tr class="memitem:a00632e6e9659c540792c769709c6d9ef inherit pro_methods_classScalableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#a00632e6e9659c540792c769709c6d9ef">resizeEvent</a> (QResizeEvent *event) override</td></tr>
 <tr class="memdesc:a00632e6e9659c540792c769709c6d9ef inherit pro_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize event handler.  <a href="../../de/d1f/classScalableWidget.html#a00632e6e9659c540792c769709c6d9ef">More...</a><br /></td></tr>
 <tr class="separator:a00632e6e9659c540792c769709c6d9ef inherit pro_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af769d275d2664e813043ed4eaa6a2589 inherit pro_methods_classScalableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#af769d275d2664e813043ed4eaa6a2589">redraw</a> ()</td></tr>
+<tr class="memdesc:af769d275d2664e813043ed4eaa6a2589 inherit pro_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redraw's the elements.  <a href="../../de/d1f/classScalableWidget.html#af769d275d2664e813043ed4eaa6a2589">More...</a><br /></td></tr>
 <tr class="separator:af769d275d2664e813043ed4eaa6a2589 inherit pro_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74163033b7dc31eedbcbbfa6ac58df6e inherit pro_methods_classScalableWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e">addWidget</a> (QWidget *widget, double percentX, double percentY, double percentSizeX, double percentSizeY)</td></tr>
 <tr class="memdesc:a74163033b7dc31eedbcbbfa6ac58df6e inherit pro_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a widget which will be scaled.  <a href="../../de/d1f/classScalableWidget.html#a74163033b7dc31eedbcbbfa6ac58df6e">More...</a><br /></td></tr>
@@ -196,9 +257,42 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a7083edda78605d50481c395624534504 inherit pro_methods_classScalableWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a widget.  <a href="../../de/d1f/classScalableWidget.html#a7083edda78605d50481c395624534504">More...</a><br /></td></tr>
 <tr class="separator:a7083edda78605d50481c395624534504 inherit pro_methods_classScalableWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class describes a notebook widget in the game. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ae794fcd6525b4497f34e9809eddaec39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae794fcd6525b4497f34e9809eddaec39">&#9670;&nbsp;</a></span>WidgetType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/d4c/classNotebookWidget.html#ae794fcd6525b4497f34e9809eddaec39">NotebookWidget::WidgetType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enum representing the type of widget being displayed. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae794fcd6525b4497f34e9809eddaec39a7d37876ff984644bdf4fafae79accadf"></a>ACTION_MENU&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae794fcd6525b4497f34e9809eddaec39aceada5c212a751f626543123cc518533"></a>HISTORY_WIDGET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae794fcd6525b4497f34e9809eddaec39a312895f21cc69bd6652a8408a89d6a27"></a>RESULTS_WIDGET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae794fcd6525b4497f34e9809eddaec39a584a10f73445cd77e809cf81e8012be4"></a>SLEEP_WIDGET&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adccd54f327e6ac7173c67e7fed29fac2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adccd54f327e6ac7173c67e7fed29fac2">&#9670;&nbsp;</a></span>NotebookWidget()</h2>
+<a id="abcaca60ebd8aee42c4638f2008c81f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcaca60ebd8aee42c4638f2008c81f71">&#9670;&nbsp;</a></span>NotebookWidget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,8 +303,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">NotebookWidget::NotebookWidget </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>day</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/db6/classEngine.html">Engine</a> &amp;&#160;</td>
+          <td class="paramname"><em>engine</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -231,6 +325,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a new instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">engine</td><td>The engine </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">parent</td><td>The parent </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a79928ef9fe287c1d46607b48051dfeb9"></a>
@@ -247,6 +350,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destroys the object. </p>
 
 </div>
 </div>
@@ -274,7 +379,359 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called when the user closes the notebook. </p>
+
 <p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>.</p>
+
+</div>
+</div>
+<a id="af23cdeddf4d5fa955aad67c94dc82996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23cdeddf4d5fa955aad67c94dc82996">&#9670;&nbsp;</a></span>closeActionMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::closeActionMenu </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hide</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the action menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>Whether to hide or close </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a8cc4afc0bb9a48dffa28d9c3d788ce82">closeCurrent()</a>.</p>
+
+</div>
+</div>
+<a id="a8cc4afc0bb9a48dffa28d9c3d788ce82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc4afc0bb9a48dffa28d9c3d788ce82">&#9670;&nbsp;</a></span>closeCurrent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::closeCurrent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hide</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the current widget on the stack. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>Whether to hide or close </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">displayActionMenu()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">displayHistoryWidget()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a046562d43eb53639d218c893531f3a49">displayResultsWidget()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#aeec4db38baec10678c6528a32724777a">displaySleepWidget()</a>.</p>
+
+</div>
+</div>
+<a id="a3c2348b2677f3c85823b462d2fde610e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c2348b2677f3c85823b462d2fde610e">&#9670;&nbsp;</a></span>closeHistoryWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::closeHistoryWidget </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hide</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the history widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>Whether to hide or close </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a8cc4afc0bb9a48dffa28d9c3d788ce82">closeCurrent()</a>.</p>
+
+</div>
+</div>
+<a id="a19f375a8734e31f48f01c7856afbef70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f375a8734e31f48f01c7856afbef70">&#9670;&nbsp;</a></span>closeResultsWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::closeResultsWidget </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hide</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the results widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>Whether to hide or close </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a8cc4afc0bb9a48dffa28d9c3d788ce82">closeCurrent()</a>.</p>
+
+</div>
+</div>
+<a id="a95cf8f3134b7598d5bd8e66fd16e4683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95cf8f3134b7598d5bd8e66fd16e4683">&#9670;&nbsp;</a></span>closeSleepWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::closeSleepWidget </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hide</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the sleep widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>Whether to hide or close </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a8cc4afc0bb9a48dffa28d9c3d788ce82">closeCurrent()</a>.</p>
+
+</div>
+</div>
+<a id="ace781db296e3548cddc928daeb0dd5a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace781db296e3548cddc928daeb0dd5a4">&#9670;&nbsp;</a></span>displayActionMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::displayActionMenu </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hide</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the menu for selecting an action. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>The hide </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#af13a2e5ae2fa216fb759faeb3994c38f">displayPrevious()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>.</p>
+
+</div>
+</div>
+<a id="ac359342bc603d531dd8ba27ed09b689b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac359342bc603d531dd8ba27ed09b689b">&#9670;&nbsp;</a></span>displayHistoryWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::displayHistoryWidget </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hide</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the history widget for journal entries. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>The day </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>The hide </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#af13a2e5ae2fa216fb759faeb3994c38f">displayPrevious()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>.</p>
+
+</div>
+</div>
+<a id="af13a2e5ae2fa216fb759faeb3994c38f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af13a2e5ae2fa216fb759faeb3994c38f">&#9670;&nbsp;</a></span>displayPrevious()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::displayPrevious </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Displays the previous widget on the stack. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">displayHistoryWidget()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a046562d43eb53639d218c893531f3a49">displayResultsWidget()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#aeec4db38baec10678c6528a32724777a">displaySleepWidget()</a>.</p>
+
+</div>
+</div>
+<a id="a046562d43eb53639d218c893531f3a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046562d43eb53639d218c893531f3a49">&#9670;&nbsp;</a></span>displayResultsWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::displayResultsWidget </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>action</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hide</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Display the results to a user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">action</td><td>The action </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>The result </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>The hide </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#af13a2e5ae2fa216fb759faeb3994c38f">displayPrevious()</a>, <a class="el" href="../../d9/d68/classGame.html#a09095fea18a75cc31ae2ddc893913a43">Game::handleActionResult()</a>, and <a class="el" href="../../d9/d68/classGame.html#a2ecfb6810e73d4445f3905da4cd89681">Game::nextDay()</a>.</p>
+
+</div>
+</div>
+<a id="aeec4db38baec10678c6528a32724777a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec4db38baec10678c6528a32724777a">&#9670;&nbsp;</a></span>displaySleepWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::displaySleepWidget </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hide</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Display the option for the user to sleep. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>The hide </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#af13a2e5ae2fa216fb759faeb3994c38f">displayPrevious()</a>.</p>
 
 </div>
 </div>
@@ -301,7 +758,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>.</p>
+<p>Called when the user has opted to explore. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">displayActionMenu()</a>, and <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>.</p>
 
 </div>
 </div>
@@ -328,7 +787,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>.</p>
+<p>Called when the user has opted to find food. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">displayActionMenu()</a>, and <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>.</p>
 
 </div>
 </div>
@@ -355,7 +816,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>.</p>
+<p>Called when the user has opted to find water. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">displayActionMenu()</a>, and <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>.</p>
 
 </div>
 </div>
@@ -382,7 +845,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#adccd54f327e6ac7173c67e7fed29fac2">NotebookWidget()</a>.</p>
+<p>Loads the widget's graphics. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#abcaca60ebd8aee42c4638f2008c81f71">NotebookWidget()</a>.</p>
 
 </div>
 </div>
@@ -409,7 +874,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#adccd54f327e6ac7173c67e7fed29fac2">NotebookWidget()</a>.</p>
+<p>Loads a stylesheet. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#abcaca60ebd8aee42c4638f2008c81f71">NotebookWidget()</a>.</p>
 
 </div>
 </div>
@@ -437,6 +904,43 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Paint event handler. See QWidget paint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa78a562380599ffdb63df4f6c4945600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78a562380599ffdb63df4f6c4945600">&#9670;&nbsp;</a></span>raiseButtons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::raiseButtons </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Raises the buttons to be on top. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">displayActionMenu()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">displayHistoryWidget()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a046562d43eb53639d218c893531f3a49">displayResultsWidget()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#aeec4db38baec10678c6528a32724777a">displaySleepWidget()</a>.</p>
+
 </div>
 </div>
 <a id="a2e514d7b0b403dbd91efa24d7b24fc36"></a>
@@ -462,7 +966,38 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>.</p>
+<p>Called when the user has opted to rest. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">displayActionMenu()</a>, and <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>.</p>
+
+</div>
+</div>
+<a id="aa66f2a9ebe8f08c750a15d5a43fdfecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa66f2a9ebe8f08c750a15d5a43fdfecc">&#9670;&nbsp;</a></span>resultAcknowledged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::resultAcknowledged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when the user has acknowledged the result widget. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a046562d43eb53639d218c893531f3a49">displayResultsWidget()</a>, and <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>.</p>
 
 </div>
 </div>
@@ -489,11 +1024,87 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#adccd54f327e6ac7173c67e7fed29fac2">NotebookWidget()</a>.</p>
+<p>Sets up the UI. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#abcaca60ebd8aee42c4638f2008c81f71">NotebookWidget()</a>.</p>
+
+</div>
+</div>
+<a id="a4d34534ceeb9f65ab33a465da06f2613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d34534ceeb9f65ab33a465da06f2613">&#9670;&nbsp;</a></span>sleep</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::sleep </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when the user has opted to sleep. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#aeec4db38baec10678c6528a32724777a">displaySleepWidget()</a>, and <a class="el" href="../../d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73">Game::setupUi()</a>.</p>
+
+</div>
+</div>
+<a id="a876711229d7881277458d558bfae1144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876711229d7881277458d558bfae1144">&#9670;&nbsp;</a></span>updateDay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NotebookWidget::updateDay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the day text. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a722118388a46d18685b0ff2d55a09c4a">Game::updateUi()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="af0627812426a60ac4f50ac6b8e20ca8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0627812426a60ac4f50ac6b8e20ca8f">&#9670;&nbsp;</a></span>actionMenu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d92/classActionMenu.html">ActionMenu</a>* NotebookWidget::actionMenu = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#af23cdeddf4d5fa955aad67c94dc82996">closeActionMenu()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">displayActionMenu()</a>.</p>
+
+</div>
+</div>
 <a id="a81bba7f17c367f76ba3ad1ffb96e3fa7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81bba7f17c367f76ba3ad1ffb96e3fa7">&#9670;&nbsp;</a></span>background</h2>
 
@@ -538,12 +1149,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a79928ef9fe287c1d46607b48051dfeb9">~NotebookWidget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#aa78a562380599ffdb63df4f6c4945600">raiseButtons()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>.</p>
 
 </div>
 </div>
-<a id="a1797b8ecfd8bb0bbeb0459033fa23526"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1797b8ecfd8bb0bbeb0459033fa23526">&#9670;&nbsp;</a></span>day</h2>
+<a id="a07b709799f7051ca2bdb9eb7377945da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b709799f7051ca2bdb9eb7377945da">&#9670;&nbsp;</a></span>engine</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -552,7 +1163,32 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int NotebookWidget::day</td>
+          <td class="memname">const <a class="el" href="../../d1/db6/classEngine.html">Engine</a>&amp; NotebookWidget::engine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The game engine. </p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">displayHistoryWidget()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a876711229d7881277458d558bfae1144">updateDay()</a>.</p>
+
+</div>
+</div>
+<a id="abf072f0d65aa6eccd64bf65e3c2e82e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf072f0d65aa6eccd64bf65e3c2e82e0">&#9670;&nbsp;</a></span>historyButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a>* NotebookWidget::historyButton</td>
         </tr>
       </table>
   </td>
@@ -562,12 +1198,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#adccd54f327e6ac7173c67e7fed29fac2">NotebookWidget()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#aa78a562380599ffdb63df4f6c4945600">raiseButtons()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>.</p>
 
 </div>
 </div>
-<a id="a280a4f6a4b8e9a37c7b79ac3d1d15f06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a280a4f6a4b8e9a37c7b79ac3d1d15f06">&#9670;&nbsp;</a></span>exploreButton</h2>
+<a id="a0c461a55d7ee2100900bf306385c3d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c461a55d7ee2100900bf306385c3d46">&#9670;&nbsp;</a></span>historyWidget</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -576,7 +1212,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a>* NotebookWidget::exploreButton</td>
+          <td class="memname"><a class="el" href="../../d7/de5/classHistoryWidget.html">HistoryWidget</a>* NotebookWidget::historyWidget</td>
         </tr>
       </table>
   </td>
@@ -586,12 +1222,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a79928ef9fe287c1d46607b48051dfeb9">~NotebookWidget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a3c2348b2677f3c85823b462d2fde610e">closeHistoryWidget()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">displayHistoryWidget()</a>.</p>
 
 </div>
 </div>
-<a id="a689cb8a877892c78eecb7db07aba0de2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a689cb8a877892c78eecb7db07aba0de2">&#9670;&nbsp;</a></span>findFoodButton</h2>
+<a id="a4d83cccbfedee6c1a3f96a57f6080873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d83cccbfedee6c1a3f96a57f6080873">&#9670;&nbsp;</a></span>resultWidget</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -600,7 +1236,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a>* NotebookWidget::findFoodButton</td>
+          <td class="memname"><a class="el" href="../../d2/dad/classResultWidget.html">ResultWidget</a>* NotebookWidget::resultWidget</td>
         </tr>
       </table>
   </td>
@@ -610,12 +1246,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a79928ef9fe287c1d46607b48051dfeb9">~NotebookWidget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a19f375a8734e31f48f01c7856afbef70">closeResultsWidget()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a046562d43eb53639d218c893531f3a49">displayResultsWidget()</a>.</p>
 
 </div>
 </div>
-<a id="aa534bdda31a3de0d9d74bdff4bc3e1f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa534bdda31a3de0d9d74bdff4bc3e1f8">&#9670;&nbsp;</a></span>findWaterButton</h2>
+<a id="a6d6e9616e7f644d07cfa8069d65f9878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d6e9616e7f644d07cfa8069d65f9878">&#9670;&nbsp;</a></span>sleepWidget</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -624,7 +1260,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a>* NotebookWidget::findWaterButton</td>
+          <td class="memname"><a class="el" href="../../d3/da5/classSleepWidget.html">SleepWidget</a>* NotebookWidget::sleepWidget</td>
         </tr>
       </table>
   </td>
@@ -634,12 +1270,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a79928ef9fe287c1d46607b48051dfeb9">~NotebookWidget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a95cf8f3134b7598d5bd8e66fd16e4683">closeSleepWidget()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#aeec4db38baec10678c6528a32724777a">displaySleepWidget()</a>.</p>
 
 </div>
 </div>
-<a id="a4194c64123db4c68f573a1c7f384afd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4194c64123db4c68f573a1c7f384afd8">&#9670;&nbsp;</a></span>restButton</h2>
+<a id="a74ebe49d34abb58e16704dcc21eca71a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ebe49d34abb58e16704dcc21eca71a">&#9670;&nbsp;</a></span>titleLabel</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -648,7 +1284,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d7/d1f/classSVGPushButton.html">SVGPushButton</a>* NotebookWidget::restButton</td>
+          <td class="memname"><a class="el" href="../../d9/d06/classScalableLabel.html">ScalableLabel</a>* NotebookWidget::titleLabel</td>
         </tr>
       </table>
   </td>
@@ -658,12 +1294,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a79928ef9fe287c1d46607b48051dfeb9">~NotebookWidget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a3c2348b2677f3c85823b462d2fde610e">closeHistoryWidget()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">displayHistoryWidget()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a876711229d7881277458d558bfae1144">updateDay()</a>.</p>
 
 </div>
 </div>
-<a id="a9998890836528750af5905a296b03ffc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9998890836528750af5905a296b03ffc">&#9670;&nbsp;</a></span>titleLabel</h2>
+<a id="aab663bc7da9b37114d49a9533ba99ea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab663bc7da9b37114d49a9533ba99ea0">&#9670;&nbsp;</a></span>widgetStack</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -672,7 +1308,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QLabel* NotebookWidget::titleLabel</td>
+          <td class="memname">QList&lt;<a class="el" href="../../d6/df1/structNotebookWidget_1_1WidgetInfo.html">WidgetInfo</a>&gt; NotebookWidget::widgetStack</td>
         </tr>
       </table>
   </td>
@@ -681,8 +1317,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stack of widgets displayed on the notebook. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">setupUi()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a79928ef9fe287c1d46607b48051dfeb9">~NotebookWidget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#a8cc4afc0bb9a48dffa28d9c3d788ce82">closeCurrent()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#ace781db296e3548cddc928daeb0dd5a4">displayActionMenu()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">displayHistoryWidget()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#af13a2e5ae2fa216fb759faeb3994c38f">displayPrevious()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a046562d43eb53639d218c893531f3a49">displayResultsWidget()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#aeec4db38baec10678c6528a32724777a">displaySleepWidget()</a>.</p>
 
 </div>
 </div>

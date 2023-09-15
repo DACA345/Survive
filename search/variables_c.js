@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['opacityanimation_771',['opacityAnimation',['../d7/d1f/classSVGPushButton.html#a7984be35461037ea334dd0ce10cb4def',1,'SVGPushButton']]],
-  ['opacityeffect_772',['opacityEffect',['../d7/d1f/classSVGPushButton.html#ac7a1843864851fed1a9e9b413a4d3118',1,'SVGPushButton']]],
-  ['overlay1_773',['overlay1',['../d8/ddb/classMenu.html#aa3cb9f70b638bde8855ef06793026bac',1,'Menu::overlay1()'],['../d7/d63/classNewGameMenu.html#a3f7ffd37b0f1751a98d0ea34e196a06a',1,'NewGameMenu::overlay1()'],['../db/dbe/classSettingsMenu.html#aef5b445892731173d0a3b985472a7cb0',1,'SettingsMenu::overlay1()']]],
-  ['overlay2_774',['overlay2',['../d8/ddb/classMenu.html#a341a5332ea5dff42007811eb500e8f52',1,'Menu']]]
+  ['name_879',['name',['../d3/d93/structAnimalInfo.html#a00bf3c4b84ccaa210ea4e8dad2af869c',1,'AnimalInfo::name()'],['../de/d3c/structLevelInfo.html#a06cb05dd3dc34b4b722ace49458c57bc',1,'LevelInfo::name()'],['../d0/d4a/structPlantInfo.html#aa7f387277c6f3b5728e1acea7ad18ed0',1,'PlantInfo::name()'],['../da/d89/classLevelInfoWidget.html#a4112c8b9d1794caba1797d8f13b8cc5f',1,'LevelInfoWidget::name()']]],
+  ['newgamebutton_880',['newGameButton',['../d8/ddb/classMenu.html#a8ca778e58194cd23a87d7c67c6e2849e',1,'Menu']]],
+  ['newgamemenu_881',['newGameMenu',['../d9/d0a/classMainMenu.html#a8dcca16ffb871824ff66b49b8824ead4',1,'MainMenu']]],
+  ['nextbutton_882',['nextButton',['../d7/de5/classHistoryWidget.html#ab700f2964dccf0b0df513016856b6590',1,'HistoryWidget']]],
+  ['notebookbutton_883',['notebookButton',['../d9/d68/classGame.html#ad2162e254d53bfb3cada34a2d8d20877',1,'Game']]],
+  ['notebookwidget_884',['notebookWidget',['../d9/d68/classGame.html#a2b07f9ac482d9d13505903f6319ec264',1,'Game']]]
 ];

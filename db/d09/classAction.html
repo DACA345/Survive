@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Survive
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">C++ survival game based on real world data.</div>
   </td>
@@ -93,19 +93,27 @@ $(document).ready(function(){initNavTree('db/d09/classAction.html','../../'); in
 </div><!--header-->
 <div class="contents">
 
+<p>This class contains the actions from a JSON.  
+ <a href="../../db/d09/classAction.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d7/d61/action_8h_source.html">action.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3aca52ab63deb4da5bc1f5c1cfba15b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d09/classAction.html#ae3aca52ab63deb4da5bc1f5c1cfba15b">Action</a> (const QString &amp;filePath)</td></tr>
+<tr class="memdesc:ae3aca52ab63deb4da5bc1f5c1cfba15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new instance from a JSON of actions.  <a href="../../db/d09/classAction.html#ae3aca52ab63deb4da5bc1f5c1cfba15b">More...</a><br /></td></tr>
 <tr class="separator:ae3aca52ab63deb4da5bc1f5c1cfba15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8afec6e5bc777581cb6d8e0f92f0b8f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d09/classAction.html#a8afec6e5bc777581cb6d8e0f92f0b8f7">loadActionsFromJson</a> (const QString &amp;filePath)</td></tr>
+<tr class="memdesc:a8afec6e5bc777581cb6d8e0f92f0b8f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the actions from json.  <a href="../../db/d09/classAction.html#a8afec6e5bc777581cb6d8e0f92f0b8f7">More...</a><br /></td></tr>
 <tr class="separator:a8afec6e5bc777581cb6d8e0f92f0b8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad165c7c764a51f2781e8b0fbfacf5db"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../de/dc4/structActionInfo.html">ActionInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d09/classAction.html#aad165c7c764a51f2781e8b0fbfacf5db">getRandomAction</a> () const</td></tr>
+<tr class="memdesc:aad165c7c764a51f2781e8b0fbfacf5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random action.  <a href="../../db/d09/classAction.html#aad165c7c764a51f2781e8b0fbfacf5db">More...</a><br /></td></tr>
 <tr class="separator:aad165c7c764a51f2781e8b0fbfacf5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a499e069dfafdb3e0a730c9be6712f025"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../de/dc4/structActionInfo.html">ActionInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d09/classAction.html#a499e069dfafdb3e0a730c9be6712f025">getRandomActionInCategory</a> (const QString &amp;category) const</td></tr>
+<tr class="memdesc:a499e069dfafdb3e0a730c9be6712f025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random action in category.  <a href="../../db/d09/classAction.html#a499e069dfafdb3e0a730c9be6712f025">More...</a><br /></td></tr>
 <tr class="separator:a499e069dfafdb3e0a730c9be6712f025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbaa5094726c8a18e2b8498431e04def"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d09/classAction.html#afbaa5094726c8a18e2b8498431e04def">getRandomActionCategory</a> () const</td></tr>
+<tr class="memdesc:afbaa5094726c8a18e2b8498431e04def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random category of actions.  <a href="../../db/d09/classAction.html#afbaa5094726c8a18e2b8498431e04def">More...</a><br /></td></tr>
 <tr class="separator:afbaa5094726c8a18e2b8498431e04def"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -113,7 +121,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a324020b3edd9a72503bc7c47a3ded6aa"><td class="memItemLeft" align="right" valign="top">QMap&lt; QString, QList&lt; <a class="el" href="../../de/dc4/structActionInfo.html">ActionInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d09/classAction.html#a324020b3edd9a72503bc7c47a3ded6aa">actions</a></td></tr>
 <tr class="separator:a324020b3edd9a72503bc7c47a3ded6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class contains the actions from a JSON. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae3aca52ab63deb4da5bc1f5c1cfba15b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3aca52ab63deb4da5bc1f5c1cfba15b">&#9670;&nbsp;</a></span>Action()</h2>
 
@@ -129,6 +139,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs a new instance from a JSON of actions. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../db/d09/classAction.html#a8afec6e5bc777581cb6d8e0f92f0b8f7" title="Loads the actions from json.">loadActionsFromJson</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -148,7 +167,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d68/classGame.html#a8dce26b00c331b2c98fa9ba54a5d5aeb">Game::relax()</a>.</p>
+<p>Gets a random action. </p>
+<dl class="section return"><dt>Returns</dt><dd>The random action. </dd></dl>
 
 </div>
 </div>
@@ -166,6 +186,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets a random category of actions. </p>
+<dl class="section return"><dt>Returns</dt><dd>The random action category. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="../../db/d09/classAction.html#aad165c7c764a51f2781e8b0fbfacf5db">getRandomAction()</a>.</p>
 
@@ -187,6 +210,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets a random action in category. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>The category</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The random action in the category. </dd></dl>
+
 <p class="reference">Referenced by <a class="el" href="../../db/d09/classAction.html#aad165c7c764a51f2781e8b0fbfacf5db">getRandomAction()</a>.</p>
 
 </div>
@@ -206,6 +238,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Loads the actions from json. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filePath</td><td>The file path </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="../../db/d09/classAction.html#ae3aca52ab63deb4da5bc1f5c1cfba15b">Action()</a>.</p>
 
@@ -231,6 +271,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stores the actions per category. </p>
 
 <p class="reference">Referenced by <a class="el" href="../../db/d09/classAction.html#afbaa5094726c8a18e2b8498431e04def">getRandomActionCategory()</a>, <a class="el" href="../../db/d09/classAction.html#a499e069dfafdb3e0a730c9be6712f025">getRandomActionInCategory()</a>, and <a class="el" href="../../db/d09/classAction.html#a8afec6e5bc777581cb6d8e0f92f0b8f7">loadActionsFromJson()</a>.</p>
 
