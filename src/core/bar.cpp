@@ -1,5 +1,11 @@
 #include "bar.h"
 
+#define CHECK_BOUNDARIES \
+    if (dataval > BAR_MAX) \
+        dataval = BAR_MAX; \
+    else if (dataval < BAR_MIN) \
+        dataval = BAR_MIN;
+
 // Define constructor
 Bar::Bar(int initialValue)
 {
@@ -22,9 +28,8 @@ Bar::~Bar()
 int Bar::plus(int val)
 {
     dataval += val; // original value plus input
-    // Apply limits after addition to ensure the health bar stays within bounds.
-    if (dataval > BAR_MAX)
-        dataval = BAR_MAX;
+    
+    CHECK_BOUNDARIES
     return dataval; // return updated value
 }
 
@@ -32,9 +37,8 @@ int Bar::plus(int val)
 int Bar::minus(int val)
 {
     dataval -= val; // original value minus input
-    // Apply limits after subtraction to ensure the health bar stays within bounds.
-    if (dataval < BAR_MIN)
-        dataval = BAR_MIN;
+    
+    CHECK_BOUNDARIES
     return dataval; // return updated value
 }
 
@@ -47,5 +51,5 @@ int Bar::getValue() const
 // Define isEmpty bool method
 bool Bar::isEmpty() const
 {
-    return dataval == 0;
+    return dataval <= BAR_MIN;
 }

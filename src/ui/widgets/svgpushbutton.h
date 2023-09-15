@@ -49,6 +49,7 @@ class SVGPushButton : public QPushButton
          */
         void leaveEvent(QEvent* event) override;
 
+        // Animation settings
         const int duration = 200;
         const double startOpacity = 1.0;
         const double endOpacity = 0.7;

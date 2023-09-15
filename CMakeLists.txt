@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 # Project information
 project(
     "Survive"
-    VERSION 0.0.3
+    VERSION 0.0.4
     LANGUAGES CXX
     DESCRIPTION "C++ survival game based on real world data."
     HOMEPAGE_URL https://github.com/DACA345/Survive
@@ -44,7 +44,6 @@ include(FindLibCheck)
 # Features
 include(FeatureSummary)
 
-option(BUILD_CLI "Build the command line version of the game." ON)
 option(BUILD_TESTS "Build the Google unit tests." ON)
 option(TEST_COVERAGE "Test the code coverage." ${BUILD_TESTS})
 option(BUILD_DOCUMENTATION "Build doxygen documentation - requires doxygen" ${DOXYGEN_FOUND})
@@ -103,8 +102,4 @@ if(BUILD_TESTS)
     FetchContent_MakeAvailable(googletest)
 
     add_subdirectory(tests)
-endif()
-
-if(BUILD_CLI) 
-    add_subdirectory(cli)
 endif()

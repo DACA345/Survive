@@ -22,7 +22,18 @@ void SurviveGame::onNewGame(const QString& id)
 {
     game = new Game(id, this);
 
+    connect(game, &Game::returnToMenu, this, &SurviveGame::onReturnToMenu);
+
     setCentralWidget(game);
+}
+
+void SurviveGame::onReturnToMenu()
+{
+    mainMenu = new MainMenu(this);
+    setCentralWidget(mainMenu);
+
+    connect(mainMenu, &MainMenu::uiOptionChanged, this, &SurviveGame::setupUiSettings);
+    connect(mainMenu, &MainMenu::newGameButtonClicked, this, &SurviveGame::onNewGame);
 }
 
 void SurviveGame::setupUiSettings()
@@ -70,14 +81,10 @@ void SurviveGame::setupUiSettings()
 
 void SurviveGame::setupUi()
 {
-    mainMenu = new MainMenu(this);
-    setCentralWidget(mainMenu);
-
-    connect(mainMenu, &MainMenu::uiOptionChanged, this, &SurviveGame::setupUiSettings);
-    connect(mainMenu, &MainMenu::newGameButtonClicked, this, &SurviveGame::onNewGame);
+    onReturnToMenu();
 }
 
 SurviveGame::~SurviveGame()
 {
-    delete centralWidget();
+
 }

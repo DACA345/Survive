@@ -3,38 +3,66 @@
 #include <QString>
 #include <QMap>
 
+#include "effect.h"
+
 /**
  * @brief   This struct describes the EventInfo
  * 
  */
 struct EventInfo
 {
-    QString event;
+    QString event;  
     QString season;
-    QString effect;
+    Effect effect;
 };
 
 /**
- * @brief   This class describes the event instance
+ * @brief   This class contains the events.
  * 
  */
 class Event {
-public:
-    // Constructor
-    Event(const QString& filePath);
+    public:
+        /**
+         * @brief      Constructs a new instance from a JSON of events.
+         * @see        loadEventsFromJson
+         *
+         * @param[in]  filePath  The file path
+         */
+        Event(const QString& filePath);
 
-    // Load method
-    void loadEventsFromJson(const QString& filePath);
+        /**
+         * @brief      Loads the events from json.
+         *
+         * @param[in]  filePath  The file path
+         */
+        void loadEventsFromJson(const QString& filePath);
 
-    QString getRandomSeason() const;
+        /**
+         * @brief      Gets a random season.
+         *
+         * @return     The random season.
+         */
+        QString getRandomSeason() const;
 
-    // Get random method 
-    const EventInfo& getRandomEvent() const;
+        /**
+         * @brief      Gets a random event.
+         *
+         * @return     The random event.
+         */
+        const EventInfo& getRandomEvent() const;
 
-    // Method to get random event for a given season
-    const EventInfo& getRandomEventForSeason(const QString& season) const;
+        /**
+         * @brief      Gets a random event for a season.
+         *
+         * @param[in]  season  The season
+         *
+         * @return     The random event.
+         */
+        const EventInfo& getRandomEventForSeason(const QString& season) const;
 
-private:
-    // Event elements
-    QMap<QString, QList<EventInfo>> events;
+    private:
+        /**
+         * Stores the events per season.
+         */
+        QMap<QString, QList<EventInfo>> events;
 };

@@ -60,5 +60,5 @@ void ScalableWidget::setScaledGeometry(QWidget* widget)
 
 ScalableWidget::~ScalableWidget()
 {
-    // Pointers should be deleted by the parent widget
+
 }

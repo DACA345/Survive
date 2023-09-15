@@ -1,77 +1,145 @@
 [
-    {
-        "event_desc": "A Blizzard has happened",
-        "season": "winter",
-        "effect": "negative"
-    },
-    {
-        "event_desc": "An EarthQuake has happened",
-        "season": "none",
-        "effect": "negative"
-    },
-    {
-        "event_desc": "An Avalanche has happened",
-        "season": "winter",
-        "effect": "negative"
-    },
-    {
-        "event_desc": "A Heatwave has occurred",
-        "season": "summer",
-        "effect": "negative"
-    },
-    {
-        "event_desc": "A Tornado has hit",
-        "season": "spring",
-        "effect": "negative"
-    },
-    {
-        "event_desc": "A Flood has happened",
-        "season": "autumn",
-        "effect": "negative"
-    },
-    {
-        "event_desc": "A Volcanic Eruption has occurred",
-        "season": "none",
-        "effect": "negative"
-    },
-    {
-        "event_desc": "A Meteor Shower has occurred",
-        "season": "none",
-        "effect": "neutral"
-    },
-    {
-        "event_desc": "A Solar Eclipse is visible",
-        "season": "none",
-        "effect": "neutral"
-    },
-    {
-        "event_desc": "A Supermoon is visible",
-        "season": "none",
-        "effect": "neutral"
-    },
-    {
-        "event_desc": "A Comet passes by",
-        "season": "none",
-        "effect": "neutral"
-    },
-    {
-        "event_desc": "A Bountiful Harvest is ready",
-        "season": "autumn",
-        "effect": "positive"
-    },
-    {
-        "event_desc": "A Rare Flower Blooms",
-        "season": "spring",
-        "effect": "positive"
-    },
-    {
-        "event_desc": "A Thunderstorm approaches the region",
-        "season": "spring",
-        "effect": "negative"
-    },
-    {
-        "event_desc": "A Snowstorm has occured",
-        "season": "winter",
-        "effect": "neutral"
+  {
+    "event_desc": "A Blizzard has struck the region, bringing freezing temperatures.",
+    "season": "winter",
+    "effect": {
+      "healthBar": -15,
+      "thirstBar": -5,
+      "hungerBar": -10,
+      "moraleBar": -10,
+      "energyBar": -20
     }
+  },
+  {
+    "event_desc": "An Earthquake has shaken the ground, causing chaos and destruction.",
+    "season": "none",
+    "effect": {
+      "healthBar": -25,
+      "thirstBar": 0,
+      "hungerBar": 0,
+      "moraleBar": -15,
+      "energyBar": -15
+    }
+  },
+  {
+    "event_desc": "An Avalanche has buried an area in snow and debris.",
+    "season": "winter",
+    "effect": {
+      "healthBar": -20,
+      "thirstBar": -5,
+      "hungerBar": -15,
+      "moraleBar": -10,
+      "energyBar": -15
+    }
+  },
+  {
+    "event_desc": "A scorching Heatwave has hit the region, making survival difficult.",
+    "season": "summer",
+    "effect": {
+      "healthBar": -10,
+      "thirstBar": -40,
+      "hungerBar": -10,
+      "moraleBar": -15,
+      "energyBar": -20
+    }
+  },
+  {
+    "event_desc": "A powerful Tornado has torn through the area, causing chaos and destruction.",
+    "season": "spring",
+    "effect": {
+      "healthBar": -20,
+      "thirstBar": -5,
+      "hungerBar": -10,
+      "moraleBar": -20,
+      "energyBar": -15
+    }
+  },
+  {
+    "event_desc": "Heavy rains have caused a Flood, submerging the area under water.",
+    "season": "autumn",
+    "effect": {
+      "healthBar": -10,
+      "thirstBar": -15,
+      "hungerBar": -5,
+      "moraleBar": -10,
+      "energyBar": -10
+    }
+  },
+  {
+    "event_desc": "A Volcanic Eruption has occurred, covering the region in ash and lava.",
+    "season": "none",
+    "effect": {
+      "healthBar": -30,
+      "thirstBar": -10,
+      "hungerBar": -5,
+      "moraleBar": -25,
+      "energyBar": -25
+    }
+  },
+  {
+    "event_desc": "A Meteor Shower has created a spectacular celestial display.",
+    "season": "none",
+    "effect": {
+      "healthBar": 0,
+      "thirstBar": 0,
+      "hungerBar": 0,
+      "moraleBar": 10,
+      "energyBar": 10
+    }
+  },
+  {
+    "event_desc": "A Solar Eclipse is visible, creating a sense of awe and wonder.",
+    "season": "none",
+    "effect": {
+      "healthBar": 0,
+      "thirstBar": 0,
+      "hungerBar": 0,
+      "moraleBar": 10,
+      "energyBar": 5
+    }
+  },
+  {
+    "event_desc": "A Supermoon is visible, lighting up the night sky.",
+    "season": "none",
+    "effect": {
+      "healthBar": 0,
+      "thirstBar": 0,
+      "hungerBar": 0,
+      "moraleBar": 15,
+      "energyBar": 10
+    }
+  },
+  {
+    "event_desc": "A Comet passes by, leaving a trail of stardust in its wake.",
+    "season": "none",
+    "effect": {
+      "healthBar": 0,
+      "thirstBar": 0,
+      "hungerBar": 0,
+      "moraleBar": 20,
+      "energyBar": 5
+    }
+  },
+  {
+    "event_desc": "A rare callum has appeared.",
+    "season": "autumn",
+    "effect": {
+      "healthBar": 15,
+      "thirstBar": 0,
+      "hungerBar": 0,
+      "moraleBar": 20,
+      "energyBar": 10
+    }
+  },
+  {
+    "event_desc": "A Rare Flower Blooms, filling the air with a delightful fragrance.",
+    "season": "spring",
+    "effect": {
+      "healthBar": 0,
+      "thirstBar": 0,
+      "hungerBar": 0,
+      "moraleBar": 15,
+      "energyBar": 5
+    }
+  }
 ]

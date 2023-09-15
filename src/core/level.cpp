@@ -1,7 +1,3 @@
-#include "level.h"
-#include "level.h"
-#include "level.h"
-#include "level.h"
 #include <QJsonDocument>
 #include <QJsonObject>
 
@@ -17,6 +13,17 @@ Level::Level(const QString& id)
         seasons(file("season.json"))
 {
     loadLevel();
+}
+
+Level::Level(const Level& level)
+    : info(level.info),
+        config(level.config),
+        animals(level.animals),
+        events(level.events),
+        explorer(level.explorer),
+        plants(level.plants),
+        seasons(level.seasons)
+{
 }
 
 QString Level::file(const QString& name) const

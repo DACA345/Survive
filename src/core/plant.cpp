@@ -8,6 +8,18 @@
 
 #include "plant.h"
 
+#define STORE_PLANT_DATA(categoryName) \
+    PlantInfo plantData; \
+    plantData.name = name; \
+    plantData.category = categoryName; \
+    plantData.edible = edible; \
+    plantData.effect.healthBar = plantEffect["healthBar"].toInt(); \
+    plantData.effect.thirstBar = plantEffect["thirstBar"].toInt(); \
+    plantData.effect.hungerBar = plantEffect["hungerBar"].toInt(); \
+    plantData.effect.moraleBar = plantEffect["moraleBar"].toInt(); \
+    plantData.effect.energyBar = plantEffect["energyBar"].toInt(); \
+    plants[categoryName].append(plantData);
+
 // Constructor to initialize animals from JSON file
 Plant::Plant(const QString& filePath)
 {
@@ -37,13 +49,15 @@ void Plant::loadPlantsFromJson(const QString& filePath)
 
     // Process Fungi
     QJsonArray fungiArray = jsonObj["fungi"].toArray();
-    for (const QJsonValue& fungiValue : fungiArray) 
-    {
+    for (const QJsonValue& fungiValue : fungiArray) {
         QJsonObject fungi = fungiValue.toObject();
         QString name = fungi["name"].toString();
         bool edible = fungi["edible"].toBool();
-        plants["fungi"].append(PlantInfo{ name, "fungi", edible });
+        QJsonObject plantEffect = fungi["effect"].toObject();
+
+        STORE_PLANT_DATA("fungi");
     }
+
 
     // Process Plant
     QJsonArray plantArray = jsonObj["plant"].toArray();
@@ -52,7 +66,9 @@ void Plant::loadPlantsFromJson(const QString& filePath)
         QJsonObject plant = plantValue.toObject();
         QString name = plant["name"].toString();
         bool edible = plant["edible"].toBool();
-        plants["plant"].append(PlantInfo{ name, "plant", edible });
+        QJsonObject plantEffect = plant["effect"].toObject(); 
+
+        STORE_PLANT_DATA("plant");
     }
 }
 

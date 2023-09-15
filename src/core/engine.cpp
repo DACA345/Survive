@@ -1,4 +1,5 @@
 #include "engine.h"
+#include "engine.h"
 #include "../config/files.h"
 
 #define HANDLE_ACTION_INITIAL \
@@ -9,32 +10,63 @@
         result.result = ActionBaseResult::NO_TURNS; \
         return result; \
     } \
-    else if (turns == 1 && turns--) {\
-        result.result = ActionBaseResult::USED_TURNS; \
-        return result; \
-    } \
     turns--;
 
-#define HANDLE_ACTION_FINAL \
+#define HANDLE_ACTION_FINAL(actionName) \
     done: \
         if (energyBar.isEmpty() || hungerBar.isEmpty() || thirstBar.isEmpty() || healthBar.isEmpty())\
         { \
             result.result = ActionBaseResult::GAME_OVER; \
             return result; \
         } \
-        result.result = ActionBaseResult::SUCCESS; \
+        else \
+        { \
+            result.result = ActionBaseResult::SUCCESS; \
+        } \
+        result.action = actionName; \
+        journal.addEntry(day->currentDay(), { actionName, result.message }); \
         return result;
 
-QRandomGenerator Engine::random = QRandomGenerator::securelySeeded();
+#define FOUND_FOOD(type) \
+    const type##Info& food = level.get##type##s().getRandom##type(); \
+    result.message = QString("You have found %1: %2 and ate it.").arg( \
+        food.category \
+    ).arg(food.name); \
+    affectBars(food.effect);
 
-Engine::Engine(const QString& levelId)
+Engine::Engine(const QString& levelId, const int& seed)
     : level(levelId),
         energyBar(BAR_MAX),
         hungerBar(BAR_MAX),
         thirstBar(BAR_MAX),
-        healthBar(BAR_MAX)
+        healthBar(BAR_MAX),
+        moraleBar(BAR_MAX)
 {
+    if (seed == -1)
+    {
+        random = QRandomGenerator::securelySeeded();
+    }
+    else
+    {
+        random = QRandomGenerator(seed);
+    }
+
     day = new Day(level.file("climate.json").toStdString());
+    journal.addDay(day->currentDay());
+}
+
+
+Engine::Engine(const Engine& engine)
+    : level(engine.level), random(engine.random)
+{
+    day = new Day(*engine.day);
+    journal = engine.journal;
+    energyBar = engine.energyBar;
+    hungerBar = engine.hungerBar;
+    thirstBar = engine.thirstBar;
+    healthBar = engine.healthBar;
+    moraleBar = engine.moraleBar;
+    turns = engine.turns;
 }
 
 double Engine::probability()
@@ -47,6 +79,11 @@ bool Engine::chance(double probability)
     return Engine::probability() <= probability;
 }
 
+bool Engine::isGameOver() const
+{
+    return energyBar.isEmpty() || hungerBar.isEmpty() || thirstBar.isEmpty() || healthBar.isEmpty();
+}
+
 const Level& Engine::getLevel() const
 {
     return level;
@@ -57,10 +94,16 @@ const Day& Engine::getDay() const
     return *day;
 }
 
+const Journal& Engine::getJournal() const
+{
+    return journal;
+}
+
 ActionResult Engine::findFood()
 {
     HANDLE_ACTION_INITIAL
 
+    energyBar.minus(config.findFoodEnergy);
     if (chance(config.findFoodNothing))
     {
         result.message = "You found nothing.";
@@ -70,35 +113,22 @@ ActionResult Engine::findFood()
     {
         if (chance(config.findFoodAnimal))
         {
-            const AnimalInfo& animal = level.getAnimals().getRandomAnimal();
-            hungerBar.plus(config.animalHunger);
-            result.message = QString("You have found %1 and ate it.").arg(
-                animal.category
-            ).arg(animal.name);
-            goto done;
+            FOUND_FOOD(Animal)
         }
         else
         {
-            const PlantInfo& plant = level.getPlants().getRandomPlant();
-            hungerBar.plus(config.plantHunger);
-            result.message = QString("You have found %1: %2 and ate it.").arg(
-                plant.category
-            ).arg(plant.name);
-            if (!plant.edible)
-            {
-                healthBar.minus(config.plantPoison);
-            }
-            goto done;
+            FOUND_FOOD(Plant)
         }
     }
 
-    HANDLE_ACTION_FINAL
+    HANDLE_ACTION_FINAL("Find Food")
 }
 
 ActionResult Engine::findWater()
 {
     HANDLE_ACTION_INITIAL
 
+    energyBar.minus(config.findWaterEnergy);
     if (chance(config.findWaterNothing))
     {
         result.message = "You found nothing.";
@@ -118,7 +148,7 @@ ActionResult Engine::findWater()
         }
     }
 
-    HANDLE_ACTION_FINAL
+    HANDLE_ACTION_FINAL("Find Water")
 }
 
 ActionResult Engine::explore()
@@ -136,13 +166,24 @@ ActionResult Engine::explore()
     }
     else
     {
-        ExploreInfo explore = level.getExplorer().getRandomExplore();
+        if (chance(config.exploreAnimal))
+        {
+            FOUND_FOOD(Animal)
+        }
+        else if (chance(config.explorePlant))
+        {
+            FOUND_FOOD(Plant)
+        }
+        else
+        {
+            const ExploreInfo& explore = level.getExplorer().getRandomExplore();
 
-        energyBar.minus(config.exploreEnergy);
-        result.message = QString("You %1 %2.").arg(explore.category).arg(explore.eventName);
+            energyBar.minus(config.exploreEnergy);
+            result.message = QString("You %1 %2.").arg(explore.category).arg(explore.eventName);
+        }
     }
 
-    HANDLE_ACTION_FINAL
+    HANDLE_ACTION_FINAL("Explore")
 }
 
 ActionResult Engine::rest()
@@ -150,22 +191,33 @@ ActionResult Engine::rest()
     HANDLE_ACTION_INITIAL
 
     energyBar.plus(config.restEnergy);
+    hungerBar.minus(config.restHunger);
+    thirstBar.minus(config.restThirst);
+
     if (hungerBar.getValue() > config.restHungerHeal && thirstBar.getValue() > config.restThirstHeal)
     {
         result.message = "You awake feeling healthier.";
-        healthBar.plus(config.restHealth);
+        healthBar.plus(config.restWellHeal);
+        goto done;
     }
     else
     {
         result.message = "You rested.";
+        goto done;
     }
 
-    HANDLE_ACTION_FINAL
+    HANDLE_ACTION_FINAL("Rest")
 }
 
 EventResult Engine::nextDay()
 {
     turns = ENGINE_INITIAL_TURNS;
+
+    // TODO(Callum): Actual sleep config
+    // For now just rest to regain energy
+    turns++;
+    rest();
+
     day->nextDay();
     return triggerDayEvent();
 }
@@ -210,21 +262,25 @@ EventResult Engine::triggerDayEvent()
 
     if (didTrigger)
     {
-        if (event.effect == "negative")
-        {
-            healthBar.minus(config.eventNegativeHealth);
-        }
-        else if (event.effect == "neutral")
-        {
-            // Morale bar implementation
-        }
-        else
-        {
-            healthBar.plus(config.eventPositiveHealth);
-        }
+        affectBars(event.effect);
+
+        journal.addDay(day->currentDay(), event.event);
+    }
+    else
+    {
+        journal.addDay(day->currentDay());
     }
 
     return { event, didTrigger };
+}
+
+void Engine::affectBars(Effect effect)
+{
+    healthBar.plus(effect.healthBar);
+    thirstBar.plus(effect.thirstBar);
+    hungerBar.plus(effect.hungerBar);
+    moraleBar.plus(effect.moraleBar);
+    energyBar.plus(effect.energyBar);
 }
 
 Engine::~Engine()

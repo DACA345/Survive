@@ -1,4 +1,3 @@
-#include "game.h"
 #include <QPainter>
 
 #include "game.h"
@@ -32,12 +31,28 @@ ON_ACTION(FindWater, findWater)
 ON_ACTION(Explore, explore)
 ON_ACTION(Rest, rest)
 
+void Game::onResultAcknowledged()
+{
+    // Disable actions when turns used up
+    if (engine.isGameOver())
+    {
+        endGame();
+        return;
+    }
+    else if (engine.getTurns() <= 0)
+    {
+        notebookWidget->displaySleepWidget();
+    } 
+}
+
 void Game::nextDay()
 {
     EventResult event = engine.nextDay();
     // NOTE(Callum): Temporary fix to display the event
     if (event.triggered)
-        resultWidget->showResult({ActionBaseResult::SUCCESS, event.event.event });
+    {
+        notebookWidget->displayResultsWidget("Day Event", event.event.event);
+    }
 
     updateUi();
 }
@@ -51,19 +66,13 @@ void Game::setupUi()
 {
     notebookButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/icon.svg"), this);
     notebookButton->hide();
-    notebookWidget = new NotebookWidget(engine.getDay().currentDay(), this);
-
-    resultWidget = new ResultWidget(this);
-    resultWidget->hide();
+    notebookWidget = new NotebookWidget(engine, this);
 
     bars = new QSvgWidget(TEXTURE_FILE("ui/bars/bars.svg"), this);
     healthBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/health.svg"), this);
     thirstBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/thirst.svg"), this);
     hungerBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/hunger.svg"), this);
     energyBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/energy.svg"), this);
-
-    sleepButton = new QPushButton("Sleep", this);
-    sleepButton->hide();
 
     connect(notebookButton, &QPushButton::clicked, notebookWidget, &NotebookWidget::show);
     connect(notebookButton, &QPushButton::clicked, notebookButton, &SVGPushButton::hide);
@@ -72,17 +81,16 @@ void Game::setupUi()
     connect(notebookWidget, &NotebookWidget::findWater, this, &Game::onFindWater);
     connect(notebookWidget, &NotebookWidget::explore, this, &Game::onExplore);
     connect(notebookWidget, &NotebookWidget::rest, this, &Game::onRest);
-    connect(notebookWidget, &NotebookWidget::close, notebookButton, &SVGPushButton::show);
+    connect(notebookWidget, &NotebookWidget::sleep, this, &Game::nextDay);
 
-    connect(sleepButton, &QPushButton::clicked, this, &Game::nextDay);
+    connect(notebookWidget, &NotebookWidget::resultAcknowledged, this, &Game::onResultAcknowledged);
+
+    connect(notebookWidget, &NotebookWidget::close, notebookButton, &SVGPushButton::show);
 
     addWidget(notebookButton, 0.01, 0.85, 0.06, 0.14);
     addWidget(notebookWidget, 0.35, 0.125, 0.3, 0.75);
-    addWidget(resultWidget, 0.3, 0.3, 0.4, 0.4);
 
     addWidget(bars, 1 - 0.295, 0.01, 0.285, 0.2);
-
-    addWidget(sleepButton, 0.45, 0.85, 0.1, 0.1);
 }
 
 void Game::updateBars()
@@ -105,17 +113,7 @@ void Game::updateUi()
 {
     updateBars();
 
-    // Disable actions when turns used up
-    if (engine.getTurns() <= 0)
-    {
-        notebookWidget->hide();
-        sleepButton->show();
-    }
-    else
-    {
-        sleepButton->hide();
-        notebookWidget->show();
-    }
+    notebookWidget->updateDay();
 }
 
 QString Game::textureFile(const QString& name)
@@ -131,33 +129,25 @@ void Game::handleActionResult(ActionResult result)
         qFatal("No turns left");
         return;
     }
-    else if (result.result == ActionBaseResult::GAME_OVER)
-    {
-        // TODO(Callum): Display over and return to main menu
-        endGame();
-    }
     else
     {
-        resultWidget->showResult(result);
+        notebookWidget->displayResultsWidget(result.action, result.message);
         updateUi();
     }
 }
 
 void Game::endGame()
 {
+    gameOver = new GameOver(this);
+    gameOver->show();
 
+    connect(gameOver, &GameOver::close, this, &Game::returnToMenu);
+
+    addWidget(gameOver, 0, 0, 1, 1);
 }
 
 Game::~Game()
 {
-    delete notebookButton;
-    delete notebookWidget;
-    delete resultWidget;
 
-    delete bars;
-    delete healthBarFill;
-    delete thirstBarFill;
-    delete hungerBarFill;
-    delete energyBarFill;
 }
 
