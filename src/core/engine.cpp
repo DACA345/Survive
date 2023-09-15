@@ -1,4 +1,8 @@
-#include "engine.h"
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QJsonObject>
+#include <QFile>
+
 #include "engine.h"
 #include "../config/files.h"
 
@@ -67,6 +71,123 @@ Engine::Engine(const Engine& engine)
     healthBar = engine.healthBar;
     moraleBar = engine.moraleBar;
     turns = engine.turns;
+}
+
+Engine Engine::loadFromFile(const QString& filePath)
+{
+    QFile jsonFile(filePath);
+
+    if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        qFatal("Engine::Engine could not open file %s", filePath.toStdString().c_str());
+    }
+
+    QByteArray jsonData = jsonFile.readAll();
+    QJsonDocument doc(QJsonDocument::fromJson(jsonData));
+
+    if (doc.isNull() || !doc.isObject())
+    {
+        qFatal("Engine::Engine could not parse json file %s", filePath.toStdString().c_str());
+    }
+
+    QJsonObject dump = doc.object();
+
+    Engine engine = Engine(dump["level"].toString());
+    engine.turns = dump["turns"].toInt();
+
+    delete engine.day;
+    engine.day = new Day(engine.getLevel().file("climate.json").toStdString(), dump["day"].toInt());
+
+    engine.healthBar = Bar(dump["health"].toInt());
+    engine.hungerBar = Bar(dump["hunger"].toInt());
+    engine.thirstBar = Bar(dump["thirst"].toInt());
+    engine.energyBar = Bar(dump["energy"].toInt());
+
+    engine.journal = Journal();
+
+    QJsonArray journalDump = dump["journal"].toArray();
+
+    for (int i = 0; i < journalDump.size(); i++)
+    {
+        QJsonObject dayEntry = journalDump.at(i).toObject();
+
+        int day = dayEntry["day"].toInt();
+
+        engine.journal.addDay(day, dayEntry["event"].toString());
+
+        QJsonArray actionEntries = dayEntry["actions"].toArray();
+
+        for (int j = 0; j < actionEntries.size(); j++)
+        {
+            QJsonObject action = actionEntries.at(j).toObject();
+
+            ActionEntry actionEntry;
+            actionEntry.action = action["action"].toString();
+            actionEntry.result = action["result"].toString();
+
+            engine.journal.addEntry(day, actionEntry);
+        }
+    }
+
+    jsonFile.close();
+
+    return engine;
+}
+
+void Engine::dump(const QString& filePath)
+{
+    QJsonObject dump;
+
+    dump["level"] = level.getInfo().id;
+    dump["turns"] = turns;
+    dump["day"] = day->currentDay();
+    dump["health"] = healthBar.getValue();
+    dump["hunger"] = hungerBar.getValue();
+    dump["thirst"] = thirstBar.getValue();
+    dump["energy"] = energyBar.getValue();
+    dump["morale"] = moraleBar.getValue();
+
+    QJsonArray journalArray = QJsonArray();
+
+    for (int i = 1; i < journal.getDayCount() + 1; i++)
+    {
+        const DayEntry& entry = journal.getEntry(i);
+
+        QJsonObject dayEntry;
+        dayEntry["day"] = i;
+        dayEntry["event"] = entry.dayEvent;
+
+        QJsonArray actionEntries;
+
+        for (const ActionEntry& actionEntry : entry.entries)
+        {
+            QJsonObject action;
+            action["action"] = actionEntry.action;
+            action["result"] = actionEntry.result;
+
+            actionEntries.append(action);
+        }
+
+        dayEntry["actions"] = actionEntries;
+        journalArray.append(dayEntry);
+    }
+
+    dump["journal"] = journalArray;
+
+    QJsonDocument save;
+    save.setObject(dump);
+
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        qDebug("Engine::dump failed to open file %s", filePath.toStdString().c_str());
+        return;
+    }
+
+    QByteArray jsonData = save.toJson(QJsonDocument::Indented);
+    file.write(jsonData);
+    file.close();
 }
 
 double Engine::probability()

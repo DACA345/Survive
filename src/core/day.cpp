@@ -17,9 +17,10 @@ const std::vector<std::string> Day::months = {
     "AUG", "SEP", "OCT", "NOV", "DEC"
 };
 
-Day::Day(const std::string& filename)
+Day::Day(const std::string& filename, const int& day)
 {
     loadClimateData(filename);
+    this->day = day;
 }
 
 void Day::loadClimateData(const std::string& filename) 
