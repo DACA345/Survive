@@ -28,32 +28,29 @@ struct LevelConfig
     // Action probabilities
     // Food
     double findFoodNothing = 0.2;
-    double findFoodAnimal = 0.2;
+    double findFoodAnimal = 0.3;
 
-    int findFoodEnergy = 30;
-
-    int animalHunger = 30;
-    int plantHunger = 10;
+    int findFoodEnergy = 20;
     int plantPoison = 30;
 
     // Water
     double findWaterNothing = 0.2;
-    double findCleanWater = 0.2;
+    double findCleanWater = 0.3;
     
     int waterThirst = 20;
-    int waterPoison = 20;
+    int waterPoison = 10;
 
-    int findWaterEnergy = 30;
+    int findWaterEnergy = 20;
 
     // Rest
     int restHungerHeal = 60;
     int restThirstHeal = 60;
 
-    int restEnergy = 20;
+    int restEnergy = 30;
     int restWellHeal = 30;
 
-    int restHunger = 30;
-    int restThirst = 30;
+    int restHunger = 15;
+    int restThirst = 5;
 
     // Explore
     double exploreNothing = 0.1;
@@ -71,8 +68,6 @@ struct LevelConfig
     double seasonEventTrigger = 0.4;
     double eventTrigger = 0.05;
 
-    int eventNegativeHealth = 40;
-    int eventPositiveHealth = 40;
 };
 
 /**
