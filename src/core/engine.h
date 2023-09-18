@@ -68,8 +68,20 @@ class Engine
          */
         ~Engine();
 
+/**
+         * @brief      Loads an engine instance from a file.
+         *
+         * @param[in]  filePath  The file path
+         *
+         * @return     The engine.
+         */
         static Engine loadFromFile(const QString& filePath);
 
+/**
+         * @brief      Dumps the engine instance to a file.
+         *
+         * @param[in]  filePath  The file path
+         */
         void dump(const QString& filePath);
 
         /**
