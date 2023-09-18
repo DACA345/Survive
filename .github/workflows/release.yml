@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: [survive-build-tests]
     types: [completed]
-    branches: [main]
+    branches-ignore: [gh-pages]
 
   push:
     tags: [v*, latest]
