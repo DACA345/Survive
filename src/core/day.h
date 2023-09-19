@@ -77,6 +77,13 @@ class Day
         const std::vector<ClimateData>& getMonthData(const std::string& month) const;
 
         /**
+         * @brief      Gets the climate data for the current day.
+         *
+         * @return     The climate data for the current day.
+         */
+        const ClimateData& getCurrentClimateData() const;
+
+        /**
          * @brief      Gets the month data.
          *
          * @param[in]  month  The month

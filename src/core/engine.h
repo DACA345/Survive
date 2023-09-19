@@ -6,6 +6,7 @@
 #include "day.h"
 #include "level.h"
 #include "journal.h"
+#include "climate.h"
 
 #define ENGINE_INITIAL_TURNS 5
 
@@ -219,10 +220,23 @@ class Engine
         void affectBars(Effect effect);
 
         /**
+         * @brief      Update temperature of current day
+         *
+         * @param[in]  Current Day
+         */
+        void updateTemp(Day day);
+
+        /**
          * The current turns.
          */
         short turns = ENGINE_INITIAL_TURNS;
 
+        /**
+         * The current day temps storage.
+         */
+        double dayTemp;
+        double afternoonTemp;
+        double nightTemp;
 
         /**
          * The energy bar.
@@ -263,4 +277,9 @@ class Engine
          * The journal.
          */
         Journal journal;
+
+        /**
+         * The climate.
+         */
+        Climate climate;
 };

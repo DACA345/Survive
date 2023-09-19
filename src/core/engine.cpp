@@ -44,7 +44,8 @@ Engine::Engine(const QString& levelId, const int& seed)
         hungerBar(BAR_MAX),
         thirstBar(BAR_MAX),
         healthBar(BAR_MAX),
-        moraleBar(BAR_MAX)
+        moraleBar(BAR_MAX),
+        climate(-10.0, 30.0)
 {
     if (seed == -1)
     {
@@ -395,13 +396,25 @@ EventResult Engine::triggerDayEvent()
     return { event, didTrigger };
 }
 
+void Engine::updateTemp(Day day)
+{
+    ClimateData climate = day.getCurrentClimateData();
+
+    nightTemp = day.getRandomTemperatureValue(climate.minTemperature);
+    dayTemp = day.getRandomTemperatureValue(climate.avgTemperature);
+    afternoonTemp = day.getRandomTemperatureValue(climate.maxTemperature);
+    // double rainVal = day.getRandomPrecipitationValue(climate.precipitation);
+}
+
 void Engine::affectBars(Effect effect)
 {
-    healthBar.plus(effect.healthBar);
-    thirstBar.plus(effect.thirstBar);
-    hungerBar.plus(effect.hungerBar);
-    moraleBar.plus(effect.moraleBar);
-    energyBar.plus(effect.energyBar);
+    // TODO Get multiplier for temperature to work (Andrew)
+    double multiplier = climate.optimum(nightTemp, afternoonTemp) ? level.getConfig().multiplier : 1;
+    healthBar.plus(effect.healthBar * multiplier);
+    thirstBar.plus(effect.thirstBar * multiplier);
+    hungerBar.plus(effect.hungerBar * multiplier);
+    moraleBar.plus(effect.moraleBar * multiplier);
+    energyBar.plus(effect.energyBar * multiplier);
 }
 
 Engine::~Engine()

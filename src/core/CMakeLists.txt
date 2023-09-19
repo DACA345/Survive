@@ -10,7 +10,7 @@ add_library(${PROJECT_NAME}-Core
     "plant.cpp"
     "season.cpp"
     "explore.cpp"
-)
+ "climate.h")
 
 target_link_libraries(${PROJECT_NAME}-Core
     PRIVATE

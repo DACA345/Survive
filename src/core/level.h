@@ -68,6 +68,11 @@ struct LevelConfig
     double seasonEventTrigger = 0.4;
     double eventTrigger = 0.05;
 
+    // Climate
+    double multiplier = 1.2;
+    double optimumMin = 4.0;
+    double optimumMax = 30.0;
+
 };
 
 /**
