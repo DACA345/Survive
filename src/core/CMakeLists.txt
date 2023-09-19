@@ -2,6 +2,7 @@ add_library(${PROJECT_NAME}-Core
     "action.cpp"
     "animal.cpp"
     "bar.cpp"
+    "climate.cpp"
     "day.cpp"
     "engine.cpp"
     "event.cpp"
@@ -10,7 +11,7 @@ add_library(${PROJECT_NAME}-Core
     "plant.cpp"
     "season.cpp"
     "explore.cpp"
- "climate.h")
+)
 
 target_link_libraries(${PROJECT_NAME}-Core
     PRIVATE

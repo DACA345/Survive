@@ -8,11 +8,10 @@ Climate::Climate()
 
 Climate::Climate(double inputMin, double inputMax)
 {
-	optimumMinTemp = inputMin;
-	optimumMaxTemp = inputMax;
+	setOptimum(inputMin, inputMax);
 }
 
-Climate::setOptimum(double inputMin, double inputMax) 
+void Climate::setOptimum(double inputMin, double inputMax) 
 {
 	optimumMinTemp = inputMin;
 	optimumMaxTemp = inputMax;

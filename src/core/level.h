@@ -70,7 +70,7 @@ struct LevelConfig
 
     // Climate
     double multiplier = 1.2;
-    double optimumMin = 4.0;
+    double optimumMin = -10.0;
     double optimumMax = 30.0;
 
 };

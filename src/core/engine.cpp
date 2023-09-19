@@ -45,7 +45,7 @@ Engine::Engine(const QString& levelId, const int& seed)
         thirstBar(BAR_MAX),
         healthBar(BAR_MAX),
         moraleBar(BAR_MAX),
-        climate(-10.0, 30.0)
+        climate(level.getConfig().optimumMin, level.getConfig().optimumMax)
 {
     if (seed == -1)
     {
