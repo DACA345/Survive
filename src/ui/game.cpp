@@ -21,7 +21,10 @@ Game::Game(const QString& levelId, QWidget *parent)
 Game::Game(const Engine& engine, QWidget* parent)
     : ScalableWidget(parent), engine(engine)
 {
-
+    loadGraphics();
+    setupUi();
+    updateUi();
+    onResultAcknowledged();
 }
 
 void Game::paintEvent(QPaintEvent* event)

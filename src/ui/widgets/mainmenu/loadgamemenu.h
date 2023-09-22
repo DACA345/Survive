@@ -35,6 +35,13 @@ class LoadGameMenu : public ScalableWidget
          */
         void loadGameMenuClosed();
 
+        /**
+         * @brief      Emitted when a save is selected.
+         *
+         * @param[in]  save  The save
+         */
+        void saveSelected(QString save);
+
     private:
         /**
          * @brief      Paint event handler. See QWidget paint.

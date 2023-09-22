@@ -27,6 +27,17 @@ void SurviveGame::onNewGame(const QString& id)
     setCentralWidget(game);
 }
 
+void SurviveGame::onLoadGame(const QString& savePath)
+{
+    Engine savedEngine = Engine::loadFromFile(savePath);
+
+    game = new Game(savedEngine, this);
+
+    connect(game, &Game::returnToMenu, this, &SurviveGame::onReturnToMenu);
+
+    setCentralWidget(game);
+}
+
 void SurviveGame::onReturnToMenu()
 {
     mainMenu = new MainMenu(this);
@@ -34,6 +45,7 @@ void SurviveGame::onReturnToMenu()
 
     connect(mainMenu, &MainMenu::uiOptionChanged, this, &SurviveGame::setupUiSettings);
     connect(mainMenu, &MainMenu::newGameButtonClicked, this, &SurviveGame::onNewGame);
+    connect(mainMenu, &MainMenu::saveGameSelected, this, &SurviveGame::onLoadGame);
 }
 
 void SurviveGame::setupUiSettings()

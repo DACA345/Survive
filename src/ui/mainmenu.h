@@ -36,6 +36,13 @@ class MainMenu : public ScalableWidget
         void newGameButtonClicked(const QString& id);
 
         /**
+         * @brief      Emitted when a save is clicked.
+         *
+         * @param[in]  savePath    The save path
+         */
+        void saveGameSelected(const QString& savePath);
+
+        /**
          * @brief      Emitted when a UI option is changed.
          */
         void uiOptionChanged();
@@ -47,6 +54,13 @@ class MainMenu : public ScalableWidget
          * @param[in]  id    The identifier
          */
         void onNewGameButtonClicked(const QString& id);
+
+        /**
+         * @brief      Called when load game button clicked.
+         *
+         * @param[in]  savePath    The save path
+         */
+        void onSaveSelected(const QString& savePath);
 
         /**
          * @brief      Displays the new game menu.
