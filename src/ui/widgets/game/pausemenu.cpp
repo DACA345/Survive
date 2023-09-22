@@ -26,8 +26,8 @@ void PauseMenu::loadGraphics()
 void PauseMenu::setupUi()
 {
     // TODO(Callum & Adam): Change to save and exit textures
-    saveButton = new SVGPushButton(TEXTURE_FILE("ui/pause/text/load.svg"), this);
-    exitButton = new SVGPushButton(TEXTURE_FILE("ui/pause/text/restart.svg"), this);
+    saveButton = new SVGPushButton(TEXTURE_FILE("ui/pause/text/save.svg"), this);
+    exitButton = new SVGPushButton(TEXTURE_FILE("ui/pause/text/exit.svg"), this);
 
     backButton = new SVGPushButton(TEXTURE_FILE("mainmenu/icons/return.svg"), this);
 
@@ -35,8 +35,8 @@ void PauseMenu::setupUi()
     connect(exitButton, &QPushButton::clicked, this, &PauseMenu::exit);
     connect(backButton, &QPushButton::clicked, this, &PauseMenu::resume);
 
-    addWidget(saveButton, 0.3875, 0.487, 0.205, 0.065);
-    addWidget(exitButton, 0.37, 0.57, 0.2375, 0.065);
+    addWidget(saveButton, 0.3975, 0.4675, 0.205, 0.065);
+    addWidget(exitButton, 0.38125, 0.55, 0.2375, 0.065);
     addWidget(backButton, 0.05, 0.025, 0.065, 0.09);
 }
 
