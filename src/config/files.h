@@ -11,4 +11,4 @@
 
 #define LEVEL_FILE(path) _PATH_JOIN(LEVEL_FOLDER, QDir::cleanPath(path))
 #define TEXTURE_FILE(path) _PATH_JOIN(TEXTURE_FOLDER, QDir::cleanPath(path))
-#define SAVE_FILE(path) _PATH_JOIN(SAVE_FOLDER, QDir::cleanPath(path))
+#define SAVE_FILE(path) _PATH_JOIN(SAVE_FOLDER, QDir::cleanPath(path + ".json"))

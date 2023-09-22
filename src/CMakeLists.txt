@@ -9,6 +9,7 @@ add_library(${PROJECT_NAME}-Gui STATIC
     "ui/widgets/game/notebook/resultwidget.cpp"
     "ui/widgets/game/notebook/sleepwidget.cpp"
     "ui/widgets/game/gameover.cpp"
+    "ui/widgets/game/pausemenu.cpp"
     "ui/widgets/mainmenu/loadgamemenu.cpp"
     "ui/widgets/mainmenu/newgamemenu.cpp"
     "ui/widgets/mainmenu/settingsmenu.cpp"

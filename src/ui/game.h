@@ -7,6 +7,7 @@
 #include "widgets/scalablewidget.h"
 #include "widgets/svgpushbutton.h"
 #include "widgets/game/gameover.h"
+#include "widgets/game/pausemenu.h"
 #include "widgets/game/notebook/notebookwidget.h"
 #include "../core/engine.h"
 
@@ -26,6 +27,12 @@ class Game : public ScalableWidget
          */
         explicit Game(const QString& levelId, QWidget *parent = nullptr);
 
+        /**
+         * @brief      Constructs a new game instance from an engine.
+         *
+         * @param[in]  engine  The engine
+         * @param      parent  The parent
+         */
         explicit Game(const Engine& engine, QWidget* parent = nullptr);
 
         /**
@@ -40,6 +47,21 @@ class Game : public ScalableWidget
         void returnToMenu();
 
     private slots:
+        /**
+         * @brief      Called on pause.
+         */
+        void onPause();
+
+        /**
+         * @brief      Called on resume.
+         */
+        void onResume();
+
+        /**
+         * @brief      Called on save.
+         */
+        void saveGame();
+
         /**
          * @brief      Called on find food.
          */
@@ -125,9 +147,11 @@ class Game : public ScalableWidget
         Engine engine;
 
         // Ui elements
+        PauseMenu* pauseMenu;
         NotebookWidget* notebookWidget;
         GameOver* gameOver;
 
+        SVGPushButton* pauseButton;
         SVGPushButton* notebookButton;
 
         QSvgWidget* bars;

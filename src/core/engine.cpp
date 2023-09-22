@@ -178,6 +178,16 @@ void Engine::dump(const QString& filePath)
     QJsonDocument save;
     save.setObject(dump);
 
+
+    QFileInfo fileInfo(filePath);
+    QDir dir;
+
+    if (!dir.exists(fileInfo.path()))
+    {
+        dir.mkpath(fileInfo.path());
+    }
+
+
     QFile file(filePath);
 
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
