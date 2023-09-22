@@ -2,5 +2,45 @@
     "level_id": "mtaspiring",
     "start_date": "1/1/2023",
     "title_name": "Mount Aspiring",
-    "seasons": true
+    "seasons": true,
+    "config": {
+        "action_probabilities": {
+            "find_food_nothing": 0.1,
+            "find_food_animal": 0.35,
+            "find_food_energy": 20,
+            "plant_poison": 30,
+            "find_water_nothing": 0.1,
+            "find_clean_water": 0.3,
+            "water_thirst": 20,
+            "water_poison": 10,
+            "find_water_energy": 20
+        },
+        "rest": {
+            "rest_hunger_heal": 60,
+            "rest_thirst_heal": 60,
+            "rest_energy": 30,
+            "rest_well_heal": 30,
+            "rest_hunger": 10,
+            "rest_thirst": 5
+        },
+        "explore": {
+            "explore_nothing": 0.1,
+            "explore_animal": 0.2,
+            "explore_plant": 0.3,
+            "explore_hunger": 10,
+            "explore_thirst": 10,
+            "explore_nothing_energy": 10,
+            "explore_energy": 15
+        },
+        "events": {
+            "season_event": 0.5,
+            "season_event_trigger": 0.4,
+            "event_trigger": 0.05
+        },
+        "climate": {
+            "multiplier": 1.2,
+            "optimum_min": -10.0,
+            "optimum_max": 30.0
+        }
+    }
 }

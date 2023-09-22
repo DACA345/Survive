@@ -22,57 +22,55 @@ struct LevelInfo
  * @brief   This struct contains all probabilty of everything in level
  * 
  */
-// TODO(Callum): Should be from a json in levels
 struct LevelConfig
 {
     // Action probabilities
     // Food
-    double findFoodNothing = 0.1;
-    double findFoodAnimal = 0.35;
+    double findFoodNothing;
+    double findFoodAnimal;
 
-    int findFoodEnergy = 20;
-    int plantPoison = 30;
+    int findFoodEnergy;
+    int plantPoison;
 
     // Water
-    double findWaterNothing = 0.1;
-    double findCleanWater = 0.3;
-    
-    int waterThirst = 20;
-    int waterPoison = 10;
+    double findWaterNothing;
+    double findCleanWater;
 
-    int findWaterEnergy = 20;
+    int waterThirst;
+    int waterPoison;
+
+    int findWaterEnergy;
 
     // Rest
-    int restHungerHeal = 60;
-    int restThirstHeal = 60;
+    int restHungerHeal;
+    int restThirstHeal;
 
-    int restEnergy = 30;
-    int restWellHeal = 30;
+    int restEnergy;
+    int restWellHeal;
 
-    int restHunger = 10;
-    int restThirst = 5;
+    int restHunger;
+    int restThirst;
 
     // Explore
-    double exploreNothing = 0.1;
-    double exploreAnimal = 0.2;
-    double explorePlant = 0.3;
+    double exploreNothing;
+    double exploreAnimal;
+    double explorePlant;
 
-    int exploreHunger = 10;
-    int exploreThirst = 10;
+    int exploreHunger;
+    int exploreThirst;
 
-    int exploreNothingEnergy = 10;
-    int exploreEnergy = 15;
+    int exploreNothingEnergy;
+    int exploreEnergy;
 
     // Events
-    double seasonEvent = 0.5;
-    double seasonEventTrigger = 0.4;
-    double eventTrigger = 0.05;
+    double seasonEvent;
+    double seasonEventTrigger;
+    double eventTrigger;
 
     // Climate
-    double multiplier = 1.2;
-    double optimumMin = -10.0;
-    double optimumMax = 30.0;
-
+    double multiplier;
+    double optimumMin;
+    double optimumMax;
 };
 
 /**
