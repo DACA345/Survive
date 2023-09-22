@@ -1,12 +1,8 @@
 name: "survive-build-release"
 
 on:
-  workflow_run:
-    workflows: [survive-build-tests]
-    types: [completed]
-    branches: [main]
-
   push:
+    branches: [main, testing]
     tags: [v*, latest]
 
 

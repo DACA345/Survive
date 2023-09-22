@@ -1,0 +1,20 @@
+on:
+  workflow_run:
+    workflows: ["survive-build-tests", "survive-build-release"]
+    types:
+        - completed
+
+jobs:
+    discord_notification:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: "Push notification"
+              uses: Ilshidur/action-discord@master
+              env:
+                    DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+              with:
+                    args: |
+                        "# Survive Build Notification"
+                        "## ${{ github.event.workflow_run.actor.login}} - ${{github.event.workflow.name }}"
+                        "### ${{ github.event.workflow_run.conclusion == 'success' && 'Success' || 'Failed' }}"
