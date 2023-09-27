@@ -56,6 +56,11 @@ class LoadGameMenu : public ScalableWidget
         void displaySaves();
 
         /**
+        * @brief      Loads the stylesheet.
+        */
+        void loadStylesheet();
+
+        /**
         * @brief      Loads the graphics.
         */
         void loadGraphics();
@@ -75,4 +80,5 @@ class LoadGameMenu : public ScalableWidget
         SVGPushButton* backButton;
 
         QPixmap background;
+        QPixmap overlay1;
 };

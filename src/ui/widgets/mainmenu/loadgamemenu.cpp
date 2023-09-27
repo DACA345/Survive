@@ -14,6 +14,7 @@ LoadGameMenu::LoadGameMenu(QWidget* parent)
         saves.append(savesIterator.next());
     }
 
+    loadStylesheet();
     loadGraphics();
     setupUi();
 }
@@ -26,7 +27,23 @@ void LoadGameMenu::displaySaves()
 
     for (int i = 0; i < saves.size(); i++)
     {
-        QPushButton* saveButton = new QPushButton(saves[i], this);
+        // Save file name format: save-{level-id}-dd-MM_hh-mm-ss.json
+        // Button text format: {level-id} - MM/dd hh:mm:ss
+        QList<QString> splitString = saves[i].split("-");
+        QList<QString> splitDate = splitString[4].split("_");
+
+        QString levelId = splitString[2];
+        QString day = splitDate[0];
+        QString month = splitString[3];
+
+        QString hour = splitDate[1];
+        QString minute = splitString[5];
+        QString second = splitString[6].split(".")[0];
+
+        QString text = levelId + " - " + month + "/" + day + " " + hour + ":" + minute + ":" + second;
+
+
+        QPushButton* saveButton = new QPushButton(text, this);
         saveButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         saveButtons.append(saveButton);
 
@@ -51,11 +68,21 @@ void LoadGameMenu::paintEvent(QPaintEvent* event)
     QPainter painter(this);
 
     painter.drawPixmap(rect(), background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+    painter.drawPixmap(rect(), overlay1.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+}
+
+void LoadGameMenu::loadStylesheet()
+{
+    QFile file(TEXTURE_FILE("mainmenu/loadgame/style/style.qss"));
+    file.open(QFile::ReadOnly);
+    setStyleSheet(file.readAll());
+    file.close();
 }
 
 void LoadGameMenu::loadGraphics()
 {
     background = QPixmap(TEXTURE_FILE("mainmenu/loadgame/background/image.png"));
+    overlay1 = QPixmap(TEXTURE_FILE("mainmenu/settings/background/overlay1.svg"));
 }
 
 void LoadGameMenu::setupUi()
