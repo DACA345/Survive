@@ -351,6 +351,7 @@ EventResult Engine::nextDay()
     rest();
 
     day->nextDay();
+    updateTemp(*day);
     return triggerDayEvent();
 }
 
@@ -408,7 +409,7 @@ EventResult Engine::triggerDayEvent()
 
 void Engine::updateTemp(Day day)
 {
-    ClimateData climate = day.getCurrentClimateData();
+    const ClimateData& climate = day.getCurrentClimateData();
 
     nightTemp = day.getRandomTemperatureValue(climate.minTemperature);
     dayTemp = day.getRandomTemperatureValue(climate.avgTemperature);
