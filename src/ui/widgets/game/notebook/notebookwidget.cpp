@@ -214,6 +214,7 @@ void NotebookWidget::displaySleepWidget(bool hide)
     
     connect(sleepWidget, &SleepWidget::close, this, &NotebookWidget::displayPrevious);
     connect(sleepWidget, &SleepWidget::close, this, &NotebookWidget::sleep);
+    connect(sleepWidget, &SleepWidget::close, this, &NotebookWidget::resultAcknowledged);
 
     addWidget(sleepWidget, 0, 0, 1, 1);
 
