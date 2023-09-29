@@ -54,9 +54,16 @@ void populateLevelConfig(const QJsonObject& json, LevelConfig& config)
     if (json.contains("climate") && json["climate"].isObject())
     {
         QJsonObject climateJson = json["climate"].toObject();
-        config.multiplier = climateJson["multiplier"].toDouble();
-        config.optimumMin = climateJson["optimum_min"].toDouble();
-        config.optimumMax = climateJson["optimum_max"].toDouble();
+        config.climateMulti = climateJson["climate_multi"].toDouble();
+        config.optimumMinTemp = climateJson["optimum_min_temp"].toDouble();
+        config.optimumMaxTemp = climateJson["optimum_max_temp"].toDouble();
+    }
+
+    if (json.contains("morale") && json["morale"].isObject())
+    {
+        QJsonObject moraleJson = json["morale"].toObject();
+        config.moraleMulti = moraleJson["morale_multi"].toDouble();
+        config.optimumMorale = moraleJson["optimum_morale"].toDouble();
     }
 }
 

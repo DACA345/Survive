@@ -45,7 +45,7 @@ Engine::Engine(const QString& levelId, const int& seed)
         thirstBar(BAR_MAX),
         healthBar(BAR_MAX),
         moraleBar(BAR_MAX),
-        climate(level.getConfig().optimumMin, level.getConfig().optimumMax)
+        climate(level.getConfig().optimumMinTemp, level.getConfig().optimumMaxTemp)
 {
     if (seed == -1)
     {
@@ -419,13 +419,67 @@ void Engine::updateTemp(Day day)
 
 void Engine::affectBars(Effect effect)
 {
-    // TODO Get multiplier for temperature to work (Andrew)
-    double multiplier = climate.optimum(nightTemp, afternoonTemp) ? level.getConfig().multiplier : 1;
-    healthBar.plus(effect.healthBar * multiplier);
-    thirstBar.plus(effect.thirstBar * multiplier);
-    hungerBar.plus(effect.hungerBar * multiplier);
-    moraleBar.plus(effect.moraleBar * multiplier);
-    energyBar.plus(effect.energyBar * multiplier);
+    // For now multiplier might be optimized
+    double cMulti = climate.optimum(nightTemp, afternoonTemp) ? level.getConfig().climateMulti : 1; // Climate Multiplier
+    
+    double mMulti = 1; // Morale Multiplier
+    if (moraleBar.getValue() > level.getConfig().optimumMorale)
+    {
+        mMulti = level.getConfig().moraleMulti;
+    }
+    float multiplier = cMulti * mMulti;
+
+    float flippedMulti = 1.0f / multiplier;
+
+    // HealthBar
+    if (effect.healthBar < 0)
+    {
+        healthBar.plus(effect.healthBar * multiplier);
+    }
+    else
+    {
+        healthBar.plus(effect.healthBar * flippedMulti);
+    }
+
+    // ThirstBar
+    if (effect.thirstBar < 0)
+    {
+        thirstBar.plus(effect.thirstBar * multiplier);
+    }
+    else
+    {
+        thirstBar.plus(effect.thirstBar * flippedMulti);
+    }
+
+    // HungerBar
+    if (effect.hungerBar < 0)
+    {
+        hungerBar.plus(effect.hungerBar * multiplier);
+    }
+    else
+    {
+        hungerBar.plus(effect.hungerBar * flippedMulti);
+    }
+
+    // MoraleBar
+    if (effect.moraleBar < 0)
+    {
+        moraleBar.plus(effect.moraleBar * multiplier);
+    }
+    else
+    {
+        moraleBar.plus(effect.moraleBar * flippedMulti);
+    }
+
+    // EnergyBar
+    if (effect.energyBar < 0)
+    {
+        energyBar.plus(effect.energyBar * multiplier);
+    }
+    else
+    {
+        energyBar.plus(effect.energyBar * flippedMulti);
+    }
 }
 
 Engine::~Engine()

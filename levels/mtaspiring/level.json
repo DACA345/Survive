@@ -38,9 +38,13 @@
             "event_trigger": 0.05
         },
         "climate": {
-            "multiplier": 1.2,
-            "optimum_min": -10.0,
-            "optimum_max": 30.0
+            "climate_multi": 1.2,
+            "optimum_min_temp": -10.0,
+            "optimum_max_temp": 32.0
+        },
+        "morale": {
+            "morale_multi": 1.05,
+            "optimum_morale": 65
         }
     }
 }
