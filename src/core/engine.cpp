@@ -33,10 +33,12 @@
 
 #define FOUND_FOOD(type) \
     const type##Info& food = level.get##type##s().getRandom##type(); \
-    result.message = QString("You have found %1: %2 and ate it.").arg( \
-        food.category \
-    ).arg(food.name); \
-    affectBars(food.effect);
+    affectBars(food.effect); \
+    if (food.edible) { \
+       result.message = QString("You have found %1 which is an edible %2! YUMMYYYYY").arg(food.name).arg(food.category); \
+    } else { \
+        result.message = QString("You have found %1 which is not an edible %2! EWWWWWWW").arg(food.name).arg(food.category); \
+    }
 
 Engine::Engine(const QString& levelId, const int& seed)
     : level(levelId),
