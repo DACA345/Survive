@@ -8,10 +8,12 @@ LoadGameMenu::LoadGameMenu(QWidget* parent)
     : ScalableWidget(parent)
 {
     QDirIterator savesIterator(SAVE_FOLDER, QDir::Files | QDir::NoDotAndDotDot);
+    
 
     while (savesIterator.hasNext())
     {
-        saves.append(savesIterator.next());
+        QFileInfo fileInfo(savesIterator.next());
+        saves.append(fileInfo.baseName());
     }
 
     loadStylesheet();
@@ -30,15 +32,15 @@ void LoadGameMenu::displaySaves()
         // Save file name format: save-{level-id}-dd-MM_hh-mm-ss.json
         // Button text format: {level-id} - MM/dd hh:mm:ss
         QList<QString> splitString = saves[i].split("-");
-        QList<QString> splitDate = splitString[4].split("_");
+        QList<QString> splitDate = splitString[3].split("_");
 
-        QString levelId = splitString[2];
+        QString levelId = splitString[1];
         QString day = splitDate[0];
-        QString month = splitString[3];
+        QString month = splitString[2];
 
         QString hour = splitDate[1];
-        QString minute = splitString[5];
-        QString second = splitString[6].split(".")[0];
+        QString minute = splitString[4];
+        QString second = splitString[5];
 
         QString text = levelId + " - " + month + "/" + day + " " + hour + ":" + minute + ":" + second;
 
@@ -53,7 +55,7 @@ void LoadGameMenu::displaySaves()
         savesLayout->addWidget(saveButton, row, col);
 
         connect(saveButton, &QPushButton::clicked, this, [this, i]() {
-            emit saveSelected(saves[i]);
+            emit saveSelected(SAVE_FILE(saves[i]));
         });
     }
     savesWidget->setLayout(savesLayout);
