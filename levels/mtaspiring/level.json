@@ -5,37 +5,37 @@
     "seasons": true,
     "config": {
         "action_probabilities": {
-            "find_food_nothing": 0.1,
-            "find_food_animal": 0.35,
-            "find_food_energy": 20,
-            "plant_poison": 30,
-            "find_water_nothing": 0.1,
+            "find_food_nothing": 0.1, 
+            "find_food_animal": 0.35, 
+            "find_food_energy": 20, //energy - 20 for finding food
+            "plant_poison": 30, //health -30 from unedible fungi
+            "find_water_nothing": 0.1, 
             "find_clean_water": 0.3,
-            "water_thirst": 20,
-            "water_poison": 10,
-            "find_water_energy": 20
+            "water_thirst": 20, //water +20 from drinking clean & dirty water
+            "water_poison": 10, //health -10 from dirty water
+            "find_water_energy": 20 //energy - 20 from finding water
         },
-        "rest": {
-            "rest_hunger_heal": 60,
-            "rest_thirst_heal": 60,
-            "rest_energy": 30,
-            "rest_well_heal": 30,
-            "rest_hunger": 10,
-            "rest_thirst": 5
-        },
-        "explore": {
-            "explore_nothing": 0.1,
-            "explore_animal": 0.2,
-            "explore_plant": 0.3,
-            "explore_hunger": 10,
-            "explore_thirst": 10,
-            "explore_nothing_energy": 10,
-            "explore_energy": 15
-        },
+      "rest": {
+        "rest_hunger_heal": 60, //food >= 60 to activate rest_well_heal
+        "rest_thirst_heal": 60, //water >= 60 to activate rest_well_heal
+        "rest_energy": 30, //energy - 30 from resting
+        "rest_well_heal": 30, //health +30 if heal is activated
+        "rest_hunger": 10, //food -10 if choose to rest
+        "rest_thirst": 5 //water -5 if choose to rest
+      },
+      "explore": {
+        "explore_nothing": 0.1,
+        "explore_animal": 0.2,
+        "explore_plant": 0.3,
+        "explore_hunger": 10, //food -10 if choose to explore
+        "explore_thirst": 10, //water -10 if choose to explore
+        "explore_nothing_energy": 10, //energy -10 if explore nothing
+        "explore_energy": 15 //energy -15 if choose to explore
+      },
         "events": {
             "season_event": 0.5,
             "season_event_trigger": 0.4,
-            "event_trigger": 0.05
+            "event_trigger": 0.75
         },
         "climate": {
             "multiplier": 1.2,
