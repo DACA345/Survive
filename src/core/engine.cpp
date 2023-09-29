@@ -429,59 +429,24 @@ void Engine::affectBars(Effect effect)
     {
         mMulti = level.getConfig().moraleMulti;
     }
-    float multiplier = cMulti * mMulti;
+    double multiplier = cMulti * mMulti;
 
-    float flippedMulti = 1.0f / multiplier;
+    double flippedMulti = 1.0 / multiplier;
 
     // HealthBar
-    if (effect.healthBar < 0)
-    {
-        healthBar.plus(effect.healthBar * multiplier);
-    }
-    else
-    {
-        healthBar.plus(effect.healthBar * flippedMulti);
-    }
+    healthBar.plus((effect.healthBar < 0) ? effect.healthBar * multiplier : effect.healthBar * flippedMulti);
 
     // ThirstBar
-    if (effect.thirstBar < 0)
-    {
-        thirstBar.plus(effect.thirstBar * multiplier);
-    }
-    else
-    {
-        thirstBar.plus(effect.thirstBar * flippedMulti);
-    }
+    thirstBar.plus((effect.thirstBar < 0) ? effect.thirstBar * multiplier : effect.thirstBar * flippedMulti);
 
     // HungerBar
-    if (effect.hungerBar < 0)
-    {
-        hungerBar.plus(effect.hungerBar * multiplier);
-    }
-    else
-    {
-        hungerBar.plus(effect.hungerBar * flippedMulti);
-    }
+    hungerBar.plus((effect.hungerBar < 0) ? effect.hungerBar * multiplier : effect.hungerBar * flippedMulti);
 
     // MoraleBar
-    if (effect.moraleBar < 0)
-    {
-        moraleBar.plus(effect.moraleBar * multiplier);
-    }
-    else
-    {
-        moraleBar.plus(effect.moraleBar * flippedMulti);
-    }
+    moraleBar.plus((effect.moraleBar < 0) ? effect.moraleBar * multiplier : effect.moraleBar * flippedMulti);
 
     // EnergyBar
-    if (effect.energyBar < 0)
-    {
-        energyBar.plus(effect.energyBar * multiplier);
-    }
-    else
-    {
-        energyBar.plus(effect.energyBar * flippedMulti);
-    }
+    energyBar.plus((effect.energyBar < 0) ? effect.energyBar * multiplier : effect.energyBar * flippedMulti);
 }
 
 Engine::~Engine()
