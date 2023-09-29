@@ -8,6 +8,7 @@
 #include "widgets/svgpushbutton.h"
 #include "widgets/game/gameover.h"
 #include "widgets/game/pausemenu.h"
+#include "widgets/game/tutorialwidget.h"
 #include "widgets/game/notebook/notebookwidget.h"
 #include "../core/engine.h"
 
@@ -56,6 +57,11 @@ class Game : public ScalableWidget
          * @brief      Called on pause.
          */
         void onPause();
+
+        /**
+        * @brief      Called on help.
+        */
+        void onHelp();
 
         /**
          * @brief      Called on resume.
@@ -152,11 +158,13 @@ class Game : public ScalableWidget
         Engine engine;
 
         // Ui elements
+        TutorialWidget* tutorialWidget;
         PauseMenu* pauseMenu;
         NotebookWidget* notebookWidget;
         GameOver* gameOver;
 
         SVGPushButton* pauseButton;
+        SVGPushButton* helpButton;
         SVGPushButton* notebookButton;
 
         QSvgWidget* bars;

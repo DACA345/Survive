@@ -16,6 +16,11 @@ Game::Game(const QString& levelId, QWidget *parent)
     loadGraphics();
     setupUi();
     updateUi();
+
+    if (engine.getDay().currentDay() == 1 && engine.getTurns() == ENGINE_INITIAL_TURNS)
+    {
+        onHelp();
+    }
 }
 
 Game::Game(const Engine& engine, QWidget* parent)
@@ -34,6 +39,26 @@ void Game::paintEvent(QPaintEvent* event)
     QPainter painter(this);
 
     painter.drawPixmap(rect(), background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+}
+
+void Game::onHelp()
+{
+    tutorialWidget = new TutorialWidget(this);
+    helpButton->hide();
+    tutorialWidget->show();
+
+    connect(tutorialWidget, &TutorialWidget::close, tutorialWidget, [this]()
+        {
+            removeWidget(tutorialWidget);
+
+            tutorialWidget->hide();
+            tutorialWidget->deleteLater();
+
+            helpButton->show();
+        }
+    );
+
+    addWidget(tutorialWidget, 0, 0, 1, 1);
 }
 
 void Game::onPause()
@@ -107,6 +132,7 @@ void Game::loadGraphics()
 
 void Game::setupUi()
 {
+    helpButton = new SVGPushButton(TEXTURE_FILE("ui/help/icon.svg"), this);
     pauseButton = new SVGPushButton(TEXTURE_FILE("ui/pause/icon.svg"), this);
 
     notebookButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/icon.svg"), this);
@@ -119,6 +145,7 @@ void Game::setupUi()
     hungerBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/hunger.svg"), this);
     energyBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/energy.svg"), this);
 
+    connect(helpButton, &QPushButton::clicked, this, &Game::onHelp);
     connect(pauseButton, &QPushButton::clicked, this, &Game::onPause);
 
     connect(notebookButton, &QPushButton::clicked, notebookWidget, &NotebookWidget::show);
@@ -134,6 +161,7 @@ void Game::setupUi()
 
     connect(notebookWidget, &NotebookWidget::close, notebookButton, &SVGPushButton::show);
 
+    addWidget(helpButton, 0.08, 0.025, 0.05, 0.075);
     addWidget(pauseButton, 0.025, 0.025, 0.05, 0.075);
 
     addWidget(notebookButton, 0.01, 0.85, 0.06, 0.14);
