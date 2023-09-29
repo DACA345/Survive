@@ -46,6 +46,11 @@ class Game : public ScalableWidget
          */
         void returnToMenu();
 
+        /**
+        * @brief      Called when the save is successful.
+        */
+        void saveSuccessful();
+
     private slots:
         /**
          * @brief      Called on pause.

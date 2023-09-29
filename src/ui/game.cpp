@@ -46,6 +46,8 @@ void Game::onPause()
     connect(pauseMenu, &PauseMenu::save, this, &Game::saveGame);
     connect(pauseMenu, &PauseMenu::exit, this, &Game::returnToMenu);
 
+    connect(this, &Game::saveSuccessful, pauseMenu, &PauseMenu::saveSuccessful);
+
     addWidget(pauseMenu, 0, 0, 1, 1);
 }
 
@@ -64,6 +66,7 @@ void Game::saveGame()
     QString dateTime = QDateTime::currentDateTime().toString("MM-dd_hh-mm-ss");
     QString saveName = QString("save-%1-%2").arg(engine.getLevel().getInfo().id).arg(dateTime);
     engine.dump(SAVE_FILE(saveName));
+    emit saveSuccessful();
 }
 
 ON_ACTION(FindFood, findFood)
