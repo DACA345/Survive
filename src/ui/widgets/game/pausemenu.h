@@ -1,5 +1,7 @@
 #pragma once
 
+#include <QSvgWidget>
+
 #include "../scalablewidget.h"
 #include "../svgpushbutton.h"
 
@@ -36,6 +38,12 @@ class PauseMenu : public ScalableWidget
          */
         void exit();
 
+    public slots:
+        /**
+        * @brief      Called when the save is successful.
+        */
+        void saveSuccessful();
+
     private:
         /**
          * @brief      Paint event handler. See QWidget paint.
@@ -54,6 +62,7 @@ class PauseMenu : public ScalableWidget
          */
         void setupUi();
 
+        QSvgWidget* saveSuccessfulWidget;
         SVGPushButton* saveButton;
         SVGPushButton* exitButton;
 
