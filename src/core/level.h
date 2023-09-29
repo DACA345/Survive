@@ -68,9 +68,14 @@ struct LevelConfig
     double eventTrigger;
 
     // Climate
-    double multiplier;
-    double optimumMin;
-    double optimumMax;
+    double climateMulti;
+    double optimumMinTemp;
+    double optimumMaxTemp;
+
+    // Morale
+    double moraleMulti;
+    double optimumMorale;
+
 };
 
 /**
