@@ -35,7 +35,7 @@
     const type##Info& food = level.get##type##s().getRandom##type(); \
     affectBars(food.effect); \
     if (food.edible) { \
-       result.message = QString("You ate %1: %2. It made you feel better").arg(food.name).arg(food.name); \
+       result.message = QString("You ate %1: %2. It made you feel better").arg(food.category).arg(food.name); \
     } else { \
         result.message = QString("You ate %1: %2. It made you feel awful").arg(food.category).arg(food.name); \
     }
