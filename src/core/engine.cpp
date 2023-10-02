@@ -35,9 +35,9 @@
     const type##Info& food = level.get##type##s().getRandom##type(); \
     affectBars(food.effect); \
     if (food.edible) { \
-       result.message = QString("You have found %1 which is an edible %2! YUMMYYYYY").arg(food.name).arg(food.category); \
+       result.message = QString("You ate %1: %2. It made you feel better").arg(food.name).arg(food.name); \
     } else { \
-        result.message = QString("You have found %1 which is not an edible %2! EWWWWWWW").arg(food.name).arg(food.category); \
+        result.message = QString("You ate %1: %2. It made you feel awful").arg(food.category).arg(food.name); \
     }
 
 Engine::Engine(const QString& levelId, const int& seed)
@@ -273,12 +273,12 @@ ActionResult Engine::findWater()
         thirstBar.plus(config.waterThirst);
         if (chance(config.findCleanWater))
         {
-            result.message = "You have found clean water and drank it.";
+            result.message = "You drank clean water. You feel refreshed";
         }
         else
         {
             healthBar.minus(config.waterPoison);
-            result.message = "You have found dirty water and drank it.";
+            result.message = "You drank dirty water. You feel awful";
         }
     }
 
