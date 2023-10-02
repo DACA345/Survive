@@ -55,7 +55,7 @@ private:
     void setupUi();
     
     QSvgWidget* bannerWidget;
-    QLabel* bodyLabel;
+    ScalableLabel* bodyLabel;
 
     SVGPushButton* closeButton;
 

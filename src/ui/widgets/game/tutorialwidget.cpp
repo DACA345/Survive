@@ -29,16 +29,16 @@ void TutorialWidget::setupUi()
 {
     bannerWidget = new QSvgWidget(TEXTURE_FILE("ui/help/background/banner.svg"), this);
 
-    bodyLabel = new QLabel(TUTORIAL_BODY, this);
+    bodyLabel = new ScalableLabel(TUTORIAL_BODY, this, true);
     bodyLabel->setWordWrap(true);
-    bodyLabel->setStyleSheet("QLabel { color : white; font-size: 16px; }");
+    bodyLabel->setStyleSheet("QLabel { color: white; }");
 
     closeButton = new SVGPushButton(TEXTURE_FILE("mainmenu/icons/return.svg"), this);
 
     connect(closeButton, &QPushButton::clicked, this, &TutorialWidget::close);
 
     addWidget(bannerWidget, 0.2, 0.1, 0.6, 0.8);
-    addWidget(bodyLabel, 0.25, 0.2, 0.5, 0.65);
+    addWidget(bodyLabel, 0.25, 0.25, 0.5, 0.6);
 
     addWidget(closeButton, 0.05, 0.025, 0.065, 0.09);
 }
