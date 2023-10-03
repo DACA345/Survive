@@ -10,6 +10,8 @@ var classMainMenu =
     [ "displaySettingsMenu", "d9/d0a/classMainMenu.html#af91cb54b3d8085bf2c6a7152dd1b1730", null ],
     [ "newGameButtonClicked", "d9/d0a/classMainMenu.html#a2837c6424731715203df0013a48ee9f1", null ],
     [ "onNewGameButtonClicked", "d9/d0a/classMainMenu.html#a5629f0b48386f51c7a17b05d163bd560", null ],
+    [ "onSaveSelected", "d9/d0a/classMainMenu.html#af3577f2e03b1b69a082e00c117aedcd8", null ],
+    [ "saveGameSelected", "d9/d0a/classMainMenu.html#a1070f0fe2d2b2579db36d9e1ac31b442", null ],
     [ "uiOptionChanged", "d9/d0a/classMainMenu.html#ad2520fd6d6684ab9153088fe88a71259", null ],
     [ "loadGameMenu", "d9/d0a/classMainMenu.html#a0780d0d9a5da2efba5e2d05f2fbcbebb", null ],
     [ "menu", "d9/d0a/classMainMenu.html#ae7d51673d2212c49550307dff79f6aba", null ],

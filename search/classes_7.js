@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['journal_504',['Journal',['../de/de0/classJournal.html',1,'']]],
-  ['journalday_505',['JournalDay',['../d4/dec/classJournalDay.html',1,'']]]
+  ['journal_559',['Journal',['../de/de0/classJournal.html',1,'']]],
+  ['journalday_560',['JournalDay',['../d4/dec/classJournalDay.html',1,'']]]
 ];

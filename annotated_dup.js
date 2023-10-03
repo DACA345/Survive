@@ -8,6 +8,7 @@ var annotated_dup =
     [ "Animal", "d7/dac/classAnimal.html", "d7/dac/classAnimal" ],
     [ "AnimalInfo", "d3/d93/structAnimalInfo.html", "d3/d93/structAnimalInfo" ],
     [ "Bar", "d7/d9a/classBar.html", "d7/d9a/classBar" ],
+    [ "Climate", "d4/dc4/classClimate.html", "d4/dc4/classClimate" ],
     [ "ClimateData", "dd/d8f/structClimateData.html", "dd/d8f/structClimateData" ],
     [ "Day", "d8/d0d/classDay.html", "d8/d0d/classDay" ],
     [ "DayEntry", "d0/d1c/structDayEntry.html", "d0/d1c/structDayEntry" ],
@@ -33,6 +34,7 @@ var annotated_dup =
     [ "Menu", "d8/ddb/classMenu.html", "d8/ddb/classMenu" ],
     [ "NewGameMenu", "d7/d63/classNewGameMenu.html", "d7/d63/classNewGameMenu" ],
     [ "NotebookWidget", "db/d4c/classNotebookWidget.html", "db/d4c/classNotebookWidget" ],
+    [ "PauseMenu", "d7/d08/classPauseMenu.html", "d7/d08/classPauseMenu" ],
     [ "Plant", "d9/d6e/classPlant.html", "d9/d6e/classPlant" ],
     [ "PlantInfo", "d0/d4a/structPlantInfo.html", "d0/d4a/structPlantInfo" ],
     [ "Precipitation", "da/dbb/structPrecipitation.html", "da/dbb/structPrecipitation" ],
@@ -44,5 +46,6 @@ var annotated_dup =
     [ "SleepWidget", "d3/da5/classSleepWidget.html", "d3/da5/classSleepWidget" ],
     [ "SurviveGame", "dd/d67/classSurviveGame.html", "dd/d67/classSurviveGame" ],
     [ "SVGPushButton", "d7/d1f/classSVGPushButton.html", "d7/d1f/classSVGPushButton" ],
-    [ "Temperature", "da/dfe/structTemperature.html", "da/dfe/structTemperature" ]
+    [ "Temperature", "da/dfe/structTemperature.html", "da/dfe/structTemperature" ],
+    [ "TutorialWidget", "d9/d09/classTutorialWidget.html", "d9/d09/classTutorialWidget" ]
 ];

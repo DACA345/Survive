@@ -16,6 +16,10 @@ var files_dup =
     ] ],
     [ "bar.cpp", "d6/d5e/bar_8cpp.html", "d6/d5e/bar_8cpp" ],
     [ "bar.h", "d7/d34/bar_8h.html", "d7/d34/bar_8h" ],
+    [ "climate.cpp", "da/d17/climate_8cpp.html", null ],
+    [ "climate.h", "d8/da3/climate_8h.html", [
+      [ "Climate", "d4/dc4/classClimate.html", "d4/dc4/classClimate" ]
+    ] ],
     [ "day.cpp", "d7/d54/day_8cpp.html", null ],
     [ "day.h", "d0/dd5/day_8h.html", [
       [ "Temperature", "da/dfe/structTemperature.html", "da/dfe/structTemperature" ],
@@ -61,7 +65,7 @@ var files_dup =
     [ "journalday.h", "da/dc1/journalday_8h.html", [
       [ "JournalDay", "d4/dec/classJournalDay.html", "d4/dec/classJournalDay" ]
     ] ],
-    [ "level.cpp", "d2/d57/level_8cpp.html", null ],
+    [ "level.cpp", "d2/d57/level_8cpp.html", "d2/d57/level_8cpp" ],
     [ "level.h", "de/d09/level_8h.html", [
       [ "LevelInfo", "de/d3c/structLevelInfo.html", "de/d3c/structLevelInfo" ],
       [ "LevelConfig", "d5/d26/structLevelConfig.html", "d5/d26/structLevelConfig" ],
@@ -89,6 +93,10 @@ var files_dup =
     [ "notebookwidget.h", "da/daf/notebookwidget_8h.html", [
       [ "NotebookWidget", "db/d4c/classNotebookWidget.html", "db/d4c/classNotebookWidget" ],
       [ "WidgetInfo", "d6/df1/structNotebookWidget_1_1WidgetInfo.html", "d6/df1/structNotebookWidget_1_1WidgetInfo" ]
+    ] ],
+    [ "pausemenu.cpp", "d2/d81/pausemenu_8cpp.html", null ],
+    [ "pausemenu.h", "d8/d0f/pausemenu_8h.html", [
+      [ "PauseMenu", "d7/d08/classPauseMenu.html", "d7/d08/classPauseMenu" ]
     ] ],
     [ "plant.cpp", "dc/db0/plant_8cpp.html", "dc/db0/plant_8cpp" ],
     [ "plant.h", "d4/d22/plant_8h.html", [
@@ -130,5 +138,7 @@ var files_dup =
     [ "svgpushbutton.cpp", "d1/d22/svgpushbutton_8cpp.html", null ],
     [ "svgpushbutton.h", "d4/d04/svgpushbutton_8h.html", [
       [ "SVGPushButton", "d7/d1f/classSVGPushButton.html", "d7/d1f/classSVGPushButton" ]
-    ] ]
+    ] ],
+    [ "tutorialwidget.cpp", "d3/d76/tutorialwidget_8cpp.html", null ],
+    [ "tutorialwidget.h", "d0/d20/tutorialwidget_8h.html", "d0/d20/tutorialwidget_8h" ]
 ];

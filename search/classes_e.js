@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['temperature_526',['Temperature',['../da/dfe/structTemperature.html',1,'']]]
+  ['temperature_582',['Temperature',['../da/dfe/structTemperature.html',1,'']]],
+  ['tutorialwidget_583',['TutorialWidget',['../d9/d09/classTutorialWidget.html',1,'']]]
 ];

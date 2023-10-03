@@ -103,12 +103,15 @@ $(document).ready(function(){initNavTree('d8/d0d/classDay.html','../../'); initR
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4c36eee068ef58b00f64a3b732800840"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a4c36eee068ef58b00f64a3b732800840">Day</a> (const std::string &amp;filename)</td></tr>
-<tr class="memdesc:a4c36eee068ef58b00f64a3b732800840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a new day with climate data from a JSON file.  <a href="../../d8/d0d/classDay.html#a4c36eee068ef58b00f64a3b732800840">More...</a><br /></td></tr>
-<tr class="separator:a4c36eee068ef58b00f64a3b732800840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20dfd093170dc76a28d693bc40b3906f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a20dfd093170dc76a28d693bc40b3906f">Day</a> (const std::string &amp;filename, const int &amp;<a class="el" href="../../d8/d0d/classDay.html#ae0dde42284eeb4d7753f1362c67530c0">day</a>=1)</td></tr>
+<tr class="memdesc:a20dfd093170dc76a28d693bc40b3906f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a new day with climate data from a JSON file.  <a href="../../d8/d0d/classDay.html#a20dfd093170dc76a28d693bc40b3906f">More...</a><br /></td></tr>
+<tr class="separator:a20dfd093170dc76a28d693bc40b3906f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138c335bb7a1b48fb8bdd4cf940c2c84"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../dd/d8f/structClimateData.html">ClimateData</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84">getMonthData</a> (const std::string &amp;<a class="el" href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">month</a>) const</td></tr>
 <tr class="memdesc:a138c335bb7a1b48fb8bdd4cf940c2c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the month data.  <a href="../../d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84">More...</a><br /></td></tr>
 <tr class="separator:a138c335bb7a1b48fb8bdd4cf940c2c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6756699f6cefb086ed7dbb9ab63cef"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d8f/structClimateData.html">ClimateData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#a1c6756699f6cefb086ed7dbb9ab63cef">getCurrentClimateData</a> () const</td></tr>
+<tr class="memdesc:a1c6756699f6cefb086ed7dbb9ab63cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the climate data for the current day.  <a href="../../d8/d0d/classDay.html#a1c6756699f6cefb086ed7dbb9ab63cef">More...</a><br /></td></tr>
+<tr class="separator:a1c6756699f6cefb086ed7dbb9ab63cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe346d646e4dd641800701cb328bd644"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../dd/d8f/structClimateData.html">ClimateData</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0d/classDay.html#afe346d646e4dd641800701cb328bd644">getMonthData</a> (int <a class="el" href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">month</a>)</td></tr>
 <tr class="memdesc:afe346d646e4dd641800701cb328bd644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the month data.  <a href="../../d8/d0d/classDay.html#afe346d646e4dd641800701cb328bd644">More...</a><br /></td></tr>
 <tr class="separator:afe346d646e4dd641800701cb328bd644"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,8 +161,8 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class describes an in-game day with climate info. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4c36eee068ef58b00f64a3b732800840"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c36eee068ef58b00f64a3b732800840">&#9670;&nbsp;</a></span>Day()</h2>
+<a id="a20dfd093170dc76a28d693bc40b3906f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20dfd093170dc76a28d693bc40b3906f">&#9670;&nbsp;</a></span>Day()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,8 +171,18 @@ Private Attributes</h2></td></tr>
           <td class="memname">Day::Day </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>day</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -204,7 +217,29 @@ Private Attributes</h2></td></tr>
 <p>Gets the current in-game day. </p>
 <dl class="section return"><dt>Returns</dt><dd>The day. </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">NotebookWidget::displayHistoryWidget()</a>, <a class="el" href="../../d1/db6/classEngine.html#acccde2b14c703bf2b19e85c921215ae9">Engine::Engine()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">NotebookWidget::setupUi()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a876711229d7881277458d558bfae1144">NotebookWidget::updateDay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../db/d4c/classNotebookWidget.html#ac359342bc603d531dd8ba27ed09b689b">NotebookWidget::displayHistoryWidget()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0a37c9665b5b636d0a56c77e5c55c345">Engine::dump()</a>, <a class="el" href="../../d1/db6/classEngine.html#acccde2b14c703bf2b19e85c921215ae9">Engine::Engine()</a>, <a class="el" href="../../d9/d68/classGame.html#a6df1b457bf4ab9730b93d4a801710e60">Game::Game()</a>, <a class="el" href="../../db/d4c/classNotebookWidget.html#a7be74f5537379ca6df7434d0615e79de">NotebookWidget::setupUi()</a>, <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>, and <a class="el" href="../../db/d4c/classNotebookWidget.html#a876711229d7881277458d558bfae1144">NotebookWidget::updateDay()</a>.</p>
+
+</div>
+</div>
+<a id="a1c6756699f6cefb086ed7dbb9ab63cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6756699f6cefb086ed7dbb9ab63cef">&#9670;&nbsp;</a></span>getCurrentClimateData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../dd/d8f/structClimateData.html">ClimateData</a> &amp; Day::getCurrentClimateData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the climate data for the current day. </p>
+<dl class="section return"><dt>Returns</dt><dd>The climate data for the current day. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a1a28e00960caa43e34a8b5384267d582">Engine::updateTemp()</a>.</p>
 
 </div>
 </div>
@@ -316,6 +351,8 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The random temperature value. </dd></dl>
 
+<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a1a28e00960caa43e34a8b5384267d582">Engine::updateTemp()</a>.</p>
+
 </div>
 </div>
 <a id="abf7d5597cf8d799f5f79831f37b62f3a"></a>
@@ -350,7 +387,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a4c36eee068ef58b00f64a3b732800840">Day()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a20dfd093170dc76a28d693bc40b3906f">Day()</a>.</p>
 
 </div>
 </div>
@@ -431,7 +468,7 @@ Private Attributes</h2></td></tr>
 <p>Gets the current in-game month id. </p>
 <dl class="section return"><dt>Returns</dt><dd>The month ID. </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a1c6756699f6cefb086ed7dbb9ab63cef">getCurrentClimateData()</a>, and <a class="el" href="../../d1/db6/classEngine.html#a0fe9cc1457081b79549934024274427c">Engine::triggerDayEvent()</a>.</p>
 
 </div>
 </div>
@@ -478,7 +515,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Stores the climate data per month. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84">getMonthData()</a>, and <a class="el" href="../../d8/d0d/classDay.html#abf7d5597cf8d799f5f79831f37b62f3a">loadClimateData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a1c6756699f6cefb086ed7dbb9ab63cef">getCurrentClimateData()</a>, <a class="el" href="../../d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84">getMonthData()</a>, and <a class="el" href="../../d8/d0d/classDay.html#abf7d5597cf8d799f5f79831f37b62f3a">loadClimateData()</a>.</p>
 
 </div>
 </div>
@@ -503,7 +540,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>The current day. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a33cd88c03561ce627030a4a9460ae95f">currentDay()</a>, <a class="el" href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">month()</a>, and <a class="el" href="../../d8/d0d/classDay.html#acdc88e7be965b37df5f9285d1653034b">nextDay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d0d/classDay.html#a33cd88c03561ce627030a4a9460ae95f">currentDay()</a>, <a class="el" href="../../d8/d0d/classDay.html#a20dfd093170dc76a28d693bc40b3906f">Day()</a>, <a class="el" href="../../d8/d0d/classDay.html#a1c6756699f6cefb086ed7dbb9ab63cef">getCurrentClimateData()</a>, <a class="el" href="../../d8/d0d/classDay.html#a838600c8c4651ee38394b6ac9e0de847">month()</a>, and <a class="el" href="../../d8/d0d/classDay.html#acdc88e7be965b37df5f9285d1653034b">nextDay()</a>.</p>
 
 </div>
 </div>

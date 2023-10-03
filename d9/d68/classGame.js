@@ -1,6 +1,7 @@
 var classGame =
 [
     [ "Game", "d9/d68/classGame.html#a6df1b457bf4ab9730b93d4a801710e60", null ],
+    [ "Game", "d9/d68/classGame.html#a43e42dfb12f935bf320bbb570f79cbf7", null ],
     [ "~Game", "d9/d68/classGame.html#ae3d112ca6e0e55150d2fdbc704474530", null ],
     [ "endGame", "d9/d68/classGame.html#a7d88788cf4b0da39a0245d418aa6f37a", null ],
     [ "handleActionResult", "d9/d68/classGame.html#a09095fea18a75cc31ae2ddc893913a43", null ],
@@ -9,10 +10,15 @@ var classGame =
     [ "onExplore", "d9/d68/classGame.html#a5e5b88292ada9cf644dc34784f899fcf", null ],
     [ "onFindFood", "d9/d68/classGame.html#a80d0f46b6c42088d0f0757dcd3a300f9", null ],
     [ "onFindWater", "d9/d68/classGame.html#ac4805d3ae1d17de4812b181d9984f553", null ],
+    [ "onHelp", "d9/d68/classGame.html#a926980acabf4a712ecfb3ad7ab683dfd", null ],
+    [ "onPause", "d9/d68/classGame.html#a8a0ab2ea30bce855e72d59d0671944b3", null ],
     [ "onRest", "d9/d68/classGame.html#a47bcb2c8331b772b4a953f8a83a5e7d0", null ],
     [ "onResultAcknowledged", "d9/d68/classGame.html#ae3dd0e158f5f549ab4da821804b484cc", null ],
+    [ "onResume", "d9/d68/classGame.html#a94139f80929d3769322ab1b79ac73517", null ],
     [ "paintEvent", "d9/d68/classGame.html#ae3d960780bb03ab5d6713e5d3343f6fc", null ],
     [ "returnToMenu", "d9/d68/classGame.html#aa86fb8e0b1ae92215e1638f0a180c6c6", null ],
+    [ "saveGame", "d9/d68/classGame.html#a9f7ad0384767e46fa072891c123b7d9c", null ],
+    [ "saveSuccessful", "d9/d68/classGame.html#a1d3f16c2cf6c81919974415af4a0edd6", null ],
     [ "setupUi", "d9/d68/classGame.html#adc34c44c36afc718c8a887b30e7d2d73", null ],
     [ "textureFile", "d9/d68/classGame.html#af59e34a0ad79fb068ad336b8bf54fc52", null ],
     [ "updateBars", "d9/d68/classGame.html#a53461ac199ac4f735cbfed19a2aa0a92", null ],
@@ -23,8 +29,12 @@ var classGame =
     [ "engine", "d9/d68/classGame.html#ad407022fcdd5ece2ccb8ae9ab6558a73", null ],
     [ "gameOver", "d9/d68/classGame.html#a3d9473a8bc81c5bf24d5a835756b619f", null ],
     [ "healthBarFill", "d9/d68/classGame.html#a561c00d6b2a5aab8872a575a43e224c4", null ],
+    [ "helpButton", "d9/d68/classGame.html#ac58a4aba6920127369c5cd759bb700ad", null ],
     [ "hungerBarFill", "d9/d68/classGame.html#a46ab31c8cc460c2fbc844eb9f8e1f0ef", null ],
     [ "notebookButton", "d9/d68/classGame.html#ad2162e254d53bfb3cada34a2d8d20877", null ],
     [ "notebookWidget", "d9/d68/classGame.html#a2b07f9ac482d9d13505903f6319ec264", null ],
-    [ "thirstBarFill", "d9/d68/classGame.html#a391782f2a842948d950a2397da301c64", null ]
+    [ "pauseButton", "d9/d68/classGame.html#af7befb34d20b7edb202b462c3f5a545d", null ],
+    [ "pauseMenu", "d9/d68/classGame.html#ac569c77b782faa10711b941722441b62", null ],
+    [ "thirstBarFill", "d9/d68/classGame.html#a391782f2a842948d950a2397da301c64", null ],
+    [ "tutorialWidget", "d9/d68/classGame.html#a8de9c6c89214991e97acfea5260a2daa", null ]
 ];

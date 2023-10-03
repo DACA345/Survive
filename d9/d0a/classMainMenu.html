@@ -114,6 +114,9 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a5629f0b48386f51c7a17b05d163bd560"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0a/classMainMenu.html#a5629f0b48386f51c7a17b05d163bd560">onNewGameButtonClicked</a> (const QString &amp;id)</td></tr>
 <tr class="memdesc:a5629f0b48386f51c7a17b05d163bd560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when new game button clicked.  <a href="../../d9/d0a/classMainMenu.html#a5629f0b48386f51c7a17b05d163bd560">More...</a><br /></td></tr>
 <tr class="separator:a5629f0b48386f51c7a17b05d163bd560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3577f2e03b1b69a082e00c117aedcd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0a/classMainMenu.html#af3577f2e03b1b69a082e00c117aedcd8">onSaveSelected</a> (const QString &amp;savePath)</td></tr>
+<tr class="memdesc:af3577f2e03b1b69a082e00c117aedcd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when load game button clicked.  <a href="../../d9/d0a/classMainMenu.html#af3577f2e03b1b69a082e00c117aedcd8">More...</a><br /></td></tr>
+<tr class="separator:af3577f2e03b1b69a082e00c117aedcd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ca36bb7cd15e97067ca6263063e6524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0a/classMainMenu.html#a2ca36bb7cd15e97067ca6263063e6524">displayNewGameMenu</a> ()</td></tr>
 <tr class="memdesc:a2ca36bb7cd15e97067ca6263063e6524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the new game menu.  <a href="../../d9/d0a/classMainMenu.html#a2ca36bb7cd15e97067ca6263063e6524">More...</a><br /></td></tr>
 <tr class="separator:a2ca36bb7cd15e97067ca6263063e6524"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,6 +141,9 @@ Signals</h2></td></tr>
 <tr class="memitem:a2837c6424731715203df0013a48ee9f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0a/classMainMenu.html#a2837c6424731715203df0013a48ee9f1">newGameButtonClicked</a> (const QString &amp;id)</td></tr>
 <tr class="memdesc:a2837c6424731715203df0013a48ee9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when a new game button is clicked.  <a href="../../d9/d0a/classMainMenu.html#a2837c6424731715203df0013a48ee9f1">More...</a><br /></td></tr>
 <tr class="separator:a2837c6424731715203df0013a48ee9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1070f0fe2d2b2579db36d9e1ac31b442"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0a/classMainMenu.html#a1070f0fe2d2b2579db36d9e1ac31b442">saveGameSelected</a> (const QString &amp;savePath)</td></tr>
+<tr class="memdesc:a1070f0fe2d2b2579db36d9e1ac31b442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when a save is clicked.  <a href="../../d9/d0a/classMainMenu.html#a1070f0fe2d2b2579db36d9e1ac31b442">More...</a><br /></td></tr>
+<tr class="separator:a1070f0fe2d2b2579db36d9e1ac31b442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2520fd6d6684ab9153088fe88a71259"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0a/classMainMenu.html#ad2520fd6d6684ab9153088fe88a71259">uiOptionChanged</a> ()</td></tr>
 <tr class="memdesc:ad2520fd6d6684ab9153088fe88a71259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when a UI option is changed.  <a href="../../d9/d0a/classMainMenu.html#ad2520fd6d6684ab9153088fe88a71259">More...</a><br /></td></tr>
 <tr class="separator:ad2520fd6d6684ab9153088fe88a71259"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,7 +273,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Closes the load game menu. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d0a/classMainMenu.html#aca0ca25d89308070758ac7304c24c0ed">displayLoadGameMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d9/d0a/classMainMenu.html#aca0ca25d89308070758ac7304c24c0ed">displayLoadGameMenu()</a>, and <a class="el" href="../../d9/d0a/classMainMenu.html#af3577f2e03b1b69a082e00c117aedcd8">onSaveSelected()</a>.</p>
 
 </div>
 </div>
@@ -485,6 +491,78 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p class="reference">Referenced by <a class="el" href="../../d9/d0a/classMainMenu.html#a2ca36bb7cd15e97067ca6263063e6524">displayNewGameMenu()</a>.</p>
+
+</div>
+</div>
+<a id="af3577f2e03b1b69a082e00c117aedcd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3577f2e03b1b69a082e00c117aedcd8">&#9670;&nbsp;</a></span>onSaveSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainMenu::onSaveSelected </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>savePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when load game button clicked. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">savePath</td><td>The save path </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/d0a/classMainMenu.html#aca0ca25d89308070758ac7304c24c0ed">displayLoadGameMenu()</a>.</p>
+
+</div>
+</div>
+<a id="a1070f0fe2d2b2579db36d9e1ac31b442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1070f0fe2d2b2579db36d9e1ac31b442">&#9670;&nbsp;</a></span>saveGameSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainMenu::saveGameSelected </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>savePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Emitted when a save is clicked. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">savePath</td><td>The save path </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/d67/classSurviveGame.html#a28248f0a53a635676ee331b61dda46e8">SurviveGame::onReturnToMenu()</a>, and <a class="el" href="../../d9/d0a/classMainMenu.html#af3577f2e03b1b69a082e00c117aedcd8">onSaveSelected()</a>.</p>
 
 </div>
 </div>

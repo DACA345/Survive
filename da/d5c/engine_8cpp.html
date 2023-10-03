@@ -90,13 +90,15 @@ $(document).ready(function(){initNavTree('da/d5c/engine_8cpp.html','../../'); in
 <div class="title">engine.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../d1/d55/engine_8h_source.html">engine.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;QJsonDocument&gt;</code><br />
+<code>#include &lt;QJsonArray&gt;</code><br />
+<code>#include &lt;QJsonObject&gt;</code><br />
+<code>#include &lt;QFile&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d55/engine_8h_source.html">engine.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dd/d20/files_8h_source.html">../config/files.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a6caf910294519e4041f425a50facd503"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/engine_8cpp.html#a6caf910294519e4041f425a50facd503">SAVE_FILE</a>(path)&#160;&#160;&#160;<a class="el" href="../../dd/d20/files_8h.html#a537f2c9bc5d99c5e11186860e99eb86c">_PATH_JOIN</a>(<a class="el" href="../../dd/d20/files_8h.html#a9413d72dc356c6e5c11b7577c1f1db1a">SAVE_FOLDER</a>, QDir::cleanPath(path))</td></tr>
-<tr class="separator:a6caf910294519e4041f425a50facd503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f378057cbae2c26c5aef028fcd4404d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/engine_8cpp.html#a6f378057cbae2c26c5aef028fcd4404d">HANDLE_ACTION_INITIAL</a></td></tr>
 <tr class="separator:a6f378057cbae2c26c5aef028fcd4404d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38669ad168ce0151930dfd660d455981"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/engine_8cpp.html#a38669ad168ce0151930dfd660d455981">HANDLE_ACTION_FINAL</a>(actionName)</td></tr>
@@ -121,10 +123,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">const</span> type##Info&amp; food = level.get##type##s().getRandom##type(); \</div>
-<div class="line">    result.message = QString(<span class="stringliteral">&quot;You have found %1: %2 and ate it.&quot;</span>).arg( \</div>
-<div class="line">        food.category \</div>
-<div class="line">    ).arg(food.name); \</div>
-<div class="line">    affectBars(food.effect);</div>
+<div class="line">    affectBars(food.effect); \</div>
+<div class="line">    if (food.edible) { \</div>
+<div class="line">       result.message = QString(<span class="stringliteral">&quot;You ate %1: %2. It made you feel better&quot;</span>).arg(food.category).arg(food.name); \</div>
+<div class="line">    } <span class="keywordflow">else</span> { \</div>
+<div class="line">        result.message = QString(<span class="stringliteral">&quot;You ate %1: %2. It made you feel awful&quot;</span>).arg(food.category).arg(food.name); \</div>
+<div class="line">    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -181,26 +185,8 @@ Macros</h2></td></tr>
 <div class="line">    } \</div>
 <div class="line">    turns--;</div>
 <div class="ttc" id="aengine_8h_html_a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f"><div class="ttname"><a href="../../d1/d55/engine_8h.html#a8b275bd8aa3e3edd79e656886c0870dbaefc1d8eaf8642473eb81c1c9910d319f">ActionBaseResult::NO_TURNS</a></div><div class="ttdeci">@ NO_TURNS</div></div>
-<div class="ttc" id="astructLevelConfig_html"><div class="ttname"><a href="../../d5/d26/structLevelConfig.html">LevelConfig</a></div><div class="ttdoc">This struct contains all probabilty of everything in level.</div><div class="ttdef"><b>Definition:</b> level.h:27</div></div>
+<div class="ttc" id="astructLevelConfig_html"><div class="ttname"><a href="../../d5/d26/structLevelConfig.html">LevelConfig</a></div><div class="ttdoc">This struct contains all probabilty of everything in level.</div><div class="ttdef"><b>Definition:</b> level.h:26</div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="a6caf910294519e4041f425a50facd503"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6caf910294519e4041f425a50facd503">&#9670;&nbsp;</a></span>SAVE_FILE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SAVE_FILE</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">path</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="../../dd/d20/files_8h.html#a537f2c9bc5d99c5e11186860e99eb86c">_PATH_JOIN</a>(<a class="el" href="../../dd/d20/files_8h.html#a9413d72dc356c6e5c11b7577c1f1db1a">SAVE_FOLDER</a>, QDir::cleanPath(path))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 </div>
 </div>
 </div><!-- contents -->

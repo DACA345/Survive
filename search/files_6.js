@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['historywidget_2ecpp_553',['historywidget.cpp',['../dd/d66/historywidget_8cpp.html',1,'']]],
-  ['historywidget_2eh_554',['historywidget.h',['../de/dc1/historywidget_8h.html',1,'']]]
+  ['game_2ecpp_608',['game.cpp',['../df/dd9/game_8cpp.html',1,'']]],
+  ['game_2eh_609',['game.h',['../d2/dd5/game_8h.html',1,'']]],
+  ['gameover_2ecpp_610',['gameover.cpp',['../da/de1/gameover_8cpp.html',1,'']]],
+  ['gameover_2eh_611',['gameover.h',['../d0/da1/gameover_8h.html',1,'']]]
 ];

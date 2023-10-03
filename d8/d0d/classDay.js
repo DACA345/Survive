@@ -1,7 +1,8 @@
 var classDay =
 [
-    [ "Day", "d8/d0d/classDay.html#a4c36eee068ef58b00f64a3b732800840", null ],
+    [ "Day", "d8/d0d/classDay.html#a20dfd093170dc76a28d693bc40b3906f", null ],
     [ "currentDay", "d8/d0d/classDay.html#a33cd88c03561ce627030a4a9460ae95f", null ],
+    [ "getCurrentClimateData", "d8/d0d/classDay.html#a1c6756699f6cefb086ed7dbb9ab63cef", null ],
     [ "getMonthData", "d8/d0d/classDay.html#a138c335bb7a1b48fb8bdd4cf940c2c84", null ],
     [ "getMonthData", "d8/d0d/classDay.html#afe346d646e4dd641800701cb328bd644", null ],
     [ "getRandomPrecipitationValue", "d8/d0d/classDay.html#a16fcc32057df1944d4d6afc746409887", null ],

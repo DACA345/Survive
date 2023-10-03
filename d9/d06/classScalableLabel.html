@@ -87,6 +87,7 @@ $(document).ready(function(){initNavTree('d9/d06/classScalableLabel.html','../..
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d0/dbc/classScalableLabel-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ScalableLabel Class Reference</div>  </div>
@@ -106,9 +107,9 @@ Inheritance diagram for ScalableLabel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2834e29b0e2b4f319c3be24ee9018310"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d06/classScalableLabel.html#a2834e29b0e2b4f319c3be24ee9018310">ScalableLabel</a> (const QString &amp;text, QWidget *parent=nullptr)</td></tr>
-<tr class="memdesc:a2834e29b0e2b4f319c3be24ee9018310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new instance.  <a href="../../d9/d06/classScalableLabel.html#a2834e29b0e2b4f319c3be24ee9018310">More...</a><br /></td></tr>
-<tr class="separator:a2834e29b0e2b4f319c3be24ee9018310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a636c2ffa76cdafa25d58dccca092e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d06/classScalableLabel.html#a04a636c2ffa76cdafa25d58dccca092e">ScalableLabel</a> (const QString &amp;text, QWidget *parent=nullptr, bool <a class="el" href="../../d9/d06/classScalableLabel.html#ae500a4181daf50459fc1990bdb8f5018">useAlternate</a>=false)</td></tr>
+<tr class="memdesc:a04a636c2ffa76cdafa25d58dccca092e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new instance.  <a href="../../d9/d06/classScalableLabel.html#a04a636c2ffa76cdafa25d58dccca092e">More...</a><br /></td></tr>
+<tr class="separator:a04a636c2ffa76cdafa25d58dccca092e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a145530a616c66103bcb17ac9aa577332"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d06/classScalableLabel.html#a145530a616c66103bcb17ac9aa577332">~ScalableLabel</a> ()</td></tr>
 <tr class="memdesc:a145530a616c66103bcb17ac9aa577332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the object.  <a href="../../d9/d06/classScalableLabel.html#a145530a616c66103bcb17ac9aa577332">More...</a><br /></td></tr>
 <tr class="separator:a145530a616c66103bcb17ac9aa577332"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,12 +119,20 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a9d84c41648b0d2622cd45b6bd524db1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d06/classScalableLabel.html#a9d84c41648b0d2622cd45b6bd524db1c">paintEvent</a> (QPaintEvent *event) override</td></tr>
 <tr class="memdesc:a9d84c41648b0d2622cd45b6bd524db1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paint event handler. See QWidget paint.  <a href="../../d9/d06/classScalableLabel.html#a9d84c41648b0d2622cd45b6bd524db1c">More...</a><br /></td></tr>
 <tr class="separator:a9d84c41648b0d2622cd45b6bd524db1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1adbd466f6e9991f4c5ce3b1beedfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d06/classScalableLabel.html#ada1adbd466f6e9991f4c5ce3b1beedfc">resizeEvent</a> (QResizeEvent *event) override</td></tr>
+<tr class="memdesc:ada1adbd466f6e9991f4c5ce3b1beedfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize event handler. See QWidget resize.  <a href="../../d9/d06/classScalableLabel.html#ada1adbd466f6e9991f4c5ce3b1beedfc">More...</a><br /></td></tr>
+<tr class="separator:ada1adbd466f6e9991f4c5ce3b1beedfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae500a4181daf50459fc1990bdb8f5018"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d06/classScalableLabel.html#ae500a4181daf50459fc1990bdb8f5018">useAlternate</a></td></tr>
+<tr class="separator:ae500a4181daf50459fc1990bdb8f5018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class describes a QLabel that scales its font. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2834e29b0e2b4f319c3be24ee9018310"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2834e29b0e2b4f319c3be24ee9018310">&#9670;&nbsp;</a></span>ScalableLabel()</h2>
+<a id="a04a636c2ffa76cdafa25d58dccca092e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04a636c2ffa76cdafa25d58dccca092e">&#9670;&nbsp;</a></span>ScalableLabel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +150,13 @@ Private Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useAlternate</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -218,6 +233,65 @@ Private Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ada1adbd466f6e9991f4c5ce3b1beedfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1adbd466f6e9991f4c5ce3b1beedfc">&#9670;&nbsp;</a></span>resizeEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScalableLabel::resizeEvent </td>
+          <td>(</td>
+          <td class="paramtype">QResizeEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resize event handler. See QWidget resize. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae500a4181daf50459fc1990bdb8f5018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae500a4181daf50459fc1990bdb8f5018">&#9670;&nbsp;</a></span>useAlternate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ScalableLabel::useAlternate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="../../d9/d06/classScalableLabel.html#a9d84c41648b0d2622cd45b6bd524db1c">paintEvent()</a>, <a class="el" href="../../d9/d06/classScalableLabel.html#ada1adbd466f6e9991f4c5ce3b1beedfc">resizeEvent()</a>, and <a class="el" href="../../d9/d06/classScalableLabel.html#a04a636c2ffa76cdafa25d58dccca092e">ScalableLabel()</a>.</p>
 
 </div>
 </div>

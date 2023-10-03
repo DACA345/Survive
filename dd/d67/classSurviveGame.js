@@ -2,6 +2,7 @@ var classSurviveGame =
 [
     [ "SurviveGame", "dd/d67/classSurviveGame.html#a00c9a137bf3f619fc0f67ed1d2419da0", null ],
     [ "~SurviveGame", "dd/d67/classSurviveGame.html#abbbb42a92aba1059ee0affd5df20c024", null ],
+    [ "onLoadGame", "dd/d67/classSurviveGame.html#a1af3c37311c43930acd4b37e8021a22a", null ],
     [ "onNewGame", "dd/d67/classSurviveGame.html#a77096b5eee899d3d9d963aca34fc0b82", null ],
     [ "onReturnToMenu", "dd/d67/classSurviveGame.html#a28248f0a53a635676ee331b61dda46e8", null ],
     [ "resizeEvent", "dd/d67/classSurviveGame.html#a548e88ab18f95e262106a2b220c4212c", null ],

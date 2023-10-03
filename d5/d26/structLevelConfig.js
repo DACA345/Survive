@@ -1,8 +1,6 @@
 var structLevelConfig =
 [
-    [ "animalHunger", "d5/d26/structLevelConfig.html#a4de097aad287db93ce2ac7977da6cfad", null ],
-    [ "eventNegativeHealth", "d5/d26/structLevelConfig.html#a14e0b8da47ec8b4b7c828a385905908a", null ],
-    [ "eventPositiveHealth", "d5/d26/structLevelConfig.html#a0f2ccbf645922f3a3196f68bf0d55212", null ],
+    [ "climateMulti", "d5/d26/structLevelConfig.html#aa215b1fc2b187c4529ff45114783d8a6", null ],
     [ "eventTrigger", "d5/d26/structLevelConfig.html#a39d845605bd63443673bba2020b18fee", null ],
     [ "exploreAnimal", "d5/d26/structLevelConfig.html#a5ecc199a7ca1be501f2c250ba7e4606f", null ],
     [ "exploreEnergy", "d5/d26/structLevelConfig.html#a81ab22b9f511ccb66318030f1081d247", null ],
@@ -17,7 +15,10 @@ var structLevelConfig =
     [ "findFoodNothing", "d5/d26/structLevelConfig.html#a74c9711f8b67963dcabcc62a1c3d8289", null ],
     [ "findWaterEnergy", "d5/d26/structLevelConfig.html#a415286e364b79a2a12178a47d08383d6", null ],
     [ "findWaterNothing", "d5/d26/structLevelConfig.html#a0070dc0ce03da4695ad3551173686c25", null ],
-    [ "plantHunger", "d5/d26/structLevelConfig.html#a570bd7291355bdc38e75449fe6be1da2", null ],
+    [ "moraleMulti", "d5/d26/structLevelConfig.html#a1b03f52dc7058fd9b853f46d248df0a0", null ],
+    [ "optimumMaxTemp", "d5/d26/structLevelConfig.html#a6f8c16c58b168612b87645b41d10b3f7", null ],
+    [ "optimumMinTemp", "d5/d26/structLevelConfig.html#ac901cf1b7c72f6cb236aaccf0b5cb515", null ],
+    [ "optimumMorale", "d5/d26/structLevelConfig.html#af3b81531c532809b0c34692c433ea49b", null ],
     [ "plantPoison", "d5/d26/structLevelConfig.html#a5a515066c69ea72dbdc65b3961474b0e", null ],
     [ "restEnergy", "d5/d26/structLevelConfig.html#a3a97b91b92c0d8304102ea73e3291dc1", null ],
     [ "restHunger", "d5/d26/structLevelConfig.html#a4489a45bd88707e0faaab0d517a4c771", null ],

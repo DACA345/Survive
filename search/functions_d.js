@@ -1,13 +1,19 @@
 var searchData=
 [
-  ['onexplore_714',['onExplore',['../d9/d68/classGame.html#a5e5b88292ada9cf644dc34784f899fcf',1,'Game']]],
-  ['onfindfood_715',['onFindFood',['../d9/d68/classGame.html#a80d0f46b6c42088d0f0757dcd3a300f9',1,'Game']]],
-  ['onfindwater_716',['onFindWater',['../d9/d68/classGame.html#ac4805d3ae1d17de4812b181d9984f553',1,'Game']]],
-  ['onframeoptionchanged_717',['onFrameOptionChanged',['../db/dbe/classSettingsMenu.html#a1789cb98e00b3450762f9723011b23a4',1,'SettingsMenu']]],
-  ['onnewgame_718',['onNewGame',['../dd/d67/classSurviveGame.html#a77096b5eee899d3d9d963aca34fc0b82',1,'SurviveGame']]],
-  ['onnewgamebuttonclicked_719',['onNewGameButtonClicked',['../d9/d0a/classMainMenu.html#a5629f0b48386f51c7a17b05d163bd560',1,'MainMenu']]],
-  ['onresolutionoptionchanged_720',['onResolutionOptionChanged',['../db/dbe/classSettingsMenu.html#a6ab63a774b7a1aa3c742b563bfd30b96',1,'SettingsMenu']]],
-  ['onrest_721',['onRest',['../d9/d68/classGame.html#a47bcb2c8331b772b4a953f8a83a5e7d0',1,'Game']]],
-  ['onresultacknowledged_722',['onResultAcknowledged',['../d9/d68/classGame.html#ae3dd0e158f5f549ab4da821804b484cc',1,'Game']]],
-  ['onreturntomenu_723',['onReturnToMenu',['../dd/d67/classSurviveGame.html#a28248f0a53a635676ee331b61dda46e8',1,'SurviveGame']]]
+  ['onexplore_782',['onExplore',['../d9/d68/classGame.html#a5e5b88292ada9cf644dc34784f899fcf',1,'Game']]],
+  ['onfindfood_783',['onFindFood',['../d9/d68/classGame.html#a80d0f46b6c42088d0f0757dcd3a300f9',1,'Game']]],
+  ['onfindwater_784',['onFindWater',['../d9/d68/classGame.html#ac4805d3ae1d17de4812b181d9984f553',1,'Game']]],
+  ['onframeoptionchanged_785',['onFrameOptionChanged',['../db/dbe/classSettingsMenu.html#a1789cb98e00b3450762f9723011b23a4',1,'SettingsMenu']]],
+  ['onhelp_786',['onHelp',['../d9/d68/classGame.html#a926980acabf4a712ecfb3ad7ab683dfd',1,'Game']]],
+  ['onloadgame_787',['onLoadGame',['../dd/d67/classSurviveGame.html#a1af3c37311c43930acd4b37e8021a22a',1,'SurviveGame']]],
+  ['onnewgame_788',['onNewGame',['../dd/d67/classSurviveGame.html#a77096b5eee899d3d9d963aca34fc0b82',1,'SurviveGame']]],
+  ['onnewgamebuttonclicked_789',['onNewGameButtonClicked',['../d9/d0a/classMainMenu.html#a5629f0b48386f51c7a17b05d163bd560',1,'MainMenu']]],
+  ['onpause_790',['onPause',['../d9/d68/classGame.html#a8a0ab2ea30bce855e72d59d0671944b3',1,'Game']]],
+  ['onresolutionoptionchanged_791',['onResolutionOptionChanged',['../db/dbe/classSettingsMenu.html#a6ab63a774b7a1aa3c742b563bfd30b96',1,'SettingsMenu']]],
+  ['onrest_792',['onRest',['../d9/d68/classGame.html#a47bcb2c8331b772b4a953f8a83a5e7d0',1,'Game']]],
+  ['onresultacknowledged_793',['onResultAcknowledged',['../d9/d68/classGame.html#ae3dd0e158f5f549ab4da821804b484cc',1,'Game']]],
+  ['onresume_794',['onResume',['../d9/d68/classGame.html#a94139f80929d3769322ab1b79ac73517',1,'Game']]],
+  ['onreturntomenu_795',['onReturnToMenu',['../dd/d67/classSurviveGame.html#a28248f0a53a635676ee331b61dda46e8',1,'SurviveGame']]],
+  ['onsaveselected_796',['onSaveSelected',['../d9/d0a/classMainMenu.html#af3577f2e03b1b69a082e00c117aedcd8',1,'MainMenu']]],
+  ['optimum_797',['optimum',['../d4/dc4/classClimate.html#a0de41e614f1ba18a784b84cf8a299698',1,'Climate']]]
 ];

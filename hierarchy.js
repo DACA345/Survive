@@ -8,6 +8,7 @@ var hierarchy =
     [ "AnimalInfo", "d3/d93/structAnimalInfo.html", null ],
     [ "Bar", "d7/d9a/classBar.html", null ],
     [ "ScalableWidget::ChildInfo", "d3/d37/structScalableWidget_1_1ChildInfo.html", null ],
+    [ "Climate", "d4/dc4/classClimate.html", null ],
     [ "ClimateData", "dd/d8f/structClimateData.html", null ],
     [ "Day", "d8/d0d/classDay.html", null ],
     [ "DayEntry", "d0/d1c/structDayEntry.html", null ],
@@ -48,9 +49,11 @@ var hierarchy =
         [ "Menu", "d8/ddb/classMenu.html", null ],
         [ "NewGameMenu", "d7/d63/classNewGameMenu.html", null ],
         [ "NotebookWidget", "db/d4c/classNotebookWidget.html", null ],
+        [ "PauseMenu", "d7/d08/classPauseMenu.html", null ],
         [ "ResultWidget", "d2/dad/classResultWidget.html", null ],
         [ "SettingsMenu", "db/dbe/classSettingsMenu.html", null ],
-        [ "SleepWidget", "d3/da5/classSleepWidget.html", null ]
+        [ "SleepWidget", "d3/da5/classSleepWidget.html", null ],
+        [ "TutorialWidget", "d9/d09/classTutorialWidget.html", null ]
       ] ]
     ] ],
     [ "Season", "d4/d42/classSeason.html", null ],
