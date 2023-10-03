@@ -11,6 +11,10 @@ int main(int argc, char* argv[])
 
     QApplication app(argc, argv);
 
+#ifdef Q_OS_UNIX
+    app.setWindowIcon(QIcon(TEXTURE_FILE("icon/icon.png")));
+#endif
+
     SurviveGame game;
 
     game.show();
