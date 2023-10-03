@@ -17,9 +17,10 @@ const std::vector<std::string> Day::months = {
     "AUG", "SEP", "OCT", "NOV", "DEC"
 };
 
-Day::Day(const std::string& filename)
+Day::Day(const std::string& filename, const int& day)
 {
     loadClimateData(filename);
+    this->day = day;
 }
 
 void Day::loadClimateData(const std::string& filename) 
@@ -143,6 +144,25 @@ const std::vector<ClimateData>& Day::getMonthData(const std::string& month) cons
         static std::vector<ClimateData> emptyVector; // Static variable to avoid returning a local variable
         return emptyVector;
     }
+}
+
+const ClimateData& Day::getCurrentClimateData() const
+{
+    const std::string& currentMonth = monthId().toStdString();
+
+    // Check if the current month exists in the climateData map
+    auto it = climateData.find(currentMonth);
+    if (it != climateData.end()) {
+        const std::vector<ClimateData>& monthData = it->second;
+        if (day >= 1 && day <= monthData.size()) {
+            // Return the climate data for the current day
+            return monthData[day - 1];
+        }
+    }
+
+    // Return a default ClimateData struct if the data is not found
+    static ClimateData defaultClimateData;
+    return defaultClimateData;
 }
 
 const std::vector<ClimateData>& Day::getMonthData(int month)

@@ -2,6 +2,7 @@ add_library(${PROJECT_NAME}-Core
     "action.cpp"
     "animal.cpp"
     "bar.cpp"
+    "climate.cpp"
     "day.cpp"
     "engine.cpp"
     "event.cpp"

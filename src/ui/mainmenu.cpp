@@ -56,12 +56,20 @@ void MainMenu::displayLoadGameMenu()
 
     // Setup connections
     connect(loadGameMenu, &LoadGameMenu::loadGameMenuClosed, this, &MainMenu::closeLoadGameMenu);
+    connect(loadGameMenu, &LoadGameMenu::saveSelected, this, &MainMenu::onSaveSelected);
 
     // Display the load game menu
     addWidget(loadGameMenu, 0, 0, 1, 1);
 
     loadGameMenu->show();
     menu->hide();
+}
+
+void MainMenu::onSaveSelected(const QString& id)
+{
+    emit saveGameSelected(id);
+
+    closeLoadGameMenu();
 }
 
 void MainMenu::closeLoadGameMenu()

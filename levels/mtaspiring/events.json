@@ -37,10 +37,10 @@
     "season": "summer",
     "effect": {
       "healthBar": -10,
-      "thirstBar": -40,
+      "thirstBar": -30,
       "hungerBar": -10,
       "moraleBar": -15,
-      "energyBar": -20
+      "energyBar": -5
     }
   },
   {
@@ -121,7 +121,7 @@
     }
   },
   {
-    "event_desc": "A rare callum has appeared.",
+    "event_desc": "A rare Callum has appeared.",
     "season": "autumn",
     "effect": {
       "healthBar": 15,

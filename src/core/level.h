@@ -22,57 +22,60 @@ struct LevelInfo
  * @brief   This struct contains all probabilty of everything in level
  * 
  */
-// TODO(Callum): Should be from a json in levels
 struct LevelConfig
 {
     // Action probabilities
     // Food
-    double findFoodNothing = 0.2;
-    double findFoodAnimal = 0.2;
+    double findFoodNothing;
+    double findFoodAnimal;
 
-    int findFoodEnergy = 30;
-
-    int animalHunger = 30;
-    int plantHunger = 10;
-    int plantPoison = 30;
+    int findFoodEnergy;
+    int plantPoison;
 
     // Water
-    double findWaterNothing = 0.2;
-    double findCleanWater = 0.2;
-    
-    int waterThirst = 20;
-    int waterPoison = 20;
+    double findWaterNothing;
+    double findCleanWater;
 
-    int findWaterEnergy = 30;
+    int waterThirst;
+    int waterPoison;
+
+    int findWaterEnergy;
 
     // Rest
-    int restHungerHeal = 60;
-    int restThirstHeal = 60;
+    int restHungerHeal;
+    int restThirstHeal;
 
-    int restEnergy = 20;
-    int restWellHeal = 30;
+    int restEnergy;
+    int restWellHeal;
 
-    int restHunger = 30;
-    int restThirst = 30;
+    int restHunger;
+    int restThirst;
 
     // Explore
-    double exploreNothing = 0.1;
-    double exploreAnimal = 0.1;
-    double explorePlant = 0.2;
+    double exploreNothing;
+    double exploreAnimal;
+    double explorePlant;
 
-    int exploreHunger = 10;
-    int exploreThirst = 10;
+    int exploreHunger;
+    int exploreThirst;
 
-    int exploreNothingEnergy = 10;
-    int exploreEnergy = 20;
+    int exploreNothingEnergy;
+    int exploreEnergy;
 
     // Events
-    double seasonEvent = 0.5;
-    double seasonEventTrigger = 0.4;
-    double eventTrigger = 0.05;
+    double seasonEvent;
+    double seasonEventTrigger;
+    double eventTrigger;
 
-    int eventNegativeHealth = 40;
-    int eventPositiveHealth = 40;
+    // Climate
+    double climateMulti;
+    double optimumMinTemp;
+    double optimumMaxTemp;
+
+    // Morale
+    double moraleMulti;
+    double optimumMorale;
+
 };
 
 /**

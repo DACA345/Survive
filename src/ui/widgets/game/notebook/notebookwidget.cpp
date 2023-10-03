@@ -65,6 +65,11 @@ void NotebookWidget::closeCurrent(bool hide)
 
 void NotebookWidget::displayActionMenu(bool hide)
 {
+    if (IS_TOP_STACK(ACTION_MENU))
+    {
+        return;
+    }
+
     closeCurrent(hide);
 
     actionMenu = new ActionMenu(this);
@@ -102,6 +107,11 @@ void NotebookWidget::closeActionMenu(bool hide)
 
 void NotebookWidget::displayHistoryWidget(int day, bool hide)
 {
+    if (IS_TOP_STACK(HISTORY_WIDGET))
+    {
+        return;
+    }
+
     titleLabel->hide();
 
     closeCurrent(hide);
@@ -148,6 +158,11 @@ void NotebookWidget::closeHistoryWidget(bool hide)
 
 void NotebookWidget::displayResultsWidget(QString action, QString result, bool hide)
 {
+    if (IS_TOP_STACK(RESULTS_WIDGET) && widgetStack.last().action == action && widgetStack.last().result == result)
+    {
+        return;
+    }
+
     closeCurrent(hide);
 
     resultWidget = new ResultWidget(action, result, this);
@@ -188,12 +203,18 @@ void NotebookWidget::closeResultsWidget(bool hide)
 
 void NotebookWidget::displaySleepWidget(bool hide)
 {
+    if (IS_TOP_STACK(SLEEP_WIDGET))
+    {
+        return;
+    }
+
     closeCurrent(hide);
 
     sleepWidget = new SleepWidget(this);
     
     connect(sleepWidget, &SleepWidget::close, this, &NotebookWidget::displayPrevious);
     connect(sleepWidget, &SleepWidget::close, this, &NotebookWidget::sleep);
+    connect(sleepWidget, &SleepWidget::close, this, &NotebookWidget::resultAcknowledged);
 
     addWidget(sleepWidget, 0, 0, 1, 1);
 

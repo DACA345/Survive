@@ -6,6 +6,7 @@
 #include "day.h"
 #include "level.h"
 #include "journal.h"
+#include "climate.h"
 
 #define ENGINE_INITIAL_TURNS 5
 
@@ -67,6 +68,22 @@ class Engine
          * @brief      Destroys the object.
          */
         ~Engine();
+
+/**
+         * @brief      Loads an engine instance from a file.
+         *
+         * @param[in]  filePath  The file path
+         *
+         * @return     The engine.
+         */
+        static Engine loadFromFile(const QString& filePath);
+
+/**
+         * @brief      Dumps the engine instance to a file.
+         *
+         * @param[in]  filePath  The file path
+         */
+        void dump(const QString& filePath);
 
         /**
          * @brief      Generates a random double between 0, 1.
@@ -203,10 +220,23 @@ class Engine
         void affectBars(Effect effect);
 
         /**
+         * @brief      Update temperature of current day
+         *
+         * @param[in]  Current Day
+         */
+        void updateTemp(Day day);
+
+        /**
          * The current turns.
          */
         short turns = ENGINE_INITIAL_TURNS;
 
+        /**
+         * The current day temps storage.
+         */
+        double dayTemp;
+        double afternoonTemp;
+        double nightTemp;
 
         /**
          * The energy bar.
@@ -247,4 +277,9 @@ class Engine
          * The journal.
          */
         Journal journal;
+
+        /**
+         * The climate.
+         */
+        Climate climate;
 };

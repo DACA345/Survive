@@ -33,8 +33,8 @@ void JournalDay::setupUi(const DayEntry& day)
 
     for (int i = 0; i < dayActions.size(); i++)
     {
-        addWidget(dayActions[i], 0.1, 0.125 + (i * 0.1), 0.8, 0.05);
-        addWidget(dayResults[i], 0.1, 0.175 + (i * 0.1), 0.8, 0.05);
+        addWidget(dayActions[i], 0.05, 0.125 + (i * 0.125), 0.9, 0.075);
+        addWidget(dayResults[i], 0.05, 0.175 + (i * 0.125), 0.9, 0.075);
     }
 }
 

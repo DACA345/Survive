@@ -35,6 +35,13 @@ class LoadGameMenu : public ScalableWidget
          */
         void loadGameMenuClosed();
 
+        /**
+         * @brief      Emitted when a save is selected.
+         *
+         * @param[in]  save  The save
+         */
+        void saveSelected(QString save);
+
     private:
         /**
          * @brief      Paint event handler. See QWidget paint.
@@ -47,6 +54,11 @@ class LoadGameMenu : public ScalableWidget
          * @brief      Display a user's saves.
          */
         void displaySaves();
+
+        /**
+        * @brief      Loads the stylesheet.
+        */
+        void loadStylesheet();
 
         /**
         * @brief      Loads the graphics.
@@ -68,4 +80,5 @@ class LoadGameMenu : public ScalableWidget
         SVGPushButton* backButton;
 
         QPixmap background;
+        QPixmap overlay1;
 };

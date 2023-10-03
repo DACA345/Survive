@@ -7,18 +7,16 @@
 LoadGameMenu::LoadGameMenu(QWidget* parent)
     : ScalableWidget(parent)
 {
-    QDirIterator savesIterator(SAVE_FOLDER, QDir::Dirs | QDir::NoDotAndDotDot);
+    QDirIterator savesIterator(SAVE_FOLDER, QDir::Files | QDir::NoDotAndDotDot);
+    
 
     while (savesIterator.hasNext())
     {
-        QDir saveDir(savesIterator.next()); 
-        QString saveJsonPath = saveDir.filePath("save.json");
-        if (QFile::exists(saveJsonPath))
-        {
-            saves.append(saveJsonPath);
-        }
+        QFileInfo fileInfo(savesIterator.next());
+        saves.append(fileInfo.baseName());
     }
 
+    loadStylesheet();
     loadGraphics();
     setupUi();
 }
@@ -31,7 +29,23 @@ void LoadGameMenu::displaySaves()
 
     for (int i = 0; i < saves.size(); i++)
     {
-        QPushButton* saveButton = new QPushButton(saves[i], this);
+        // Save file name format: save-{level-id}-dd-MM_hh-mm-ss.json
+        // Button text format: {level-id} - MM/dd hh:mm:ss
+        QList<QString> splitString = saves[i].split("-");
+        QList<QString> splitDate = splitString[3].split("_");
+
+        QString levelId = splitString[1];
+        QString day = splitDate[0];
+        QString month = splitString[2];
+
+        QString hour = splitDate[1];
+        QString minute = splitString[4];
+        QString second = splitString[5];
+
+        QString text = levelId + " - " + month + "/" + day + " " + hour + ":" + minute + ":" + second;
+
+
+        QPushButton* saveButton = new QPushButton(text, this);
         saveButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         saveButtons.append(saveButton);
 
@@ -40,15 +54,13 @@ void LoadGameMenu::displaySaves()
 
         savesLayout->addWidget(saveButton, row, col);
 
-        //connect(saveButton, &QPushButton::clicked, this, [this, i]()
-        //    {
-        //    emit loadGameMenuClosed();
-        //    emit saveSelected(saves[i]);
-        //});
+        connect(saveButton, &QPushButton::clicked, this, [this, i]() {
+            emit saveSelected(SAVE_FILE(saves[i]));
+        });
     }
     savesWidget->setLayout(savesLayout);
 
-    addWidget(savesWidget, 0.1, 0.1, 0.8, 0.7);
+    addWidget(savesWidget, 0.15, 0.15, 0.75, 0.65);
 }
 
 void LoadGameMenu::paintEvent(QPaintEvent* event)
@@ -58,11 +70,21 @@ void LoadGameMenu::paintEvent(QPaintEvent* event)
     QPainter painter(this);
 
     painter.drawPixmap(rect(), background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+    painter.drawPixmap(rect(), overlay1.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+}
+
+void LoadGameMenu::loadStylesheet()
+{
+    QFile file(TEXTURE_FILE("mainmenu/loadgame/style/style.qss"));
+    file.open(QFile::ReadOnly);
+    setStyleSheet(file.readAll());
+    file.close();
 }
 
 void LoadGameMenu::loadGraphics()
 {
     background = QPixmap(TEXTURE_FILE("mainmenu/loadgame/background/image.png"));
+    overlay1 = QPixmap(TEXTURE_FILE("mainmenu/settings/background/overlay1.svg"));
 }
 
 void LoadGameMenu::setupUi()

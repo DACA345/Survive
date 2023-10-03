@@ -16,7 +16,7 @@ class ScalableLabel : public QLabel
          * @param[in]  text    The text
          * @param      parent  The parent
          */
-        explicit ScalableLabel(const QString& text, QWidget *parent = nullptr);
+        explicit ScalableLabel(const QString& text, QWidget *parent = nullptr, bool useAlternate = false);
 
         /**
          * @brief      Destroys the object.
@@ -30,4 +30,13 @@ class ScalableLabel : public QLabel
          * @param      event  The event
          */
         void paintEvent(QPaintEvent* event) override;
+
+        /**
+        * @brief      Resize event handler. See QWidget resize.
+        *
+        * @param      event  The event
+        */
+        void resizeEvent(QResizeEvent* event) override;
+
+        bool useAlternate;
 };

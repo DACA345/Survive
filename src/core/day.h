@@ -51,7 +51,7 @@ class Day
          *
          * @param[in]  filename  The filename
          */
-        Day(const std::string& filename);
+        Day(const std::string& filename, const int& day = 1);
 
         /**
          * @brief      Convert an int value of a month to a string.
@@ -75,6 +75,13 @@ class Day
          * @return     The month data.
          */
         const std::vector<ClimateData>& getMonthData(const std::string& month) const;
+
+        /**
+         * @brief      Gets the climate data for the current day.
+         *
+         * @return     The climate data for the current day.
+         */
+        const ClimateData& getCurrentClimateData() const;
 
         /**
          * @brief      Gets the month data.

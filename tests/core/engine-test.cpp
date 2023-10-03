@@ -91,3 +91,27 @@ TEST(EngineTests, NextDayTest)
 
     EXPECT_EQ(test.getDay().currentDay(), 2);
 }
+
+TEST(EngineTests, DumpAndLoadTest)
+{
+    Engine test = Engine("mtaspiring", SEED);
+
+    test.explore();
+    test.findFood();
+    test.findWater();
+    test.rest();
+    test.explore();
+    test.nextDay();
+
+    test.dump("enginedump.json");
+
+    Engine loaded = Engine::loadFromFile("enginedump.json");
+
+    EXPECT_EQ(test.getHealth(), loaded.getHealth());
+    EXPECT_EQ(test.getHunger(), loaded.getHunger());
+    EXPECT_EQ(test.getThirst(), loaded.getThirst());
+    EXPECT_EQ(test.getEnergy(), loaded.getEnergy());
+    EXPECT_EQ(test.getTurns(), loaded.getTurns());
+    EXPECT_EQ(test.getDay().currentDay(), loaded.getDay().currentDay());
+    EXPECT_EQ(test.getJournal().getDayCount(), loaded.getJournal().getDayCount());
+}

@@ -1,4 +1,5 @@
 #include <QPainter>
+#include <QDateTime>
 
 #include "game.h"
 #include "../config/files.h"
@@ -15,6 +16,20 @@ Game::Game(const QString& levelId, QWidget *parent)
     loadGraphics();
     setupUi();
     updateUi();
+
+    if (engine.getDay().currentDay() == 1 && engine.getTurns() == ENGINE_INITIAL_TURNS)
+    {
+        onHelp();
+    }
+}
+
+Game::Game(const Engine& engine, QWidget* parent)
+    : ScalableWidget(parent), engine(engine)
+{
+    loadGraphics();
+    setupUi();
+    updateUi();
+    onResultAcknowledged();
 }
 
 void Game::paintEvent(QPaintEvent* event)
@@ -24,6 +39,59 @@ void Game::paintEvent(QPaintEvent* event)
     QPainter painter(this);
 
     painter.drawPixmap(rect(), background.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+}
+
+void Game::onHelp()
+{
+    tutorialWidget = new TutorialWidget(this);
+    helpButton->hide();
+    tutorialWidget->show();
+
+    connect(tutorialWidget, &TutorialWidget::close, tutorialWidget, [this]()
+        {
+            removeWidget(tutorialWidget);
+
+            tutorialWidget->hide();
+            tutorialWidget->deleteLater();
+
+            helpButton->show();
+        }
+    );
+
+    addWidget(tutorialWidget, 0, 0, 1, 1);
+}
+
+void Game::onPause()
+{
+    pauseMenu = new PauseMenu(this);
+    pauseButton->hide();
+    pauseMenu->show();
+
+    connect(pauseMenu, &PauseMenu::resume, this, &Game::onResume);
+    connect(pauseMenu, &PauseMenu::save, this, &Game::saveGame);
+    connect(pauseMenu, &PauseMenu::exit, this, &Game::returnToMenu);
+
+    connect(this, &Game::saveSuccessful, pauseMenu, &PauseMenu::saveSuccessful);
+
+    addWidget(pauseMenu, 0, 0, 1, 1);
+}
+
+void Game::onResume()
+{
+    removeWidget(pauseMenu);
+    
+    pauseMenu->hide();
+    pauseMenu->deleteLater();
+
+    pauseButton->show();
+}
+
+void Game::saveGame()
+{
+    QString dateTime = QDateTime::currentDateTime().toString("MM-dd_hh-mm-ss");
+    QString saveName = QString("save-%1-%2").arg(engine.getLevel().getInfo().id).arg(dateTime);
+    engine.dump(SAVE_FILE(saveName));
+    emit saveSuccessful();
 }
 
 ON_ACTION(FindFood, findFood)
@@ -64,6 +132,9 @@ void Game::loadGraphics()
 
 void Game::setupUi()
 {
+    helpButton = new SVGPushButton(TEXTURE_FILE("ui/help/icon.svg"), this);
+    pauseButton = new SVGPushButton(TEXTURE_FILE("ui/pause/icon.svg"), this);
+
     notebookButton = new SVGPushButton(TEXTURE_FILE("ui/notebook/icon.svg"), this);
     notebookButton->hide();
     notebookWidget = new NotebookWidget(engine, this);
@@ -73,6 +144,9 @@ void Game::setupUi()
     thirstBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/thirst.svg"), this);
     hungerBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/hunger.svg"), this);
     energyBarFill = new QSvgWidget(TEXTURE_FILE("ui/bars/fill/energy.svg"), this);
+
+    connect(helpButton, &QPushButton::clicked, this, &Game::onHelp);
+    connect(pauseButton, &QPushButton::clicked, this, &Game::onPause);
 
     connect(notebookButton, &QPushButton::clicked, notebookWidget, &NotebookWidget::show);
     connect(notebookButton, &QPushButton::clicked, notebookButton, &SVGPushButton::hide);
@@ -86,6 +160,9 @@ void Game::setupUi()
     connect(notebookWidget, &NotebookWidget::resultAcknowledged, this, &Game::onResultAcknowledged);
 
     connect(notebookWidget, &NotebookWidget::close, notebookButton, &SVGPushButton::show);
+
+    addWidget(helpButton, 0.08, 0.025, 0.05, 0.075);
+    addWidget(pauseButton, 0.025, 0.025, 0.05, 0.075);
 
     addWidget(notebookButton, 0.01, 0.85, 0.06, 0.14);
     addWidget(notebookWidget, 0.35, 0.125, 0.3, 0.75);
