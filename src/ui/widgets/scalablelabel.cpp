@@ -51,7 +51,7 @@ void ScalableLabel::resizeEvent(QResizeEvent* event)
     QFont font = this->font();
     int size = font.pointSize();
 
-    size = size <= 0 ? START_SIZE : size;
+    size = size <= 2 ? START_SIZE : size;
 
     QFontMetrics fontMetrics(font);
     QRect rect = fontMetrics.boundingRect(rectLbl, Qt::TextWordWrap, text);
@@ -61,7 +61,7 @@ void ScalableLabel::resizeEvent(QResizeEvent* event)
         font.setPointSize(size + step);
         QFontMetrics fontMetrics(font);
         rect = fontMetrics.boundingRect(rectLbl, Qt::TextWordWrap, text);
-        if (size <= 1)
+        if (size <= 2)
         {
             break;
         }
